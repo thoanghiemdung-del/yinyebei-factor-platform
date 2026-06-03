@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>量化回测平台 - 登录</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Microsoft YaHei', sans-serif; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); min-height:100vh; display:flex; align-items:center; justify-content:center; }
+.login-box { background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 40px; width: 380px; }
+h1 { color: #e94560; text-align: center; margin-bottom: 8px; font-size: 24px; }
+.subtitle { color: #aaa; text-align: center; margin-bottom: 30px; font-size: 13px; }
+input { width: 100%; padding: 12px 16px; margin-bottom: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; color: #fff; font-size: 14px; outline: none; transition: border 0.3s; }
+input:focus { border-color: #e94560; }
+button { width: 100%; padding: 12px; background: #e94560; color: #fff; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background 0.3s; }
+button:hover { background: #d63850; }
+.error { color: #ff6b6b; text-align: center; margin-bottom: 12px; font-size: 13px; }
+.success-msg { color: #4ecdc4; text-align: center; margin-bottom: 12px; font-size: 13px; }
+#register-form { display: none; }
+#login-form { display: block; }
+.toggle-link { color: #aaa; text-align: center; margin-top: 16px; font-size: 13px; }
+.toggle-link a { color: #e94560; cursor: pointer; text-decoration: none; }
+.toggle-link a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="login-box">
+  <h1>量化回测平台</h1>
+  <p class="subtitle">A-Share Factor Competition</p>
+
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+  {% if success %}<p class="success-msg">{{ success }}</p>{% endif %}
+
+  <!-- Login Form -->
+  <form id="login-form" method="POST" action="/login">
+    <input type="text" name="username" placeholder="用户名或邮箱" required>
+    <input type="password" name="password" placeholder="密码" required>
+    <button type="submit">登 录</button>
+  </form>
+
+  <!-- Register Form -->
+  <form id="register-form" method="POST" action="/register">
+    <input type="email" name="email" placeholder="邮箱" required>
+    <input type="text" name="nickname" placeholder="昵称（可选，显示在社区中）" maxlength="50">
+    <input type="password" name="password" placeholder="密码（至少6位）" required>
+    <input type="password" name="confirm_password" placeholder="确认密码" required>
+    <button type="submit">注 册</button>
+  </form>
+
+  <p class="toggle-link" id="toggle-login">
+    没有账号？<a onclick="showRegister()">注册</a>
+  </p>
+  <p class="toggle-link" id="toggle-register" style="display:none;">
+    已有账号？<a onclick="showLogin()">登录</a>
+  </p>
+</div>
+
+<script>
+function showRegister() {
+  document.getElementById('login-form').style.display = 'none';
+  document.getElementById('register-form').style.display = 'block';
+  document.getElementById('toggle-login').style.display = 'none';
+  document.getElementById('toggle-register').style.display = 'block';
+}
+function showLogin() {
+  document.getElementById('login-form').style.display = 'block';
+  document.getElementById('register-form').style.display = 'none';
+  document.getElementById('toggle-login').style.display = 'block';
+  document.getElementById('toggle-register').style.display = 'none';
+}
+
+// If backend rendered with mode=register, show register form on load
+if ('{{ mode }}' === 'register') {
+  showRegister();
+}
+</script>
+</body>
+</html>

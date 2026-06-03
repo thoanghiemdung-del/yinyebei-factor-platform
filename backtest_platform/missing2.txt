@@ -1,0 +1,463 @@
+-lower_shadow_pct|market_cap
+-rank((high-low)/ts_mean(high-low,20))|market_cap
+-rank((volume-ts_mean(volume,20))/ts_std(volume,20))|market_cap
+-rank(abs(abnormal_vol_rev - max_dd_60d))|market_cap
+-rank(abs(abnormal_vol_rev - mom_liquidity_adj))|market_cap
+-rank(abs(demean(intraday_volatility)))|market_cap
+-rank(abs(downside_vol_60d - mom_liquidity_adj))|market_cap
+-rank(abs(ret_60d - max_dd_60d))|market_cap
+-rank(abs(rev_5d - mom_liquidity_adj))|market_cap
+-rank(abs(turnover_rate - max_dd_60d))|market_cap
+-rank(abs(turnover_rate - mom_liquidity_adj))|market_cap
+-rank(abs(turnover_rate - rev_vol_conf))|market_cap
+-rank(abs(volume_breakout - ret_120d_skip5))|market_cap
+-rank(abs(volume_concentration - upper_shadow_pct))|market_cap
+-rank(abs(volume_profile_ratio - max_dd_60d))|market_cap
+-rank(abs(volume_profile_ratio - turnover_change))|market_cap
+-rank(abs(zscore(abnormal_vol_rev) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(abnormal_vol_rev) - zscore(mom_liquidity_adj)))|market_cap
+-rank(abs(zscore(abnormal_vol_rev) - zscore(mom_vol_conf)))|market_cap
+-rank(abs(zscore(amihud_20d) - zscore(mom_vol_conf)))|market_cap
+-rank(abs(zscore(amihud_20d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(bollinger_pos) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(close_location) + zscore(afternoon_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(close_location) + zscore(am_pm_divergence) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) + zscore(last30min_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) + zscore(last30min_return) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(close_location) + zscore(last30min_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(close_location) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(close_location) - zscore(am_pm_divergence) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) - zscore(body_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) - zscore(first30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) - zscore(first30min_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(close_location) - zscore(last30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) - zscore(morning_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(close_location) - zscore(morning_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(close_location) - zscore(morning_return)))|market_cap
+-rank(abs(zscore(close_location) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(downside_vol_60d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(am_pm_divergence)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(first30min_return)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(last30min_return)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(volume_concentration)))|market_cap
+-rank(abs(zscore(intraday_volatility) - zscore(vwap_gap)))|market_cap
+-rank(abs(zscore(last30min_return)))|market_cap
+-rank(abs(zscore(log_dollar_vol) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(lower_shadow_pct) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(lower_shadow_pct) - zscore(last30min_return)))|market_cap
+-rank(abs(zscore(morning_return) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(morning_return) - zscore(body_return)))|market_cap
+-rank(abs(zscore(morning_return) - zscore(last30min_return)))|market_cap
+-rank(abs(zscore(ret_120d_skip5) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(ret_20d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(ret_60d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(rev_1d) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(rev_1d) - zscore(mom_liquidity_adj)))|market_cap
+-rank(abs(zscore(rev_5d) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(rev_5d) - zscore(mom_liquidity_adj)))|market_cap
+-rank(abs(zscore(rev_overnight) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(rev_overnight) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(rsi_14) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_5d) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(turnover_5d) - zscore(max_dd_60d)))|market_cap
+-rank(abs(zscore(turnover_5d) - zscore(mom_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_5d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_5d) - zscore(turnover_change)))|market_cap
+-rank(abs(zscore(turnover_change) - zscore(abnormal_vol_rev)))|market_cap
+-rank(abs(zscore(turnover_change) - zscore(auction_return)))|market_cap
+-rank(abs(zscore(turnover_change) - zscore(market_cap_rank)))|market_cap
+-rank(abs(zscore(turnover_change) - zscore(rev_1d)))|market_cap
+-rank(abs(zscore(turnover_change) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(close_vs_high_20d)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(max_dd_60d)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(mom_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(turnover_change)))|market_cap
+-rank(abs(zscore(turnover_rate) - zscore(volume_breakout)))|market_cap
+-rank(abs(zscore(upper_shadow_pct) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(upper_shadow_pct) - zscore(body_return)))|market_cap
+-rank(abs(zscore(upper_shadow_pct) - zscore(first30min_return)))|market_cap
+-rank(abs(zscore(upper_shadow_pct) - zscore(last30min_return)))|market_cap
+-rank(abs(zscore(vol_20d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(vol_60d) - zscore(max_dd_60d)))|market_cap
+-rank(abs(zscore(vol_60d) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(abnormal_vol_rev)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(amihud_20d)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(auction_return)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(market_cap_rank)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(rev_1d)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(rev_5d)))|market_cap
+-rank(abs(zscore(volume_breakout) - zscore(rev_vol_conf)))|market_cap
+-rank(abs(zscore(volume_breakout)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(afternoon_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(afternoon_return) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(afternoon_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(am_pm_divergence) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(am_pm_divergence) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(am_pm_divergence) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(body_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(first30min_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(first30min_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(last30min_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(last30min_return) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) + zscore(last30min_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(afternoon_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(afternoon_return) + zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(afternoon_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(afternoon_return)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(am_pm_divergence) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(am_pm_divergence) + zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(am_pm_divergence)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(body_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(first30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(first30min_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(last30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(last30min_return) + zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(last30min_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(last30min_return)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(volume_concentration)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(afternoon_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(afternoon_return) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(afternoon_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(am_pm_divergence) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(am_pm_divergence) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(am_pm_divergence) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(body_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(body_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(first30min_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(last30min_return) - zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(last30min_return) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) + zscore(last30min_return) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(afternoon_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(am_pm_divergence) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(body_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(body_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(close_location)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(first30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(first30min_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(last30min_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(last30min_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(lower_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(morning_return) + zscore(intraday_volatility)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(morning_return) + zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(upper_shadow_pct)))|market_cap
+-rank(abs(zscore(vwap_gap) - zscore(volume_concentration)))|market_cap
+-rank(abs(zscore(vwap_gap)))|market_cap
+-rank(am_pm_divergence) * rank(lower_shadow_pct) * rank(close_location)|market_cap
+-rank(body_ratio) * rank(mom_vol_conf)|market_cap
+-rank(body_return) * signed_power(rank(am_pm_divergence), 2)|market_cap
+-rank(close_location) * rank(last30min_return) * rank(intraday_volatility)|market_cap
+-rank(close_location) * rank(turnover_rate)|market_cap
+-rank(close_location) * rank(vol_5d)|market_cap
+-rank(close_location) * rank(volume_profile_ratio)|market_cap
+-rank(close_location) * zscore(body_return) * rank(upper_shadow_pct)|market_cap
+-rank(close_location) * zscore(first30min_return) * rank(intraday_volatility)|market_cap
+-rank(close_location) * zscore(last30min_return) * rank(intraday_volatility)|market_cap
+-rank(close_location) * zscore(morning_return) * rank(lower_shadow_pct)|market_cap
+-rank(downside_vol_60d) - rank(rev_vol_conf)|market_cap
+-rank(intraday_volatility) * rank(-upper_shadow_pct) * rank(close_location)|market_cap
+-rank(intraday_volatility) * rank(body_return)|market_cap
+-rank(intraday_volatility) * rank(close_location)|market_cap
+-rank(intraday_volatility) * rank(close_location) * rank(price_efficiency)|market_cap
+-rank(intraday_volatility) * rank(price_efficiency) * rank(volume_concentration)|market_cap
+-rank(intraday_volatility) * rank(returns)|market_cap
+-rank(intraday_volatility) + rank(vwap_gap)|market_cap
+-rank(intraday_volatility) - rank(upper_shadow_pct)|market_cap
+-rank(lower_shadow_pct) * rank(turnover_rate)|market_cap
+-rank(lower_shadow_pct) * rank(vol_5d)|market_cap
+-rank(morning_return) * rank(vol_10d)|market_cap
+-rank(morning_return) * zscore(first30min_return)|market_cap
+-rank(price_efficiency) * rank(afternoon_return) * rank(intraday_volatility)|market_cap
+-rank(price_efficiency) * rank(body_return) * rank(intraday_volatility)|market_cap
+-rank(price_efficiency) * rank(close_location) * rank(volume_concentration)|market_cap
+-rank(price_efficiency) * rank(first30min_return) * rank(lower_shadow_pct)|market_cap
+-rank(price_efficiency) * rank(last30min_return) * rank(intraday_volatility)|market_cap
+-rank(price_efficiency) * rank(last30min_return) * rank(lower_shadow_pct)|market_cap
+-rank(price_efficiency) * rank(returns)|market_cap
+-rank(ret_5d) * rank(mom_liquidity_adj)|market_cap
+-rank(ret_60d) * rank(mom_vol_conf)|market_cap
+-rank(rev_overnight) * rank(mom_vol_conf)|market_cap
+-rank(skewness_60d) * rank(volume_breakout)|market_cap
+-rank(ts_delta(amount, 5))|market_cap
+-rank(ts_delta(body_return, 10))|market_cap
+-rank(ts_delta(close, 6))|market_cap
+-rank(ts_delta(close,3))|market_cap
+-rank(ts_delta(close/open-1, 10))|market_cap
+-rank(ts_delta(close/open-1, 11))|market_cap
+-rank(ts_delta(close/open-1, 12))|market_cap
+-rank(ts_delta(close/open-1, 13))|market_cap
+-rank(ts_delta(close/open-1, 14))|market_cap
+-rank(ts_delta(close/open-1, 15))|market_cap
+-rank(ts_delta(close/open-1, 16))|market_cap
+-rank(ts_delta(close/open-1, 17))|market_cap
+-rank(ts_delta(close/open-1, 18))|market_cap
+-rank(ts_delta(close/open-1, 19))|market_cap
+-rank(ts_delta(close/open-1, 20))|market_cap
+-rank(ts_delta(close/open-1, 30))|market_cap
+-rank(ts_delta(close/open-1, 5))|market_cap
+-rank(ts_delta(close/open-1, 6))|market_cap
+-rank(ts_delta(close/open-1, 60))|market_cap
+-rank(ts_delta(close/open-1, 7))|market_cap
+-rank(ts_delta(close/open-1, 8))|market_cap
+-rank(ts_delta(close/open-1, 9))|market_cap
+-rank(ts_delta(close_location, 10))|market_cap
+-rank(ts_delta(intraday_volatility, 5))|market_cap
+-rank(ts_delta(volume_profile_ratio, 10))|market_cap
+-rank(ts_delta(volume_profile_ratio, 30))|market_cap
+-rank(ts_delta(volume_profile_ratio, 5))|market_cap
+-rank(ts_delta(vwap_gap, 20))|market_cap
+-rank(ts_delta(vwap_gap, 5))|market_cap
+-rank(ts_mean(volume*(close-open)/open,5))|market_cap
+-rank(ts_mean(volume,3)/ts_mean(volume,15))|market_cap
+-rank(turnover_5d) * rank(turnover_change)|market_cap
+-rank(turnover_rate) * rank(close_vs_high_20d)|market_cap
+-rank(turnover_rate) * rank(sharpe_60d)|market_cap
+-rank(turnover_rate) - rank(abnormal_vol_rev)|market_cap
+-rank(turnover_rate) - rank(ret_20d)|market_cap
+-rank(turnover_rate) - rank(rev_5d)|market_cap
+-rank(vol_20d) * rank(mom_vol_conf)|market_cap
+-rank(vol_20d) - rank(rev_vol_conf)|market_cap
+-rank(volume_breakout) * rank(body_ratio)|market_cap
+-rank(volume_breakout) * rank(close_vs_high_20d)|market_cap
+-rank(volume_breakout) * rank(mom_vol_conf)|market_cap
+-rank(volume_breakout) * rank(ret_20d)|market_cap
+-rank(volume_breakout) * rank(rev_overnight)|market_cap
+-rank(volume_breakout) * rank(sharpe_60d)|market_cap
+-rank(volume_breakout) * rank(turnover_5d)|market_cap
+-rank(volume_breakout) + rank(bollinger_pos)|market_cap
+-rank(volume_breakout) + rank(downside_vol_60d)|market_cap
+-rank(volume_breakout) - rank(auction_return)|market_cap
+-rank(volume_breakout) - rank(ret_120d_skip5)|market_cap
+-rank(volume_breakout) - rank(ret_20d)|market_cap
+-rank(volume_concentration) * rank(first30min_return) * rank(intraday_volatility)|market_cap
+-rank(volume_concentration) * rank(last30min_return) * rank(intraday_volatility)|market_cap
+-rank(volume_concentration) * rank(vol_20d)|market_cap
+-rank(volume_concentration) * rank(vol_5d)|market_cap
+-rank(volume_concentration) * zscore(afternoon_return) * rank(lower_shadow_pct)|market_cap
+-rank(volume_concentration) * zscore(last30min_return) * rank(lower_shadow_pct)|market_cap
+-rank(volume_profile_ratio) * rank(body_ratio)|market_cap
+-rank(volume_profile_ratio) * rank(vol_ratio)|market_cap
+-rank(volume_profile_ratio) - rank(auction_return)|market_cap
+-rank(volume_profile_ratio) - rank(beta_60d)|market_cap
+-rank(volume_profile_ratio) - rank(market_cap_rank)|market_cap
+-rank(vwap_gap) * rank(am_pm_divergence) * rank(intraday_volatility)|market_cap
+-rank(vwap_gap) * zscore(afternoon_return) * rank(lower_shadow_pct)|market_cap
+-rank(zscore(body_return) + zscore(am_pm_divergence))|market_cap
+-signed_power(rank(lower_shadow_pct), 2) * rank(body_return)|market_cap
+-signed_power(rank(volume_concentration), 2) * rank(close_location)|market_cap
+-signed_power(zscore(close_location) + zscore(lower_shadow_pct), 2)|market_cap
+-signed_power(zscore(close_location) + zscore(upper_shadow_pct), 2)|market_cap
+-signed_power(zscore(close_location) - zscore(first30min_return), 2) * zscore(lower_shadow_pct)|market_cap
+-signed_power(zscore(first30min_return) + zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(afternoon_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(body_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(close_location), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(volume_concentration), 2)|market_cap
+-signed_power(zscore(intraday_volatility) + zscore(vwap_gap), 2)|market_cap
+-signed_power(zscore(intraday_volatility) - zscore(afternoon_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) - zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) - zscore(morning_return), 2)|market_cap
+-signed_power(zscore(intraday_volatility) - zscore(price_efficiency), 2)|market_cap
+-signed_power(zscore(intraday_volatility) - zscore(upper_shadow_pct), 2)|market_cap
+-signed_power(zscore(intraday_volatility), 2)|market_cap
+-signed_power(zscore(lower_shadow_pct) + zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(afternoon_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(body_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(first30min_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(morning_return), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(upper_shadow_pct), 2)|market_cap
+-signed_power(zscore(price_efficiency) + zscore(volume_concentration), 2)|market_cap
+-signed_power(zscore(turnover_5d) - zscore(close_vs_high_20d), 2)|market_cap
+-signed_power(zscore(turnover_change) - zscore(close_vs_high_20d), 2)|market_cap
+-signed_power(zscore(turnover_change) - zscore(lower_shadow), 2)|market_cap
+-signed_power(zscore(turnover_change) - zscore(max_dd_60d), 2)|market_cap
+-signed_power(zscore(turnover_change) - zscore(rsi_14), 2)|market_cap
+-signed_power(zscore(turnover_change) - zscore(upper_shadow), 2)|market_cap
+-signed_power(zscore(turnover_rate) - zscore(max_dd_60d), 2)|market_cap
+-signed_power(zscore(turnover_rate) - zscore(volume_breakout), 2)|market_cap
+-signed_power(zscore(upper_shadow_pct) + zscore(last30min_return), 2)|market_cap
+-signed_power(zscore(upper_shadow_pct) + zscore(lower_shadow_pct), 2)|market_cap
+-signed_power(zscore(upper_shadow_pct), 2)|market_cap
+-signed_power(zscore(vol_60d) - zscore(rev_vol_conf), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(abnormal_vol_rev), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(body_ratio), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(close_vs_high_20d), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(downside_vol_60d), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(market_cap_rank), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(rev_1d), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(rev_overnight), 2)|market_cap
+-signed_power(zscore(volume_breakout) - zscore(upper_shadow), 2)|market_cap
+-signed_power(zscore(volume_concentration) + zscore(upper_shadow_pct), 2)|market_cap
+-signed_power(zscore(volume_profile_ratio) - zscore(close_vs_high_20d), 2)|market_cap
+-signed_power(zscore(volume_profile_ratio) - zscore(volume_breakout), 2)|market_cap
+-signed_power(zscore(vwap_gap) - zscore(am_pm_divergence), 2) * zscore(lower_shadow_pct)|market_cap
+-signed_power(zscore(vwap_gap) - zscore(first30min_return), 2) * zscore(lower_shadow_pct)|market_cap
+-signed_power(zscore(vwap_gap) - zscore(morning_return), 2) * zscore(lower_shadow_pct)|market_cap
+-zscore(abnormal_vol_rev) * zscore(max_dd_60d)|market_cap
+-zscore(abnormal_vol_rev) * zscore(rev_vol_conf)|market_cap
+-zscore(afternoon_return) * rank(am_pm_divergence)|market_cap
+-zscore(afternoon_return) * rank(close_location)|market_cap
+-zscore(afternoon_return) * rank(last30min_return)|market_cap
+-zscore(afternoon_return) * zscore(body_return)|market_cap
+-zscore(afternoon_return) * zscore(last30min_return)|market_cap
+-zscore(body_return) * rank(first30min_return)|market_cap
+-zscore(body_return) * rank(last30min_return)|market_cap
+-zscore(body_return) * rank(morning_return)|market_cap
+-zscore(body_return) * rank(vwap_gap)|market_cap
+-zscore(bollinger_pos) * zscore(close_vs_high_20d)|market_cap
+-zscore(bollinger_pos) * zscore(mom_vol_conf)|market_cap
+-zscore(close_location) * rank(afternoon_return)|market_cap
+-zscore(close_location) * rank(afternoon_return) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * rank(am_pm_divergence) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * rank(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * rank(body_return) * zscore(lower_shadow_pct)|market_cap
+-zscore(close_location) * rank(last30min_return)|market_cap
+-zscore(close_location) * rank(last30min_return) * zscore(lower_shadow_pct)|market_cap
+-zscore(close_location) * rank(lower_shadow_pct)|market_cap
+-zscore(close_location) * rank(morning_return)|market_cap
+-zscore(close_location) * rank(upper_shadow_pct)|market_cap
+-zscore(close_location) * rank(vwap_gap)|market_cap
+-zscore(close_location) * zscore(afternoon_return)|market_cap
+-zscore(close_location) * zscore(body_return)|market_cap
+-zscore(close_location) * zscore(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * zscore(first30min_return) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * zscore(last30min_return)|market_cap
+-zscore(close_location) * zscore(last30min_return) * zscore(intraday_volatility)|market_cap
+-zscore(close_location) * zscore(last30min_return) * zscore(lower_shadow_pct)|market_cap
+-zscore(close_location) * zscore(morning_return)|market_cap
+-zscore(first30min_return) * zscore(body_return)|market_cap
+-zscore(intraday_volatility + first30min_return)|market_cap
+-zscore(intraday_volatility + morning_return)|market_cap
+-zscore(intraday_volatility - first30min_return)|market_cap
+-zscore(intraday_volatility - upper_shadow_pct)|market_cap
+-zscore(intraday_volatility) * rank(lower_shadow_pct)|market_cap
+-zscore(intraday_volatility) * rank(price_efficiency)|market_cap
+-zscore(intraday_volatility) * zscore(lower_shadow_pct)|market_cap
+-zscore(last30min_return) * rank(afternoon_return)|market_cap
+-zscore(last30min_return) * rank(am_pm_divergence)|market_cap
+-zscore(last30min_return) * rank(morning_return)|market_cap
+-zscore(last30min_return) * zscore(body_return)|market_cap
+-zscore(lower_shadow_pct) * rank(first30min_return)|market_cap
+-zscore(lower_shadow_pct) * rank(last30min_return)|market_cap
+-zscore(lower_shadow_pct) * rank(price_efficiency)|market_cap
+-zscore(lower_shadow_pct) * rank(upper_shadow_pct)|market_cap
+-zscore(lower_shadow_pct) * rank(volume_concentration)|market_cap
+-zscore(lower_shadow_pct) * zscore(body_return)|market_cap
+-zscore(morning_return) * rank(body_return)|market_cap
+-zscore(morning_return) * zscore(body_return)|market_cap
+-zscore(morning_return) * zscore(first30min_return)|market_cap
+-zscore(price_efficiency) * zscore(am_pm_divergence)|market_cap
+-zscore(price_efficiency) * zscore(first30min_return)|market_cap
+-zscore(price_efficiency) * zscore(vwap_gap)|market_cap
+-zscore(ret_5d) * zscore(close_vs_high_20d)|market_cap
+-zscore(ret_5d) * zscore(mom_vol_conf)|market_cap
+-zscore(ret_60d) * zscore(mom_vol_conf)|market_cap
+-zscore(rev_1d) * zscore(rev_vol_conf)|market_cap
+-zscore(rev_overnight) * zscore(rev_vol_conf)|market_cap
+-zscore(turnover_change) * rank(volume_profile_ratio)|market_cap
+-zscore(turnover_change) * zscore(bollinger_pos)|market_cap
+-zscore(turnover_change) * zscore(close_vs_high_20d)|market_cap
+-zscore(turnover_change) * zscore(mom_vol_conf)|market_cap
+-zscore(turnover_change) * zscore(ret_20d)|market_cap
+-zscore(turnover_change) * zscore(ret_60d)|market_cap
+-zscore(turnover_change) * zscore(vol_20d)|market_cap
+-zscore(turnover_change) * zscore(vol_ratio)|market_cap
+-zscore(turnover_rate) * zscore(turnover_change)|market_cap
+-zscore(turnover_rate) * zscore(volume_breakout)|market_cap
+-zscore(vol_60d) * zscore(mom_vol_conf)|market_cap
+-zscore(volume_breakout) * rank(downside_vol_60d)|market_cap
+-zscore(volume_breakout) * rank(volume_profile_ratio)|market_cap
+-zscore(volume_breakout) * zscore(bollinger_pos)|market_cap
+-zscore(volume_breakout) * zscore(close_vs_high_20d)|market_cap
+-zscore(volume_breakout) * zscore(log_dollar_vol)|market_cap
+-zscore(volume_breakout) * zscore(mom_vol_conf)|market_cap
+-zscore(volume_breakout) * zscore(ret_20d)|market_cap
+-zscore(volume_breakout) * zscore(ret_60d)|market_cap
+-zscore(volume_breakout) * zscore(turnover_change)|market_cap
+-zscore(volume_breakout) * zscore(vol_20d)|market_cap
+-zscore(volume_breakout) * zscore(vol_60d)|market_cap
+-zscore(volume_breakout) * zscore(vol_ratio)|market_cap
+-zscore(volume_concentration + afternoon_return)|market_cap
+-zscore(volume_concentration + last30min_return)|market_cap
+-zscore(volume_concentration + lower_shadow_pct)|market_cap
+-zscore(volume_concentration)|market_cap
+-zscore(volume_concentration) * rank(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(volume_concentration) * rank(last30min_return)|market_cap
+-zscore(volume_concentration) * rank(lower_shadow_pct)|market_cap
+-zscore(volume_concentration) * rank(morning_return)|market_cap
+-zscore(volume_concentration) * rank(price_efficiency)|market_cap
+-zscore(volume_concentration) * rank(upper_shadow_pct)|market_cap
+-zscore(volume_concentration) * rank(vwap_gap)|market_cap
+-zscore(volume_concentration) * zscore(body_return)|market_cap
+-zscore(volume_concentration) * zscore(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(volume_concentration) * zscore(first30min_return)|market_cap
+-zscore(volume_profile_ratio) * zscore(close_vs_high_20d)|market_cap
+-zscore(volume_profile_ratio) * zscore(turnover_change)|market_cap
+-zscore(volume_profile_ratio) * zscore(volume_breakout)|market_cap
+-zscore(vwap_gap) * rank(afternoon_return)|market_cap
+-zscore(vwap_gap) * rank(afternoon_return) * zscore(intraday_volatility)|market_cap
+-zscore(vwap_gap) * rank(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(vwap_gap) * rank(close_location)|market_cap
+-zscore(vwap_gap) * rank(first30min_return)|market_cap
+-zscore(vwap_gap) * rank(last30min_return)|market_cap
+-zscore(vwap_gap) * zscore(afternoon_return)|market_cap
+-zscore(vwap_gap) * zscore(afternoon_return) * zscore(intraday_volatility)|market_cap
+-zscore(vwap_gap) * zscore(afternoon_return) * zscore(lower_shadow_pct)|market_cap
+-zscore(vwap_gap) * zscore(body_return)|market_cap
+-zscore(vwap_gap) * zscore(body_return) * zscore(intraday_volatility)|market_cap
+-zscore(vwap_gap) * zscore(body_return) * zscore(lower_shadow_pct)|market_cap
+-zscore(vwap_gap) * zscore(close_location)|market_cap
+-zscore(vwap_gap) * zscore(last30min_return)|market_cap
+-zscore(vwap_gap) * zscore(lower_shadow_pct)|market_cap
+-zscore(vwap_gap) * zscore(morning_return) * zscore(intraday_volatility)|market_cap
+rank((open-preclose)/preclose - (close-open)/open)|market_cap
+rank(-close_location) * rank(rev_5d)|market_cap
+rank(auction_return) + rank(rev_vol_conf)|market_cap
+rank(rev_5d) + rank(close_vs_high_20d)|market_cap
+rank(upper_shadow_pct) - rank(morning_return)|market_cap
+signed_power(zscore(close_location) - zscore(body_return), 2) * zscore(intraday_volatility)|market_cap
+signed_power(zscore(price_efficiency) - zscore(afternoon_return), 2)|market_cap
+signed_power(zscore(price_efficiency) - zscore(afternoon_return), 2) * zscore(lower_shadow_pct)|market_cap
+signed_power(zscore(price_efficiency) - zscore(volume_concentration), 2)|market_cap
+zscore(abnormal_vol_rev) - zscore(close_vs_high_20d)|market_cap
+zscore(abnormal_vol_rev) - zscore(turnover_change)|market_cap
+zscore(am_pm_divergence) - zscore(volume_concentration)|market_cap
+zscore(amihud_20d) - zscore(volume_breakout)|market_cap
+zscore(beta_60d) - zscore(volume_breakout)|market_cap
+zscore(bollinger_pos) - zscore(mom_vol_conf)|market_cap
+zscore(close_vs_high_20d) - zscore(bollinger_pos)|market_cap
+zscore(close_vs_high_20d) - zscore(ret_5d)|market_cap
+zscore(downside_vol_60d) - zscore(mom_vol_conf)|market_cap
+zscore(max_dd_60d) * zscore(mom_vol_conf)|market_cap
+zscore(mom_liquidity_adj) - zscore(volume_profile_ratio)|market_cap
+zscore(ret_20d) - zscore(volume_breakout)|market_cap
+zscore(ret_5d) - zscore(mom_vol_conf)|market_cap
+zscore(rev_1d) * zscore(close_vs_high_20d)|market_cap
+zscore(rev_1d) * zscore(mom_liquidity_adj)|market_cap
+zscore(rev_1d) * zscore(mom_vol_conf)|market_cap
+zscore(rev_5d) - zscore(max_dd_60d)|market_cap
+zscore(rev_overnight) * zscore(close_vs_high_20d)|market_cap
+zscore(rev_overnight) - zscore(mom_vol_conf)|market_cap
+zscore(rev_vol_conf) - zscore(volume_profile_ratio)|market_cap
+zscore(rsi_14) - zscore(mom_vol_conf)|market_cap
+zscore(rsi_14) - zscore(volume_breakout)|market_cap
+zscore(turnover_change) * zscore(market_cap_rank)|market_cap
+zscore(turnover_change) * zscore(max_dd_60d)|market_cap
+zscore(turnover_change) * zscore(rev_1d)|market_cap
+zscore(turnover_rate) * zscore(max_dd_60d)|market_cap
+zscore(upper_shadow_pct) * zscore(last30min_return)|market_cap
+zscore(vol_ratio) - zscore(mom_vol_conf)|market_cap
+zscore(volume_breakout) * zscore(market_cap_rank)|market_cap
+zscore(volume_breakout) * zscore(max_dd_60d)|market_cap
+zscore(volume_breakout) * zscore(rev_1d)|market_cap
+zscore(volume_concentration) * rank(afternoon_return) * zscore(upper_shadow_pct)|market_cap
+zscore(volume_concentration) * rank(morning_return) * zscore(upper_shadow_pct)|market_cap
+zscore(volume_concentration) * zscore(first30min_return) * zscore(lower_shadow_pct)|market_cap
+zscore(volume_concentration) * zscore(morning_return) * zscore(upper_shadow_pct)|market_cap
+zscore(volume_profile_ratio) * zscore(max_dd_60d)|market_cap

@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alpha 历史 - YYB Quant</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:"Microsoft YaHei",Arial,sans-serif;background:#0d1117;color:#c9d1d9;font-size:13px}
+    .hdr{height:52px;background:#161b22;border-bottom:1px solid #30363d;display:flex;align-items:center;justify-content:space-between;padding:0 22px;position:sticky;top:0;z-index:50}
+    .hdr h1{font-size:16px;color:#f0f6fc;font-weight:650}
+    .hdr nav{display:flex;gap:18px;align-items:center}
+    .hdr a{color:#8b949e;text-decoration:none;font-size:12px}
+    .hdr a:hover,.hdr a.active{color:#58a6ff}
+    .page{max-width:100%;margin:0 auto;padding:16px 18px 28px}
+    .topline{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:14px}
+    .title h2{font-size:22px;color:#f0f6fc;margin-bottom:5px}
+    .title p{color:#8b949e;line-height:1.6}
+    .statusbar{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .pill{display:inline-flex;align-items:center;gap:5px;border:1px solid #30363d;background:#111820;border-radius:999px;padding:5px 9px;color:#8b949e;font-size:12px}
+    .pill strong{color:#f0f6fc;font-weight:600}
+    .workbench{display:grid;grid-template-columns:300px minmax(0,1fr);gap:14px;align-items:start}
+    .panel{background:#111820;border:1px solid #30363d;border-radius:8px}
+    .panel-head{padding:12px 14px;border-bottom:1px solid #30363d;display:flex;align-items:center;justify-content:space-between;gap:10px}
+    .panel-head h3{font-size:14px;color:#f0f6fc}
+    .panel-body{padding:12px 14px}
+    label{display:block;color:#8b949e;font-size:12px;margin-bottom:6px}
+    input,select{width:100%;background:#0d1117;border:1px solid #30363d;border-radius:5px;color:#f0f6fc;padding:8px 9px;font-size:12px;outline:none}
+    input:focus,select:focus{border-color:#58a6ff}
+    button{background:#1f6feb;border:1px solid #388bfd;color:#fff;border-radius:5px;padding:7px 10px;font-size:12px;cursor:pointer;white-space:nowrap}
+    button.secondary{background:#161b22;border-color:#30363d;color:#c9d1d9}
+    button.warn{background:#9a6700;border-color:#d29922}
+    button.purple{background:#6f42c1;border-color:#8957e5}
+    button.ghost{background:transparent;border-color:#30363d;color:#8b949e}
+    button:disabled{opacity:.45;cursor:not-allowed}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
+    .wide{grid-column:1/-1}
+    .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+    .chip{border:1px solid #30363d;background:#0d1117;border-radius:999px;padding:5px 8px;color:#8b949e;font-size:12px;cursor:pointer;user-select:none}
+    .chip.active{border-color:#58a6ff;color:#58a6ff;background:rgba(88,166,255,.08)}
+    .cond-row{display:grid;grid-template-columns:1.1fr .75fr 1fr 28px;gap:6px;margin-bottom:7px}
+    .cond-row button{padding:0;background:#2d1515;border-color:#6e2c2c;color:#ff7b72}
+    .actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .selection{position:sticky;top:66px;z-index:30}
+    .sel-count{font-size:24px;color:#f0f6fc;font-weight:700}
+    .sel-hint{color:#8b949e;font-size:12px;line-height:1.6;margin-top:4px}
+    .result{margin-top:10px;padding:10px;border:1px solid #30363d;border-radius:6px;background:#0d1117;color:#8b949e;line-height:1.8;min-height:42px}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+    .card{border:1px solid #30363d;background:#111820;border-radius:7px;padding:9px 10px}
+    .card .val{font-size:16px;color:#f0f6fc;font-weight:700;line-height:1.2}
+    .card .lbl{font-size:11px;color:#8b949e;margin-top:4px}
+    .chart-box{border:1px solid #30363d;background:#0d1117;border-radius:7px;padding:10px;margin:10px 0}
+    .chart-box h3{font-size:12px;color:#8b949e;margin-bottom:8px;font-weight:600}
+    .chart-box canvas{width:100%!important;height:200px!important}
+    .fi-list{font-size:11px;color:#8b949e;line-height:1.8;margin-top:8px}
+    .fi-chip{display:inline-block;border:1px solid #30363d;border-radius:999px;padding:3px 7px;margin:2px;color:#c9d1d9;background:#111820}
+    .main{min-width:0}
+    .table-tools{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+    .table-tools .left,.table-tools .right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .table-wrap{border:1px solid #30363d;border-radius:8px;overflow-x:hidden;overflow-y:auto;background:#0d1117;max-height:calc(100vh - 158px)}
+    table{width:100%;border-collapse:collapse;font-size:12px;table-layout:fixed}
+    th{position:sticky;top:0;background:#161b22;color:#8b949e;text-align:left;border-bottom:1px solid #30363d;padding:8px 7px;font-weight:600;z-index:10;cursor:pointer}
+    th:first-child,td:first-child{position:sticky;left:0;background:#111820;z-index:12}
+    td{border-bottom:1px solid #1c2533;padding:8px 7px;vertical-align:middle;overflow:hidden}
+    tr:hover td{background:rgba(88,166,255,.04)}
+    tr:hover td:first-child{background:#132033}
+    .expr{font-family:Consolas,Menlo,monospace;color:#58a6ff;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;white-space:normal;overflow-wrap:anywhere;line-height:1.45}
+    .name{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:#e6edf3;line-height:1.45}
+    .num.pos,.positive{color:#ff7b72}.num.neg,.negative{color:#3fb950}.muted{color:#6e7681}.good{color:#3fb950}.bad{color:#ff7b72}.warnText{color:#d29922}
+    .stack{display:flex;flex-direction:column;gap:3px;line-height:1.25}
+    .sub{font-size:11px;color:#8b949e}
+    .group{display:inline-flex;border-radius:999px;padding:4px 8px;border:1px solid #30363d;background:#111820;color:#c9d1d9;font-size:11px}
+    .group.mixed,.group.unknown{color:#ffb4a8;border-color:#6e2c2c;background:#251316}
+    .type{font-size:11px;color:#8b949e}
+    .empty{padding:52px;text-align:center;color:#6e7681}
+    .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.62);z-index:100;align-items:center;justify-content:center;padding:24px}
+    .modal.open{display:flex}
+    .modal-card{width:min(1180px,96vw);max-height:88vh;overflow:auto;background:#0d1117;border:1px solid #30363d;border-radius:8px}
+    .modal-head{position:sticky;top:0;background:#161b22;border-bottom:1px solid #30363d;padding:12px 14px;display:flex;align-items:center;justify-content:space-between}
+    .corr-table{width:100%;font-size:11px;table-layout:auto;border-collapse:collapse}
+    .corr-table th,.corr-table td{padding:6px 7px;text-align:center;white-space:nowrap}
+    .corr-rh{position:sticky!important;left:0;background:#161b22!important;text-align:left!important;max-width:140px;overflow:hidden;text-overflow:ellipsis;z-index:3;font-weight:600;color:#e6edf3}
+    .corr-ch span{display:block;max-width:100px;overflow:hidden;text-overflow:ellipsis;margin:0 auto}
+    .corr-table td.corr-rh{font-weight:400;color:#8b949e}
+    .corr-high{background:#4d1f24!important;color:#ffd8d8}.corr-mid{background:#3b2d12!important;color:#ffd98a}.corr-low{background:#11301f!important;color:#9be9a8}
+    .sa-sub-item{cursor:pointer;padding:8px 10px;border:1px solid #30363d;border-radius:5px;margin-bottom:4px;background:#111820;font-size:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+    .sa-sub-item:hover{border-color:#58a6ff}
+    .sa-sub-detail{display:none;padding:10px;border:1px solid #30363d;border-top:0;border-radius:0 0 5px 5px;margin-top:-5px;margin-bottom:8px;background:#0d1117}
+    .sa-sub-detail.open{display:block}
+    @media(max-width:980px){.workbench{grid-template-columns:1fr}.selection{position:static}.topline{align-items:flex-start;flex-direction:column}.table-wrap{max-height:none}th,td{font-size:11px;padding:7px 5px}.hdr{height:auto;align-items:flex-start;flex-direction:column;padding:10px 14px}.hdr nav{flex-wrap:wrap;gap:10px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+</head>
+<body>
+  <div class="hdr">
+    <h1>YYB Quant Research</h1>
+    <nav>
+      <a href="/dashboard">仪表盘</a>
+      <a class="active" href="/alpha_history">Alpha历史</a>
+      <a href="/data_fields">数据字段</a>
+      <a href="/operators">操作符</a>
+      <a href="/correlation">相关性</a>
+      <a href="/community">社区</a>
+      <a href="/learn">学习</a>
+      <a href="/logout">退出</a>
+    </nav>
+  </div>
+
+  <main class="page">
+    <div class="topline">
+      <div class="title">
+        <h2>Alpha 历史研究台</h2>
+        <p>按经济含义分组、按多指标同时筛选，再用相关性贪心、多选相关性矩阵、等权和 LightGBM 组合来做候选验证。</p>
+      </div>
+      <div class="statusbar" id="statusbar">
+        <span class="pill">加载中</span>
+      </div>
+    </div>
+
+    <div class="workbench">
+      <aside>
+        <section class="panel">
+          <div class="panel-head"><h3>筛选</h3><button class="ghost" onclick="resetFilters()">重置</button></div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="wide">
+                <label>搜索名称 / 表达式</label>
+                <input id="searchInput" placeholder="如 ret_20d、vwap、downside" oninput="applyFilters()">
+              </div>
+              <div>
+                <label>类型</label>
+                <select id="typeFilter" onchange="applyFilters()">
+                  <option value="alpha">单因子</option>
+                  <option value="all">全部</option>
+                  <option value="combo">组合</option>
+                  <option value="lgb">LightGBM</option>
+                </select>
+              </div>
+              <div>
+                <label>混合信号</label>
+                <select id="mixedFilter" onchange="applyFilters()">
+                  <option value="hide">隐藏混合/未分组</option>
+                  <option value="show">显示全部</option>
+                  <option value="only">只看混合/未分组</option>
+                </select>
+              </div>
+              <div>
+                <label>中性化</label>
+                <select id="neutFilter" onchange="applyFilters()">
+                  <option value="all">全部</option>
+                  <option value="market_cap">市值中性化</option>
+                  <option value="none">无中性化</option>
+                </select>
+              </div>
+            </div>
+            <label>经济分组</label>
+            <div id="groupChips" class="chips"></div>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top:12px">
+          <div class="panel-head"><h3>指标条件</h3><button class="secondary" onclick="addCondition()">新增条件</button></div>
+          <div class="panel-body">
+            <div id="conditions"></div>
+            <div class="sel-hint">所有条件同时满足才会显示，例如 <code>Sharpe &gt; 1</code> 且 <code>|IC| &gt; 0.03</code>。</div>
+          </div>
+        </section>
+
+        <section class="panel" style="margin-top:12px">
+          <div class="panel-head"><h3>相关性贪心筛选</h3></div>
+          <div class="panel-body">
+            <div class="row">
+              <div>
+                <label>MaxCorr</label>
+                <input id="greedyMaxCorr" type="number" min="0" max="1" step="0.05" value="0.70">
+              </div>
+              <div>
+                <label>保留个数</label>
+                <input id="greedyKeep" type="number" min="1" step="1" value="50">
+              </div>
+              <div>
+                <label>排序指标</label>
+                <select id="greedyMetric">
+                  <option value="abs_ic">|IC|</option>
+                  <option value="ic">IC</option>
+                  <option value="sharpe">Sharpe</option>
+                  <option value="fitness">Fitness</option>
+                  <option value="icir">ICIR</option>
+                  <option value="annual">年化收益</option>
+                  <option value="turnover">Turnover</option>
+                  <option value="maxdd">最大回撤</option>
+                  <option value="max_corr">MaxCorr</option>
+                </select>
+              </div>
+              <div>
+                <label>顺序</label>
+                <select id="greedyOrder">
+                  <option value="desc">降序</option>
+                  <option value="asc">升序</option>
+                </select>
+              </div>
+            </div>
+            <div class="actions">
+              <button onclick="runGreedy()">应用为筛选</button>
+              <button class="secondary" onclick="clearGreedy()">清除贪心筛选</button>
+            </div>
+            <div id="greedyResult" class="result">先用左侧条件圈定候选，再按任意指标排序做 maxcorr 贪心。</div>
+          </div>
+        </section>
+
+        <section class="panel selection" style="margin-top:12px">
+          <div class="panel-head"><h3>已选因子</h3><button class="ghost" onclick="clearSelection()">清空</button></div>
+          <div class="panel-body">
+            <div class="sel-count" id="selectedCount">0</div>
+            <div class="sel-hint">多选后可以直接查看相关性矩阵，或做等权 / LightGBM 组合回测。</div>
+            <div class="actions">
+              <button id="corrBtn" class="secondary" onclick="showCorrelation()" disabled>查看相关性</button>
+              <select id="ewMethod" style="width:auto;padding:6px 10px;background:#161b22;color:#c9d1d9;border:1px solid #30363d;border-radius:6px;font-size:12px">
+                <option value="equal">等权</option>
+                <option value="icir">ICIR加权</option>
+                <option value="ridge">Ridge</option>
+              </select>
+              <button id="ewBtn" class="warn" onclick="runEqualWeight()" disabled>运行组合</button>
+              <button id="lgbBtn" class="purple" onclick="runLGB()" disabled>LightGBM</button>
+            </div>
+            <div id="comboResult" class="result">等待选择。</div>
+          </div>
+        </section>
+      </aside>
+
+      <section class="main">
+        <div class="table-tools">
+          <div class="left">
+            <button class="secondary" onclick="reloadHistory(true)">刷新</button>
+            <button class="secondary" onclick="toggleVisibleSelection()">选择当前页</button>
+            <button class="secondary" onclick="clearVisibleSelection()">取消当前页</button>
+          </div>
+          <div class="right">
+            <span class="pill">当前显示 <strong id="visibleCount">0</strong></span>
+            <span class="pill">历史总数 <strong id="totalCount">0</strong></span>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <colgroup>
+              <col style="width:4%">
+              <col style="width:9%">
+              <col style="width:8%">
+              <col style="width:5%">
+              <col style="width:22%">
+              <col style="width:6%">
+              <col style="width:5%">
+              <col style="width:5%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:8%">
+              <col style="width:7%">
+            </colgroup>
+            <thead>
+              <tr>
+                <th style="width:42px">选</th>
+                <th onclick="sortBy('timestamp')">时间 <span id="sort-timestamp"></span></th>
+                <th onclick="sortBy('name')">名称 <span id="sort-name"></span></th>
+                <th onclick="sortBy('group')">分组 <span id="sort-group"></span></th>
+                <th>类型</th>
+                <th onclick="sortBy('is_ic')">IS_IC <span id="sort-is_ic"></span></th>
+                <th onclick="sortBy('oos_ic')">OOS_IC <span id="sort-oos_ic"></span></th>
+                <th onclick="sortBy('annual')">年化/回撤 <span id="sort-annual"></span><span id="sort-maxdd"></span></th>
+                <th onclick="sortBy('sharpe')">Sharpe/ICIR <span id="sort-sharpe"></span><span id="sort-icir"></span></th>
+                <th onclick="sortBy('maxcorr')">交易/相关 <span id="sort-turnover"></span><span id="sort-maxcorr"></span></th>
+                <th>中性化</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+              <tr><td colspan="12" class="empty">加载中...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <div class="modal" id="detailModal">
+    <div class="modal-card" style="width:min(1100px,98vw)">
+      <div class="modal-head">
+        <h3 id="detailTitle">因子详情</h3>
+        <button class="secondary" onclick="closeDetail()">关闭</button>
+      </div>
+      <div id="detailBody" class="panel-body" style="padding:16px;max-height:80vh;overflow-y:auto"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="corrModal">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h3>已选因子相关性矩阵</h3>
+        <button class="secondary" onclick="closeCorrelation()">关闭</button>
+      </div>
+      <div id="corrBody" class="panel-body"></div>
+    </div>
+  </div>
+
+  <script>
+    document.cookie = "ngrok-skip-browser-warning=true; path=/; max-age=86400";
+    (function loadChartJS(){
+      if(typeof Chart!=='undefined')return;
+      var s=document.createElement('script');
+      s.src='/static/chart.umd.min.js';
+      s.onerror=function(){console.warn('Chart.js unavailable')};
+      document.head.appendChild(s);
+    })();
+    var records=[], viewRecords=[], selected={}, groupFilter=new Set(), activeGreedyIds=null, historyMeta={};
+    var sortKey='abs_ic', sortDir='desc', conditions=[];
+    var conditionFields=[
+      ['is_ic','IS_IC'],['oos_ic','OOS_IC'],['annual','年化收益'],['sharpe','Sharpe'],
+      ['fitness','Fitness'],['icir','ICIR'],['turnover','Turnover'],['maxdd','最大回撤'],
+      ['maxcorr','MaxCorr'],['group','分组'],['type','类型'],['name','名称'],['expression','表达式']
+    ];
+    var ops=['>','>=','<','<=','=','!=','contains'];
+
+    function byId(id){return document.getElementById(id)}
+    function esc(s){var d=document.createElement('div');d.textContent=s==null?'':String(s);return d.innerHTML}
+    function num(v){v=Number(v);return Number.isFinite(v)?v:null}
+    function metric(r,key){
+      var m=r.metrics||{};
+      if(key==='ic')return num(m.is_pearson_ic)!=null?num(m.is_pearson_ic):(num(m.pearson_ic)||0);
+      if(key==='abs_ic')return Math.abs(num(m.is_pearson_ic)!=null?num(m.is_pearson_ic):(num(m.pearson_ic)||0));
+      if(key==='is_ic')return num(m.is_pearson_ic)!=null?num(m.is_pearson_ic):(num(m.pearson_ic)||0);
+      if(key==='oos_ic')return num(m.oos_pearson_ic)!=null?num(m.oos_pearson_ic):(num(m.pearson_ic)||0);
+      if(key==='annual')return num(m.is_annual_excess)!=null?num(m.is_annual_excess):(num(m.annual_excess)??num(m.annual_return)??num(m.returns)??0);
+      if(key==='sharpe')return num(m.is_sharpe)!=null?num(m.is_sharpe):(num(m.sharpe)||0);
+      if(key==='icir')return num(m.is_icir)!=null?num(m.is_icir):(num(m.icir)||0);
+      if(key==='fitness')return num(m.is_fitness)!=null?num(m.is_fitness):(num(m.fitness)||0);
+      if(key==='turnover')return num(m.is_turnover)!=null?num(m.is_turnover):(num(m.turnover)||0);
+      if(key==='maxdd')return Math.abs(num(m.is_max_drawdown)!=null?num(m.is_max_drawdown):(num(m.max_drawdown)||0));
+      if(key==='maxcorr'){
+        var rc=num(r.max_corr);
+        if(rc!=null&&rc>0)return rc;
+        var mc=num(m.max_corr);
+        return (mc!=null&&mc>0)?mc:null;
+      }
+      if(key==='timestamp')return Date.parse(r.timestamp||'')||0;
+      if(key==='group')return r.group||'';
+      if(key==='type')return typeLabel(r);
+      if(key==='name')return r.name||'';
+      if(key==='expression')return r.expression||'';
+      return m[key];
+    }
+    function pct(v,d){return ((num(v)||0)*100).toFixed(d==null?2:d)+'%'}
+    function fmt(v,d){v=num(v);return v==null?'--':v.toFixed(d==null?2:d)}
+    function signed(v,d){v=num(v)||0;return '<span class="'+(v>=0?'positive':'negative')+'">'+fmt(v,d)+'</span>'}
+    function maxCorrClass(v){if(v==null)return 'muted';return v<0.7?'good':(v<0.85?'warnText':'bad')}
+    function drawdownClass(v){v=num(v)||0;return v<0.18?'good':(v<0.32?'warnText':'bad')}
+    function downsample(arr,target){
+      arr=arr||[];
+      if(arr.length<=target)return arr;
+      var step=arr.length/target,out=[];
+      for(var i=0;i<target;i++){
+        var lo=Math.floor(i*step),hi=Math.floor((i+1)*step),s=0,n=0;
+        for(var j=lo;j<hi&&j<arr.length;j++){if(arr[j]!=null){s+=Number(arr[j]);n++;}}
+        out.push(n?s/n:null);
+      }
+      return out;
+    }
+    function genDates(y,m,d,n){
+      var dt=new Date(y,m-1,d),out=[];
+      for(var i=0;i<n;i++){out.push(dt.toISOString().slice(0,10));dt.setDate(dt.getDate()+1);}
+      return out;
+    }
+    function genTradeLabels(nPts){
+      // Generate trading-day-aware date labels for ~nPts points starting 2020-01-02
+      var labels=[], d=new Date(2020,0,2), count=0, lastLabel='';
+      while(count<nPts){
+        var dow=d.getDay();
+        if(dow!==0&&dow!==6){  // skip weekends
+          var s=d.toISOString().slice(0,10);
+          var show=false;
+          if(count===0)show=true;
+          else if(s.endsWith('-01-02'))show=true; // year start
+          else if(s.endsWith('-07-01'))show=true; // mid year
+          labels.push(show?s:'');
+          if(lastLabel.length>10&&s.endsWith('-01-02'))lastLabel='';
+          count++;
+        }
+        d.setDate(d.getDate()+1);
+      }
+      return labels;
+    }
+    function typeLabel(r){var expr=(r.expression||'').toLowerCase();if(r.type==='superalpha'&&expr.indexOf('lgb(')===0)return 'LGB';if(r.type==='superalpha'){if(expr.indexOf('[icir]')>=0)return 'ICIR';if(expr.indexOf('[ridge]')>=0)return 'Ridge';return 'EW'}return '单因子'}
+    function groupClass(r){return r.group_key==='mixed'?'mixed':(r.group_key==='unknown'?'unknown':'')}
+
+    async function reloadHistory(force){
+      byId('historyBody').innerHTML='<tr><td colspan="14" class="empty">加载中...</td></tr>';
+      var lastErr=null;
+      for(var attempt=0;attempt<3;attempt++){
+        if(attempt>0)await new Promise(function(r){setTimeout(r,1000*attempt)});
+        try{
+          var resp=await fetch('/api/alpha/history',{cache:'no-store',headers:{'ngrok-skip-browser-warning':'true'}});
+          var txt=await resp.text();
+          var data;
+          try{data=JSON.parse(txt)}catch(e){throw new Error(txt.slice(0,100)||'返回非JSON')}
+          if(!resp.ok||data.error)throw new Error(data.error||('HTTP '+resp.status));
+          historyMeta=data||{};
+          records=data.records||[];
+          selected=Object.fromEntries(Object.entries(selected).filter(function(kv){return records.some(function(r){return r.id===kv[0]})}));
+          renderGroups();
+          applyFilters();
+          return;
+        }catch(e){lastErr=e}
+      }
+      byId('historyBody').innerHTML='<tr><td colspan="10" class="empty">加载失败（重试3次）：'+esc(lastErr&&lastErr.message)+' <button class=\"secondary\" onclick=\"reloadHistory()\">手动重试</button></td></tr>';
+    }
+
+    function renderGroups(){
+      var counts={};
+      records.forEach(function(r){counts[r.group||'未分组']=(counts[r.group||'未分组']||0)+1});
+      var html=Object.keys(counts).sort().map(function(g){
+        var cls=groupFilter.has(g)?'chip active':'chip';
+        return '<span class="'+cls+'" onclick="toggleGroup(\''+esc(g).replace(/'/g,"\\'")+'\')">'+esc(g)+' '+counts[g]+'</span>';
+      }).join('');
+      byId('groupChips').innerHTML=html||'<span class="muted">暂无分组</span>';
+    }
+    function toggleGroup(g){if(groupFilter.has(g))groupFilter.delete(g);else groupFilter.add(g);renderGroups();applyFilters()}
+
+    function addCondition(field,op,value){
+      conditions.push({field:field||'abs_ic',op:op||'>',value:value||''});
+      renderConditions();
+    }
+    function renderConditions(){
+      byId('conditions').innerHTML=conditions.map(function(c,i){
+        var fs=conditionFields.map(function(f){return '<option value="'+f[0]+'" '+(c.field===f[0]?'selected':'')+'>'+f[1]+'</option>'}).join('');
+        var os=ops.map(function(o){return '<option value="'+o+'" '+(c.op===o?'selected':'')+'>'+o+'</option>'}).join('');
+        return '<div class="cond-row"><select onchange="conditions['+i+'].field=this.value;applyFilters()">'+fs+'</select><select onchange="conditions['+i+'].op=this.value;applyFilters()">'+os+'</select><input value="'+esc(c.value)+'" oninput="conditions['+i+'].value=this.value;applyFilters()" placeholder="值"><button onclick="conditions.splice('+i+',1);renderConditions();applyFilters()">×</button></div>';
+      }).join('');
+    }
+
+    function passCondition(r,c){
+      if(c.value===''||c.value==null)return true;
+      var v=metric(r,c.field), target=c.value;
+      if(['group','type','name','expression'].includes(c.field)){
+        var sv=String(v||'').toLowerCase(), tv=String(target).toLowerCase();
+        if(c.op==='contains')return sv.indexOf(tv)>=0;
+        if(c.op==='=')return sv===tv;
+        if(c.op==='!=')return sv!==tv;
+        return sv.indexOf(tv)>=0;
+      }
+      var nv=num(v), nt=num(target);
+      if(nv==null||nt==null)return false;
+      if(c.op==='>')return nv>nt;
+      if(c.op==='>=')return nv>=nt;
+      if(c.op==='<')return nv<nt;
+      if(c.op==='<=')return nv<=nt;
+      if(c.op==='=')return Math.abs(nv-nt)<1e-12;
+      if(c.op==='!=')return Math.abs(nv-nt)>=1e-12;
+      return String(nv).indexOf(String(target))>=0;
+    }
+
+    function baseFiltered(ignoreGreedy){
+      var q=(byId('searchInput').value||'').toLowerCase().trim();
+      var typ=byId('typeFilter').value, mixed=byId('mixedFilter').value;
+      return records.filter(function(r){
+        if(typ==='alpha'&&r.type!=='alpha')return false;
+        if(typ==='combo'&&!(r.type==='superalpha'&&(r.expression||'').indexOf('lgb(')!==0))return false;
+        if(typ==='lgb'&&!(r.type==='superalpha'&&(r.expression||'').indexOf('lgb(')===0))return false;
+        if(mixed==='hide'&&r.type==='alpha'&&r.group_excluded)return false;
+        if(mixed==='only'&&!(r.type==='alpha'&&r.group_excluded))return false;
+        var neut=byId('neutFilter').value;
+        if(neut==='market_cap'&&!(r.metrics||{})._neutralize)return false;
+        if(neut==='none'&&(r.metrics||{})._neutralize)return false;
+        if(groupFilter.size&&!(groupFilter.has(r.group||'未分组')))return false;
+        if(q&&String((r.name||'')+' '+(r.expression||'')).toLowerCase().indexOf(q)<0)return false;
+        if(!conditions.every(function(c){return passCondition(r,c)}))return false;
+        if(!ignoreGreedy&&activeGreedyIds&&!(activeGreedyIds.has(r.id)))return false;
+        return true;
+      });
+    }
+    function applyFilters(){
+      viewRecords=baseFiltered(false);
+      sortRecords();
+      renderTable();
+      updateStatus();
+    }
+    function sortRecords(){
+      viewRecords.sort(function(a,b){
+        var va=metric(a,sortKey), vb=metric(b,sortKey);
+        if(typeof va==='string'||typeof vb==='string')return sortDir==='asc'?String(va).localeCompare(String(vb)):String(vb).localeCompare(String(va));
+        va=va==null?-Infinity:va;vb=vb==null?-Infinity:vb;
+        return sortDir==='asc'?va-vb:vb-va;
+      });
+    }
+    function sortBy(k){if(sortKey===k)sortDir=sortDir==='desc'?'asc':'desc';else{sortKey=k;sortDir='desc'}applyFilters()}
+
+    function renderTable(){
+      ['timestamp','name','group','abs_ic','ic','annual','sharpe','icir','fitness','turnover','maxdd','maxcorr'].forEach(function(k){
+        var el=byId('sort-'+k);if(el)el.textContent=sortKey===k?(sortDir==='asc'?'↑':'↓'):'';
+      });
+      if(!viewRecords.length){byId('historyBody').innerHTML='<tr><td colspan="12" class="empty">没有满足条件的因子</td></tr>';return}
+      byId('historyBody').innerHTML=viewRecords.map(function(r){
+        var m=r.metrics||{}, id=esc(r.id), t=(r.timestamp||'').replace('T',' ').slice(0,16);
+        var dd=metric(r,'maxdd'), ann=metric(r,'annual'), is_ic=num(m.is_pearson_ic)!=null?m.is_pearson_ic:num(m.pearson_ic);
+        var oos_ic=num(m.oos_pearson_ic)!=null?m.oos_pearson_ic:num(m.pearson_ic);
+        var maxcorr=metric(r,'maxcorr');
+        return '<tr>'+
+          '<td><input type="checkbox" '+(selected[r.id]?'checked':'')+' onchange="toggleSelect(\''+id+'\',this.checked)"></td>'+
+          '<td class="muted">'+esc(t)+'</td>'+
+          '<td><span class="name" title="'+esc(r.name||(r.expression||'').slice(0,40))+'">'+esc(r.name||(r.expression||'').slice(0,30))+'</span>'+
+          '<button class="ghost" style="font-size:10px;padding:1px 4px" onclick="copyExpr(\''+id+'\')">复制</button></td>'+
+          '<td><span class="group '+groupClass(r)+'" title="'+esc(r.group_reason||'')+'">'+esc(r.group||'?')+'</span></td>'+
+          '<td><span class="type">'+typeLabel(r)+'</span></td>'+
+          '<td>'+signed(is_ic,4)+'</td>'+
+          '<td>'+signed(oos_ic,4)+'</td>'+
+          '<td><div class="stack"><span>'+signed(ann*100,2)+'%</span><span class="'+drawdownClass(dd)+'">DD '+pct(dd,2)+'</span></div></td>'+
+          '<td><div class="stack"><span>S '+fmt(m.sharpe,2)+'</span><span class="sub">IR '+fmt(m.icir,2)+'</span></div></td>'+
+          '<td><div class="stack"><span>TO '+pct(m.turnover,1)+'</span><span class="'+maxCorrClass(maxcorr)+'">Cr '+(maxcorr==null?'--':fmt(maxcorr,3))+'</span></div></td>'+
+          '<td><span class="pill" style="font-size:10px">'+(m._neutralize=='market_cap'?'市值':'无')+'</span></td>'+
+          '<td><button class="ghost" onclick="showDetail(\''+id+'\')">详情</button></td>'+
+        '</tr>';
+      }).join('');
+    }
+
+    function updateStatus(){
+      byId('visibleCount').textContent=viewRecords.length;
+      byId('totalCount').textContent=records.length;
+      var single=records.filter(function(r){return r.type==='alpha'}).length;
+      var clean=records.filter(function(r){return r.type==='alpha'&&!r.group_excluded}).length;
+      var mixed=records.filter(function(r){return r.type==='alpha'&&r.group_excluded}).length;
+      var dropped=historyMeta.dropped_negative_mirrors||0;
+      byId('statusbar').innerHTML='<span class="pill">单因子 <strong>'+single+'</strong></span><span class="pill">明确分组 <strong>'+clean+'</strong></span><span class="pill">混合/未分组 <strong>'+mixed+'</strong></span><span class="pill">反向负IC已剔除 <strong>'+dropped+'</strong></span>';
+      updateSelection();
+    }
+    function toggleSelect(id,on){if(on)selected[id]=true;else delete selected[id];updateSelection()}
+    function updateSelection(){
+      var n=Object.keys(selected).length;
+      byId('selectedCount').textContent=n;
+      byId('corrBtn').disabled=n<2;
+      byId('ewBtn').disabled=n<2;
+      byId('lgbBtn').disabled=n<2;
+    }
+    function selectedRecords(){var ids=new Set(Object.keys(selected));return records.filter(function(r){return ids.has(r.id)})}
+    function toggleVisibleSelection(){viewRecords.forEach(function(r){selected[r.id]=true});renderTable();updateSelection()}
+    function clearVisibleSelection(){viewRecords.forEach(function(r){delete selected[r.id]});renderTable();updateSelection()}
+    function clearSelection(){selected={};renderTable();updateSelection()}
+    function resetFilters(){groupFilter.clear();conditions=[];activeGreedyIds=null;byId('searchInput').value='';byId('typeFilter').value='alpha';byId('mixedFilter').value='hide';byId('neutFilter').value='all';renderGroups();renderConditions();applyFilters();byId('greedyResult').textContent='已重置筛选。'}
+    function clearGreedy(){activeGreedyIds=null;applyFilters();byId('greedyResult').textContent='已清除贪心筛选。'}
+    function copyExpr(id){var r=records.find(function(x){return x.id===id});if(!r)return;navigator.clipboard&&navigator.clipboard.writeText(r.expression||'');byId('comboResult').textContent='已复制表达式。'}
+    function showDetail(id){
+      var r=records.find(function(x){return x.id===id});if(!r)return;
+      var expr=r.expression||'', m=r.metrics||{};
+      byId('detailModal').classList.add('open');
+      byId('detailTitle').textContent=(r.name||'').slice(0,40)||'因子详情';
+      var h='';
+      h+='<div style=\"background:#161b22;border:1px solid #30363d;border-radius:6px;padding:10px;margin-bottom:12px;font-family:Consolas,monospace;font-size:11px;color:#58a6ff;white-space:pre-wrap;word-break:break-all;max-height:150px;overflow-y:auto\">'+esc(expr)+'</div>';
+      h+='<div style=\"display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px\">';
+      h+=renderMetricPanel('IS (2020-2022)',m,true);
+      h+=renderMetricPanel('OOS (2023)',m,false);
+      h+='</div>';
+      h+='<div class=\"chart-box\"><h3>PnL (IS蓝 / OOS红)</h3><canvas id=\"detail-pnl\" style=\"height:200px\"></canvas></div>';
+      byId('detailBody').innerHTML=h;
+      fetch('/api/alpha/history/'+id+'/pnl',{headers:{'ngrok-skip-browser-warning':'true'}}).then(function(r2){return r2.json()}).then(function(d2){
+        var isRaw=d2.pnl_is||[], oosRaw=d2.pnl_oos||[];
+        if(typeof Chart!=='undefined'&&(isRaw.length||oosRaw.length)){
+          setTimeout(function(){
+            var c=document.getElementById('detail-pnl');if(!c)return;
+            var ex=Chart.getChart(c);if(ex)ex.destroy();
+            var isDS=downsample(isRaw,200), oosDS=downsample(oosRaw,80);
+            var combined=isDS.concat(oosDS);
+            var labels=genTradeLabels(combined.length);
+            // IS blue, OOS red — OOS baseline = IS endpoint
+            var isLast=isDS.length?isDS[isDS.length-1]:0;
+            var ds=[];
+            if(isDS.length)ds.push({label:'IS',data:isDS,borderColor:'#58a6ff',borderWidth:2,pointRadius:0,spanGaps:true});
+            if(oosDS.length){
+              var oosAdjusted=[];
+              for(var k=0;k<oosDS.length;k++)oosAdjusted.push(isLast+oosDS[k]);
+              var oosPadded=[]; for(var k=0;k<isDS.length-1;k++)oosPadded.push(null);
+              oosPadded.push(isLast);  // bridge point
+              for(var k=0;k<oosAdjusted.length;k++)oosPadded.push(oosAdjusted[k]);
+              ds.push({label:'OOS',data:oosPadded,borderColor:'#e94560',borderWidth:2,pointRadius:0,spanGaps:true});
+            }
+            new Chart(c.getContext('2d'),{type:'line',data:{labels:labels,datasets:ds},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#8b949e',font:{size:10},boxWidth:12}}},scales:{x:{ticks:{maxTicksLimit:6,color:'#484f58',font:{size:9},callback:function(v,i){return labels[i]||''}},grid:{display:false}},y:{grid:{color:'#21262d'}}}}});
+          },100);
+        }
+      }).catch(function(){});
+    }
+    function renderMetricPanel(title,m,isIS){
+      var prefix=isIS?'is_':'';
+      var ic=isIS?(m.is_pearson_ic||m.pearson_ic):(m.oos_pearson_ic||m.pearson_ic);
+      var sh=m[prefix+'sharpe']||(isIS?null:m.sharpe);
+      var ir=m[prefix+'icir']||(isIS?null:m.icir);
+      var ann=m[prefix+'annual_excess']||m[prefix+'returns']||(isIS?null:m.annual_excess||m.returns);
+      var fit=m[prefix+'fitness']||(isIS?null:m.fitness);
+      var to=m[prefix+'turnover']||(isIS?null:m.turnover);
+      var dd=m[prefix+'max_drawdown']||(isIS?null:m.max_drawdown);
+      var mg=m[prefix+'margin_bps']||(isIS?null:m.margin_bps);
+      var wr=m[prefix+'win_rate']||(isIS?null:m.win_rate);
+      var h='<div style=\"background:#0d1117;border:1px solid #30363d;border-radius:6px;padding:8px\">';
+      h+='<div style=\"color:#f0f6fc;font-weight:600;font-size:12px;margin-bottom:6px\">'+title+'</div>';
+      h+='<div style=\"font-size:11px;line-height:1.8\">';
+      if(ic!=null)h+='IC: <b>'+fmt(ic,4)+'</b><br>';
+      if(sh!=null)h+='Sharpe: <b>'+fmt(sh,2)+'</b><br>';
+      if(ir!=null)h+='ICIR: <b>'+fmt(ir,2)+'</b><br>';
+      if(ann!=null)h+='年化: <b>'+pct(ann,1)+'</b><br>';
+      if(fit!=null)h+='Fit: <b>'+fmt(fit,2)+'</b><br>';
+      if(to!=null)h+='TO: <b>'+pct(to,1)+'</b><br>';
+      if(dd!=null)h+='DD: <b>'+pct(Math.abs(num(dd)||0),2)+'</b><br>';
+      if(mg!=null)h+='Margin: <b>'+fmt(mg,1)+'bps</b><br>';
+      if(wr!=null)h+='胜率: <b>'+pct(wr,1)+'</b>';
+      h+='</div></div>';
+      return h;
+    }
+    function closeDetail(){byId('detailModal').classList.remove('open')}
+
+    async function postJson(url,body,timeoutSec){
+      var ctrl=new AbortController();
+      var t=setTimeout(function(){ctrl.abort();},(timeoutSec||60)*1000);
+      try{
+        var resp=await fetch(url,{method:'POST',headers:{'Content-Type':'application/json','ngrok-skip-browser-warning':'true'},body:JSON.stringify(body||{}),signal:ctrl.signal});
+        clearTimeout(t);
+        var txt=await resp.text(), data={};
+        try{data=txt?JSON.parse(txt):{}}catch(e){throw new Error(txt.slice(0,160)||'返回不是 JSON')}
+        if(!resp.ok||data.error)throw new Error(data.error||('HTTP '+resp.status));
+        return data;
+      }catch(e){
+        clearTimeout(t);
+        if(e.name==='AbortError')throw new Error('请求超时（'+timeoutSec+'秒），请重试');
+        throw e;
+      }
+    }
+    function metricsLine(m){
+      m=m||{};
+      return 'IC '+fmt(m.pearson_ic,4)+'，年化 '+pct(m.annual_excess??m.annual_return??m.returns,2)+'，Sharpe '+fmt(m.sharpe,2)+'，Fitness '+fmt(m.fitness,2)+'，最大回撤 '+pct(Math.abs(num(m.max_drawdown)||0),2);
+    }
+    async function selectedCorrelationSummary(ids){
+      try{
+        var data=await postJson('/api/alpha/correlation',{ids:ids});
+        var mat=data.correlation_matrix||[], max=0, pairs=0;
+        for(var i=0;i<mat.length;i++){
+          for(var j=i+1;j<mat[i].length;j++){
+            var v=Math.abs(num(mat[i][j])||0);
+            if(v>max)max=v;
+            pairs++;
+          }
+        }
+        return {max_corr:max,pairs:pairs,count:ids.length};
+      }catch(e){
+        return {error:e.message,count:ids.length};
+      }
+    }
+    function renderMetricCard(value,label,cls){
+      return '<div class="card"><div class="val '+(cls||'')+'">'+value+'</div><div class="lbl">'+label+'</div></div>';
+    }
+    function renderLgbResult(data,corrSummary){
+      var cm=data.metrics||data.combined_metrics||{}, fi=data.feature_importance||{}, subs=data.sub_alphas||[];
+      var annual=(cm.returns??cm.annual_excess??cm.annual_return??0);
+      var h='<div style="color:#a855f7;font-weight:bold;margin-bottom:8px;">LightGBM 组合结果</div>';
+      h+='<div style="font-size:11px;color:#8b949e;line-height:1.8;margin-bottom:8px;">请求 '+(data.n_requested_factors||0)+' 个，去重后 '+(data.n_unique_factors||0)+' 个，实际训练 '+(data.n_factors||0)+' 个；训练期 2020-2022，OOS 2023。'+((data.n_skipped_features||0)>0?' 跳过坏特征 '+data.n_skipped_features+' 个。':'')+'</div>';
+      if(corrSummary){
+        if(corrSummary.error)h+='<div class="sub">输入相关性计算失败：'+esc(corrSummary.error)+'</div>';
+        else h+='<div class="sub">输入因子相关性：'+corrSummary.count+' 个，最大两两相关 '+fmt(corrSummary.max_corr,3)+'。可点击“查看相关性”看矩阵。</div>';
+      }
+      h+='<div class="metrics">';
+      h+=renderMetricCard(pct(annual,2),'年化收益',annual>=0?'positive':'negative');
+      h+=renderMetricCard(fmt(cm.pearson_ic,4),'Pearson IC');
+      h+=renderMetricCard(fmt(cm.sharpe,2),'Sharpe');
+      h+=renderMetricCard(fmt(cm.fitness,2),'Fitness');
+      h+=renderMetricCard(pct(cm.turnover,1),'Turnover');
+      h+=renderMetricCard(pct(Math.abs(num(cm.max_drawdown)||0),2),'最大回撤',drawdownClass(Math.abs(num(cm.max_drawdown)||0)));
+      h+=renderMetricCard(fmt(cm.margin_bps,1),'Margin(bps)');
+      h+=renderMetricCard(pct(cm.win_rate,1),'日胜率');
+      h+='</div>';
+      h+='<div class="chart-box"><h3>PnL 叠加对比</h3><canvas id="lgb-comb-pnl"></canvas></div>';
+      var fis=Object.keys(fi).map(function(k){return [k,fi[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,12);
+      if(fis.length){
+        h+='<div class="fi-list"><strong>特征重要性</strong> ';
+        fis.forEach(function(p){h+='<span class="fi-chip" title="'+esc(p[0])+'">'+esc(p[0].slice(0,24))+' '+fmt(p[1]*100,1)+'%</span>'});
+        h+='</div>';
+      }
+      if(subs.length){
+        h+='<div class="fi-list"><strong>Top 子因子</strong> ';
+        subs.forEach(function(sa){
+          var sm=sa.metrics||{};
+          h+='<span class="fi-chip" title="'+esc(sa.expression||'')+'">IC '+fmt(sm.pearson_ic,4)+' / 年化 '+pct(sm.returns??sm.annual_excess??0,1)+'</span>';
+        });
+        h+='</div>';
+      }
+      byId('comboResult').innerHTML=h;
+      drawLgbCharts(cm.pnl_series||data.pnl_series||[],subs);
+    }
+    function drawLgbCharts(pnlRaw,subs){
+      if(typeof Chart==='undefined'){setTimeout(function(){drawLgbCharts(pnlRaw,subs)},400);return;}
+      var canvas=byId('lgb-comb-pnl');
+      if(!canvas)return;
+      var main=downsample(pnlRaw||[],200);
+      if(!main.length)return;
+      var ds=[{label:'LGB组合',data:main,borderColor:'#a855f7',borderWidth:2,pointRadius:0,spanGaps:true}];
+      (subs||[]).forEach(function(sa,i){
+        var sp=downsample(sa.pnl_series||[],200);
+        if(sp.length)ds.push({label:(sa.expression||'子因子').slice(0,18),data:sp,borderColor:'hsla('+(i*110+30)+',70%,60%,0.62)',borderWidth:1,pointRadius:0,spanGaps:true});
+      });
+      new Chart(canvas.getContext('2d'),{type:'line',data:{labels:genDates(2023,1,1,main.length),datasets:ds},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#8b949e',font:{size:10},boxWidth:12}},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+Number(ctx.raw||0).toFixed(2)+'%'}}}},scales:{x:{display:false},y:{grid:{color:'#21262d'}}}}});
+    }
+    async function runGreedy(){
+      var candidates=baseFiltered(true).map(function(r){return r.id});
+      if(!candidates.length){byId('greedyResult').textContent='当前筛选下没有符合条件的因子。';return}
+      byId('greedyResult').textContent='正在做相关性贪心筛选...';
+      try{
+        var data=await postJson('/api/alpha/history/corr_greedy',{
+          max_corr:Number(byId('greedyMaxCorr').value),
+          keep_count:Number(byId('greedyKeep').value),
+          sort_metric:byId('greedyMetric').value,
+          sort_order:byId('greedyOrder').value,
+          candidate_ids:candidates
+        });
+        activeGreedyIds=new Set(data.ids||[]);
+        selected={};(data.ids||[]).forEach(function(id){selected[id]=true});
+        byId('greedyResult').innerHTML='候选 '+data.candidate_count+'，保留 '+data.selected_count+'/'+data.requested_keep_count+'，实际最大相关 '+fmt(data.selected_max_corr,4)+'，平均 IC '+fmt(data.avg_ic,4)+'，排序指标 '+esc(data.sort_metric)+'。';
+        applyFilters();
+      }catch(e){byId('greedyResult').innerHTML='<span class="bad">贪心筛选失败：'+esc(e.message)+'</span>'}
+    }
+    async function runEqualWeight(){
+      var sel=selectedRecords();
+      var ids=sel.map(function(r){return r.id});
+      if(ids.length<2){byId('comboResult').textContent='等权组合需要≥2个因子（你选了'+sel.length+'个）';return}
+      byId('comboResult').innerHTML='<div class="empty">等权组合回测中...</div>';
+      try{
+        var method=byId('ewMethod').value;
+        var data=await postJson('/api/superalpha',{alpha_ids:ids,neutralize:'market_cap',sub_alpha_limit:ids.length,method:method},600);
+        if(data.error){byId('comboResult').innerHTML='<span class="bad">'+esc(data.error)+'</span>';return}
+        renderComboResult(data);
+        reloadHistory(true);
+      }catch(e){byId('comboResult').innerHTML='<span class="bad">等权组合失败：'+esc(e.message)+'</span>'}
+    }
+    function renderComboResult(data){
+      var cm=data.combined_metrics||{}, subs=data.sub_alphas||[];
+      var annual=(cm.returns??cm.annual_excess??cm.annual_return??0);
+      var h='<div style="color:#e94560;font-weight:bold;margin-bottom:8px;">等权组合结果 ('+subs.length+' 因子)</div>';
+      h+='<div class="metrics">';
+      h+=renderMetricCard(pct(annual,2),'年化收益',annual>=0?'positive':'negative');
+      h+=renderMetricCard(fmt(cm.pearson_ic,4),'Pearson IC');
+      h+=renderMetricCard(fmt(cm.sharpe,2),'Sharpe');
+      h+=renderMetricCard(fmt(cm.fitness,2),'Fitness');
+      h+=renderMetricCard(pct(cm.turnover,1),'Turnover');
+      h+=renderMetricCard(pct(Math.abs(num(cm.max_drawdown)||0),2),'最大回撤',drawdownClass(Math.abs(num(cm.max_drawdown)||0)));
+      h+=renderMetricCard(fmt(cm.margin_bps,1),'Margin(bps)');
+      h+=renderMetricCard(pct(cm.win_rate,1),'日胜率');
+      h+='</div>';
+      if(cm.pnl_series&&cm.pnl_series.length)h+='<div class="chart-box"><h3>PnL 叠加对比</h3><canvas id="combo-pnl-canvas"></canvas></div>';
+      h+='<div style="margin-top:8px;"><strong style="color:#f0f6fc;font-size:13px;">子因子详情</strong></div>';
+      subs.forEach(function(sa,si){
+        var sm=sa.metrics||{}, nm=(sa.expression||'').substring(0,30);
+        h+='<div class="sa-sub-item" onclick="var d=this.nextElementSibling;d.classList.toggle(\'open\')"><span style="color:#58a6ff;font-family:monospace;">'+esc(nm)+'</span> <span style="color:#8b949e;">IC:'+fmt(sm.pearson_ic,4)+' 年化:'+pct(sm.returns??sm.annual_excess??0,1)+' Sharpe:'+fmt(sm.sharpe,2)+'</span></div>';
+        h+='<div class="sa-sub-detail"><div class="metrics">';
+        h+=renderMetricCard(pct(sm.returns??sm.annual_excess??0,2),'年化收益');
+        h+=renderMetricCard(fmt(sm.pearson_ic,4),'Pearson IC');
+        h+=renderMetricCard(fmt(sm.sharpe,2),'Sharpe');
+        h+=renderMetricCard(fmt(sm.fitness,2),'Fitness');
+        h+=renderMetricCard(pct(sm.turnover,1),'Turnover');
+        h+=renderMetricCard(pct(Math.abs(num(sm.max_drawdown)||0),2),'最大回撤');
+        h+=renderMetricCard(fmt(sm.margin_bps,1),'Margin(bps)');
+        h+=renderMetricCard(pct(sm.win_rate,1),'日胜率');
+        h+='</div><div class="chart-box"><canvas id="combo-sub-pnl-'+si+'" style="height:160px!important"></canvas></div></div>';
+      });
+      byId('comboResult').innerHTML=h;
+      drawComboCharts(cm.pnl_series||[],subs);
+    }
+    function drawComboCharts(pnlRaw,subs){
+      if(typeof Chart==='undefined'){setTimeout(function(){drawComboCharts(pnlRaw,subs)},400);return}
+      var ctx=document.getElementById('combo-pnl-canvas');
+      if(ctx){
+        var main=downsample(pnlRaw||[],200);
+        if(main.length){
+          var ds=[{label:'组合',data:main,borderColor:'#e94560',borderWidth:2,pointRadius:0,spanGaps:true}];
+          (subs||[]).forEach(function(sa,i){
+            var sp=downsample(sa.pnl_series||[],200);
+            if(sp.length)ds.push({label:(sa.expression||'').substring(0,18),data:sp,borderColor:'hsla('+(i*120+30)+',70%,60%,0.6)',borderWidth:1,pointRadius:0,spanGaps:true});
+          });
+          new Chart(ctx.getContext('2d'),{type:'line',data:{labels:genDates(2020,1,2,main.length),datasets:ds},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:'#8b949e',font:{size:10},boxWidth:12}},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+ctx.raw.toFixed(2)+'%'}}}},scales:{x:{display:false},y:{grid:{color:'#21262d'}}}}});
+        }
+      }
+      (subs||[]).forEach(function(sa,si){
+        var ctx2=document.getElementById('combo-sub-pnl-'+si);
+        if(ctx2&&sa.pnl_series&&sa.pnl_series.length){
+          new Chart(ctx2.getContext('2d'),{type:'line',data:{labels:genDates(2020,1,2,downsample(sa.pnl_series,200).length),datasets:[{label:'PnL',data:downsample(sa.pnl_series,200),borderColor:'#f0883e',borderWidth:1.5,pointRadius:0,spanGaps:true}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(ctx){return 'PnL: '+ctx.raw.toFixed(2)+'%'},title:function(ctx){return ctx[0].label}}}},scales:{x:{ticks:{maxTicksLimit:8,color:'#484f58',font:{size:8}},grid:{display:false}},y:{grid:{color:'#21262d'}}}}});
+        }
+      });
+    }
+    async function runLGB(){
+      var selectedAlphaRecords=selectedRecords().filter(function(r){return r.type==='alpha'||r.type==='superalpha'});
+      var exprs=[], ids=[];
+      selectedAlphaRecords.forEach(function(r){
+        var e=(r.expression||'').trim();
+        if(e&&e.indexOf('superalpha(')!==0&&e.indexOf('lgb(')!==0){exprs.push(e);ids.push(r.id)}
+      });
+      if(exprs.length<2){byId('comboResult').textContent='LightGBM 至少需要 2 个单因子（当前选中 '+selectedAlphaRecords.length+' 个，其中 '+exprs.length+' 个有效）。';return}
+      byId('comboResult').textContent='LightGBM 训练中（'+exprs.length+' 因子），5因子约1分钟，50因子约5-8分钟，请耐心等待...';
+      try{
+        var corrPromise=selectedCorrelationSummary(ids);
+        var data=await postJson('/api/superalpha/lgb/start',{expressions:exprs,max_lgb_features:300,max_train_samples:300000,train_matrix_budget_mb:128,predict_matrix_budget_mb:8,sub_alpha_limit:8,oos_cache_feature_limit:60,n_estimators:50},600);
+        if(data.error)throw new Error(data.error);
+        var corrSummary=await corrPromise;
+        renderLgbResult(data,corrSummary);
+        reloadHistory(true);
+      }catch(e){byId('comboResult').textContent='LightGBM 失败：'+e.message}
+    }
+
+    async function showCorrelation(){
+      var ids=Object.keys(selected);
+      if(ids.length<2)return;
+      byId('corrModal').classList.add('open');
+      byId('corrBody').innerHTML='<div class="empty">正在计算相关性矩阵...</div>';
+      try{
+        var data=await postJson('/api/alpha/correlation',{ids:ids});
+        var names=(data.alphas||[]).map(function(a,i){return (a.name||a.expression||('A'+(i+1))).slice(0,18)});
+        var mat=data.corr_matrix||data.correlation_matrix||[];
+        var html='<table class="corr-table"><thead><tr><th class="corr-rh">因子</th>'+names.map(function(n,i){return '<th class="corr-ch" title="'+esc(n)+'"><span>'+esc(n)+'</span></th>'}).join('')+'</tr></thead><tbody>';
+        for(var i=0;i<mat.length;i++){
+          html+='<tr><td class="corr-rh">'+esc(names[i])+'</td>';
+          for(var j=0;j<mat[i].length;j++){
+            var v=Math.abs(num(mat[i][j])||0), cls=v>=0.7?'corr-high':(v>=0.4?'corr-mid':'corr-low');
+            var val=fmt(mat[i][j],2);
+            html+='<td class="'+cls+'" title="'+esc(names[i])+' × '+esc(names[j])+' = '+val+'">'+val+'</td>';
+          }
+          html+='</tr>';
+        }
+        html+='</tbody></table>';
+        byId('corrBody').innerHTML=html;
+      }catch(e){byId('corrBody').innerHTML='<div class="empty">相关性计算失败：'+esc(e.message)+'</div>'}
+    }
+    function closeCorrelation(){byId('corrModal').classList.remove('open')}
+
+    addCondition('abs_ic','>','0.01');
+    reloadHistory(true);
+  </script>
+</body>
+</html>

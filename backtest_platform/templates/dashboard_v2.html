@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>量化回测仪表盘</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei',sans-serif;background:#0d1117;color:#c9d1d9}
+.header{background:#161b22;border-bottom:1px solid #30363d;padding:12px 20px;display:flex;justify-content:space-between;align-items:center}
+.header h1{color:#e94560;font-size:17px}
+.header nav{display:flex;gap:24px}
+.header nav a{color:#8b949e;text-decoration:none;font-size:12px}
+.header nav a:hover{color:#58a6ff}
+.container{max-width:960px;margin:0 auto;padding:20px}
+.input-row{display:flex;gap:10px;margin-bottom:12px}
+.input-row input{flex:1;padding:10px 12px;background:#161b22;border:1px solid #30363d;border-radius:6px;color:#fff;font-size:14px}
+.input-row select{padding:10px 12px;background:#161b22;border:1px solid #30363d;border-radius:6px;color:#fff;font-size:13px}
+.input-row button{padding:10px 20px;background:#e94560;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px}
+.input-row button:hover{background:#d63850}
+.input-row button:disabled{background:#555}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.card{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;text-align:center}
+.card .val{font-size:24px;font-weight:bold;color:#58a6ff}
+.card .lbl{font-size:10px;color:#8b949e;margin-top:4px}
+.card.up .val{color:#e94560}
+/* Settings */
+.settings-toggle{display:flex;align-items:center;gap:8px;margin-bottom:10px;cursor:pointer;font-size:11px;color:#8b949e;user-select:none}
+.settings-toggle:hover{color:#58a6ff}
+.settings-toggle .arrow{transition:transform 0.2s;font-size:10px}
+.settings-toggle.open .arrow{transform:rotate(90deg)}
+.settings-panel{display:none;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-bottom:14px;grid-template-columns:repeat(4,1fr);gap:10px}
+.settings-panel.open{display:grid}
+.settings-panel label{font-size:10px;color:#8b949e;display:flex;flex-direction:column;gap:4px}
+.settings-panel input,.settings-panel select{padding:7px 9px;background:#0d1117;border:1px solid #30363d;border-radius:4px;color:#fff;font-size:11px}
+.settings-panel button{padding:7px 14px;background:#1c2533;color:#58a6ff;border:1px solid #30363d;border-radius:4px;cursor:pointer;font-size:11px;grid-column:span 2}
+.settings-panel button:hover{background:#30363d}
+/* Charts */
+.charts-row{display:flex;gap:12px;margin-bottom:14px}
+.chart-box{flex:1;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px;min-height:220px;position:relative;overflow:hidden;min-width:0}
+.chart-box h3{font-size:11px;color:#8b949e;margin-bottom:8px}
+.chart-box canvas{width:100%!important;height:180px!important;max-width:100%}
+/* SuperAlpha */
+.sa-section{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-bottom:14px}
+.sa-section h3{font-size:12px;color:#8b949e;margin-bottom:10px}
+.sa-controls{display:flex;gap:8px;align-items:center;margin-bottom:10px;flex-wrap:wrap}
+.sa-controls button{padding:6px 14px;background:#1c2533;color:#58a6ff;border:1px solid #30363d;border-radius:4px;cursor:pointer;font-size:11px}
+.sa-controls button:hover{background:#30363d}
+.sa-controls button.primary{background:#f0883e;color:#fff;border-color:#f0883e}
+.sa-controls button.primary:disabled{background:#555;border-color:#555;color:#888;cursor:not-allowed}
+.sa-controls span{font-size:11px;color:#8b949e}
+#sa-select-list{max-height:200px;overflow-y:auto;font-size:11px;margin-bottom:8px}
+#sa-select-list label{display:flex;align-items:center;gap:8px;padding:6px 8px;cursor:pointer;border-bottom:1px solid #1c2533}
+#sa-select-list label:hover{background:#1c2533}
+#sa-select-list input[type=checkbox]{cursor:pointer}
+#sa-result{margin-top:10px;font-size:11px}
+#sa-result table{width:100%;border-collapse:collapse;margin-top:6px}
+#sa-result th{text-align:left;color:#8b949e;padding:4px 6px;border-bottom:1px solid #30363d}
+#sa-result td{padding:4px 6px;border-bottom:1px solid #1c2533}
+/* Examples */
+.example-box{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:14px;margin-top:14px}
+.example-box h3{color:#8b949e;font-size:12px;margin-bottom:8px}
+.example-box code{display:inline-block;padding:3px 8px;margin:2px;color:#58a6ff;font-size:11px;cursor:pointer;background:#1c2533;border-radius:3px}
+.example-box code:hover{color:#e94560}
+#error-msg{color:#ff6b6b;font-size:12px;margin-bottom:10px;display:none}
+#progress{height:4px;background:#30363d;border-radius:2px;margin-bottom:10px;overflow:hidden;display:none}
+#progress div{height:100%;background:#58a6ff;width:0;transition:width 0.3s}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>量化回测</h1>
+  <nav>
+    <a href="/dashboard">仪表盘</a>
+    <a href="/alpha_history">Alpha历史</a>
+    <a href="/data_fields">字段</a>
+    <a href="/operators">操作符</a>
+    <a href="/logout">退出</a>
+  </nav>
+</div>
+<div class="container">
+
+  <!-- === Settings Panel (collapsible) === -->
+  <div class="settings-toggle" id="settings-toggle" onclick="toggleSettings()">
+    <span class="arrow">►</span> 仿真设置
+  </div>
+  <div class="settings-panel" id="settings-panel">
+    <label>起始日期<input type="date" id="set-start" value="2020-01-02"></label>
+    <label>结束日期<input type="date" id="set-end" value="2023-12-29"></label>
+    <label>Top分组比例<input type="number" id="set-top" value="0.1" step="0.05" min="0.05" max="0.5"></label>
+    <label>延迟天数<input type="number" id="set-delay" value="1" step="1" min="1" max="10"></label>
+    <label>默认中性化<select id="set-neut"><option value="none">无中性化</option><option value="market_cap">市值中性化</option></select></label>
+    <label>股票池<select id="set-univ"><option value="csi800">CSI 800</option></select></label>
+    <button onclick="saveSettings()">保存设置</button>
+    <button onclick="loadSettings()" style="grid-column:span 1">恢复默认</button>
+  </div>
+
+  <!-- === Single Expression Backtest === -->
+  <div class="input-row">
+    <input type="text" id="expr" placeholder="输入因子表达式，如 rank(ts_delta(close, 20))" value="rank(ts_delta(close, 20))">
+    <select id="neut">
+      <option value="market_cap">市值中性化</option>
+      <option value="none">无中性化</option>
+    </select>
+    <button id="btn" onclick="go()">回 测</button>
+  </div>
+  <div id="progress"><div></div></div>
+  <div id="error-msg"></div>
+
+  <div class="metrics">
+    <div class="card up"><div class="val" id="m-excess">--</div><div class="lbl">年化收益</div></div>
+    <div class="card"><div class="val" id="m-ic">--</div><div class="lbl">Pearson IC</div></div>
+    <div class="card"><div class="val" id="m-sharpe">--</div><div class="lbl">Sharpe</div></div>
+    <div class="card"><div class="val" id="m-fitness">--</div><div class="lbl">Fitness</div></div>
+    <div class="card"><div class="val" id="m-turnover">--</div><div class="lbl">Turnover</div></div>
+    <div class="card"><div class="val" id="m-dd">--</div><div class="lbl">最大回撤</div></div>
+    <div class="card"><div class="val" id="m-margin">--</div><div class="lbl">Margin(bps)</div></div>
+    <div class="card"><div class="val" id="m-winrate">--</div><div class="lbl">日胜率</div></div>
+  </div>
+
+  <!-- === Charts (Chart.js loaded async) === -->
+  <div class="charts-row" id="charts-row" style="display:none">
+    <div class="chart-box">
+      <h3>PnL 累积收益曲线</h3>
+      <canvas id="pnl-canvas"></canvas>
+    </div>
+    <div class="chart-box">
+      <h3>IC 序列 (近60日)</h3>
+      <canvas id="ic-canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- === SuperAlpha === -->
+  <div class="sa-section">
+    <h3>SuperAlpha — 从 Alpha 历史选取等权组合</h3>
+    <div class="sa-controls">
+      <button onclick="loadSAHistory()">加载历史 Alpha</button>
+      <span>已选 <strong id="sa-count">0</strong> 个</span>
+      <select id="sa-neut">
+        <option value="market_cap">市值中性化</option>
+        <option value="none">无中性化</option>
+      </select>
+      <button onclick="loadSAHistory('excess','desc')" style="font-size:10px;">按收益▼</button>
+      <button onclick="loadSAHistory('excess','asc')" style="font-size:10px;">按收益▲</button>
+      <button onclick="loadSAHistory('ic','desc')" style="font-size:10px;">按IC▼</button>
+      <button onclick="loadSAHistory('ic','asc')" style="font-size:10px;">按IC▲</button>
+      <button class="primary" id="sa-run-btn" onclick="runSAFromHistory()" disabled>等权组合回测</button>
+    </div>
+    <div id="sa-select-list"></div>
+    <div id="sa-result"></div>
+  </div>
+
+  <!-- === Example expressions === -->
+  <div class="example-box">
+    <h3>示例（点击填充并回测）</h3>
+    <code onclick="fillAndGo(this)">rank(ts_delta(close, 20))</code>
+    <code onclick="fillAndGo(this)">-rank(ts_sum(close/open-1, 5))</code>
+    <code onclick="fillAndGo(this)">rank(ts_mean(volume, 5) / ts_mean(volume, 20))</code>
+    <code onclick="fillAndGo(this)">-signed_power(close/open-1, 2) * rank(volume)</code>
+    <code onclick="fillAndGo(this)">rank(ts_std(close/open-1, 20))</code>
+    <code onclick="fillAndGo(this)">ts_delta(close, 60) / (ts_std(close/open-1, 60) + 0.001)</code>
+    <code onclick="fillAndGo(this)">close / open - 1</code>
+    <code onclick="fillAndGo(this)">rank(ts_corr(close/open-1, volume, 20))</code>
+    <code onclick="fillAndGo(this)">group_neutralize(rank(ts_delta(close, 5)), market_cap)</code>
+    <code onclick="fillAndGo(this)">trade_when(volume > ts_mean(volume, 20), rank(ts_delta(close, 10)), -1)</code>
+    <code onclick="fillAndGo(this)">rank(ts_decay_linear(close/open-1, 10))</code>
+    <code onclick="fillAndGo(this)">rank(vwap_gap)</code>
+    <code onclick="fillAndGo(this)">-rank(price_efficiency)</code>
+    <code onclick="fillAndGo(this)">rank(volume_concentration) * sign(close_location - 0.5)</code>
+    <code onclick="fillAndGo(this)">-rank(am_pm_divergence)</code>
+  </div>
+
+</div>
+
+<script>
+// ========== Chart.js async loader (交接文档 Rule 4) ==========
+(function loadChartJS(){
+  if(typeof Chart!=="undefined"){return;}
+  var s=document.createElement("script");
+  s.src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js";
+  s.onload=function(){console.log("Chart.js loaded OK");};
+  s.onerror=function(){console.warn("Chart.js CDN unreachable, charts disabled");};
+  document.head.appendChild(s);
+})();
+
+// ========== Global state ==========
+var pnlChart=null, icChart=null;
+var lastPnlData=[], lastIcData=[];
+
+// ========== Helpers (交接文档 Rule 3: document.getElementById only) ==========
+function byId(id){return document.getElementById(id);}
+function fillAndGo(el){byId("expr").value=el.textContent;go();}
+
+// ========== Settings ==========
+function toggleSettings(){
+  var panel=byId("settings-panel");
+  var toggle=byId("settings-toggle");
+  var open=panel.classList.toggle("open");
+  toggle.classList.toggle("open",open);
+  if(open){loadSettingsFromServer();}
+}
+
+async function loadSettingsFromServer(){
+  try{
+    var r=await fetch("/api/settings");
+    var d=await r.json();
+    if(d.error)return;
+    byId("set-start").value=d.start_date||"2020-01-02";
+    byId("set-end").value=d.end_date||"2023-12-29";
+    byId("set-top").value=d.top_pct||0.1;
+    byId("set-delay").value=d.delay_days||1;
+    byId("set-neut").value=d.neutralize||"none";
+    byId("neut").value=d.neutralize||"market_cap";
+  }catch(e){console.error("loadSettings:",e);}
+}
+
+async function saveSettings(){
+  var data={
+    start_date:byId("set-start").value,
+    end_date:byId("set-end").value,
+    top_pct:parseFloat(byId("set-top").value)||0.1,
+    delay_days:parseInt(byId("set-delay").value)||1,
+    neutralize:byId("set-neut").value
+  };
+  try{
+    var r=await fetch("/api/settings",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)});
+    var d=await r.json();
+    if(d.success){
+      byId("neut").value=data.neutralize;
+      alert("设置已保存");
+      toggleSettings();
+    }
+  }catch(e){console.error("saveSettings:",e);}
+}
+
+function loadSettings(){
+  byId("set-start").value="2020-01-02";
+  byId("set-end").value="2023-12-29";
+  byId("set-top").value="0.1";
+  byId("set-delay").value="1";
+  byId("set-neut").value="none";
+  saveSettings();
+}
+
+// ========== Single backtest ==========
+async function go(){
+  var errEl=byId("error-msg");errEl.style.display="none";
+  var v=byId("expr").value.trim();
+  if(!v){errEl.textContent="请输入表达式";errEl.style.display="block";return;}
+  var btn=byId("btn");btn.textContent="回测中...";btn.disabled=true;
+  var prog=byId("progress");prog.style.display="block";prog.firstChild.style.width="30%";
+  try{
+    var neut=byId("neut").value;
+    var r=await fetch("/api/backtest",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({expression:v,neutralize:neut})});
+    prog.firstChild.style.width="80%";
+    var d=await r.json();
+    prog.style.display="none";btn.textContent="回 测";btn.disabled=false;
+    if(d.error){errEl.textContent=d.error;errEl.style.display="block";return;}
+    prog.firstChild.style.width="100%";
+    updateMetricCards(d);
+    lastPnlData=d.pnl_series||[];
+    lastIcData=d.ic_series||[];
+    drawCharts();
+  }catch(ex){prog.style.display="none";btn.textContent="回 测";btn.disabled=false;errEl.textContent="请求失败: "+ex.message;errEl.style.display="block";}
+}
+
+function updateMetricCards(d){
+  byId("m-excess").textContent=((d.annual_excess||0)*100).toFixed(2)+"%";
+  byId("m-ic").textContent=(d.pearson_ic||0).toFixed(4);
+  byId("m-sharpe").textContent=(d.sharpe||0).toFixed(2);
+  byId("m-fitness").textContent=(d.fitness||0).toFixed(2);
+  byId("m-turnover").textContent=((d.turnover||0)*100).toFixed(1)+"%";
+  byId("m-dd").textContent=((d.max_drawdown||0)*100).toFixed(2)+"%";
+  byId("m-margin").textContent=(d.margin_bps||0).toFixed(1);
+  byId("m-winrate").textContent=((d.win_rate||0)*100).toFixed(1)+"%";
+}
+
+function downsample(arr, targetLen){
+  if(arr.length<=targetLen)return arr;
+  var step=arr.length/targetLen, result=[];
+  for(var i=0;i<targetLen;i++){
+    var lo=Math.floor(i*step), hi=Math.floor((i+1)*step);
+    var s=0, n=0;
+    for(var j=lo;j<hi&&j<arr.length;j++){if(arr[j]!=null){s+=arr[j];n++;}}
+    result.push(n>0?s/n:null);
+  }
+  return result;
+}
+
+function drawCharts(){
+  if(typeof Chart==="undefined"){return;}
+  var row=byId("charts-row");row.style.display="flex";
+  if(lastPnlData.length>0){
+    if(pnlChart){pnlChart.destroy();pnlChart=null;}
+    var ctx=byId("pnl-canvas");
+    if(ctx){
+      var MAX_POINTS=200;
+      var pnlDown=downsample(lastPnlData, MAX_POINTS);
+      pnlChart=new Chart(ctx.getContext("2d"),{
+        type:"line",
+        data:{labels:pnlDown.map(function(_,i){return i+1;}),datasets:[{label:"PnL %",data:pnlDown,borderColor:"#e94560",borderWidth:1.5,pointRadius:0,spanGaps:true,fill:true,backgroundColor:"rgba(233,69,96,0.08)"}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false,ticks:{maxTicksLimit:10}},y:{grid:{color:"#21262d"}}}}
+      });
+    }
+  }
+  if(lastIcData.length>0){
+    if(icChart){icChart.destroy();icChart=null;}
+    var ctx2=byId("ic-canvas");
+    if(ctx2){
+      icChart=new Chart(ctx2.getContext("2d"),{
+        type:"bar",
+        data:{labels:lastIcData.map(function(_,i){return i+1;}),datasets:[{label:"IC",data:lastIcData,backgroundColor:lastIcData.map(function(v){return v>=0?"rgba(233,69,96,0.7)":"rgba(63,185,80,0.7)");}),borderWidth:0}]},
+        options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false,ticks:{maxTicksLimit:10}},y:{grid:{color:"#21262d"}}}}
+      });
+    }
+  }
+}
+
+// ========== SuperAlpha: History-based selection ==========
+var saHistory=[], saSelected=[];
+function saNum(v){v=Number(v);return Number.isFinite(v)?v:0;}
+
+async function loadSAHistory(sortBy, sortDir){
+  var listEl=byId("sa-select-list");
+  listEl.innerHTML='<div style="color:#8b949e;padding:8px;">加载中...</div>';
+  try{
+    var r=await fetch("/api/alpha/history");
+    var d=await r.json();
+    saHistory=d.records||[];
+    if(saHistory.length===0){
+      listEl.innerHTML='<div style="color:#8b949e;padding:8px;">暂无 Alpha 记录，请先做一次回测</div>';
+      return;
+    }
+    // Sort
+    if(sortBy){
+      saHistory.sort(function(a,b){
+        var am=a.metrics||{}, bm=b.metrics||{};
+        var va, vb;
+        if(sortBy==="ic"){va=saNum(am.pearson_ic); vb=saNum(bm.pearson_ic);}
+        else{va=saNum(am.annual_excess); vb=saNum(bm.annual_excess);}
+        return sortDir==="asc"?va-vb:vb-va;
+      });
+    }
+    var h="";
+    saHistory.forEach(function(a,i){
+      var m=a.metrics||{};
+      var ex=saNum(m.annual_excess)*100;
+      var checked=saSelected.indexOf(i)>=0?" checked":"";
+      h+='<label><input type="checkbox" onchange="toggleSA('+i+',this.checked)"'+checked+' style="cursor:pointer;">';
+      h+='<span style="font-family:monospace;color:#58a6ff;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+(a.name||a.expression||"").substring(0,50)+'</span>';
+      h+='<span style="color:#8b949e;font-size:10px;">IC:'+saNum(m.pearson_ic).toFixed(3)+' Ex:'+(ex.toFixed(1))+'%</span>';
+      h+='</label>';
+    });
+    listEl.innerHTML=h;
+  }catch(e){
+    listEl.innerHTML='<div style="color:#ff6b6b;padding:8px;">加载失败: '+e.message+'</div>';
+  }
+}
+
+function toggleSA(i,checked){
+  if(checked){
+    if(saSelected.length>=5){alert("最多选5个");return false;}
+    saSelected.push(i);
+  }else{
+    saSelected=saSelected.filter(function(x){return x!==i;});
+  }
+  byId("sa-count").textContent=saSelected.length;
+  byId("sa-run-btn").disabled=saSelected.length<2;
+}
+
+async function runSAFromHistory(){
+  if(saSelected.length<2){alert("至少选2个Alpha");return;}
+  var ids=saSelected.map(function(i){return saHistory[i].id;});
+  var neut=byId("sa-neut").value;
+  var resEl=byId("sa-result");
+  resEl.innerHTML='<div style="text-align:center;color:#8b949e;padding:12px;">组合回测中...</div>';
+  try{
+    var resp=await fetch("/api/superalpha",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({alpha_ids:ids,neutralize:neut})});
+    var data=await resp.json();
+    if(data.error){resEl.innerHTML='<span style="color:#ff6b6b">'+data.error+'</span>';return;}
+    var cm=data.combined_metrics||{};
+    var h='<div style="color:#e94560;font-weight:bold;margin-bottom:8px;">组合: IC='+(cm.pearson_ic||0).toFixed(4)+' 年化收益='+((cm.annual_excess||0)*100).toFixed(2)+'% Sharpe='+(cm.sharpe||0).toFixed(2)+' Fitness='+(cm.fitness||0).toFixed(2)+' Turnover='+((cm.turnover||0)*100).toFixed(1)+'%</div>';
+    h+='<table><thead><tr><th>Alpha</th><th>权重</th><th>IC</th><th>年化收益</th><th>Sharpe</th></tr></thead><tbody>';
+    var subs=data.sub_alphas||[];
+    subs.forEach(function(sa){
+      var nm=(sa.expression||"").substring(0,35);
+      var m=sa.metrics||{};
+      h+='<tr><td style="font-family:monospace;font-size:10px;color:#58a6ff;">'+nm+'</td><td>'+((sa.weight||0)*100).toFixed(0)+'%</td><td style="color:'+(m.pearson_ic>=0?"#e94560":"#3fb950")+';">'+(m.pearson_ic||0).toFixed(4)+'</td><td>'+((m.annual_excess||0)*100).toFixed(2)+'%</td><td>'+(m.sharpe||0).toFixed(2)+'</td></tr>';
+    });
+    h+='</tbody></table>';
+    var combPnl=cm.pnl_series;
+    if(combPnl && combPnl.length>0 && typeof Chart!=="undefined"){
+      h+='<div style="margin-top:10px;overflow:hidden;"><canvas id="sa-pnl-canvas" style="height:180px;width:100%!important;max-width:100%;"></canvas></div>';
+    }
+    resEl.innerHTML=h;
+    if(combPnl && combPnl.length>0 && typeof Chart!=="undefined"){
+      setTimeout(function(){
+        var ctx=document.getElementById("sa-pnl-canvas");
+        if(ctx){
+          var MAX_P=200;
+          var saPnl=combPnl.length>MAX_P?downsample(combPnl,MAX_P):combPnl;
+          new Chart(ctx.getContext("2d"),{
+            type:"line",
+            data:{labels:saPnl.map(function(_,i){return i+1;}),datasets:[{label:"Combined PnL",data:saPnl,borderColor:"#e94560",borderWidth:1.5,pointRadius:0,spanGaps:true,fill:true,backgroundColor:"rgba(233,69,96,0.06)"}]},
+            options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false,ticks:{maxTicksLimit:10}},y:{grid:{color:"#21262d"}}}}
+          });
+        }
+      },100);
+    }
+  }catch(e){
+    resEl.innerHTML='<span style="color:#ff6b6b">请求失败: '+e.message+'</span>';
+  }
+}
+
+// Init: load settings on startup
+loadSettingsFromServer();
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学习 - YYB Quant Research Manual</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#0d1117;color:#d6dde8;font-family:"Microsoft YaHei","Segoe UI",Arial,sans-serif;line-height:1.72}
+a{color:#58a6ff;text-decoration:none}
+a:hover{color:#f0883e}
+.header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:12px 24px;background:rgba(13,17,23,.92);border-bottom:1px solid #30363d;backdrop-filter:blur(12px)}
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand strong{font-size:15px;color:#f0f6fc}
+.brand span{font-size:11px;color:#8b949e}
+.nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:10px}
+.nav a{padding:6px 10px;border-radius:6px;color:#8b949e;font-size:12px}
+.nav a.active,.nav a:hover{background:#182230;color:#58a6ff}
+.hero{border-bottom:1px solid #263242;background:linear-gradient(135deg,#101820 0%,#13212b 45%,#171b24 100%)}
+.hero-inner{max-width:1180px;margin:0 auto;padding:34px 24px 30px}
+.eyebrow{color:#f0883e;font-size:12px;font-weight:700;letter-spacing:0}
+h1{margin-top:8px;color:#f0f6fc;font-size:30px;line-height:1.18;font-weight:800}
+.hero p{max-width:780px;margin-top:12px;color:#aeb8c6;font-size:14px}
+.status-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:22px}
+.status{border:1px solid #30363d;background:rgba(13,17,23,.62);border-radius:8px;padding:12px}
+.status b{display:block;color:#f0f6fc;font-size:14px}
+.status span{display:block;margin-top:4px;color:#8b949e;font-size:11px}
+.shell{max-width:1180px;margin:0 auto;padding:22px 24px 42px;display:grid;grid-template-columns:260px minmax(0,1fr);gap:22px}
+.toc{position:sticky;top:72px;align-self:start;border:1px solid #30363d;background:#111820;border-radius:8px;padding:14px}
+.toc h2{font-size:13px;color:#f0f6fc;margin-bottom:10px}
+.toc a{display:block;padding:7px 8px;border-radius:6px;color:#aeb8c6;font-size:12px}
+.toc a:hover{background:#182230;color:#58a6ff}
+.content{display:flex;flex-direction:column;gap:16px}
+section{border:1px solid #30363d;background:#111820;border-radius:8px;overflow:hidden}
+.section-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:18px 20px;background:#131c27;border-bottom:1px solid #263242}
+.section-head h2{font-size:18px;color:#f0f6fc}
+.section-head p{margin-top:5px;color:#8b949e;font-size:12px}
+.badge{flex:0 0 auto;margin-top:1px;border:1px solid #38536b;background:#162536;color:#79c0ff;border-radius:999px;padding:4px 9px;font-size:11px}
+.body{padding:18px 20px}
+.body p{margin:8px 0;color:#c9d1d9;font-size:13px}
+.body ul{margin:9px 0 10px 18px;color:#c9d1d9;font-size:13px}
+.body li{margin:5px 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:12px 0}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:12px 0}
+.panel{border:1px solid #263242;background:#0d1117;border-radius:8px;padding:13px}
+.panel h3{font-size:13px;color:#f0883e;margin-bottom:7px}
+.panel p,.panel li{font-size:12px;color:#aeb8c6}
+.formula{margin:10px 0;padding:12px;border:1px solid #263242;background:#0a0f14;border-radius:8px;color:#79c0ff;font:12px/1.65 "Cascadia Code",Consolas,monospace;white-space:pre-wrap;word-break:break-word}
+code{background:#182230;color:#79c0ff;border-radius:4px;padding:2px 5px;font-size:12px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:12px}
+th{background:#182230;color:#79c0ff;text-align:left;padding:9px;border-bottom:1px solid #30363d}
+td{padding:9px;border-bottom:1px solid #263242;color:#c9d1d9;vertical-align:top}
+.callout{margin:12px 0;padding:12px 14px;border-left:3px solid #f0883e;background:rgba(240,136,62,.08);border-radius:0 8px 8px 0;color:#f2c08a;font-size:12px}
+.danger{border-left-color:#ff7b72;background:rgba(255,123,114,.08);color:#ffb4ad}
+.ok{border-left-color:#3fb950;background:rgba(63,185,80,.08);color:#9be9a8}
+.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:13px 0}
+.step{min-height:72px;border:1px solid #263242;background:#0d1117;border-radius:8px;padding:10px}
+.step b{display:block;color:#f0f6fc;font-size:12px}
+.step span{display:block;margin-top:5px;color:#8b949e;font-size:11px}
+.footer{margin-top:6px;color:#6e7681;font-size:11px;text-align:center}
+@media(max-width:980px){.shell{grid-template-columns:1fr}.toc{position:static}.status-grid,.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}.flow{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:620px){.header{align-items:flex-start;flex-direction:column}.nav{justify-content:flex-start}.status-grid,.grid2,.grid3,.flow{grid-template-columns:1fr}h1{font-size:24px}.hero-inner,.shell{padding-left:16px;padding-right:16px}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="brand">
+    <strong>YYB Quant Research</strong>
+    <span>因子研究、组合回测、样本外验证</span>
+  </div>
+  <nav class="nav">
+    <a href="/dashboard">仪表盘</a>
+    <a href="/alpha_history">Alpha历史</a>
+    <a href="/data_fields">字段</a>
+    <a href="/operators">操作符</a>
+    <a href="/correlation">相关性</a>
+    <a href="/community">社区</a>
+    <a class="active" href="/learn">学习</a>
+    <a href="/logout">退出</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">PLATFORM MANUAL</div>
+    <h1>从单因子到可提交组合的完整研究手册</h1>
+    <p>这页只解释平台真正会影响结果的部分：比赛口径、回测方式、LightGBM 样本外训练、低相关筛选、因子构建路径和提交前检查。目标不是堆指标，而是把每个 Alpha 都放进可复盘的研究流程里。</p>
+    <div class="status-grid">
+      <div class="status"><b>2020-2023</b><span>统一回测区间</span></div>
+      <div class="status"><b>未来5日收益</b><span>标签与比赛目标一致</span></div>
+      <div class="status"><b>Top10%多头</b><span>相对全市场等权超额</span></div>
+      <div class="status"><b>2023 OOS</b><span>LGB 只在样本外评估</span></div>
+    </div>
+  </div>
+</div>
+
+<main class="shell">
+  <aside class="toc">
+    <h2>目录</h2>
+    <a href="#workflow">研究工作流</a>
+    <a href="#competition">比赛口径</a>
+    <a href="#single">单因子回测</a>
+    <a href="#history">Alpha历史筛选</a>
+    <a href="#equal">等权组合</a>
+    <a href="#lgb">LightGBM OOS</a>
+    <a href="#dedup">低相关去重</a>
+    <a href="#factor">因子构建</a>
+    <a href="#metrics">指标解释</a>
+    <a href="#overfit">过拟合控制</a>
+    <a href="#ai">AI接口</a>
+  </aside>
+
+  <div class="content">
+    <section id="workflow">
+      <div class="section-head">
+        <div><h2>研究工作流</h2><p>平台应该按研究闭环使用，而不是只看单次高收益。</p></div>
+        <span class="badge">Research Loop</span>
+      </div>
+      <div class="body">
+        <div class="flow">
+          <div class="step"><b>1 字段</b><span>选择未充分利用且有经济解释的字段</span></div>
+          <div class="step"><b>2 假设</b><span>写清楚动量、反转、流动性或风险补偿逻辑</span></div>
+          <div class="step"><b>3 表达式</b><span>用时序处理和截面排序形成信号</span></div>
+          <div class="step"><b>4 单因子</b><span>看 IC、PnL、回撤和换手</span></div>
+          <div class="step"><b>5 筛选</b><span>按分组、指标和任意排序指标做 maxcorr 贪心</span></div>
+          <div class="step"><b>6 组合</b><span>用等权和 LGB 做样本外对照</span></div>
+        </div>
+        <div class="callout ok">最稳的路径是：先让单因子有解释，再用相关性控制多样性，最后用 2023 OOS 结果判断组合是否值得进入候选库。</div>
+      </div>
+    </section>
+
+    <section id="competition">
+      <div class="section-head">
+        <div><h2>比赛口径与数据边界</h2><p>所有回测结果都要用同一口径理解。</p></div>
+        <span class="badge">Protocol</span>
+      </div>
+      <div class="body">
+        <table>
+          <tr><th>项目</th><th>平台口径</th><th>解释</th></tr>
+          <tr><td>信号时间</td><td>T 日收盘</td><td>只使用当日及历史数据构建因子。</td></tr>
+          <tr><td>预测目标</td><td>未来 5 日收益</td><td>平台 Label 是未来 5 日收益，避免日内不可交易假设。</td></tr>
+          <tr><td>收益定义</td><td>Top10% 多头 - 全市场等权</td><td>评估的是多头超额收益，不是多空组合。</td></tr>
+          <tr><td>LGB 划分</td><td>2020-2022 训练，2023 OOS</td><td>训练和最终观察集分离，中间默认留 5 日 purge。</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="single">
+      <div class="section-head">
+        <div><h2>单因子回测</h2><p>用于验证一个经济假设，不用于证明最终可提交。</p></div>
+        <span class="badge">Single Alpha</span>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <div class="panel">
+            <h3>适合做什么</h3>
+            <p>快速判断字段和表达式是否有方向性、稳定性、可解释性。单因子要重点看 IC 和 PnL 形态，而不是只看某一次年化。</p>
+          </div>
+          <div class="panel">
+            <h3>常用模板</h3>
+            <div class="formula">rank(ret_20d)
+-rank(returns)
+rank(ts_mean(volume,5)/ts_mean(volume,20))
+rank(vwap_gap)</div>
+          </div>
+        </div>
+        <div class="callout">单因子如果 IC 不高但和已有库低相关，仍然可能在组合里有价值；反过来，高 IC 但 maxcorr 很高，可能只是重复暴露。</div>
+      </div>
+    </section>
+
+    <section id="history">
+      <div class="section-head">
+        <div><h2>Alpha历史筛选与分组</h2><p>历史页是从单因子库进入组合研究的主入口。</p></div>
+        <span class="badge">History Lab</span>
+      </div>
+      <div class="body">
+        <div class="grid3">
+          <div class="panel">
+            <h3>经济分组</h3>
+            <p>单因子按主要经济含义分成动量、反转、波动率、流动性、微观结构、规模、基本面、情绪/分析师。明显同时混入多类信号的表达式标为混合/剔除，默认不进入组合筛选。</p>
+          </div>
+          <div class="panel">
+            <h3>多条件筛选</h3>
+            <p>筛选条件同时生效。例如 <code>|IC| &gt; 0.03</code>、<code>Sharpe &gt; 1</code>、<code>MaxCorr &lt; 0.7</code>、分组为微观结构，只有全部满足的因子才会显示。</p>
+          </div>
+          <div class="panel">
+            <h3>多选研究</h3>
+            <p>左侧多选后可查看两两相关性矩阵，也可以直接做等权组合和 LightGBM OOS。相关性矩阵是判断“高 IC 重复暴露”与“低相关互补暴露”的第一道闸。</p>
+          </div>
+        </div>
+        <div class="callout ok">推荐流程：先按经济分组和指标筛出候选，再看相关性矩阵，最后用等权和 LGB 分别验证线性叠加与非线性增益。</div>
+      </div>
+    </section>
+
+    <section id="equal">
+      <div class="section-head">
+        <div><h2>等权组合回测</h2><p>用来验证低相关因子的线性叠加价值。</p></div>
+        <span class="badge">Equal Weight</span>
+      </div>
+      <div class="body">
+        <p>Alpha 历史页勾选多个单因子后，等权组合会先对每个因子做截面标准化，再做平均。它不学习复杂非线性，因此更容易解释，也更能看出低相关因子是否真的互补。</p>
+        <div class="formula">combined = mean(zscore(alpha_1), zscore(alpha_2), ..., zscore(alpha_n))</div>
+        <ul>
+          <li>适合比较同样数量下，“低相关低 IC”与“高相关高 IC”哪组组合更稳。</li>
+          <li>如果等权组合的回撤明显下降，说明多样性在发挥作用。</li>
+          <li>如果等权组合没有改善，说明候选因子可能只是同一类暴露的重复表达。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="lgb">
+      <div class="section-head">
+        <div><h2>LightGBM 样本外回测</h2><p>用于测试非线性组合，但必须严格防止泄漏和过拟合。</p></div>
+        <span class="badge">OOS ML</span>
+      </div>
+      <div class="body">
+        <div class="grid3">
+          <div class="panel"><h3>训练集</h3><p>2020-2022，默认最多 300 个唯一表达式，采样受内存预算控制。</p></div>
+          <div class="panel"><h3>Purge</h3><p>训练结束到 OOS 开始之间默认留 5 日间隔，降低 5 日标签重叠泄漏。</p></div>
+          <div class="panel"><h3>测试集</h3><p>2023 只做预测和评价，不参与训练和参数学习。</p></div>
+        </div>
+        <p>LGB 会自动对输入表达式去重，并跳过无法解析、常数或全缺失特征。结果里会显示请求因子数、去重后数量、实际训练数量、跳过特征数和特征重要性。</p>
+        <div class="callout danger">LGB 年化很高不等于可以直接提交。必须同时看 2023 OOS、回撤、特征重要性是否集中、是否只靠少数同类因子，以及组合和已有候选的相关性。</div>
+      </div>
+    </section>
+
+    <section id="dedup">
+      <div class="section-head">
+        <div><h2>低相关贪心去重</h2><p>Alpha 历史页可按任意研究指标排序，再做 maxcorr 约束筛选。</p></div>
+        <span class="badge">MaxCorr</span>
+      </div>
+      <div class="body">
+        <p>输入 <code>maxcorr</code>、<code>保留个数</code> 和排序指标后，系统先在当前筛选结果中保留明确经济分组的单因子，再按指定指标排序。可用排序指标包括 <code>|IC|</code>、IC、Sharpe、Fitness、年化收益、Turnover、最大回撤和 MaxCorr。</p>
+        <div class="formula">sort by selected_metric desc
+for alpha in sorted:
+  keep if max_corr(alpha, kept) <= maxcorr
+stop when len(kept) == keep_count</div>
+        <p>贪心结果会直接变成当前页面筛选和多选状态，随后可以立刻查看相关性矩阵，或用等权和 LightGBM 对同一批因子做组合回测。</p>
+      </div>
+    </section>
+
+    <section id="factor">
+      <div class="section-head">
+        <div><h2>因子构建方法</h2><p>优先寻找新的经济暴露，而不是重复改写同一个公式。</p></div>
+        <span class="badge">Alpha Design</span>
+      </div>
+      <div class="body">
+        <div class="grid2">
+          <div class="panel">
+            <h3>分钟结构</h3>
+            <p>从 VWAP 偏离、开收盘结构、成交集中度、日内冲击恢复等角度构建，通常和纯日频动量相关性较低。</p>
+          </div>
+          <div class="panel">
+            <h3>流动性与成交</h3>
+            <p>成交额、换手、异常量、Amihud 冲击可以表达交易拥挤、冲击成本和短期反转。</p>
+          </div>
+          <div class="panel">
+            <h3>波动率形态</h3>
+            <p>下行波动、波动率比值、偏度、K线影线适合表达风险补偿和行为反转。</p>
+          </div>
+          <div class="panel">
+            <h3>组合变换</h3>
+            <p>先做简单可解释表达式，再用 zscore、rank、ts_rank、group_neutralize 做稳健化，不要一开始就堆复杂函数。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="metrics">
+      <div class="section-head">
+        <div><h2>指标解释</h2><p>每个指标回答的问题不同，要组合判断。</p></div>
+        <span class="badge">Metrics</span>
+      </div>
+      <div class="body">
+        <table>
+          <tr><th>指标</th><th>含义</th><th>使用方式</th></tr>
+          <tr><td>IC / Rank IC</td><td>因子值与未来收益的相关</td><td>判断方向性和排序能力。</td></tr>
+          <tr><td>年化超额</td><td>Top10% 多头相对全市场的年化收益</td><td>观察收益强度，必须和回撤一起看。</td></tr>
+          <tr><td>最大回撤</td><td>PnL 从高点到低点的最大跌幅</td><td>过滤脆弱、阶段性失效因子。</td></tr>
+          <tr><td>Sharpe / Sortino</td><td>收益稳定性</td><td>Sortino 更关注下行波动。</td></tr>
+          <tr><td>Turnover</td><td>持仓变化速度</td><td>过高可能难交易，过低可能响应慢。</td></tr>
+          <tr><td>maxcorr</td><td>与已选因子的最大收益相关</td><td>控制重复暴露，构建多样化候选库。</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="overfit">
+      <div class="section-head">
+        <div><h2>过拟合控制</h2><p>速度快不代表质量低，但必须有防线。</p></div>
+        <span class="badge">Robustness</span>
+      </div>
+      <div class="body">
+        <ul>
+          <li>候选筛选可以用全样本快速发现信号，但最终 LGB 必须使用 2020-2022 训练、2023 OOS 观察。</li>
+          <li>不要只提交同一批高度相关的 LGB；每个 LGB 应该由不同字段族或不同经济假设支撑。</li>
+          <li>特征重要性如果集中在几个相似表达式上，要回到单因子层面检查是否重复。</li>
+          <li>高年化必须同时配合低回撤、稳定 IC、低 maxcorr 和合理换手。</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="section-head">
+        <div><h2>AI接口与排障</h2><p>右下角助手用于平台内问答，不替代研究判断。</p></div>
+        <span class="badge">Assistant</span>
+      </div>
+      <div class="body">
+        <p>AI 助手会读取平台源码、字段列表和操作符说明回答问题。DeepSeek API 不可用时，系统会自动使用本地兜底知识回答 LGB、等权、单因子、maxcorr 和指标解释，避免前端只显示 API 错误。</p>
+        <div class="grid2">
+          <div class="panel"><h3>推荐问题</h3><p>“LGB 是怎么回测的？”、“这个字段适合构建什么因子？”、“等权组合和 LGB 区别是什么？”、“maxcorr 应该设多少？”</p></div>
+          <div class="panel"><h3>常见失败</h3><p><code>Failed to fetch</code> 通常是后端瞬时不可达；刷新页面或等待守护进程重启。训练内存错误则减少特征数或让系统默认截断。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">YYB Quant Research Manual · 更新口径：LGB 2020-2022 train + 5-day purge + 2023 OOS</div>
+  </div>
+</main>
+</body>
+</html>

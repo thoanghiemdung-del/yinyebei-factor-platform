@@ -1,0 +1,623 @@
+rank(returns)|market_cap
+-rank(returns)|market_cap
+ts_rank(returns, 10)|market_cap
+ts_rank(returns, 40)|market_cap
+signed_power(returns, 2)|none
+signed_power(returns, 0.5)|none
+ts_decay_linear(returns, 5)|market_cap
+ts_decay_linear(returns, 20)|market_cap
+ts_delta(returns, 5)|none
+ts_delta(returns, 20)|none
+zscore(returns)|market_cap
+ts_mean(returns, 10)|market_cap
+ts_mean(returns, 40)|market_cap
+ts_std(returns, 20)|none
+ts_skew(returns, 20)|market_cap
+ts_kurt(returns, 60)|none
+group_neutralize(returns, market_cap)|none
+rank(ret_5d)|market_cap
+-rank(ret_5d)|market_cap
+ts_rank(ret_5d, 20)|market_cap
+signed_power(ret_5d, 2)|none
+ts_decay_linear(ret_5d, 10)|market_cap
+ts_delta(ret_5d, 10)|none
+zscore(ret_5d)|market_cap
+rank(ret_10d)|market_cap
+-rank(ret_10d)|market_cap
+ts_rank(ret_10d, 20)|market_cap
+signed_power(ret_10d, 2)|none
+ts_decay_linear(ret_10d, 10)|market_cap
+ts_delta(ret_10d, 20)|none
+ts_mean(ret_10d, 20)|market_cap
+group_neutralize(ret_10d, market_cap)|none
+rank(ret_20d)|market_cap
+-rank(ret_20d)|market_cap
+ts_rank(ret_20d, 40)|market_cap
+signed_power(ret_20d, 2)|none
+signed_power(ret_20d, 0.5)|none
+ts_decay_linear(ret_20d, 20)|market_cap
+ts_delta(ret_20d, 20)|none
+ts_delta(ret_20d, 40)|none
+zscore(ret_20d)|market_cap
+ts_mean(ret_20d, 10)|market_cap
+rank(ret_40d)|market_cap
+-rank(ret_40d)|market_cap
+ts_rank(ret_40d, 60)|market_cap
+signed_power(ret_40d, 2)|none
+ts_decay_linear(ret_40d, 20)|market_cap
+ts_delta(ret_40d, 20)|none
+zscore(ret_40d)|market_cap
+ts_mean(ret_40d, 20)|market_cap
+rank(ret_60d)|market_cap
+-rank(ret_60d)|market_cap
+ts_rank(ret_60d, 120)|market_cap
+signed_power(ret_60d, 2)|none
+ts_decay_linear(ret_60d, 40)|market_cap
+ts_delta(ret_60d, 40)|none
+zscore(ret_60d)|market_cap
+rank(ret_120d_skip5)|market_cap
+-rank(ret_120d_skip5)|market_cap
+signed_power(ret_120d_skip5, 2)|none
+ts_decay_linear(ret_120d_skip5, 60)|market_cap
+zscore(ret_120d_skip5)|market_cap
+group_neutralize(ret_120d_skip5, market_cap)|none
+rank(cumret_5d)|market_cap
+-rank(cumret_5d)|market_cap
+ts_rank(cumret_5d, 20)|market_cap
+signed_power(cumret_5d, 2)|none
+ts_delta(cumret_5d, 5)|none
+zscore(cumret_5d)|market_cap
+rank(sharpe_60d)|market_cap
+-rank(sharpe_60d)|market_cap
+signed_power(sharpe_60d, 2)|none
+ts_decay_linear(sharpe_60d, 20)|market_cap
+ts_delta(sharpe_60d, 20)|none
+ts_mean(sharpe_60d, 20)|market_cap
+rank(mom_vol_adj)|market_cap
+-rank(mom_vol_adj)|market_cap
+signed_power(mom_vol_adj, 2)|none
+ts_decay_linear(mom_vol_adj, 20)|market_cap
+ts_delta(mom_vol_adj, 10)|none
+zscore(mom_vol_adj)|market_cap
+rank(close_vs_high_20d)|market_cap
+-rank(close_vs_high_20d)|market_cap
+ts_rank(close_vs_high_20d, 20)|market_cap
+signed_power(close_vs_high_20d, 2)|none
+ts_delta(close_vs_high_20d, 5)|none
+-rank(max_dd_60d)|market_cap
+rank(max_dd_60d)|market_cap
+ts_rank(max_dd_60d, 40)|market_cap
+signed_power(max_dd_60d, 0.5)|none
+ts_delta(max_dd_60d, 20)|none
+rank(rev_1d)|market_cap
+-rank(rev_1d)|market_cap
+ts_rank(rev_1d, 5)|market_cap
+signed_power(rev_1d, 2)|none
+ts_decay_linear(rev_1d, 5)|market_cap
+ts_mean(rev_1d, 10)|market_cap
+rank(rev_5d)|market_cap
+-rank(rev_5d)|market_cap
+ts_rank(rev_5d, 20)|market_cap
+signed_power(rev_5d, 2)|none
+ts_decay_linear(rev_5d, 10)|market_cap
+ts_delta(rev_5d, 10)|none
+zscore(rev_5d)|market_cap
+rank(rev_10d)|market_cap
+ts_rank(rev_10d, 20)|market_cap
+signed_power(rev_10d, 2)|none
+ts_decay_linear(rev_10d, 10)|market_cap
+zscore(rev_10d)|market_cap
+rank(rev_20d)|market_cap
+ts_rank(rev_20d, 40)|market_cap
+signed_power(rev_20d, 2)|none
+ts_decay_linear(rev_20d, 20)|market_cap
+ts_delta(rev_20d, 20)|none
+rank(rev_overnight)|market_cap
+ts_rank(rev_overnight, 10)|market_cap
+signed_power(rev_overnight, 2)|none
+rank(abnormal_vol_rev)|market_cap
+ts_rank(abnormal_vol_rev, 20)|market_cap
+signed_power(abnormal_vol_rev, 2)|none
+ts_decay_linear(abnormal_vol_rev, 10)|market_cap
+rank(extreme_loser_5d)|market_cap
+ts_rank(extreme_loser_5d, 20)|market_cap
+signed_power(extreme_loser_5d, 2)|none
+ts_decay_linear(extreme_loser_5d, 10)|market_cap
+rank(extreme_winner_5d)|market_cap
+ts_rank(extreme_winner_5d, 20)|market_cap
+signed_power(extreme_winner_5d, 2)|none
+rank(rev_vol_regime)|market_cap
+ts_rank(rev_vol_regime, 20)|market_cap
+signed_power(rev_vol_regime, 2)|none
+-rank(vol_5d)|market_cap
+rank(vol_5d)|market_cap
+ts_rank(vol_5d, 20)|market_cap
+ts_delta(vol_5d, 5)|none
+signed_power(vol_5d, 2)|none
+zscore(vol_5d)|market_cap
+ts_decay_linear(vol_5d, 5)|market_cap
+-rank(vol_10d)|market_cap
+ts_rank(vol_10d, 20)|market_cap
+ts_delta(vol_10d, 10)|none
+signed_power(vol_10d, 2)|none
+zscore(vol_10d)|market_cap
+ts_decay_linear(vol_10d, 10)|market_cap
+-rank(vol_20d)|market_cap
+ts_rank(vol_20d, 40)|market_cap
+ts_delta(vol_20d, 20)|none
+signed_power(vol_20d, 2)|none
+signed_power(vol_20d, 0.5)|none
+zscore(vol_20d)|market_cap
+ts_decay_linear(vol_20d, 20)|market_cap
+ts_mean(vol_20d, 20)|market_cap
+-rank(vol_40d)|market_cap
+ts_rank(vol_40d, 60)|market_cap
+ts_delta(vol_40d, 20)|none
+signed_power(vol_40d, 2)|none
+zscore(vol_40d)|market_cap
+-rank(vol_60d)|market_cap
+ts_rank(vol_60d, 120)|market_cap
+ts_delta(vol_60d, 40)|none
+signed_power(vol_60d, 2)|none
+zscore(vol_60d)|market_cap
+-rank(vol_120d)|market_cap
+ts_rank(vol_120d, 60)|market_cap
+ts_delta(vol_120d, 60)|none
+signed_power(vol_120d, 0.5)|none
+zscore(vol_120d)|market_cap
+rank(upside_vol_60d)|market_cap
+-rank(upside_vol_60d)|market_cap
+ts_rank(upside_vol_60d, 40)|market_cap
+signed_power(upside_vol_60d, 2)|none
+ts_delta(upside_vol_60d, 20)|none
+zscore(upside_vol_60d)|market_cap
+-rank(downside_vol_60d)|market_cap
+rank(downside_vol_60d)|market_cap
+ts_rank(downside_vol_60d, 40)|market_cap
+signed_power(downside_vol_60d, 2)|none
+ts_delta(downside_vol_60d, 20)|none
+zscore(downside_vol_60d)|market_cap
+-rank(vol_ratio)|market_cap
+rank(vol_ratio)|market_cap
+ts_rank(vol_ratio, 20)|market_cap
+signed_power(vol_ratio, 2)|none
+ts_delta(vol_ratio, 10)|none
+-rank(vol_ratio_5_20)|market_cap
+rank(vol_ratio_5_20)|market_cap
+ts_rank(vol_ratio_5_20, 20)|market_cap
+signed_power(vol_ratio_5_20, 2)|none
+ts_delta(vol_ratio_5_20, 5)|none
+-rank(vol_ratio_20_60)|market_cap
+rank(vol_ratio_20_60)|market_cap
+ts_rank(vol_ratio_20_60, 20)|market_cap
+signed_power(vol_ratio_20_60, 2)|none
+ts_delta(vol_ratio_20_60, 10)|none
+-rank(down_up_vol_ratio)|market_cap
+rank(down_up_vol_ratio)|market_cap
+ts_rank(down_up_vol_ratio, 40)|market_cap
+signed_power(down_up_vol_ratio, 2)|none
+-rank(skewness_20d)|market_cap
+rank(skewness_20d)|market_cap
+ts_rank(skewness_20d, 20)|market_cap
+signed_power(skewness_20d, 2)|none
+-rank(skewness_60d)|market_cap
+ts_rank(skewness_60d, 40)|market_cap
+signed_power(skewness_60d, 2)|none
+-rank(kurtosis_60d)|market_cap
+rank(kurtosis_60d)|market_cap
+ts_rank(kurtosis_60d, 40)|market_cap
+signed_power(kurtosis_60d, 0.5)|none
+-rank(bollinger_width)|market_cap
+rank(bollinger_width)|market_cap
+ts_rank(bollinger_width, 20)|market_cap
+ts_delta(bollinger_width, 5)|none
+-rank(intraday_volatility)|market_cap
+rank(intraday_volatility)|market_cap
+ts_rank(intraday_volatility, 20)|market_cap
+signed_power(intraday_volatility, 2)|none
+ts_delta(intraday_volatility, 5)|none
+-rank(volume)|market_cap
+rank(volume)|market_cap
+ts_rank(volume, 10)|market_cap
+ts_rank(volume, 40)|market_cap
+ts_delta(volume, 5)|none
+signed_power(volume, 0.5)|none
+zscore(volume)|market_cap
+ts_decay_linear(volume, 5)|market_cap
+-rank(amount)|market_cap
+rank(amount)|market_cap
+ts_delta(amount, 5)|none
+zscore(amount)|market_cap
+-rank(dollar_volume)|market_cap
+rank(dollar_volume)|market_cap
+ts_rank(dollar_volume, 20)|market_cap
+ts_delta(dollar_volume, 10)|none
+zscore(dollar_volume)|market_cap
+-rank(log_dollar_vol)|market_cap
+rank(log_dollar_vol)|market_cap
+ts_rank(log_dollar_vol, 20)|market_cap
+ts_delta(log_dollar_vol, 10)|none
+rank(volume_profile_ratio)|market_cap
+-rank(volume_profile_ratio)|market_cap
+ts_rank(volume_profile_ratio, 10)|market_cap
+signed_power(volume_profile_ratio, 2)|none
+ts_delta(volume_profile_ratio, 5)|none
+rank(volume_breakout)|market_cap
+-rank(volume_breakout)|market_cap
+ts_rank(volume_breakout, 20)|market_cap
+signed_power(volume_breakout, 2)|none
+ts_delta(volume_breakout, 5)|none
+rank(turnover_rate)|market_cap
+-rank(turnover_rate)|market_cap
+ts_rank(turnover_rate, 10)|market_cap
+signed_power(turnover_rate, 2)|none
+ts_delta(turnover_rate, 5)|none
+rank(turnover_5d)|market_cap
+-rank(turnover_5d)|market_cap
+ts_rank(turnover_5d, 20)|market_cap
+ts_delta(turnover_5d, 5)|none
+rank(turnover_change)|market_cap
+-rank(turnover_change)|market_cap
+ts_rank(turnover_change, 20)|market_cap
+signed_power(turnover_change, 2)|none
+ts_delta(turnover_change, 5)|none
+rank(adv5)|market_cap
+ts_delta(adv5, 5)|none
+ts_rank(adv5, 20)|market_cap
+rank(adv20)|market_cap
+ts_delta(adv20, 10)|none
+ts_rank(adv20, 60)|market_cap
+rank(volume_trend_20d)|market_cap
+-rank(volume_trend_20d)|market_cap
+ts_rank(volume_trend_20d, 20)|market_cap
+signed_power(volume_trend_20d, 2)|none
+-rank(amount_volatility)|market_cap
+rank(amount_volatility)|market_cap
+ts_rank(amount_volatility, 20)|market_cap
+ts_delta(amount_volatility, 10)|none
+rank(volume_price_corr)|market_cap
+-rank(volume_price_corr)|market_cap
+ts_rank(volume_price_corr, 20)|market_cap
+signed_power(volume_price_corr, 2)|none
+ts_delta(volume_price_corr, 10)|none
+rank(volume_price_div)|market_cap
+-rank(volume_price_div)|market_cap
+ts_rank(volume_price_div, 20)|market_cap
+signed_power(volume_price_div, 2)|none
+-rank(amihud_20d)|market_cap
+rank(amihud_20d)|market_cap
+ts_rank(amihud_20d, 40)|market_cap
+ts_delta(amihud_20d, 20)|none
+zscore(amihud_20d)|market_cap
+rank(close)|market_cap
+ts_delta(close, 5)|none
+ts_mean(close, 5)|market_cap
+ts_mean(close, 20)|market_cap
+rank(open)|market_cap
+ts_delta(open, 5)|none
+ts_max(high, 20)|market_cap
+ts_max(high, 60)|market_cap
+ts_min(low, 20)|market_cap
+ts_min(low, 60)|market_cap
+ts_delta(preclose, 5)|none
+-rank(upper_shadow_pct)|market_cap
+rank(upper_shadow_pct)|market_cap
+ts_rank(upper_shadow_pct, 20)|market_cap
+signed_power(upper_shadow_pct, 2)|none
+ts_decay_linear(upper_shadow_pct, 10)|market_cap
+rank(lower_shadow_pct)|market_cap
+-rank(lower_shadow_pct)|market_cap
+ts_rank(lower_shadow_pct, 20)|market_cap
+signed_power(lower_shadow_pct, 2)|none
+ts_decay_linear(lower_shadow_pct, 10)|market_cap
+-rank(upper_shadow)|market_cap
+rank(upper_shadow)|market_cap
+ts_rank(upper_shadow, 10)|market_cap
+rank(lower_shadow)|market_cap
+-rank(lower_shadow)|market_cap
+ts_rank(lower_shadow, 10)|market_cap
+rank(body_ratio)|market_cap
+-rank(body_ratio)|market_cap
+ts_rank(body_ratio, 20)|market_cap
+signed_power(body_ratio, 2)|none
+rank(doji_score)|market_cap
+-rank(doji_score)|market_cap
+ts_rank(doji_score, 10)|market_cap
+rank(gap_up)|market_cap
+-rank(gap_up)|market_cap
+ts_rank(gap_up, 10)|market_cap
+signed_power(gap_up, 2)|none
+-rank(gap_down)|market_cap
+rank(gap_down)|market_cap
+ts_rank(gap_down, 10)|market_cap
+signed_power(gap_down, 2)|none
+rank(gap_momentum)|market_cap
+-rank(gap_momentum)|market_cap
+ts_rank(gap_momentum, 10)|market_cap
+rank(close_vs_low_20d)|market_cap
+-rank(close_vs_low_20d)|market_cap
+ts_rank(close_vs_low_20d, 20)|market_cap
+signed_power(close_vs_low_20d, 0.5)|none
+rank(auction_return)|market_cap
+-rank(auction_return)|market_cap
+ts_rank(auction_return, 10)|market_cap
+signed_power(auction_return, 2)|none
+ts_decay_linear(auction_return, 5)|market_cap
+rank(close) - rank(open)|market_cap
+rank(high) - rank(low)|market_cap
+rank(close) - rank(preclose)|market_cap
+rank(close)/rank(high)|none
+rank(close)/rank(low)|none
+rank(morning_return)|market_cap
+-rank(morning_return)|market_cap
+ts_rank(morning_return, 10)|market_cap
+signed_power(morning_return, 2)|none
+ts_decay_linear(morning_return, 5)|market_cap
+rank(afternoon_return)|market_cap
+-rank(afternoon_return)|market_cap
+ts_rank(afternoon_return, 10)|market_cap
+signed_power(afternoon_return, 2)|none
+ts_decay_linear(afternoon_return, 5)|market_cap
+rank(first30min_return)|market_cap
+-rank(first30min_return)|market_cap
+ts_rank(first30min_return, 10)|market_cap
+signed_power(first30min_return, 2)|none
+ts_decay_linear(first30min_return, 5)|market_cap
+rank(first30_mom)|market_cap
+ts_rank(first30_mom, 10)|market_cap
+signed_power(first30_mom, 2)|none
+rank(last30min_return)|market_cap
+-rank(last30min_return)|market_cap
+ts_rank(last30min_return, 10)|market_cap
+signed_power(last30min_return, 2)|none
+ts_decay_linear(last30min_return, 5)|market_cap
+rank(last30_mom)|market_cap
+ts_rank(last30_mom, 10)|market_cap
+signed_power(last30_mom, 2)|none
+rank(body_return)|market_cap
+-rank(body_return)|market_cap
+ts_rank(body_return, 10)|market_cap
+signed_power(body_return, 2)|none
+rank(intraday_mom)|market_cap
+ts_rank(intraday_mom, 10)|market_cap
+signed_power(intraday_mom, 2)|none
+rank(intraday_reversal)|market_cap
+-rank(intraday_reversal)|market_cap
+ts_rank(intraday_reversal, 10)|market_cap
+signed_power(intraday_reversal, 2)|none
+rank(overnight_reversal)|market_cap
+ts_rank(overnight_reversal, 10)|market_cap
+signed_power(overnight_reversal, 2)|none
+-rank(am_pm_divergence)|market_cap
+rank(am_pm_divergence)|market_cap
+ts_rank(am_pm_divergence, 10)|market_cap
+signed_power(am_pm_divergence, 2)|none
+rank(close_location)|market_cap
+-rank(close_location)|market_cap
+ts_rank(close_location, 10)|market_cap
+signed_power(close_location, 2)|none
+rank(price_efficiency)|market_cap
+-rank(price_efficiency)|market_cap
+ts_rank(price_efficiency, 10)|market_cap
+signed_power(price_efficiency, 2)|none
+rank(vwap_gap)|market_cap
+-rank(vwap_gap)|market_cap
+ts_rank(vwap_gap, 10)|market_cap
+signed_power(vwap_gap, 2)|none
+ts_decay_linear(vwap_gap, 5)|market_cap
+rank(close_vs_vwap)|market_cap
+ts_rank(close_vs_vwap, 10)|market_cap
+signed_power(close_vs_vwap, 2)|none
+rank(vwap_trend)|market_cap
+-rank(vwap_trend)|market_cap
+ts_rank(vwap_trend, 10)|market_cap
+rank(volume_concentration)|market_cap
+-rank(volume_concentration)|market_cap
+ts_rank(volume_concentration, 10)|market_cap
+signed_power(volume_concentration, 2)|none
+rank(volume_hhi)|market_cap
+ts_rank(volume_hhi, 10)|market_cap
+rank(open_vol_ratio)|market_cap
+-rank(open_vol_ratio)|market_cap
+ts_rank(open_vol_ratio, 10)|market_cap
+rank(close_vol_ratio)|market_cap
+-rank(close_vol_ratio)|market_cap
+ts_rank(close_vol_ratio, 10)|market_cap
+rank(smart_money_vol)|market_cap
+-rank(smart_money_vol)|market_cap
+ts_rank(smart_money_vol, 10)|market_cap
+signed_power(smart_money_vol, 2)|none
+rank(large_trade_ratio)|market_cap
+-rank(large_trade_ratio)|market_cap
+ts_rank(large_trade_ratio, 10)|market_cap
+rank(large_trade_signal)|market_cap
+-rank(large_trade_signal)|market_cap
+ts_rank(large_trade_signal, 10)|market_cap
+-rank(roll_spread)|market_cap
+rank(roll_spread)|market_cap
+ts_rank(roll_spread, 20)|market_cap
+-rank(amihud_min)|market_cap
+rank(amihud_min)|market_cap
+ts_rank(amihud_min, 20)|market_cap
+-rank(amihud_hybrid)|market_cap
+rank(amihud_hybrid)|market_cap
+ts_rank(amihud_hybrid, 20)|market_cap
+-rank(vpin)|market_cap
+rank(vpin)|market_cap
+ts_rank(vpin, 20)|market_cap
+signed_power(vpin, 2)|none
+rank(vpin_informed)|market_cap
+ts_rank(vpin_informed, 20)|market_cap
+rank(vol_skew)|market_cap
+-rank(vol_skew)|market_cap
+ts_rank(vol_skew, 10)|market_cap
+-rank(realized_vol)|market_cap
+ts_rank(realized_vol, 20)|market_cap
+ts_delta(realized_vol, 10)|none
+rank(opening_confirm)|market_cap
+ts_rank(opening_confirm, 10)|market_cap
+-rank(close_manipulation)|market_cap
+rank(close_manipulation)|market_cap
+ts_rank(close_manipulation, 10)|market_cap
+rank(triple_confirm)|market_cap
+ts_rank(triple_confirm, 10)|market_cap
+-rank(wat)|market_cap
+rank(wat)|market_cap
+ts_rank(wat, 10)|market_cap
+rank(smart_money_vwap)|market_cap
+ts_rank(smart_money_vwap, 10)|market_cap
+rank(vol_conc_mom)|market_cap
+ts_rank(vol_conc_mom, 10)|market_cap
+rank(mom_vol_conf)|market_cap
+ts_rank(mom_vol_conf, 20)|market_cap
+signed_power(mom_vol_conf, 2)|none
+rank(mom_liquidity_adj)|market_cap
+ts_rank(mom_liquidity_adj, 20)|market_cap
+signed_power(mom_liquidity_adj, 2)|none
+rank(rev_vol_conf)|market_cap
+ts_rank(rev_vol_conf, 20)|market_cap
+signed_power(rev_vol_conf, 2)|none
+rank(intraday_ret5d)|market_cap
+ts_rank(intraday_ret5d, 20)|market_cap
+signed_power(intraday_ret5d, 2)|none
+rank(vwap_close_mom)|market_cap
+ts_rank(vwap_close_mom, 20)|market_cap
+signed_power(vwap_close_mom, 2)|none
+rank(smart_money_rev)|market_cap
+ts_rank(smart_money_rev, 20)|market_cap
+signed_power(smart_money_rev, 2)|none
+rank(liquidity_premium)|market_cap
+-rank(liquidity_premium)|market_cap
+ts_rank(liquidity_premium, 40)|market_cap
+-rank(rsi_14)|market_cap
+rank(rsi_14)|market_cap
+ts_rank(rsi_14, 20)|market_cap
+signed_power(rsi_14, 2)|none
+ts_delta(rsi_14, 5)|none
+-rank(bollinger_pos)|market_cap
+rank(bollinger_pos)|market_cap
+ts_rank(bollinger_pos, 20)|market_cap
+ts_delta(bollinger_pos, 5)|none
+-rank(beta_60d)|market_cap
+rank(beta_60d)|market_cap
+ts_rank(beta_60d, 40)|market_cap
+ts_delta(beta_60d, 20)|none
+rank(market_cap_rank)|market_cap
+-rank(market_cap_rank)|market_cap
+ts_rank(market_cap_rank, 40)|market_cap
+-rank(max_ret_20d)|market_cap
+rank(max_ret_20d)|market_cap
+ts_rank(max_ret_20d, 20)|market_cap
+signed_power(max_ret_20d, 2)|none
+-rank(min_ret_20d)|market_cap
+rank(min_ret_20d)|market_cap
+ts_rank(min_ret_20d, 20)|market_cap
+rank(hit_rate_20d)|market_cap
+-rank(hit_rate_20d)|market_cap
+ts_rank(hit_rate_20d, 20)|market_cap
+rank(hit_rate_60d)|market_cap
+-rank(hit_rate_60d)|market_cap
+ts_rank(hit_rate_60d, 40)|market_cap
+rank(ret_20d) - rank(vol_20d)|market_cap
+rank(ret_20d) * rank(vol_20d)|none
+rank(sharpe_60d) - rank(vol_60d)|market_cap
+ts_rank(returns, 10) - ts_rank(vol_10d, 10)|market_cap
+rank(ret_20d) * rank(volume_profile_ratio)|market_cap
+rank(ret_20d) * rank(volume_trend_20d)|market_cap
+rank(ret_10d) + rank(volume_trend_20d)|market_cap
+ts_rank(returns, 20) - ts_rank(volume_trend_20d, 20)|market_cap
+rank(rev_5d) * rank(volume_profile_ratio)|market_cap
+rank(rev_5d) * rank(turnover_rate)|market_cap
+rank(extreme_loser_5d) + rank(volume_breakout)|market_cap
+-rank(vol_20d) - rank(volume_breakout)|market_cap
+rank(vol_ratio_5_20) * rank(volume_profile_ratio)|none
+-rank(vol_20d) * rank(volume_price_corr)|none
+rank(first30min_return) * rank(last30min_return)|market_cap
+rank(first30_mom) - rank(last30_mom)|none
+rank(morning_return) - rank(afternoon_return)|market_cap
+rank(close_location) * rank(body_ratio)|market_cap
+rank(vwap_gap) * rank(smart_money_vol)|market_cap
+rank(price_efficiency) * rank(volume_concentration)|market_cap
+rank(close_vs_vwap) + rank(smart_money_vol)|market_cap
+rank(am_pm_divergence) * rank(volume_concentration)|none
+rank(close_location) - rank(upper_shadow_pct)|market_cap
+rank(sharpe_60d) + rank(hit_rate_60d)|market_cap
+rank(mom_vol_adj) - rank(max_dd_60d)|market_cap
+-rank(vol_120d) - rank(kurtosis_60d)|market_cap
+rank(smart_money_vol) * rank(vwap_gap)|market_cap
+rank(large_trade_signal) + rank(smart_money_vol)|market_cap
+rank(smart_money_vwap) + rank(close_location)|market_cap
+rank(ret_20d) - rank(market_cap_rank)|market_cap
+rank(ret_60d) + rank(market_cap_rank)|market_cap
+rank(mom_vol_adj) - rank(market_cap_rank)|market_cap
+rank(ret_10d) * rank(vol_ratio_5_20)|none
+-rank(rev_5d) * rank(vol_ratio_5_20)|none
+rank(ret_20d) - ts_rank(vol_20d, 20)|market_cap
+rank(ret_20d) - rank(amihud_20d)|market_cap
+rank(ret_10d) * rank(turnover_change)|market_cap
+rank(rev_5d) - rank(amihud_20d)|market_cap
+rank(rsi_14) * rank(volume_profile_ratio)|none
+rank(bollinger_pos) * rank(volume_breakout)|none
+-rank(rsi_14) * rank(bollinger_width)|none
+rank(bollinger_pos) + rank(close_vs_low_20d)|market_cap
+rank(ret_5d) + rank(ret_20d)|market_cap
+rank(ret_10d) + rank(ret_40d)|market_cap
+rank(ret_20d) + rank(ret_60d)|market_cap
+rank(ret_5d) - rank(ret_60d)|market_cap
+rank(ret_20d) - rank(ret_120d_skip5)|market_cap
+rank(auction_return) * rank(intraday_mom)|market_cap
+rank(gap_up) - rank(upper_shadow_pct)|market_cap
+rank(gap_down) + rank(lower_shadow_pct)|market_cap
+rank(extreme_loser_5d) - rank(vol_20d)|market_cap
+rank(extreme_winner_5d) + rank(vol_20d)|market_cap
+rank(rev_1d) * rank(hit_rate_20d)|none
+rank(vwap_gap) + rank(smart_money_vol) + rank(close_location)|market_cap
+rank(ret_20d) + rank(volume_trend_20d) - rank(vol_20d)|market_cap
+rank(morning_return) + rank(afternoon_return) + rank(body_return)|market_cap
+rank(sharpe_60d) - rank(max_dd_60d)|market_cap
+rank(ret_60d) - rank(downside_vol_60d)|market_cap
+rank(ret_20d) - rank(skewness_60d)|market_cap
+-rank(vol_60d) - rank(down_up_vol_ratio)|market_cap
+rank(vwap_gap) * rank(price_efficiency)|market_cap
+rank(close_location) * rank(volume_concentration)|market_cap
+rank(triple_confirm) * rank(volume_concentration)|none
+rank(turnover_change) - rank(amount_volatility)|market_cap
+rank(ret_20d) / (rank(vol_20d) + 0.01)|none
+rank(cumret_5d) * rank(volume_trend_20d)|market_cap
+rank(returns) * rank(close_vs_high_20d)|market_cap
+rank(vwap)|market_cap
+ts_rank(vwap, 20)|market_cap
+ts_delta(vwap, 10)|none
+signed_power(returns, 3)|none
+signed_power(ret_20d, 3)|none
+signed_power(rev_5d, 3)|none
+signed_power(sharpe_60d, 0.5)|none
+ts_delta(vol_20d, 10)|none
+ts_delta(turnover_rate, 10)|none
+ts_delta(close_location, 5)|none
+ts_delta(vwap_gap, 5)|none
+ts_mean(volume, 10)|market_cap
+ts_mean(volume, 40)|market_cap
+ts_mean(returns, 5)|market_cap
+group_neutralize(ret_20d, market_cap)|none
+group_neutralize(ret_60d, market_cap)|none
+group_neutralize(vol_20d, market_cap)|none
+group_neutralize(sharpe_60d, market_cap)|none
+ts_product(returns, 5)|market_cap
+ts_product(returns, 20)|market_cap
+ts_median(returns, 20)|market_cap
+ts_median(volume, 20)|market_cap
+rank(morning_return) + rank(last30min_return)|market_cap
+rank(ret_5d) * rank(close_location)|market_cap
+rank(rev_overnight) * rank(gap_up)|market_cap
+rank(ret_20d) + rank(rsi_14)|market_cap
+-rank(vol_60d) * rank(market_cap_rank)|market_cap
+rank(amihud_20d) - rank(vwap_gap)|market_cap
+rank(turnover_5d) + rank(volume_concentration)|market_cap
+rank(volume_profile_ratio) - rank(amount_volatility)|market_cap
+rank(body_ratio) * rank(returns)|none
+rank(lower_shadow_pct) * rank(rev_1d)|market_cap
+rank(upper_shadow_pct) * rank(ret_5d)|market_cap
+rank(ret_20d) / (rank(vol_20d) + 0.01)|market_cap
+rank(ret_10d) / (rank(vol_10d) + 0.01)|market_cap
+rank(ret_5d) / (rank(vol_5d) + 0.01)|market_cap

@@ -1,0 +1,27 @@
+# Data and caches
+*.db
+*.sqlite
+*.pkl
+*.npy
+*.npz
+*.mat
+*.zip
+*.jsonl
+*.log
+__pycache__/
+.pytest_cache/
+cache/
+logs/
+experiment_results/
+verify_output/
+
+# Credentials or local state
+cookie.txt
+cookie2.txt
+*.env
+.env
+
+# OS/editor
+Thumbs.db
+.DS_Store
+.vscode/

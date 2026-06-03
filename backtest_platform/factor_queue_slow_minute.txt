@@ -1,0 +1,55 @@
+rank(first30_mom)|market_cap
+ts_rank(first30_mom, 10)|market_cap
+signed_power(first30_mom, 2)|none
+rank(last30_mom)|market_cap
+ts_rank(last30_mom, 10)|market_cap
+signed_power(last30_mom, 2)|none
+rank(intraday_mom)|market_cap
+ts_rank(intraday_mom, 10)|market_cap
+signed_power(intraday_mom, 2)|none
+rank(close_vs_vwap)|market_cap
+ts_rank(close_vs_vwap, 10)|market_cap
+signed_power(close_vs_vwap, 2)|none
+rank(vwap_trend)|market_cap
+-rank(vwap_trend)|market_cap
+ts_rank(vwap_trend, 10)|market_cap
+rank(volume_hhi)|market_cap
+ts_rank(volume_hhi, 10)|market_cap
+rank(open_vol_ratio)|market_cap
+-rank(open_vol_ratio)|market_cap
+ts_rank(open_vol_ratio, 10)|market_cap
+rank(close_vol_ratio)|market_cap
+-rank(close_vol_ratio)|market_cap
+ts_rank(close_vol_ratio, 10)|market_cap
+rank(smart_money_vol)|market_cap
+-rank(smart_money_vol)|market_cap
+ts_rank(smart_money_vol, 10)|market_cap
+signed_power(smart_money_vol, 2)|none
+rank(large_trade_ratio)|market_cap
+-rank(large_trade_ratio)|market_cap
+ts_rank(large_trade_ratio, 10)|market_cap
+-rank(roll_spread)|market_cap
+rank(roll_spread)|market_cap
+ts_rank(roll_spread, 20)|market_cap
+-rank(amihud_min)|market_cap
+rank(amihud_min)|market_cap
+ts_rank(amihud_min, 20)|market_cap
+-rank(vpin)|market_cap
+rank(vpin)|market_cap
+ts_rank(vpin, 20)|market_cap
+signed_power(vpin, 2)|none
+rank(vpin_informed)|market_cap
+ts_rank(vpin_informed, 20)|market_cap
+rank(vol_skew)|market_cap
+-rank(vol_skew)|market_cap
+ts_rank(vol_skew, 10)|market_cap
+-rank(realized_vol)|market_cap
+ts_rank(realized_vol, 20)|market_cap
+ts_delta(realized_vol, 10)|none
+rank(first30_mom) - rank(last30_mom)|none
+rank(vwap_gap) * rank(smart_money_vol)|market_cap
+rank(close_vs_vwap) + rank(smart_money_vol)|market_cap
+rank(smart_money_vol) * rank(vwap_gap)|market_cap
+rank(large_trade_signal) + rank(smart_money_vol)|market_cap
+rank(auction_return) * rank(intraday_mom)|market_cap
+rank(vwap_gap) + rank(smart_money_vol) + rank(close_location)|market_cap

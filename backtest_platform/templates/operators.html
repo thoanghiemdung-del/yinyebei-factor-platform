@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>操作符参考</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei',sans-serif;background:#0d1117;color:#c9d1d9}
+.header{background:#161b22;border-bottom:1px solid #30363d;padding:10px 20px;display:flex;justify-content:center;align-items:center;position:sticky;top:0;z-index:100}
+.header h1{color:#e94560;font-size:16px}
+.header nav{display:flex;gap:24px}
+.header nav a{color:#8b949e;text-decoration:none;font-size:12px}
+.header nav a:hover{color:#58a6ff}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.cat{margin-bottom:20px}
+.cat-title{background:#161b22;border:1px solid #30363d;border-radius:8px;padding:12px 18px;cursor:pointer;display:flex;justify-content:center;align-items:center}
+.cat-title:hover{border-color:#58a6ff}
+.cat-title h2{font-size:15px;color:#58a6ff}
+.cat-body{display:none;background:#111820;border:1px solid #30363d;border-top:none;border-radius:0 0 8px 8px;padding:12px 18px}
+.cat-body.open{display:block}
+.op-row{display:flex;padding:10px 0;border-bottom:1px solid #1c2533;cursor:pointer;align-items:flex-start;gap:16px}
+.op-row:hover{background:rgba(88,166,255,0.03)}
+.op-row:last-child{border-bottom:none}
+.op-sig{font-family:monospace;font-size:13px;color:#e94560;min-width:220px;white-space:nowrap}
+.op-desc{flex:1;font-size:12px;color:#8b949e;line-height:1.6}
+.op-example{font-family:monospace;font-size:11px;color:#58a6ff;min-width:180px}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>操作符参考</h1>
+  <nav><a href="/dashboard">仪表盘</a><a href="/alpha_history">Alpha历史</a><a href="/data_fields">数据字段</a><a href="/operators">操作符</a><a href="/correlation">相关性</a><a href="/community">社区</a><a href="/learn">学习</a><a href="/logout">退出</a></nav>
+</div>
+<div class="container" id="content"></div>
+<script>
+const OPS = [
+  {cat:'时序算子', items:[
+    {sig:'ts_delta(x, d)', desc:'x的d日变化：x[t] - x[t-d]。正值表示上涨趋势。最常用的动量算子。', ex:'ts_delta(close, 20)'},
+    {sig:'ts_mean(x, d)', desc:'x的d日滚动均值。平滑信号、计算均线的基础算子。NaN-aware：忽略窗口内缺失值。', ex:'ts_mean(volume, 20)'},
+    {sig:'ts_std(x, d)', desc:'x的d日滚动标准差。衡量波动率的基础算子。NaN-aware。', ex:'ts_std(close/open-1, 20)'},
+    {sig:'ts_rank(x, d)', desc:'x在d日内的时序排名百分位[0,1]。比原始值更稳健，不受量纲影响。', ex:'ts_rank(close, 60)'},
+    {sig:'ts_max(x, d)', desc:'x在d日内的最大值。用于计算高点、突破等。', ex:'ts_max(high, 20)'},
+    {sig:'ts_min(x, d)', desc:'x在d日内的最小值。用于计算低点、回撤等。', ex:'ts_min(low, 20)'},
+    {sig:'ts_sum(x, d)', desc:'x在d日内的累加和。常用于累计收益、累计成交量。NaN-aware。', ex:'ts_sum(close/open-1, 5)'},
+    {sig:'ts_corr(x, y, d)', desc:'x和y在d日内的滚动相关系数[-1,1]。正值表示同涨同跌，负值表示背离。需要≥10个有效观测。', ex:'ts_corr(close, volume, 20)'},
+    {sig:'ts_delay(x, d)', desc:'将x延迟d天。x[t]变为x[t-d]的值。用于避免未来信息泄露或构造滞后信号。', ex:'ts_delay(close, 5)'},
+    {sig:'ts_decay_linear(x, d)', desc:'d日线性衰减加权平均。近期权重更大，远期权重线性递减。比简单均线更灵敏。', ex:'ts_decay_linear(close, 20)'},
+    {sig:'ts_backfill(x)', desc:'用下一个有效值向前填充NaN。适用于缺失值较少的序列，避免前向填充引入滞后。', ex:'ts_backfill(volume)'},
+  ]},
+  {cat:'截面算子', items:[
+    {sig:'rank(x)', desc:'每日截面内对所有股票排名百分位[0,1]。1表示因子值最大，0表示最小。需要≥30只有效股票。量化因子最核心的算子。', ex:'rank(ts_delta(close, 20))'},
+    {sig:'zscore(x)', desc:'每日截面内z-score标准化：(x-μ)/σ。先1%/99%缩尾防极端值。输出均值0标准差1。', ex:'zscore(close/open-1)'},
+    {sig:'demean(x)', desc:'每日截面内去均值：x - mean(x)。用于简单的截面中性化。', ex:'demean(rank(close))'},
+    {sig:'signed_power(x, e)', desc:'保号幂次变换：sign(x)×|x|^e。e=2放大极端值（尾部增强），e=0.5压缩极端值（稳健化）。', ex:'signed_power(close/open-1, 2)'},
+    {sig:'group_neutralize(x, group)', desc:'按group分组去均值：x - group_mean(x)。当前仅支持market_cap分组（对数市值10组）。用于行业/市值中性化。', ex:'group_neutralize(rank(ts_delta(close,5)), market_cap)'},
+    {sig:'group_rank(x, group)', desc:'按group分组内排名百分位。每组内独立排名，消除组间差异。', ex:'group_rank(ts_delta(close,20), market_cap)'},
+    {sig:'group_zscore(x, group)', desc:'按group分组内z-score标准化。每组内独立标准化。', ex:'group_zscore(close/open-1, market_cap)'},
+    {sig:'ts_regression(y, x, d)', desc:'y对x的d日滚动回归残差。剔除x对y的线性影响。可选lag参数延迟使用。', ex:'ts_regression(close/open-1, volume, 60, 1)'},
+  ]},
+];
+function render(){
+  let h='';
+  OPS.forEach(cat=>{
+    h+='<div class="cat"><div class="cat-title" onclick="this.nextElementSibling.classList.toggle(\'open\')"><h2>'+cat.cat+'（'+cat.items.length+'个）</h2><span style="color:#8b949e;">展开</span></div><div class="cat-body open">';
+    cat.items.forEach(op=>{
+      h+='<div class="op-row"><div class="op-sig">'+op.sig+'</div><div class="op-desc">'+op.desc+'</div><div class="op-example">'+op.ex+'</div></div>';
+    });
+    h+='</div></div>';
+  });
+  document.getElementById('content').innerHTML=h;
+}
+render();
+</script>
+</body>
+</html>
