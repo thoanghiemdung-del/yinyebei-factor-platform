@@ -1,0 +1,150 @@
+[W0] [9/622] 1% done=5 err=0 rate=0.1/s total_elapsed=1min
+[W0] [31/622] 5% done=10 err=0 rate=0.0/s total_elapsed=3min
+[W0] [37/622] 6% done=15 err=0 rate=0.2/s total_elapsed=3min
+[W0] [42/622] 7% done=20 err=0 rate=0.3/s total_elapsed=4min
+[W0] [47/622] 8% done=25 err=0 rate=0.2/s total_elapsed=4min
+[W0] [52/622] 8% done=30 err=0 rate=0.3/s total_elapsed=4min
+[W0] [57/622] 9% done=35 err=0 rate=0.1/s total_elapsed=5min
+[W0] [62/622] 10% done=40 err=0 rate=0.1/s total_elapsed=6min
+[W0] [73/622] 12% done=45 err=0 rate=0.1/s total_elapsed=6min
+[W0] [78/622] 13% done=50 err=0 rate=0.2/s total_elapsed=7min
+[W0] ERR[81]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[W0] ERR[82]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[W0] ERR[83]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[W0] ERR[84]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[W0] ERR[85]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[W0] [110/622] 18% done=55 err=10 rate=0.1/s total_elapsed=8min
+[W0] [115/622] 18% done=60 err=10 rate=0.2/s total_elapsed=8min
+[W0] [132/622] 21% done=65 err=17 rate=0.1/s total_elapsed=9min
+[W0] [144/622] 23% done=70 err=17 rate=0.1/s total_elapsed=10min
+[W0] [149/622] 24% done=75 err=17 rate=0.2/s total_elapsed=10min
+[W0] [154/622] 25% done=80 err=17 rate=0.1/s total_elapsed=11min
+[W0] [159/622] 26% done=85 err=17 rate=0.1/s total_elapsed=11min
+[W0] [165/622] 27% done=90 err=17 rate=0.1/s total_elapsed=12min
+[W0] [170/622] 27% done=95 err=17 rate=0.1/s total_elapsed=13min
+[W0] [175/622] 28% done=100 err=17 rate=0.1/s total_elapsed=14min
+[W0] [181/622] 29% done=105 err=17 rate=0.1/s total_elapsed=14min
+[W0] [190/622] 31% done=110 err=17 rate=0.1/s total_elapsed=15min
+[W0] [195/622] 31% done=115 err=17 rate=0.1/s total_elapsed=16min
+[22:47:35] === Backfill V2 starting ===
+[22:47:35] Loading engine...
+[22:47:39] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[22:47:39] Queue: 623, In DB: 66, To process: 559
+[22:47:39] Starting DB count: 66
+[22:55:15] === Backfill V2 starting ===
+[22:55:15] Loading engine...
+[22:55:19] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[22:55:19] Queue: 623, In DB: 66, To process: 559
+[22:55:19] Starting DB count: 66
+[22:56:55] [31/623] 2% done=10 err=0 rate=0.1/s db=66 (+0) elapsed=2min
+[22:57:31] [42/623] 4% done=20 err=0 rate=0.6/s db=66 (+0) elapsed=2min
+[22:58:08] [52/623] 5% done=30 err=0 rate=0.8/s db=66 (+0) elapsed=3min
+[22:59:16] [62/623] 7% done=40 err=0 rate=0.6/s db=66 (+0) elapsed=4min
+[23:00:10] [78/623] 9% done=50 err=0 rate=0.9/s db=66 (+0) elapsed=5min
+[23:00:18]   ERR[81]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[82]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[83]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[84]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[85]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[86]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[87]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18]   ERR[88]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:00:18] [89/623] 11% done=52 err=8 rate=8.2/s db=66 (+0) elapsed=5min
+[23:00:18]   ERR[89]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:03:17] === Backfill V2 starting ===
+[23:03:17] Loading engine...
+[23:03:21] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[23:03:21] Queue: 623, In DB: 66, To process: 559
+[23:03:21] Starting DB count: 66
+[23:04:47] [31/623] 2% done=10 err=0 rate=0.1/s db=66 (+0) elapsed=2min
+[23:05:14] [42/623] 4% done=20 err=0 rate=0.7/s db=66 (+0) elapsed=2min
+[23:05:45] [52/623] 5% done=30 err=0 rate=1.0/s db=66 (+0) elapsed=2min
+[23:06:48] [62/623] 7% done=40 err=0 rate=0.6/s db=66 (+0) elapsed=4min
+[23:07:55] [78/623] 9% done=50 err=0 rate=0.7/s db=66 (+0) elapsed=5min
+[23:11:46] === Backfill V2 starting ===
+[23:11:46] Loading engine...
+[23:11:50] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[23:11:50] Queue: 623, In DB: 66, To process: 559
+[23:11:50] Starting DB count: 66
+[23:13:12] [31/623] 2% done=10 err=0 rate=0.1/s db=66 (+0) elapsed=1min
+[23:13:39] [42/623] 4% done=20 err=0 rate=0.7/s db=66 (+0) elapsed=2min
+[23:14:18] === Backfill V2 starting ===
+[23:14:18] Loading engine...
+[23:14:22] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[23:14:22] Queue: 623, In DB: 66, To process: 559
+[23:14:22] Starting DB count: 66
+[23:15:49] [31/623] 2% done=10 err=0 rate=0.1/s db=66 (+0) elapsed=2min
+[23:16:29] [42/623] 4% done=20 err=0 rate=0.5/s db=66 (+0) elapsed=2min
+[23:17:22] [52/623] 5% done=30 err=0 rate=0.6/s db=66 (+0) elapsed=3min
+[23:19:15] [62/623] 7% done=40 err=0 rate=0.4/s db=66 (+0) elapsed=5min
+[23:20:19] [78/623] 9% done=50 err=0 rate=0.8/s db=66 (+0) elapsed=6min
+[23:20:26]   ERR[81]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[82]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[83]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[84]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[85]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[86]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[87]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[88]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26] [89/623] 11% done=52 err=8 rate=7.7/s db=66 (+0) elapsed=6min
+[23:20:26]   ERR[89]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:20:26]   ERR[90]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[23:21:04] [115/623] 13% done=60 err=10 rate=1.9/s db=66 (+0) elapsed=7min
+[23:21:31] [127/623] 14% done=64 err=16 rate=2.9/s db=66 (+0) elapsed=7min
+[23:22:42] [147/623] 16% done=73 err=17 rate=1.3/s db=66 (+0) elapsed=8min
+[23:23:28] [157/623] 18% done=83 err=17 rate=2.2/s db=66 (+0) elapsed=9min
+[23:25:37] [168/623] 20% done=93 err=17 rate=0.9/s db=66 (+0) elapsed=11min
+[23:26:47] [179/623] 21% done=103 err=17 rate=1.7/s db=66 (+0) elapsed=12min
+[23:27:37] [194/623] 23% done=113 err=17 rate=2.6/s db=66 (+0) elapsed=13min
+[00:53:33] [204/623] 25% done=121 err=19 rate=0.0/s db=66 (+0) elapsed=99min
+[02:12:10] [214/623] 27% done=130 err=20 rate=0.0/s db=68 (+2) elapsed=178min
+[02:12:38] [224/623] 29% done=140 err=20 rate=5.9/s db=77 (+11) elapsed=178min
+[02:13:02] [234/623] 30% done=150 err=20 rate=7.1/s db=87 (+21) elapsed=179min
+[02:13:28] [244/623] 32% done=160 err=20 rate=7.0/s db=97 (+31) elapsed=179min
+[02:13:41] [254/623] 34% done=165 err=25 rate=14.1/s db=100 (+34) elapsed=179min
+[02:13:56] [264/623] 36% done=170 err=30 rate=13.8/s db=102 (+36) elapsed=180min
+[02:28:55] [274/623] 38% done=180 err=30 rate=0.2/s db=106 (+40) elapsed=195min
+[02:56:17] [284/623] 39% done=190 err=30 rate=0.1/s db=107 (+41) elapsed=222min
+[02:56:45] [294/623] 41% done=200 err=30 rate=8.1/s db=110 (+44) elapsed=222min
+[02:57:09] [304/623] 43% done=210 err=30 rate=10.3/s db=112 (+46) elapsed=223min
+[02:57:35] [314/623] 45% done=220 err=30 rate=9.4/s db=116 (+50) elapsed=223min
+[02:58:05] [324/623] 47% done=230 err=30 rate=8.9/s db=116 (+50) elapsed=224min
+[02:58:31] [334/623] 48% done=240 err=30 rate=10.4/s db=117 (+51) elapsed=224min
+[02:58:58] [344/623] 50% done=250 err=30 rate=10.1/s db=119 (+53) elapsed=225min
+[02:59:29] [354/623] 52% done=260 err=30 rate=9.4/s db=124 (+58) elapsed=225min
+[02:59:51] [364/623] 54% done=270 err=30 rate=13.6/s db=128 (+62) elapsed=226min
+[03:00:05] [374/623] 55% done=276 err=34 rate=23.0/s db=130 (+64) elapsed=226min
+[03:00:14] [384/623] 57% done=280 err=40 rate=33.8/s db=132 (+66) elapsed=226min
+[03:00:20] [394/623] 59% done=282 err=48 rate=63.7/s db=132 (+66) elapsed=226min
+[03:00:20] [404/623] 61% done=282 err=58 rate=6661.3/s db=132 (+66) elapsed=226min
+[03:00:20] [414/623] 63% done=282 err=68 rate=11758.3/s db=132 (+66) elapsed=226min
+[03:00:20] [424/623] 64% done=282 err=78 rate=11675.9/s db=132 (+66) elapsed=226min
+[03:00:20] [434/623] 66% done=282 err=88 rate=13602.1/s db=132 (+66) elapsed=226min
+[03:00:20] [444/623] 68% done=282 err=98 rate=12470.5/s db=132 (+66) elapsed=226min
+[03:00:20] [454/623] 70% done=282 err=108 rate=14652.7/s db=132 (+66) elapsed=226min
+[03:00:20] [464/623] 72% done=282 err=118 rate=13399.5/s db=132 (+66) elapsed=226min
+[03:00:20] [474/623] 73% done=282 err=128 rate=12522.4/s db=132 (+66) elapsed=226min
+[03:00:20] [484/623] 75% done=282 err=138 rate=14711.0/s db=132 (+66) elapsed=226min
+[03:00:20] [494/623] 77% done=282 err=148 rate=15371.3/s db=132 (+66) elapsed=226min
+[03:00:20] [504/623] 79% done=282 err=158 rate=13983.2/s db=132 (+66) elapsed=226min
+[03:00:20] [514/623] 81% done=282 err=168 rate=14385.0/s db=132 (+66) elapsed=226min
+[03:00:20] [524/623] 82% done=282 err=178 rate=15459.8/s db=132 (+66) elapsed=226min
+[03:00:34] [534/623] 84% done=283 err=187 rate=34.5/s db=132 (+66) elapsed=226min
+[03:00:59] [544/623] 86% done=290 err=190 rate=19.3/s db=132 (+66) elapsed=227min
+[03:01:24] [554/623] 88% done=294 err=196 rate=19.1/s db=132 (+66) elapsed=227min
+[03:01:56] [564/623] 89% done=300 err=200 rate=15.7/s db=133 (+67) elapsed=228min
+[03:02:19] [574/623] 91% done=306 err=204 rate=22.1/s db=136 (+70) elapsed=228min
+[03:02:38] [584/623] 93% done=310 err=210 rate=27.5/s db=136 (+70) elapsed=228min
+[03:02:54] [594/623] 95% done=314 err=216 rate=33.2/s db=139 (+73) elapsed=229min
+[03:03:07] [604/623] 97% done=320 err=220 rate=40.3/s db=142 (+76) elapsed=229min
+[03:03:08] [614/623] 98% done=320 err=230 rate=915.2/s db=142 (+76) elapsed=229min
+[03:03:08] === DONE: 320 saved, 239 errors in 229min ===
+[03:03:08] Final DB count: 142 (started at 66, +76)
+[08:37:12] === Backfill V2 starting ===
+[08:37:12] Loading engine...
+[08:37:16] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[08:37:16] Queue: 623, In DB: 142, To process: 483
+[08:37:16] Starting DB count: 142
+[08:38:37] [31/623] 2% done=10 err=0 rate=0.1/s db=142 (+0) elapsed=1min
+[08:39:02] [42/623] 4% done=20 err=0 rate=0.8/s db=142 (+0) elapsed=2min
+[08:39:33] [52/623] 6% done=30 err=0 rate=1.0/s db=142 (+0) elapsed=2min

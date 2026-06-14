@@ -1,0 +1,46 @@
+[20:59:10] ============================================================
+[20:59:10] MINER V3 START — knowledge-base driven pipeline
+[20:59:10] ============================================================
+[20:59:10] Checking Flask...
+[20:59:10] Pre-warming minute cache...
+[21:00:23]   Phase0:符号对: 301 new (from ~316 raw)
+[21:00:26]   Phase1:时序信号: 378 new (from ~694 raw)
+[21:00:27]   Phase2:幂增强: 112 new (from ~806 raw)
+[21:00:28]   Phase3:多信号融合: 64 new (from ~870 raw)
+[21:00:28]   Phase4:波动调整: 36 new (from ~906 raw)
+[21:00:29]   Phase5:量×微结构: 112 new (from ~1018 raw)
+[21:00:29]   Phase6:条件触发: 16 new (from ~1034 raw)
+[21:00:29]   Phase7:价值/质量: 16 new (from ~1051 raw)
+[21:00:29]   Phase8:正交化: 6 new (from ~1057 raw)
+[21:00:29] Queue: 1041 untested expressions across 9 phases
+[21:00:29] Starting: 116/300
+[21:01:15] ============================================================
+[21:01:15] MINER V3 START — knowledge-base driven pipeline
+[21:01:15] ============================================================
+[21:01:15] Checking Flask...
+[21:01:15] Pre-warming minute cache...
+[21:02:30]   Phase0:符号对: 301 new (from ~316 raw)
+[21:02:33]   Phase1:时序信号: 378 new (from ~694 raw)
+[21:02:34]   Phase2:幂增强: 112 new (from ~806 raw)
+[21:02:34]   Phase3:多信号融合: 64 new (from ~870 raw)
+[21:02:34]   Phase4:波动调整: 36 new (from ~906 raw)
+[21:02:35]   Phase5:量×微结构: 112 new (from ~1018 raw)
+[21:02:35]   Phase6:条件触发: 16 new (from ~1034 raw)
+[21:02:35]   Phase7:价值/质量: 16 new (from ~1051 raw)
+[21:02:35]   Phase8:正交化: 6 new (from ~1057 raw)
+[21:02:35] Queue: 1041 untested expressions across 9 phases
+[21:02:35] Starting: 116/300
+[21:08:58] === 5min REPORT: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:11:04] === 5min REPORT: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:14:42] ============================================================
+[21:14:42] MINER V3 START — knowledge-base driven pipeline
+[21:14:42] ============================================================
+[21:14:42] Checking Flask...
+[21:14:42] Pre-warming minute cache (600s timeout, may take 6-8 min on fresh Flask)...
+[21:17:33] === 5min REPORT: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:19:40] === 5min REPORT: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:19:58] Progress: 40/1041 tested | 116/300 found (39%)
+[21:22:47] === 5min REPORT: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:24:44] Warm attempt 1 failed/timeout, retrying...
+[21:29:27] === 5min REPORT: 116->87 (+-29) | 29.0% | Flask=OK ===
+[21:32:01] Warm attempt 2 failed/timeout, retrying...

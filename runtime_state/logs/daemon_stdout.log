@@ -1,0 +1,89 @@
+[19:24:41] ================================================== DAEMON START ==================================================
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 175, in <module>
+    r = bt(expr)
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 25, in btTraceback (most recent call last):
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 175, in <module>
+    phase = 2
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 25, in bt
+    o = opener()
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 20, in opener
+    o.open(urllib.request.Request(f'{API}/login',
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 175, in <module>
+    phase = 2
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 25, in bt
+    o = opener()
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 20, in opener
+    o.open(urllib.request.Request(f'{API}/login',
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+[19:29:39] ================================================== DAEMON START ==================================================
+[19:29:39] Pre-warming Flask minute cache (6 min wait)...
+[19:39:41] Warm attempt 1 failed: timed out
+[19:49:47] Warm attempt 2 failed: timed out
+[19:59:53] Warm attempt 3 failed: timed out
+[19:59:58] WARNING: Minute cache warm failed! Will retry in main loop.
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 198, in <module>
+    r = bt(expr)
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 25, in bt
+    o = opener()
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 20, in opener
+    o.open(urllib.request.Request(f'{API}/login',
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+[20:04:38] ================================================== DAEMON START ==================================================
+[20:04:38] Pre-warming Flask minute cache (6 min wait)...
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 115, in <module>
+    o = opener()
+  File "D:\yyb\backtest_platform\daemon_mine.py", line 20, in opener
+    o.open(urllib.request.Request(f'{API}/login',
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+[20:04:52] ================================================== DAEMON START ==================================================
+[20:04:52] Pre-warming Flask minute cache (6 min wait)...

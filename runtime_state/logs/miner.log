@@ -1,0 +1,1046 @@
+[21:32:06] ==================================================
+[21:32:06] MINER START (reliable, quality-gated)
+[21:32:06] ==================================================
+[21:32:08] Flask DOWN, exiting
+[21:33:18] ==================================================
+[21:33:18] MINER START (reliable, quality-gated)
+[21:33:18] ==================================================
+[21:33:18] Warming minute cache (direct 600s timeout)...
+[21:38:00] Warmup OK (IC=-0.0127)
+[21:38:05] Queue: 723 untested, starting at 87/300
+[21:38:36]   + IC=-0.0112 S=-7.07 TO=0.70 | Msump:intraday_v+volume_con
+[21:42:36] Progress: 80/723 | 88/300 (29%)
+[21:43:28] === 5min: 87→89 (+2) | 29% | Flask=OK ===
+[21:46:09] ==================================================
+[21:46:09] MINER START (reliable, quality-gated)
+[21:46:09] ==================================================
+[21:46:09] Warming minute cache (direct 600s timeout)...
+[21:46:13] Warmup OK (IC=-0.0127)
+[21:46:19] Queue: 710 untested, starting at 90/300
+[21:46:43]   + IC=-0.0164 S=-7.88 TO=0.79 | Msump:intraday_v+vwap_gap
+[21:46:58]   + IC=-0.0112 S=-7.07 TO=0.70 | Msump:intraday_v+volume_con
+[21:47:07]   + IC=-0.0137 S=-7.30 TO=0.81 | Msump:intraday_v+close_loca
+[21:47:35]   + IC=-0.0109 S=-5.11 TO=0.78 | Msump:intraday_v+morning_re
+[21:47:47]   + IC=-0.0121 S=-6.70 TO=0.80 | Msump:intraday_v+afternoon_
+[21:48:31]   + IC=-0.0147 S=-7.07 TO=0.78 | Msump:intraday_v+body_retur
+[21:48:56]   + IC=-0.0134 S=-6.57 TO=0.89 | Msump:price_effi+vwap_gap
+[21:49:23]   + IC=-0.0121 S=-6.62 TO=0.90 | Msump:price_effi+close_loca
+[21:51:02]   + IC=-0.0146 S=-6.05 TO=0.89 | Msump:price_effi+body_retur
+[21:58:01] ==================================================
+[21:58:01] MINER START
+[21:58:01] ==================================================
+[21:58:02] Warmup (600s timeout)...
+[22:04:48] Warmup OK (IC=-0.0127)
+[22:04:53] Queue: 640 | Start: 90/300
+[22:05:30]   + IC=-0.0170 S=-8.35 TO=0.80 | Msump:vwap_gap+volume_con
+[22:05:40]   + IC=-0.0145 S=-9.01 TO=0.87 | Msump:vwap_gap+close_loca
+[22:06:01]   + IC=-0.0131 S=-7.58 TO=0.84 | Msump:vwap_gap+lower_shad
+[22:07:42]   + IC=-0.0108 S=-5.95 TO=0.79 | Msump:volume_con+last30min_
+[22:07:51]   + IC=-0.0160 S=-7.14 TO=0.82 | Msump:volume_con+body_retur
+[22:08:17]   + IC=+0.0118 S=2.01 TO=0.86 | Msump:close_loca+upper_shad
+[22:08:27] Progress: 80/640 | 92/300 (30%)
+[22:08:33]   + IC=-0.0115 S=-7.89 TO=0.87 | Msump:close_loca+lower_shad
+[22:08:43]   + IC=-0.0128 S=-5.45 TO=0.87 | Msump:close_loca+morning_re
+[22:08:53]   + IC=-0.0122 S=-7.89 TO=0.88 | Msump:close_loca+afternoon_
+[22:09:06]   + IC=-0.0105 S=-5.06 TO=0.88 | Msump:close_loca+first30min
+[22:09:17]   + IC=-0.0115 S=-8.43 TO=0.88 | Msump:close_loca+last30min_
+[22:09:27]   + IC=-0.0147 S=-7.79 TO=0.87 | Msump:close_loca+body_retur
+[22:10:00] === 5min: 90>92 (+2) | 30% | Flask=OK ===
+[22:10:13]   + IC=-0.0128 S=-7.13 TO=0.88 | Msump:upper_shad+morning_re
+[22:11:32]   + IC=-0.0160 S=-8.68 TO=0.89 | Msump:upper_shad+body_retur
+[22:12:15]   + IC=-0.0118 S=-5.70 TO=0.83 | Msump:lower_shad+morning_re
+[22:13:12]   + IC=-0.0148 S=-8.24 TO=0.83 | Msump:lower_shad+body_retur
+[22:13:37]   + IC=-0.0130 S=-5.04 TO=0.88 | Msump:morning_re+afternoon_
+[22:14:05]   + IC=-0.0106 S=-5.52 TO=0.87 | Msump:morning_re+last30min_
+[22:14:05] Progress: 160/640 | 92/300 (30%)
+[22:14:17]   + IC=-0.0120 S=-4.73 TO=0.83 | Msump:morning_re+body_retur
+[22:15:08]   + IC=-0.0140 S=-7.27 TO=0.87 | Msump:afternoon_+body_retur
+[22:15:08] === 5min: 92>92 (+0) | 30% | Flask=OK ===
+[22:15:54]   + IC=-0.0127 S=-5.74 TO=0.89 | Msump:first30min+body_retur
+[22:16:28]   + IC=-0.0132 S=-7.70 TO=0.87 | Msump:last30min_+body_retur
+[22:16:54]   + IC=-0.0117 S=-5.32 TO=0.88 | Msump:body_retur+am_pm_dive
+[22:17:01]   + IC=+0.0147 S=-3.91 TO=0.77 | MxD:intradayxreturns
+[22:17:15]   + IC=+0.0153 S=-2.59 TO=0.64 | MxD:intradayxvolume_p
+[22:17:22]   + IC=+0.0145 S=-4.33 TO=0.50 | MxD:intradayxturnover
+[22:17:30]   + IC=+0.0127 S=-2.95 TO=0.48 | MxD:intradayxvol_5d
+[22:17:37]   + IC=+0.0111 S=-3.44 TO=0.41 | MxD:intradayxvol_10d
+[22:17:50]   + IC=+0.0101 S=-3.12 TO=0.38 | MxD:intradayxvol_40d
+[22:18:19]   + IC=+0.0138 S=-1.96 TO=0.86 | MxD:price_efxreturns
+[22:19:21]   + IC=+0.0168 S=0.81 TO=0.84 | MxD:vwap_gapxreturns
+[22:19:34]   + IC=+0.0197 S=0.85 TO=0.68 | MxD:vwap_gapxvolume_p
+[22:19:40]   + IC=+0.0193 S=-1.56 TO=0.64 | MxD:vwap_gapxturnover
+[22:19:51]   + IC=+0.0167 S=-1.90 TO=0.61 | MxD:vwap_gapxvol_10d
+[22:20:01]   + IC=+0.0157 S=-1.68 TO=0.57 | MxD:vwap_gapxvol_40d
+[22:20:07]   + IC=+0.0127 S=-1.31 TO=0.57 | MxD:vwap_gapxvol_120d
+[22:20:27]   + IC=+0.0173 S=0.68 TO=0.51 | MxD:volume_cxvolume_p
+[22:20:40]   + IC=+0.0152 S=-4.02 TO=0.37 | MxD:volume_cxturnover
+[22:20:48]   + IC=+0.0152 S=-0.68 TO=0.43 | MxD:volume_cxvol_5d
+[22:20:56]   + IC=+0.0121 S=-3.43 TO=0.27 | MxD:volume_cxvol_10d
+[22:20:56] === 5min: 92>129 (+37) | 43% | Flask=OK ===
+[22:21:13]   + IC=+0.0104 S=-2.97 TO=0.19 | MxD:volume_cxvol_40d
+[22:21:39]   + IC=+0.0153 S=0.77 TO=0.87 | MxD:close_loxreturns
+[22:21:58]   + IC=+0.0178 S=0.96 TO=0.70 | MxD:close_loxvolume_p
+[22:22:06]   + IC=+0.0173 S=-1.70 TO=0.66 | MxD:close_loxturnover
+[22:22:22]   + IC=+0.0149 S=-1.57 TO=0.62 | MxD:close_loxvol_10d
+[22:22:22] Progress: 240/640 | 140/300 (46%)
+[22:22:30]   + IC=+0.0139 S=-1.59 TO=0.59 | MxD:close_loxvol_40d
+[22:22:36]   + IC=+0.0106 S=-1.47 TO=0.59 | MxD:close_loxvol_120d
+[22:24:05]   ! MxD:lower_shxvolume_p: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:24:14]   ! MxD:lower_shxturnover: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:24:19] ==================================================
+[22:24:19] MINER START
+[22:24:19] ==================================================
+[22:24:19] Warmup (600s timeout)...
+[22:24:33] Warmup OK (IC=-0.0127)
+[22:24:43] Queue: 662 | Start: 123/300
+[22:25:43]   + IC=-0.0164 S=-7.88 TO=0.79 | Msump:intraday_v+vwap_gap
+[22:25:48]   ! MxD:morning_xvolume_p: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:26:00]   ! MxD:morning_xturnover: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:26:06]   + IC=-0.0112 S=-7.07 TO=0.70 | Msump:intraday_v+volume_con
+[22:26:27]   ! MxD:morning_xvol_10d: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:26:27] === 5min: 129>128 (+-1) | 42% | Flask=OK ===
+[22:26:28]   + IC=-0.0137 S=-7.30 TO=0.81 | Msump:intraday_v+close_loca
+[22:26:44]   ! MxD:morning_xvol_40d: UNIQUE constraint failed: index 'idx_alpha_expr'
+[22:27:54]   + IC=-0.0109 S=-5.11 TO=0.78 | Msump:intraday_v+morning_re
+[22:28:18]   + IC=-0.0121 S=-6.70 TO=0.80 | Msump:intraday_v+afternoon_
+[22:45:00] === 5min: 123>129 (+6) | 43% | Flask=OK ===
+[22:45:40] === 5min: 128>129 (+1) | 43% | Flask=OK ===
+[22:50:23] ==================================================
+[22:50:23] MINER START
+[22:50:23] ==================================================
+[22:50:23] Warmup (600s timeout)...
+[22:57:43] Pool: 287 untested (56 no-minute, 231 need-minute)
+[22:57:43] SIMPLE MINER START
+[22:57:43] Count: 129/300
+[23:00:24] Warmup failed: timed out
+[23:00:34] Queue: 667 | Start: 129/300
+[23:00:44] Pool: 287 untested (56 no-minute, 231 need-minute)
+[23:00:44] SIMPLE MINER START
+[23:00:44] Count: 129/300
+[23:01:25] === 5min: 129>129 (+0) | 43% | Flask=OK ===
+[23:01:34] Pool: 287 untested (56 no-minute, 231 need-minute)
+[23:01:34] SIMPLE MINER START
+[23:01:34] Count: 129/300
+[23:01:51] === 5min: 129>129 (+0) | 43% | Flask=OK ===
+[23:06:57] === 5min: 129>129 (+0) | 43% | Flask=OK ===
+[23:08:42] === 5min: 129>129 (+0) | 43% | Flask=OK ===
+[23:09:43] === 5min: 129>129 (+0) | 43% | Flask=OK ===
+[23:11:10] Progress: 320/640 | 129/300 (43%)
+[00:17:47] Pool: 287 untested (56 no-minute, 231 need-minute)
+[00:17:47] SIMPLE MINER START
+[00:17:47] Count: 129/300
+[00:18:05] + IC=+0.0111 S=1.02 TO=0.81 | -rank(ts_delta(returns, 10))
+[00:18:15] + IC=+0.0116 S=0.97 TO=0.82 | -rank(ts_delta(returns, 15))
+[00:18:41] + IC=+0.0110 S=2.01 TO=0.57 | -rank(ts_delta(volume_profile_ratio, 5))
+[00:18:48] + IC=+0.0121 S=1.86 TO=0.51 | -rank(ts_delta(volume_profile_ratio, 10))
+[00:21:34] Pool: 215 untested (19 no-min, 196 need-min)
+[00:21:34] NIGHT MINER START
+[00:21:34] Target: 300 | Current: 133
+[00:21:42] + IC=+0.0117 S=2.35 TO=0.49 | 量变化: vpr_d15
+[00:21:49] + IC=+0.0105 S=1.11 TO=0.52 | 量变化: vpr_d30
+[00:29:33] Warming minute cache (attempt 1/3)...
+[00:39:34] Warm attempt 1 failed
+[00:39:44] Warming minute cache (attempt 2/3)...
+[00:49:45] Warm attempt 2 failed
+[00:49:55] Warming minute cache (attempt 3/3)...
+[00:59:42] Pool: 211 untested (15 no-min, 196 need-min)
+[00:59:42] NIGHT MINER START
+[00:59:42] Target: 300 | Current: 135
+[00:59:56] Warm attempt 3 failed
+[01:03:58] Pool: 211 untested (15 no-min, 196 need-min)
+[01:03:58] NIGHT MINER START
+[01:03:58] Target: 300 | Current: 135
+[01:05:49] Pool: 211 untested (15 no-min, 196 need-min)
+[01:05:49] NIGHT MINER START
+[01:05:49] Target: 300 | Current: 135
+[01:07:23] Pool: 211 untested (15 no-min, 196 need-min)
+[01:07:23] NIGHT MINER START
+[01:07:23] Target: 300 | Current: 135
+[01:07:31] Warming minute cache (attempt 1/3)...
+[01:09:22] Pool: 211 untested (15 no-min, 196 need-min)
+[01:09:22] NIGHT MINER START
+[01:09:23] Target: 300 | Current: 135
+[01:11:54] Warming minute cache (attempt 1/3)...
+[01:17:32] Warm attempt 1 failed: timed out
+[01:17:43] Warming minute cache (attempt 2/3)...
+[01:21:56] Warm attempt 1 failed: timed out
+[01:22:07] Warming minute cache (attempt 2/3)...
+[01:22:16] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[01:22:27] Warming minute cache (attempt 3/3)...
+[01:22:32] Warm attempt 3 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[01:23:03] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[01:23:13] Warming minute cache (attempt 3/3)...
+[01:33:16] Warm attempt 3 failed: timed out
+[02:20:09] Flask DOWN (restart #1)
+[02:20:13] Flask DOWN (restart #1)
+[02:20:13] Flask DOWN (restart #1)
+[02:20:27] Flask restarted OK
+[02:20:27] Flask restarted OK
+[02:20:27] Warming minute cache (attempt 1/3)...
+[02:20:28] Warming minute cache (attempt 1/3)...
+[02:20:28] Flask restarted OK
+[02:20:29] Warming minute cache (attempt 1/3)...
+[02:20:36] Warm attempt 1 failed
+[02:20:37] Warm attempt 1 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[02:20:47] Warming minute cache (attempt 2/3)...
+[02:20:47] Warming minute cache (attempt 2/3)...
+[02:20:53] Warm attempt 1 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[02:20:55] Warm attempt 2 failed
+[02:21:03] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[02:21:04] Warming minute cache (attempt 2/3)...
+[02:21:05] Warming minute cache (attempt 3/3)...
+[02:21:13] Warming minute cache (attempt 3/3)...
+[02:24:19] Warm attempt 3 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[02:24:20] Warm attempt 3 failed
+[02:26:18] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[02:26:28] Warming minute cache (attempt 3/3)...
+[02:28:12] Warm attempt 3 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[10:01:43] Pool: 197 untested (4 no-min, 193 need-min)
+[10:01:43] NIGHT MINER START
+[10:01:43] Target: 300 | Current: 143
+[10:05:01] Pool: 43 minute-only expressions with economic logic
+[10:05:01] NIGHT MINER START
+[10:05:01] Target: 300 | Current: 143
+[10:05:27] + IC=+0.0150 S=1.78 TO=0.84 | VWAP回归
+[10:05:39] + IC=+0.0127 S=1.32 TO=0.89 | 收盘动量
+[10:07:23] + IC=+0.0143 S=1.85 TO=0.86 | 全日反转
+[10:07:46] + IC=+0.0155 S=2.16 TO=0.86 | 收盘×量
+[10:07:58] + IC=-0.0121 S=-5.66 TO=0.83 | 下影×早盘
+[10:08:10] + IC=-0.0103 S=-6.84 TO=0.85 | 下影×尾盘
+[10:09:39] + IC=+0.0116 S=-3.50 TO=0.63 | 信号增强:低波
+[10:09:52] + IC=+0.0148 S=-3.32 TO=0.63 | 信号增强:低波
+[10:10:04] + IC=+0.0200 S=1.89 TO=0.84 | 信号增强:VWAP
+[10:10:16] + IC=+0.0152 S=1.47 TO=0.89 | 信号增强:收盘
+[10:10:28] + IC=+0.0168 S=1.40 TO=0.89 | 信号增强:收盘
+[10:10:41] + IC=+0.0105 S=1.96 TO=0.61 | 信号增强:量集
+[10:10:57] + IC=+0.0120 S=1.96 TO=0.61 | 信号增强:量集
+[10:11:43] + IC=-0.0128 S=-7.13 TO=0.88 | 分钟求和: upper_shad+morning_re
+[10:11:43] === 10min REPORT: 143>154 (+11) | 154/300 (51%) | Runtime:10min | Found:1 | F=OK M=cold ===
+[10:12:06] + IC=+0.0101 S=1.20 TO=0.86 | 信号增强:早盘
+[10:12:22] + IC=+0.0110 S=0.99 TO=0.86 | 信号增强:早盘
+[10:12:31] + IC=+0.0118 S=0.30 TO=0.84 | 信号增强:尾盘
+[10:12:42] + IC=+0.0134 S=0.26 TO=0.84 | 信号增强:尾盘
+[10:14:03] + IC=+0.0155 S=-2.20 TO=0.58 | 微结构×日频: vwap_gap×vol_20d
+[10:14:26] + IC=+0.0154 S=-1.62 TO=0.57 | 微结构×日频: vwap_gap×vol_60d
+[10:14:35] + IC=+0.0116 S=-1.67 TO=0.62 | 微结构×日频: vwap_gap×ret_20d
+[10:14:47] + IC=+0.0104 S=-4.05 TO=0.21 | 微结构×日频: volume_c×vol_20d
+[10:15:24] + IC=+0.0136 S=-1.73 TO=0.60 | 微结构×日频: close_lo×vol_20d
+[10:15:43] + IC=+0.0136 S=-1.58 TO=0.59 | 微结构×日频: close_lo×vol_60d
+[10:17:18] Pool: 33 minute-only expressions with economic logic
+[10:17:18] NIGHT MINER START
+[10:17:18] Target: 300 | Current: 164
+[10:19:40] Pool: 32 minute-only expressions with economic logic
+[10:19:40] NIGHT MINER START
+[10:19:40] Target: 300 | Current: 164
+[10:20:15] + IC=+0.0108 S=-1.81 TO=0.60 | 微结构×日频: morning_×vol_20d
+[10:21:30] + IC=+0.0111 S=-1.43 TO=0.59 | 微结构×日频: morning_×vol_60d
+[10:22:38] Pool: 22 minute-only expressions with economic logic
+[10:22:38] NIGHT MINER START
+[10:22:38] Target: 300 | Current: 166
+[10:23:02] + IC=+0.0141 S=-2.23 TO=0.80 | 三重确认: intrad×price_×volume
+[10:23:02] === 10min REPORT: 154>167 (+13) | 167/300 (55%) | Runtime:21min | Found:10 | F=OK M=cold ===
+[10:24:39] + IC=+0.0217 S=-1.24 TO=0.80 | 三重确认: intrad×volume×vwap_g
+[10:25:26] + IC=+0.0164 S=-2.29 TO=0.81 | 三重确认: intrad×close_×price_
+[10:26:11] + IC=+0.0205 S=-0.32 TO=0.87 | 三重确认: intrad×close_×vwap_g
+[10:27:03] + IC=+0.0205 S=-1.46 TO=0.79 | 三重确认: intrad×close_×volume
+[10:28:06] Pool: 32 minute-only expressions with economic logic
+[10:28:06] NIGHT MINER START
+[10:28:06] Target: 300 | Current: 171
+[10:30:49] Pool: 33 minute-only expressions with economic logic
+[10:30:49] NIGHT MINER START
+[10:30:49] Target: 300 | Current: 172
+[10:30:49] + IC=+0.0173 S=0.68 TO=0.85 | 三重确认: price_×volume×vwap_g
+[10:32:00] + IC=+0.0164 S=-2.29 TO=0.81 | 三重确认: price_×close_×intrad
+[10:33:08] + IC=+0.0173 S=0.76 TO=0.87 | 三重确认: price_×close_×vwap_g
+[10:33:08] === 10min REPORT: 167>174 (+7) | 174/300 (58%) | Runtime:31min | Found:17 | F=OK M=cold ===
+[10:34:12] + IC=+0.0167 S=1.11 TO=0.88 | 三重确认: price_×close_×volume
+[10:38:18] + IC=+0.0205 S=-0.32 TO=0.87 | 三重确认: vwap_g×close_×intrad
+[10:39:21] + IC=+0.0173 S=0.76 TO=0.87 | 三重确认: vwap_g×close_×price_
+[10:40:37] + IC=+0.0191 S=2.04 TO=0.85 | 三重确认: vwap_g×close_×volume
+[10:47:55] Pool: 33 minute-only expressions with economic logic
+[10:47:55] NIGHT MINER START
+[10:47:55] Target: 300 | Current: 178
+[11:01:39] Pool: 33 minute-only expressions with economic logic
+[11:01:39] NIGHT MINER START
+[11:01:39] Target: 300 | Current: 178
+[11:02:31] Pool: 33 minute-only expressions with economic logic
+[11:02:31] NIGHT MINER START
+[11:02:31] Target: 300 | Current: 178
+[11:07:03] Pool: 33 minute-only expressions with economic logic
+[11:07:03] NIGHT MINER START
+[11:07:03] Target: 300 | Current: 178
+[11:19:54] Flask DOWN (restart #1)
+[11:19:55] Flask DOWN (restart #1)
+[11:19:55] Flask DOWN (restart #1)
+[11:19:55] Flask DOWN (restart #1)
+[11:19:55] Flask DOWN (restart #1)
+[11:19:55] Flask DOWN (restart #1)
+[11:19:59] Flask DOWN (restart #2)
+[11:20:00] Flask DOWN (restart #2)
+[11:20:01] Flask DOWN (restart #2)
+[11:20:10] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:12] Flask restart FAILED, retrying in 30s
+[11:20:16] Flask restart FAILED, retrying in 30s
+[11:20:16] Flask restart FAILED, retrying in 30s
+[11:20:17] Flask restart FAILED, retrying in 30s
+[11:20:48] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:50] Flask DOWN (restart #1)
+[11:20:54] Flask DOWN (restart #2)
+[11:20:54] Flask DOWN (restart #2)
+[11:20:55] Flask DOWN (restart #2)
+[11:21:04] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:06] Flask restart FAILED, retrying in 30s
+[11:21:10] Flask restart FAILED, retrying in 30s
+[11:21:11] Flask restart FAILED, retrying in 30s
+[11:21:11] Flask restart FAILED, retrying in 30s
+[11:21:42] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:44] Flask DOWN (restart #1)
+[11:21:48] Flask DOWN (restart #2)
+[11:21:49] Flask DOWN (restart #2)
+[11:21:50] Flask DOWN (restart #2)
+[11:21:58] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:00] Flask restart FAILED, retrying in 30s
+[11:22:01] Flask restart FAILED, retrying in 30s
+[11:22:04] Flask restart FAILED, retrying in 30s
+[11:22:05] Flask restart FAILED, retrying in 30s
+[11:22:06] Flask restart FAILED, retrying in 30s
+[11:22:36] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:38] Flask DOWN (restart #1)
+[11:22:39] Flask DOWN (restart #1)
+[11:22:42] Flask DOWN (restart #2)
+[11:22:43] Flask DOWN (restart #2)
+[11:22:44] Flask DOWN (restart #2)
+[11:22:53] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:54] Flask restart FAILED, retrying in 30s
+[11:22:55] Flask restart FAILED, retrying in 30s
+[11:22:58] Flask restart FAILED, retrying in 30s
+[11:22:59] Flask restart FAILED, retrying in 30s
+[11:23:00] Flask restart FAILED, retrying in 30s
+[11:23:31] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:32] Flask DOWN (restart #1)
+[11:23:33] Flask DOWN (restart #1)
+[11:23:36] Flask DOWN (restart #2)
+[11:23:37] Flask DOWN (restart #2)
+[11:23:38] Flask DOWN (restart #2)
+[11:23:47] Flask restart FAILED, retrying in 30s
+[11:23:48] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:49] Flask restart FAILED, retrying in 30s
+[11:23:52] Flask restart FAILED, retrying in 30s
+[11:23:53] Flask restart FAILED, retrying in 30s
+[11:23:54] Flask restart FAILED, retrying in 30s
+[11:24:25] Flask DOWN (restart #1)
+[11:24:26] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:27] Flask DOWN (restart #1)
+[11:24:30] Flask DOWN (restart #2)
+[11:24:31] Flask DOWN (restart #2)
+[11:24:32] Flask DOWN (restart #2)
+[11:24:41] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:43] Flask restart FAILED, retrying in 30s
+[11:24:47] Flask restart FAILED, retrying in 30s
+[11:24:47] Flask restart FAILED, retrying in 30s
+[11:24:48] Flask restart FAILED, retrying in 30s
+[11:25:19] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:21] Flask DOWN (restart #1)
+[11:25:25] Flask DOWN (restart #2)
+[11:25:25] Flask DOWN (restart #2)
+[11:25:26] Flask DOWN (restart #2)
+[11:25:35] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:37] Flask restart FAILED, retrying in 30s
+[11:25:41] Flask restart FAILED, retrying in 30s
+[11:25:41] Flask restart FAILED, retrying in 30s
+[11:25:42] Flask restart FAILED, retrying in 30s
+[11:26:13] Flask DOWN (restart #1)
+[11:26:15] Flask DOWN (restart #1)
+[11:26:15] Flask DOWN (restart #1)
+[11:26:15] Flask DOWN (restart #1)
+[11:26:15] Flask DOWN (restart #1)
+[11:26:15] Flask DOWN (restart #1)
+[11:26:19] Flask DOWN (restart #2)
+[11:26:19] Flask DOWN (restart #2)
+[11:26:21] Flask DOWN (restart #2)
+[11:26:30] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:31] Flask restart FAILED, retrying in 30s
+[11:26:35] Flask restart FAILED, retrying in 30s
+[11:26:36] Flask restart FAILED, retrying in 30s
+[11:26:37] Flask restart FAILED, retrying in 30s
+[11:35:49] Pool: 33 minute-only expressions with economic logic
+[11:35:49] NIGHT MINER START
+[11:35:49] Target: 300 | Current: 178
+[11:59:00] Pool: 33 minute-only expressions with economic logic
+[11:59:00] NIGHT MINER START
+[11:59:00] Target: 300 | Current: 178
+[12:01:50] Pool: 33 minute-only expressions with economic logic
+[12:01:50] NIGHT MINER START
+[12:01:50] Target: 300 | Current: 178
+[12:03:57] Pool: 33 minute-only expressions with economic logic
+[12:03:57] NIGHT MINER START
+[12:03:57] Target: 300 | Current: 178
+[12:07:03] ==================================================
+[12:07:03] MINER START
+[12:07:03] Loaded 0 previously-seen expressions
+[12:07:03] ==================================================
+[12:07:08] Pool: 257 untested minute-only expressions | Start: 178/300
+[12:07:20] Pool exhausted, rebuilding...
+[12:07:20] Rebuilt: 0 untested
+[12:07:20] ALL expressions tested! Will retry in 10min.
+[12:13:49] ==================================================
+[12:13:49] MINER START
+[12:13:49] Loaded 326 previously-seen expressions
+[12:13:49] ==================================================
+[12:13:49] Pool: 0 untested minute-only expressions | Start: 178/300
+[12:13:49] Pool exhausted, rebuilding...
+[12:13:49] Rebuilt: 0 untested
+[12:13:49] ALL expressions tested! Will retry in 10min.
+[12:14:40] ==================================================
+[12:14:40] MINER START
+[12:14:40] Loaded 0 previously-seen expressions
+[12:14:40] ==================================================
+[12:14:44] Pool: 257 untested minute-only expressions | Start: 178/300
+[12:14:53] Pool exhausted, rebuilding...
+[12:14:53] Rebuilt: 0 untested
+[12:14:53] ALL expressions tested! Will retry in 10min.
+[12:23:49] Pool exhausted, rebuilding...
+[12:23:49] Rebuilt: 0 untested
+[12:23:49] ALL expressions tested! Will retry in 10min.
+[12:24:53] Pool exhausted, rebuilding...
+[12:24:53] Rebuilt: 0 untested
+[12:24:53] ALL expressions tested! Will retry in 10min.
+[12:33:49] Pool exhausted, rebuilding...
+[12:33:49] Rebuilt: 0 untested
+[12:33:49] ALL expressions tested! Will retry in 10min.
+[12:33:51] ==================================================
+[12:33:51] MINER START
+[12:33:51] Loaded 326 previously-seen expressions
+[12:33:51] ==================================================
+[12:33:51] Pool: 0 untested minute-only expressions | Start: 178/300
+[12:33:51] Pre-warming minute cache (up to 10 min)...
+[12:33:51] Warm attempt 1 failed: name 'CookieJar' is not defined
+[12:33:51] Warm attempt 2 failed: name 'CookieJar' is not defined
+[12:33:51] Warm attempt 3 failed: name 'CookieJar' is not defined
+[12:33:51] WARNING: Cache warm failed, backtests will be slow until cache loads naturally
+[12:33:51] Pool exhausted, rebuilding...
+[12:33:51] Rebuilt: 0 untested
+[12:33:51] ALL expressions tested! Will retry in 10min.
+[12:34:53] Pool exhausted, rebuilding...
+[12:34:53] Rebuilt: 0 untested
+[12:34:53] ALL expressions tested! Will retry in 10min.
+[13:12:36] ==================================================
+[13:12:36] MINER START
+[13:12:36] Loaded 0 previously-seen expressions
+[13:12:36] ==================================================
+[13:12:38] Pool: 257 untested minute-only expressions | Start: 178/300
+[13:12:38] Pre-warming minute cache (up to 10 min)...
+[13:17:31] Minute cache WARM (attempt 1, 4360556 cells)
+[13:20:14] ==================================================
+[13:20:14] MINER START
+[13:20:14] Loaded 0 previously-seen expressions
+[13:20:14] ==================================================
+[13:20:17] Pool: 392 untested minute-only expressions | Start: 178/300
+[13:20:17] Pre-warming minute cache (up to 10 min)...
+[13:20:17] Minute cache WARM (attempt 1, 4360556 cells)
+[13:35:42] + IC=-0.0160 S=-8.68 TO=0.89 | Sum:upper_sh+body_ret
+[13:35:42] === 5min: 178>179 (+1) | 179/300 (59%) | 23min | F=OK ===
+[13:40:10] + IC=-0.0127 S=-5.74 TO=0.89 | Sum:first30m+body_ret
+[13:41:25] + IC=+0.0102 S=1.29 TO=0.78 | tsD:intraday_v_5
+[13:41:25] === 5min: 179>180 (+1) | 180/300 (60%) | 29min | F=OK ===
+[13:42:17] ==================================================
+[13:42:17] MINER START
+[13:42:17] Loaded 0 previously-seen expressions
+[13:42:17] ==================================================
+[13:42:21] Pool: 388 untested minute-only expressions | Start: 180/300
+[13:42:21] Pre-warming minute cache (up to 10 min)...
+[13:42:21] Minute cache WARM (attempt 1, 4360556 cells)
+[13:42:47] + IC=+0.0110 S=0.82 TO=0.83 | tsD:vwap_gap_5
+[13:43:01] + IC=+0.0110 S=-0.06 TO=0.84 | tsD:vwap_gap_20
+[13:44:57] + IC=+0.0103 S=2.48 TO=0.90 | tsD:close_loca_10
+[13:51:21] + IC=+0.0124 S=1.75 TO=0.84 | tsD:body_retur_10
+[13:51:21] === 5min: 180>69 (+-111) | 69/300 (23%) | 39min | F=OK ===
+[13:51:30] ==================================================
+[13:51:30] MINER START
+[13:51:30] Loaded 0 previously-seen expressions
+[13:51:30] ==================================================
+[13:51:34] Pool: 445 untested minute-only expressions | Start: 69/300
+[13:51:34] Pre-warming minute cache (up to 10 min)...
+[13:51:34] Minute cache WARM (attempt 1, 4360556 cells)
+[13:52:04] ==================================================
+[13:52:04] MINER START
+[13:52:04] Loaded 0 previously-seen expressions
+[13:52:04] ==================================================
+[13:52:08] Pool: 445 untested minute-only expressions | Start: 73/300
+[13:52:08] Pre-warming minute cache (up to 10 min)...
+[13:52:09] Minute cache WARM (attempt 1, 4360556 cells)
+[13:52:18] + IC=+0.0150 S=1.78 TO=0.84 | VWAP回归
+[13:52:43] + IC=+0.0127 S=1.32 TO=0.89 | 收盘动量
+[13:53:54] CRASH: bad operand type for abs(): 'NoneType'
+[13:53:59] + IC=+0.0110 S=0.82 TO=0.83 | tsD:vwap_gap_5
+[13:53:59] === 5min: 178>72 (+-106) | 72/300 (24%) | 34min | F=OK ===
+[13:57:33] Pool exhausted, rebuilding...
+[13:57:33] Rebuilt: 0 untested
+[13:57:33] ALL expressions tested! Will retry in 10min.
+[14:02:40] Pool exhausted, rebuilding...
+[14:02:40] Rebuilt: 0 untested
+[14:02:40] ALL expressions tested! Will retry in 10min.
+[14:04:00] ==================================================
+[14:04:00] MINER START
+[14:04:00] Loaded 0 previously-seen expressions
+[14:04:00] ==================================================
+[14:04:04] Pool: 441 untested minute-only expressions | Start: 76/300
+[14:04:04] Pre-warming minute cache (up to 10 min)...
+[14:04:05] Warm attempt 1 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:04:06] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:04:06] Warm attempt 3 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:04:06] WARNING: Cache warm failed, backtests will be slow until cache loads naturally
+[14:07:33] Pool exhausted, rebuilding...
+[14:07:33] Rebuilt: 0 untested
+[14:07:33] ALL expressions tested! Will retry in 10min.
+[14:12:18] Pool exhausted, rebuilding...
+[14:12:18] Rebuilt: 0 untested
+[14:12:18] ALL expressions tested! Will retry in 10min.
+[14:12:40] Pool exhausted, rebuilding...
+[14:12:40] Rebuilt: 0 untested
+[14:12:40] ALL expressions tested! Will retry in 10min.
+[14:17:34] Pool exhausted, rebuilding...
+[14:17:34] Rebuilt: 0 untested
+[14:17:34] ALL expressions tested! Will retry in 10min.
+[14:17:51] ==================================================
+[14:17:51] MINER START
+[14:17:51] Loaded 0 previously-seen expressions
+[14:17:51] ==================================================
+[14:17:55] Pool: 441 untested minute-only expressions | Start: 76/300
+[14:17:55] Pre-warming minute cache (up to 10 min)...
+[14:17:56] Warm attempt 1 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:17:58] Warm attempt 2 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:17:58] Warm attempt 3 failed: HTTP Error 500: INTERNAL SERVER ERROR
+[14:17:58] WARNING: Cache warm failed, backtests will be slow until cache loads naturally
+[14:18:30] ==================================================
+[14:18:30] MINER START
+[14:18:30] Loaded 0 previously-seen expressions
+[14:18:30] ==================================================
+[14:18:36] Pool: 441 untested minute-only expressions | Start: 76/300
+[14:18:36] Pre-warming minute cache via backtest (up to 10 min)...
+[14:18:37] Warm attempt 1: backtest failed, retrying...
+[14:18:38] Warm attempt 2: backtest failed, retrying...
+[14:18:38] Warm attempt 3: backtest failed, retrying...
+[14:18:56] Pool exhausted, rebuilding...
+[14:18:56] Rebuilt: 0 untested
+[14:18:56] ALL expressions tested! Will retry in 10min.
+[14:19:21] Pool exhausted, rebuilding...
+[14:19:21] Rebuilt: 0 untested
+[14:19:21] ALL expressions tested! Will retry in 10min.
+[14:22:18] Pool exhausted, rebuilding...
+[14:22:18] Rebuilt: 0 untested
+[14:22:18] ALL expressions tested! Will retry in 10min.
+[14:22:40] Pool exhausted, rebuilding...
+[14:22:40] Rebuilt: 0 untested
+[14:22:40] ALL expressions tested! Will retry in 10min.
+[14:27:34] Pool exhausted, rebuilding...
+[14:27:34] Rebuilt: 0 untested
+[14:27:34] ALL expressions tested! Will retry in 10min.
+[14:28:57] Pool exhausted, rebuilding...
+[14:28:57] Rebuilt: 0 untested
+[14:28:57] ALL expressions tested! Will retry in 10min.
+[14:29:21] Pool exhausted, rebuilding...
+[14:29:21] Rebuilt: 0 untested
+[14:29:21] ALL expressions tested! Will retry in 10min.
+[14:32:18] Pool exhausted, rebuilding...
+[14:32:18] Rebuilt: 0 untested
+[14:32:18] ALL expressions tested! Will retry in 10min.
+[14:32:40] Pool exhausted, rebuilding...
+[14:32:40] Rebuilt: 0 untested
+[14:32:40] ALL expressions tested! Will retry in 10min.
+[14:48:49] ==================================================
+[14:48:49] MINER START
+[14:48:49] Loaded 0 previously-seen expressions
+[14:48:49] ==================================================
+[14:48:55] Pool: 441 untested minute-only expressions | Start: 76/300
+[14:48:55] Pre-warming minute cache via backtest (up to 10 min)...
+[14:48:56] Warm attempt 1: backtest failed, retrying...
+[14:50:37] Warm attempt 2: backtest failed, retrying...
+[14:52:42] Warm attempt 3: backtest failed, retrying...
+[15:00:11] ==================================================
+[15:00:11] MINER START
+[15:00:11] Loaded 0 previously-seen expressions
+[15:00:11] ==================================================
+[15:00:16] Pool: 441 untested minute-only expressions | Start: 76/300
+[15:00:16] Pre-warming minute cache via backtest (up to 10 min)...
+[15:00:17] Warm attempt 1: backtest failed, retrying...
+[15:00:17] Warm attempt 2: backtest failed, retrying...
+[15:51:20] ==================================================
+[15:51:20] MINER START
+[15:51:20] Loaded 0 previously-seen expressions
+[15:51:20] ==================================================
+[15:51:23] Pool: 441 untested minute-only expressions | Start: 76/300
+[15:51:23] Pre-warming minute cache via backtest (up to 10 min)...
+[15:51:27] Warm attempt 1: backtest failed, retrying...
+[15:51:30] Warm attempt 2: backtest failed, retrying...
+[15:51:34] Warm attempt 3: backtest failed, retrying...
+[15:52:16] + IC=+0.0143 S=1.85 TO=0.86 | 全日反转
+[15:52:35] + IC=+0.0179 S=-2.38 TO=0.78 | MxM:intradayxvwap_gap
+[15:52:45] + IC=+0.0133 S=-3.80 TO=0.66 | MxM:intradayxvolume_c
+[15:53:01] + IC=+0.0104 S=-2.82 TO=0.70 | MxM:intradayxlower_sh
+[15:53:05] ==================================================
+[15:53:05] MINER START
+[15:53:05] Loaded 0 previously-seen expressions
+[15:53:05] ==================================================
+[15:53:08] Pool: 437 untested minute-only expressions | Start: 81/300
+[15:53:08] Pre-warming minute cache via backtest (up to 10 min)...
+[15:53:12] + IC=+0.0120 S=-2.39 TO=0.78 | MxM:intradayxmorning_
+[15:53:14] Minute cache WARM (attempt 1, IC=+0.0068)
+[15:54:09] + IC=+0.0164 S=-2.13 TO=0.77 | MxM:intradayxbody_ret
+[15:54:41] + IC=+0.0144 S=0.03 TO=0.87 | MxM:price_efxvwap_gap
+[15:55:12] + IC=+0.0130 S=0.18 TO=0.89 | MxM:price_efxclose_lo
+[15:55:58] + IC=+0.0115 S=-0.71 TO=0.87 | MxM:price_efxmorning_
+[15:57:01] + IC=+0.0151 S=-0.74 TO=0.87 | MxM:price_efxbody_ret
+[15:57:01] === 5min: 76>87 (+11) | 87/300 (29%) | 6min | F=OK ===
+[15:57:32] + IC=+0.0172 S=2.01 TO=0.81 | MxM:vwap_gapxvolume_c
+[15:57:48] + IC=+0.0165 S=1.80 TO=0.87 | MxM:vwap_gapxclose_lo
+[15:58:11] + IC=+0.0128 S=1.82 TO=0.84 | Sum:vwap_gap+upper_sh
+[15:58:20] + IC=+0.0140 S=1.54 TO=0.88 | MxM:vwap_gapxlower_sh
+[15:58:36] + IC=+0.0154 S=1.46 TO=0.85 | MxM:vwap_gapxmorning_
+[15:58:51] + IC=+0.0151 S=1.29 TO=0.84 | MxM:vwap_gapxafternoo
+[15:59:07] + IC=+0.0131 S=0.86 TO=0.84 | MxM:vwap_gapxfirst30m
+[15:59:24] + IC=+0.0153 S=-0.08 TO=0.83 | MxM:vwap_gapxlast30mi
+[15:59:40] + IC=+0.0191 S=1.56 TO=0.85 | MxM:vwap_gapxbody_ret
+[15:59:56] + IC=+0.0114 S=-0.87 TO=0.81 | MxM:vwap_gapxam_pm_di
+[16:00:04] + IC=+0.0111 S=2.56 TO=0.88 | Sum:vwap_gap+am_pm_di
+[16:00:12] + IC=+0.0155 S=2.16 TO=0.86 | MxM:volume_cxclose_lo
+[16:00:12] === 5min: 82>99 (+17) | 99/300 (33%) | 7min | F=OK ===
+[16:00:50] + IC=+0.0116 S=1.32 TO=0.82 | MxM:volume_cxmorning_
+[16:01:07] + IC=+0.0120 S=0.53 TO=0.81 | MxM:volume_cxafternoo
+[16:01:51] + IC=+0.0161 S=2.00 TO=0.83 | MxM:volume_cxbody_ret
+[16:02:30] + IC=+0.0118 S=2.01 TO=0.86 | Sum:close_lo+upper_sh
+[16:02:30] === 5min: 87>103 (+16) | 103/300 (34%) | 11min | F=OK ===
+[16:02:38] + IC=+0.0128 S=1.59 TO=0.89 | MxM:close_loxlower_sh
+[16:02:52] + IC=+0.0131 S=1.17 TO=0.88 | MxM:close_loxmorning_
+[16:03:09] + IC=+0.0137 S=0.79 TO=0.87 | MxM:close_loxafternoo
+[16:03:24] + IC=+0.0109 S=0.71 TO=0.88 | MxM:close_loxfirst30m
+[16:03:40] + IC=+0.0135 S=-0.48 TO=0.86 | MxM:close_loxlast30mi
+[16:03:54] + IC=+0.0168 S=1.30 TO=0.88 | MxM:close_loxbody_ret
+[16:04:53] + IC=-0.0128 S=-7.13 TO=0.88 | Sum:upper_sh+morning_
+[16:06:10] + IC=+0.0121 S=1.42 TO=0.88 | MxM:lower_shxmorning_
+[16:06:10] === 5min: 99>111 (+12) | 111/300 (37%) | 13min | F=OK ===
+[16:06:25] + IC=+0.0103 S=-0.22 TO=0.88 | MxM:lower_shxafternoo
+[16:07:10] + IC=+0.0167 S=1.37 TO=0.89 | MxM:lower_shxbody_ret
+[16:07:42] + IC=+0.0124 S=0.57 TO=0.83 | MxM:morning_xafternoo
+[16:08:12] + IC=+0.0103 S=-0.29 TO=0.84 | MxM:morning_xlast30mi
+[16:08:12] === 5min: 103>115 (+12) | 115/300 (38%) | 17min | F=OK ===
+[16:08:27] + IC=+0.0122 S=1.62 TO=0.86 | MxM:morning_xbody_ret
+[16:09:15] + IC=+0.0123 S=-0.73 TO=0.83 | MxM:afternooxlast30mi
+[16:09:30] + IC=+0.0160 S=0.98 TO=0.85 | MxM:afternooxbody_ret
+[16:10:41] + IC=+0.0149 S=0.06 TO=0.84 | MxM:last30mixbody_ret
+[16:12:12] + IC=+0.0115 S=1.26 TO=0.84 | tsD:vwap_gap_10
+[16:12:12] === 5min: 111>120 (+9) | 120/300 (40%) | 19min | F=OK ===
+[16:12:20] + IC=+0.0110 S=-0.06 TO=0.84 | tsD:vwap_gap_20
+[16:30:42] ==================================================
+[16:30:42] MINER START
+[16:30:42] Loaded 0 previously-seen expressions
+[16:30:42] ==================================================
+[16:30:46] Pool: 397 untested minute-only expressions | Start: 121/300
+[16:30:46] Pre-warming minute cache via backtest (up to 10 min)...
+[16:30:57] CRASH: bad operand type for abs(): 'NoneType'
+[16:31:42] ==================================================
+[16:31:42] MINER START
+[16:31:42] Loaded 231 previously-seen expressions
+[16:31:42] ==================================================
+[16:31:43] Pool: 230 untested minute-only expressions | Start: 121/300
+[16:31:43] Pre-warming minute cache via backtest (up to 10 min)...
+[16:40:47] Warm attempt 1: backtest failed, retrying...
+[16:41:44] Warm attempt 1: backtest failed, retrying...
+[16:49:55] Warm attempt 2: backtest failed, retrying...
+[16:49:57] Warm attempt 3: backtest failed, retrying...
+[16:51:44] Warm attempt 2: backtest failed, retrying...
+[16:59:04] Flask DOWN (restart #1)
+[16:59:04] Flask DOWN (restart #1)
+[17:49:52] ==================================================
+[17:49:52] MINER START
+[17:49:52] Loaded 0 previously-seen expressions
+[17:49:52] ==================================================
+[17:49:56] Pool: 395 untested minute-only expressions | Start: 121/300
+[17:49:56] Pre-warming minute cache via backtest (up to 10 min)...
+[17:49:59] Minute cache WARM (attempt 1, IC=+0.0068)
+[17:53:53] ==================================================
+[17:53:53] MINER START
+[17:53:53] Loaded 0 previously-seen expressions
+[17:53:53] ==================================================
+[17:53:56] Pool: 395 untested minute-only expressions | Start: 121/300
+[17:53:57] Pre-warming minute cache via backtest (up to 10 min)...
+[17:54:05] Minute cache WARM (attempt 1, IC=+0.0068)
+[17:55:51] ==================================================
+[17:55:51] MINER START
+[17:55:51] Loaded 0 previously-seen expressions
+[17:55:51] ==================================================
+[17:55:54] Pool: 395 untested minute-only expressions | Start: 121/300
+[17:55:54] Pre-warming minute cache via backtest (up to 10 min)...
+[17:56:03] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:04:39] ==================================================
+[18:04:39] MINER START
+[18:04:39] Loaded 0 previously-seen expressions
+[18:04:39] ==================================================
+[18:04:43] Pool: 395 untested minute-only expressions | Start: 121/300
+[18:04:43] Pre-warming minute cache via backtest (up to 10 min)...
+[18:04:57] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:07:57] ==================================================
+[18:07:57] MINER START
+[18:07:57] Loaded 0 previously-seen expressions
+[18:07:57] ==================================================
+[18:08:02] Pool: 395 untested minute-only expressions | Start: 121/300
+[18:08:02] Pre-warming minute cache via backtest (up to 10 min)...
+[18:08:20] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:08:20] CRASH: name 'main_loop' is not defined
+[18:08:30] CRASH: name 'main_loop' is not defined
+[18:08:40] CRASH: name 'main_loop' is not defined
+[18:08:50] CRASH: name 'main_loop' is not defined
+[18:09:00] CRASH: name 'main_loop' is not defined
+[18:09:10] CRASH: name 'main_loop' is not defined
+[18:09:20] CRASH: name 'main_loop' is not defined
+[18:09:30] CRASH: name 'main_loop' is not defined
+[18:09:40] CRASH: name 'main_loop' is not defined
+[18:09:50] CRASH: name 'main_loop' is not defined
+[18:10:00] CRASH: name 'main_loop' is not defined
+[18:10:10] CRASH: name 'main_loop' is not defined
+[18:10:20] CRASH: name 'main_loop' is not defined
+[18:10:21] ==================================================
+[18:10:21] MINER START
+[18:10:21] Loaded 79 previously-seen expressions
+[18:10:21] ==================================================
+[18:10:24] Pool: 382 untested minute-only expressions | Start: 121/300
+[18:10:24] Pre-warming minute cache via backtest (up to 10 min)...
+[18:10:30] CRASH: name 'main_loop' is not defined
+[18:10:40] CRASH: name 'main_loop' is not defined
+[18:10:42] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:10:50] CRASH: name 'main_loop' is not defined
+[18:11:01] CRASH: name 'main_loop' is not defined
+[18:11:11] CRASH: name 'main_loop' is not defined
+[18:11:21] CRASH: name 'main_loop' is not defined
+[18:11:31] CRASH: name 'main_loop' is not defined
+[18:11:41] CRASH: name 'main_loop' is not defined
+[18:11:51] CRASH: name 'main_loop' is not defined
+[18:12:01] CRASH: name 'main_loop' is not defined
+[18:12:11] CRASH: name 'main_loop' is not defined
+[18:12:21] CRASH: name 'main_loop' is not defined
+[18:12:22] ==================================================
+[18:12:22] MINER START
+[18:12:22] Loaded 91 previously-seen expressions
+[18:12:22] ==================================================
+[18:12:25] Pool: 370 untested minute-only expressions | Start: 121/300
+[18:12:25] Pre-warming minute cache via backtest (up to 10 min)...
+[18:12:31] CRASH: name 'main_loop' is not defined
+[18:12:41] CRASH: name 'main_loop' is not defined
+[18:12:48] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:12:51] CRASH: name 'main_loop' is not defined
+[18:13:01] CRASH: name 'main_loop' is not defined
+[18:13:11] CRASH: name 'main_loop' is not defined
+[18:13:21] CRASH: name 'main_loop' is not defined
+[18:13:31] CRASH: name 'main_loop' is not defined
+[18:13:37] ==================================================
+[18:13:37] MINER START
+[18:13:37] Loaded 98 previously-seen expressions
+[18:13:37] ==================================================
+[18:13:40] Pool: 363 untested minute-only expressions | Start: 121/300
+[18:13:40] Pre-warming minute cache via backtest (up to 10 min)...
+[18:13:41] CRASH: name 'main_loop' is not defined
+[18:13:51] CRASH: name 'main_loop' is not defined
+[18:14:01] CRASH: name 'main_loop' is not defined
+[18:14:08] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:14:11] CRASH: name 'main_loop' is not defined
+[18:14:21] CRASH: name 'main_loop' is not defined
+[18:14:32] CRASH: name 'main_loop' is not defined
+[18:14:42] CRASH: name 'main_loop' is not defined
+[18:14:52] CRASH: name 'main_loop' is not defined
+[18:15:02] CRASH: name 'main_loop' is not defined
+[18:15:12] CRASH: name 'main_loop' is not defined
+[18:15:22] CRASH: name 'main_loop' is not defined
+[18:15:33] CRASH: name 'main_loop' is not defined
+[18:15:43] CRASH: name 'main_loop' is not defined
+[18:15:53] CRASH: name 'main_loop' is not defined
+[18:16:03] CRASH: name 'main_loop' is not defined
+[18:16:03] ==================================================
+[18:16:03] MINER START
+[18:16:03] Loaded 113 previously-seen expressions
+[18:16:03] ==================================================
+[18:16:06] Pool: 348 untested minute-only expressions | Start: 121/300
+[18:16:06] Pre-warming minute cache via backtest (up to 10 min)...
+[18:16:13] CRASH: name 'main_loop' is not defined
+[18:16:23] CRASH: name 'main_loop' is not defined
+[18:16:33] CRASH: name 'main_loop' is not defined
+[18:16:38] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:16:43] CRASH: name 'main_loop' is not defined
+[18:16:53] CRASH: name 'main_loop' is not defined
+[18:17:03] CRASH: name 'main_loop' is not defined
+[18:17:13] CRASH: name 'main_loop' is not defined
+[18:17:23] CRASH: name 'main_loop' is not defined
+[18:17:33] CRASH: name 'main_loop' is not defined
+[18:17:43] CRASH: name 'main_loop' is not defined
+[18:17:53] CRASH: name 'main_loop' is not defined
+[18:18:03] CRASH: name 'main_loop' is not defined
+[18:18:13] CRASH: name 'main_loop' is not defined
+[18:18:23] CRASH: name 'main_loop' is not defined
+[18:18:33] CRASH: name 'main_loop' is not defined
+[18:18:43] CRASH: name 'main_loop' is not defined
+[18:18:54] CRASH: name 'main_loop' is not defined
+[18:18:55] ==================================================
+[18:18:55] MINER START
+[18:18:55] Loaded 130 previously-seen expressions
+[18:18:55] ==================================================
+[18:18:58] Pool: 331 untested minute-only expressions | Start: 121/300
+[18:18:58] Pre-warming minute cache via backtest (up to 10 min)...
+[18:19:04] CRASH: name 'main_loop' is not defined
+[18:19:14] CRASH: name 'main_loop' is not defined
+[18:19:24] CRASH: name 'main_loop' is not defined
+[18:19:34] CRASH: name 'main_loop' is not defined
+[18:19:38] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:19:44] CRASH: name 'main_loop' is not defined
+[18:19:54] CRASH: name 'main_loop' is not defined
+[18:20:04] CRASH: name 'main_loop' is not defined
+[18:20:14] CRASH: name 'main_loop' is not defined
+[18:20:20] ==================================================
+[18:20:20] MINER START
+[18:20:20] Loaded 0 previously-seen expressions
+[18:20:20] ==================================================
+[18:20:24] CRASH: name 'main_loop' is not defined
+[18:20:25] Pool: 395 untested minute-only expressions | Start: 121/300
+[18:20:25] Pre-warming minute cache via backtest (up to 10 min)...
+[18:20:34] CRASH: name 'main_loop' is not defined
+[18:20:44] CRASH: name 'main_loop' is not defined
+[18:20:54] CRASH: name 'main_loop' is not defined
+[18:21:04] CRASH: name 'main_loop' is not defined
+[18:21:10] Minute cache WARM (attempt 1, IC=+0.0068)
+[18:21:14] CRASH: name 'main_loop' is not defined
+[18:21:24] CRASH: name 'main_loop' is not defined
+[18:21:34] CRASH: name 'main_loop' is not defined
+[18:21:44] CRASH: name 'main_loop' is not defined
+[18:21:54] CRASH: name 'main_loop' is not defined
+[18:22:04] CRASH: name 'main_loop' is not defined
+[18:22:14] CRASH: name 'main_loop' is not defined
+[18:22:24] CRASH: name 'main_loop' is not defined
+[18:22:34] CRASH: name 'main_loop' is not defined
+[18:22:44] CRASH: name 'main_loop' is not defined
+[18:22:54] CRASH: name 'main_loop' is not defined
+[18:23:05] CRASH: name 'main_loop' is not defined
+[18:23:15] CRASH: name 'main_loop' is not defined
+[18:23:25] CRASH: name 'main_loop' is not defined
+[18:23:35] CRASH: name 'main_loop' is not defined
+[18:23:45] CRASH: name 'main_loop' is not defined
+[18:23:55] CRASH: name 'main_loop' is not defined
+[18:24:05] CRASH: name 'main_loop' is not defined
+[18:24:15] CRASH: name 'main_loop' is not defined
+[18:24:25] CRASH: name 'main_loop' is not defined
+[18:24:35] CRASH: name 'main_loop' is not defined
+[18:24:45] CRASH: name 'main_loop' is not defined
+[18:24:55] CRASH: name 'main_loop' is not defined
+[18:25:05] CRASH: name 'main_loop' is not defined
+[18:25:15] CRASH: name 'main_loop' is not defined
+[18:25:25] CRASH: name 'main_loop' is not defined
+[18:25:35] CRASH: name 'main_loop' is not defined
+[18:25:45] CRASH: name 'main_loop' is not defined
+[18:25:55] CRASH: name 'main_loop' is not defined
+[18:26:05] CRASH: name 'main_loop' is not defined
+[18:26:15] CRASH: name 'main_loop' is not defined
+[18:26:25] CRASH: name 'main_loop' is not defined
+[18:26:35] CRASH: name 'main_loop' is not defined
+[18:26:45] CRASH: name 'main_loop' is not defined
+[18:26:55] CRASH: name 'main_loop' is not defined
+[18:27:06] CRASH: name 'main_loop' is not defined
+[18:27:16] CRASH: name 'main_loop' is not defined
+[18:27:26] CRASH: name 'main_loop' is not defined
+[18:27:36] CRASH: name 'main_loop' is not defined
+[18:27:42]   bt None: Sum:vwap_gap+volume_c
+[18:27:46] CRASH: name 'main_loop' is not defined
+[18:27:56] CRASH: name 'main_loop' is not defined
+[18:28:06] CRASH: name 'main_loop' is not defined
+[18:28:16] CRASH: name 'main_loop' is not defined
+[18:28:26] CRASH: name 'main_loop' is not defined
+[18:28:36] CRASH: name 'main_loop' is not defined
+[18:28:46] CRASH: name 'main_loop' is not defined
+[18:28:56] CRASH: name 'main_loop' is not defined
+[18:29:06] CRASH: name 'main_loop' is not defined
+[18:29:16] CRASH: name 'main_loop' is not defined
+[18:29:26] CRASH: name 'main_loop' is not defined
+[18:29:36] CRASH: name 'main_loop' is not defined
+[18:29:46] CRASH: name 'main_loop' is not defined
+[18:29:56] CRASH: name 'main_loop' is not defined
+[18:30:06] CRASH: name 'main_loop' is not defined
+[18:30:16] CRASH: name 'main_loop' is not defined
+[18:30:26] CRASH: name 'main_loop' is not defined
+[18:30:33]   bt None: Sum:vwap_gap+last30mi
+[18:30:36] CRASH: name 'main_loop' is not defined
+[18:30:47] CRASH: name 'main_loop' is not defined
+[18:30:57] CRASH: name 'main_loop' is not defined
+[18:31:07] CRASH: name 'main_loop' is not defined
+[18:31:17] CRASH: name 'main_loop' is not defined
+[18:31:27] CRASH: name 'main_loop' is not defined
+[18:31:37] CRASH: name 'main_loop' is not defined
+[18:31:47] CRASH: name 'main_loop' is not defined
+[18:31:57] CRASH: name 'main_loop' is not defined
+[18:32:07] CRASH: name 'main_loop' is not defined
+[18:32:17] CRASH: name 'main_loop' is not defined
+[18:32:27] CRASH: name 'main_loop' is not defined
+[18:32:37] CRASH: name 'main_loop' is not defined
+[18:32:47] CRASH: name 'main_loop' is not defined
+[18:32:57] CRASH: name 'main_loop' is not defined
+[18:33:07] CRASH: name 'main_loop' is not defined
+[18:33:16]   bt None: Sum:upper_sh+last30mi
+[18:33:17] CRASH: name 'main_loop' is not defined
+[18:33:27] CRASH: name 'main_loop' is not defined
+[18:33:34]   bt None: Sum:vwap_gap+body_ret
+[18:33:36]   bt None: MxM:intradayxfirst30m
+[18:33:37]   bt None: MxM:close_loxupper_sh
+[18:33:37] CRASH: name 'main_loop' is not defined
+[18:33:42]   bt None: MxM:price_efxlast30mi
+[18:33:42]   bt None: Sum:upper_sh+am_pm_di
+[18:33:45]   bt None: Sum:afternoo+body_ret
+[18:33:47]   bt None: tsD:volume_con_3
+[18:33:47] CRASH: name 'main_loop' is not defined
+[18:33:51]   bt None: tsD:afternoon__5
+[18:33:54]   bt None: tsR:price_effi_10
+[18:33:57] CRASH: name 'main_loop' is not defined
+[18:34:08] CRASH: name 'main_loop' is not defined
+[18:34:18] CRASH: name 'main_loop' is not defined
+[18:34:28] CRASH: name 'main_loop' is not defined
+[18:34:38] CRASH: name 'main_loop' is not defined
+[18:34:39]   bt None: Sum:close_lo+body_ret
+[18:34:45]   bt None: MxM:volume_cxfirst30m
+[18:34:46]   bt None: MxM:volume_cxam_pm_di
+[18:34:48] CRASH: name 'main_loop' is not defined
+[18:34:48]   bt None: Sum:lower_sh+last30mi
+[18:34:54]   bt None: MxM:upper_shxbody_ret
+[18:34:58] CRASH: name 'main_loop' is not defined
+[18:35:02]   bt None: Sum:afternoo+first30m
+[18:35:04]   bt None: tsR:afternoon__10
+[18:35:08] CRASH: name 'main_loop' is not defined
+[18:35:09]   bt None: sP:lower_shad^2
+[18:35:09]   bt None: tsD:price_effi_20
+[18:35:18] CRASH: name 'main_loop' is not defined
+[18:35:23]   bt None: MxM:afternooxfirst30m
+[18:35:28] CRASH: name 'main_loop' is not defined
+[18:35:31]   bt None: tsD:price_effi_10
+[18:35:38] CRASH: name 'main_loop' is not defined
+[18:35:48] CRASH: name 'main_loop' is not defined
+[18:35:58] CRASH: name 'main_loop' is not defined
+[18:36:08] CRASH: name 'main_loop' is not defined
+[18:36:15]   bt None: tsCorr:price_xvolume_20
+[18:36:17]   bt None: tsD:morning_re_20
+[18:36:19] CRASH: name 'main_loop' is not defined
+[18:36:26]   bt None: tsR:intraday_v_10
+[18:36:29] CRASH: name 'main_loop' is not defined
+[18:36:35]   bt None: tsR:morning_re_20
+[18:36:39] CRASH: name 'main_loop' is not defined
+[18:36:42]   bt None: tsD:morning_re_10
+[18:36:49]   bt None: sP:close_loca^2
+[18:36:49] CRASH: name 'main_loop' is not defined
+[18:36:53]   bt None: tsD:am_pm_dive_20
+[18:36:54]   bt None: Sum:upper_sh+afternoo
+[18:37:00] CRASH: name 'main_loop' is not defined
+[18:37:01]   bt None: MxM:first30mxam_pm_di
+[18:37:04]   bt None: tsCorr:price_xvwap_g_20
+[18:37:11] CRASH: name 'main_loop' is not defined
+[18:37:13]   bt None: Sum:close_lo+last30mi
+[18:37:14]   bt None: tsR:morning_re_10
+[18:37:21]   bt None: Sum:morning_+last30mi
+[18:37:21] CRASH: name 'main_loop' is not defined
+[18:37:33] CRASH: name 'main_loop' is not defined
+[18:37:43] CRASH: name 'main_loop' is not defined
+[18:37:52]   bt None: tsD:close_loca_20
+[18:37:52] Flask DOWN (restart #1)
+[18:37:53] CRASH: name 'main_loop' is not defined
+[18:38:03] Flask restarted OK
+[18:38:03] Flask restarted OK
+[18:38:03] CRASH: name 'main_loop' is not defined
+[18:38:07]   bt None: Ratio:intrad/close_
+[18:38:14] CRASH: name 'main_loop' is not defined
+[18:38:24] CRASH: name 'main_loop' is not defined
+[18:38:32]   bt None: Ratio:intrad/vwap_g
+[18:38:34] CRASH: name 'main_loop' is not defined
+[18:38:44] CRASH: name 'main_loop' is not defined
+[18:38:55] CRASH: name 'main_loop' is not defined
+[18:39:05] CRASH: name 'main_loop' is not defined
+[18:39:12]   bt None: tsD:intraday_v_10
+[18:39:15] CRASH: name 'main_loop' is not defined
+[18:39:18]   bt None: sP:volume_con^2
+[18:39:25] CRASH: name 'main_loop' is not defined
+[18:39:30]   bt None: tsD:first30min_20
+[18:39:35] CRASH: name 'main_loop' is not defined

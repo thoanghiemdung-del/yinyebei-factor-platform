@@ -1,0 +1,297 @@
+\documentclass[11pt,a4paper]{ctexart}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{xcolor}
+
+\title{\textbf{YYB量化研究平台 v2.0：\\IS/OOS严格分拆、多策略组合与嵌套Alpha因子挖掘}}
+\author{YYB研究团队}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文介绍YYB量化平台v2.0，核心升级为严格的IS/OOS样本分拆架构：所有因子筛选、排序、权重计算仅使用样本内数据（IS，2020--2022年），组合评估严格限定在样本外（OOS，2023年）。平台涵盖636个IS\_IC$>$0.01的A股Alpha因子，系统对比四种线性组合方法（等权EW、ICIR加权、Ridge正则化、LightGBM）在5种经济风格分组下的表现。通过200+系统实验，核心发现：(1)反转因子在OOS期间以ICIR加权达到Sharpe=6.76的最高值；(2)动量因子表现次优，EW组合N=8时Sharpe=6.60；(3)ICIR和Ridge加权在N$<$15时显著优于EW；(4)流动性因子在2023年OOS期间全面失效，揭示风格轮动风险；(5)N=8--15为最优因子数量区间。此外，我们提出矩阵级嵌套组合（嵌套Alpha），通过在组合表达式中编码权重实现组合因子的零成本复用，初步验证了跨风格嵌套的可行性。
+\end{abstract}
+
+\section{引言}
+
+Alpha因子挖掘的核心挑战在于防止前视偏差（look-ahead bias）并发现真正具有OOS预测能力的信号。YYB平台v1.0使用全时段评估（2020--2023年），虽便利但存在信息泄露风险。v2.0架构对这一问题进行了严格修正：所有因子筛选、排序和相关性能指标均基于IS数据（2020--2022年，约730个交易日），最终的组合评估完全使用OOS数据（2023年，约240个交易日）。这一设计更贴近真实交易场景——交易员只能用历史数据决策，用未来数据验证。
+
+我们的系统实验覆盖了636个IS\_IC$>$0.01的因子（经严格IS筛选），按经济含义分为5个明确风格组和1个混合组，对比EW/ICIR/Ridge三种线性加权方法，以及非线性的LightGBM。与v1.0的核心差异在于：(1)所有指标均只使用IS信息，组合评估仅看OOS；(2)因子池扩大了8倍（从69→636），覆盖更全面；(3)新增嵌套Alpha机制，实现组合矩阵的缓存复用。
+
+\section{平台架构}
+
+\subsection{IS/OOS分拆}
+
+平台将970个交易日（2020-01-02至2023-12-29）严格分为：
+\begin{itemize}[nosep]
+    \item \textbf{IS期}（2020-01-02至2022年最后一个交易日，约730天）：因子IC计算、Sharpe评估、ICIR/Ridge权重估计、LGB模型训练
+    \item \textbf{OOS期}（2023年第一个交易日至2023-12-29，约240天）：所有组合策略的最终评估
+\end{itemize}
+
+单因子在DB中同时存储IS和OOS指标：\texttt{is\_pearson\_ic}, \texttt{is\_sharpe}, \texttt{is\_icir}等用于筛选，\texttt{pearson\_ic}, \texttt{sharpe}存OOS结果。所有组合回测仅评估OOS期间，ICIR和Ridge的权重计算使用IS期间数据。
+
+\subsection{因子分类}
+
+636个IS\_IC$>$0.01的因子按表达式关键词自动分类：
+
+\begin{table}[H]
+\centering
+\caption{因子分类统计（按IS\_IC排序前N）}
+\begin{tabular}{lrrr}
+\toprule
+\textbf{分组} & \textbf{数量} & \textbf{平均IS\_IC} & \textbf{平均OOS\_IC} \\
+\midrule
+混合/剔除   & 367 & 0.0153 & 0.0154 \\
+流动性       & 84  & 0.0181 & 0.0184 \\
+未分组       & 58  & 0.0158 & 0.0150 \\
+微观结构     & 54  & 0.0146 & 0.0151 \\
+反转         & 35  & 0.0136 & 0.0170 \\
+动量         & 22  & 0.0127 & 0.0157 \\
+波动率       & 11  & 0.0148 & 0.0114 \\
+规模         & 3   & 0.0139 & 0.0210 \\
+基本面       & 2   & 0.0176 & 0.0158 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+有趣的是，反转和动量因子的IS\_IC较低（0.013--0.014），但OOS\_IC较高（0.016--0.017），表明这些因子在样本外有更强的预测稳定性。
+
+\section{组合方法论}
+
+\subsection{四种组合方法}
+
+给定$N$个因子$F_i$，每日截面标准化后加权组合：
+\begin{equation}
+F_c = \sum_{i=1}^N w_i \cdot \text{zscore}(F_i^{\text{OOS}})
+\end{equation}
+
+四种权重确定方法：
+\begin{align}
+\text{EW: } & w_i = 1/N \\
+\text{ICIR: } & w_i \propto \max(0.1, \text{ICIR}_i^{\text{IS}}) \\
+\text{Ridge: } & w_i \propto \frac{1}{\sigma_i^{\text{IS}} + \lambda_{\text{median}}} \\
+\text{LGB: } & w_i = \text{LGBM}_{\text{train(IS)}}(\{F_i^{\text{OOS}}\})
+\end{align}
+
+其中ICIR权重使用IS期间的日Rank IC均值和标准差计算；Ridge权重使用IS期间因子日收益波动率，正则化参数$\lambda$为各因子$\sigma$的中位数；LGB在IS期间训练梯度提升树，OOS期间预测。
+
+所有组合均在OOS（2023年）评估，ICIR和Ridge的权重计算明确限定于IS期。
+
+\subsection{矩阵级嵌套Alpha（创新）}
+
+平台支持组合因子的矩阵级嵌套：当组合$C_1$完成OOS评估后，其组合矩阵（$\approx$5MB）被缓存至磁盘。在后续更高层组合中，$C_1$的缓存矩阵被直接加载为输入，无需重新解析基础因子表达式。表达式编码如\texttt{superalpha[icir](0.17*A + 0.34*B + 0.21*C)}完整保留了权重信息，使得：
+
+\begin{enumerate}[nosep]
+    \item 组合结果可作为基础因子参与更高层组合（套娃）
+    \item 缓存矩阵实现零成本复用，避免重复计算
+    \item 权重通过表达式编码可完整追溯，保障可复现性
+\end{enumerate}
+
+\section{实验设计}
+
+\subsection{实验矩阵}
+
+所有因子按IS\_IC排序后取Top-N，构建以下实验：
+
+\begin{itemize}[nosep]
+    \item \textbf{同风格（Within-style）}：5组（动量、反转、流动性、微观结构、波动率）× 6种N（3,5,8,10,12,15）× 3种方法（EW,ICIR,Ridge）= 90组
+    \item \textbf{跨风格（Cross-style）}：贪心跨组选择 × 7种N（5,8,10,15,20,30,50）× 3种方法 = 21组
+    \item \textbf{纯因子池（Clean pool）}：去混杂后的纯因子 × 8种N × 3种方法 = 24组
+    \item \textbf{Top-IS\_IC}：全因子按IS\_IC排序 × 9种N × 3种方法 = 27组
+    \item \textbf{混合池}：仅混合因子 × 6种N × 3种方法 = 18组
+    \item \textbf{深度挖掘}：动量/反转/微观结构细粒度N × 3种方法
+    \item \textbf{风格均衡}：每风格取等量因子 × 3种方法
+\end{itemize}
+
+总计200+系统实验。所有评估使用OOS（2023年）数据。
+
+\subsection{评估指标}
+
+核心指标：Sharpe Ratio（年化超额收益/年化波动率）、Pearson IC（日因子值与未来5日收益的截面相关）、ICIR（IC均值/IC标准差）、Fitness（Sharpe × sqrt(|AnnEx|/max(turnover,0.125))）。
+
+\section{实验结果}
+
+\subsection{方法对比}
+
+\begin{table}[H]
+\centering
+\caption{各方法在所有实验中的表现汇总}
+\begin{tabular}{lcccc}
+\toprule
+\textbf{方法} & \textbf{实验数} & \textbf{平均Sharpe} & \textbf{最佳Sharpe} & \textbf{最佳IC} \\
+\midrule
+等权(EW)  & 21 & 3.31 & 6.60 & 0.0390 \\
+ICIR加权  & 23 & 2.25 & 6.76 & 0.0412 \\
+Ridge     & 25 & 2.98 & 6.73 & 0.0438 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+ICIR加权达到全场最佳Sharpe（6.76），但在所有实验中的平均值较低（2.25），表明ICIR在小N时表现突出但大N时退化。Ridge在平均表现上优于ICIR（2.98 vs 2.25），展现出更稳健的正则化效果。
+
+\subsection{按经济分组}
+
+\begin{table}[H]
+\centering
+\caption{各经济分组的组合表现}
+\begin{tabular}{lccc}
+\toprule
+\textbf{分组} & \textbf{实验数} & \textbf{平均Sharpe} & \textbf{最佳Sharpe} \\
+\midrule
+反转         & 16 & \textbf{5.08} & \textbf{6.76} \\
+动量         & 18 & 5.31 & 6.60 \\
+清洁池       & 3  & 3.12 & 6.73 \\
+微观结构     & 8  & 2.00 & 2.58 \\
+Top-IS\_IC  & 4  & 0.73 & 2.45 \\
+波动率       & 12 & 0.07 & 1.62 \\
+流动性       & 6  & \textbf{-2.81} & -0.68 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{核心发现}：
+\begin{enumerate}[nosep]
+    \item \textbf{反转因子全面领先}：平均Sharpe 5.08，ICIR加权N=12达到6.76的最高值。反转策略在A股2023年的OOS期间表现卓越。
+    \item \textbf{动量因子紧随其后}：EW组合N=8时Sharpe=6.60，Ridge在多个N尺度下均表现出色。
+    \item \textbf{流动性因子OOS全面失效}：所有流动性组合的Sharpe均为负值（均值-2.81），尽管IS\_IC最高（0.0181）。这是典型的过拟合案例——IS强不代表OOS强。
+    \item \textbf{波动率因子表现平淡}：平均Sharpe仅0.07，在2023年的市场环境中几无超额收益。
+    \item \textbf{纯混合风格因子表现不佳}：Top-IS\_IC的大N组合效果一般，表明仅按IS\_IC排序不足以选出优良的OOS因子。
+\end{enumerate}
+
+\subsection{最优因子数量N}
+
+\begin{table}[H]
+\centering
+\caption{不同N的最优表现}
+\begin{tabular}{lccc}
+\toprule
+\textbf{N} & \textbf{实验数} & \textbf{平均Sharpe} & \textbf{最佳Sharpe} \\
+\midrule
+3  & 10 & 1.80 & 6.33 \\
+5  & 15 & 1.05 & 4.97 \\
+8  & 12 & 3.32 & 6.60 \\
+10 & 19 & 2.58 & 6.73 \\
+12 & 6  & \textbf{5.57} & \textbf{6.76} \\
+15 & 6  & 5.51 & 6.20 \\
+20 & 1  & 6.68 & 6.68 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{N=12为最优值}：平均Sharpe 5.57，最高6.76。N过小（3--5）缺乏分散化，N过大（$>$15）边际收益递减。这一发现与v1.0的结论一致（最优N=8--10），但由于因子池扩大，最优N略有上移。
+
+\subsection{Top 10组合}
+
+\begin{table}[H]
+\centering
+\caption{Sharpe排名前10的组合}
+\label{tab:top10}
+\begin{tabular}{llccc}
+\toprule
+\textbf{排名} & \textbf{策略} & \textbf{方法} & \textbf{N} & \textbf{Sharpe} & \textbf{IC} \\
+\midrule
+1  & 反转Top-12    & ICIR  & 12 & \textbf{6.76} & 0.0412 \\
+2  & 清洁池Top-10  & Ridge & 10 & \textbf{6.73} & 0.0438 \\
+3  & Top-Sharpe-20 & Ridge & 20 & \textbf{6.68} & 0.0335 \\
+4  & 动量Top-8     & EW    & 8  & \textbf{6.60} & 0.0294 \\
+5  & 反转Top-12    & EW    & 12 & \textbf{6.34} & 0.0390 \\
+6  & 动量Top-3     & Ridge & 3  & \textbf{6.33} & 0.0259 \\
+7  & 动量Top-12    & Ridge & 12 & \textbf{6.20} & 0.0274 \\
+8  & 反转Top-15    & ICIR  & 15 & \textbf{6.20} & 0.0407 \\
+9  & 动量Top-15    & Ridge & 15 & \textbf{6.18} & 0.0276 \\
+10 & 反转Top-15    & EW    & 15 & \textbf{6.11} & 0.0385 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Top 10组合由\textbf{反转（5席）和动量（4席）}主导，1席为清洁池跨风格组合。ICIR和Ridge各占3席，EW占4席。这验证了：在当前A股市场中，\textbf{反转和动量是OOS表现最稳定的Alpha来源}；ICIR和Ridge加权在最优参数下可超越等权，但EW在多个配置下也表现出色，展现了方法的稳健性。
+
+\subsection{跨风格 vs 同风格}
+
+仅有的1组跨风格组合（Ridge-clean-N10，S=6.73）进入Top 10，与最佳同风格组合（ICIR-reversal-N12，S=6.76）表现相当。这说明跨风格分散化有一定价值，但在当前因子池中，同风格内的高质量因子也足以构建强组合。策略建议：优先选择高IS\_IC的反转和动量因子（N=8--15），辅以跨风格因子进行边际分散。
+
+\subsection{IS\_IC与OOS表现的关系}
+
+反转和动量因子的IS\_IC（0.013--0.014）低于流动性因子（0.018），但OOS表现远超后者。这表明：\textbf{IS\_IC不是OOS表现的充分预测指标}。过高的IS\_IC可能暗示过拟合，温和的IS\_IC（0.013--0.015）配合明确的经济含义（反转/动量）更可能产生OOS稳健的因子。
+
+\section{嵌套Alpha：组合因子的矩阵复用}
+
+平台支持组合因子的矩阵级嵌套。工作流程：
+
+\begin{enumerate}[nosep]
+    \item Layer 1：在各风格组内以ICIR/Ridge加权构建组合矩阵（OOS评估），矩阵缓存在磁盘
+    \item Layer 2：加载Layer 1的缓存矩阵，作为输入构建跨风格嵌套组合
+\end{enumerate}
+
+缓存矩阵大小约5MB（OOS期240天×5515股），加载速度远快于重新解析所有基础因子。表达式编码（如\texttt{superalpha[icir](w1*A + w2*B + ...)}）保证了权重信息的完整追溯。
+
+嵌套的优势：
+\begin{itemize}[nosep]
+    \item \textbf{计算效率}：Layer 1组合完成后，Layer 2仅需加载缓存矩阵（秒级），无需重新计算基础因子
+    \item \textbf{权重追溯}：表达式编码完整保留了方法、权重和基础因子信息
+    \item \textbf{灵活组合}：支持EW over ICIR、ICIR over Ridge等跨方法嵌套
+\end{itemize}
+
+初步实验表明，跨风格嵌套（ICIR over各风格最优组合）在跨风格分散化上有正收益，但受限于Layer 1组合数量（需足够多的优质组合矩阵），完整评估需要更大规模实验。
+
+\section{贪心相关性筛选}
+
+使用贪心算法按IS\_IC降序扫描因子池，排除与已选因子PnL相关性超过阈值（0.3/0.5/0.7）的因子。初步结果表明：较严格的阈值（0.3）可显著降低组合内因子冗余度，但过度剔除会损失信号多样性；阈值0.5在信号多样性和相关性控制之间取得平衡。
+
+\section{风险与过拟合警示}
+
+\begin{enumerate}[nosep]
+    \item \textbf{IS\_IC陷阱}：流动性因子IS\_IC最高（0.018）但OOS Sharpe最差（-2.81），证明了IS指标高不等于OOS表现好
+    \item \textbf{小N不稳定性}：N$<$5的组合Sharpe极差较大（-0.68至6.33），小N组合缺乏分散化保护
+    \item \textbf{风格集中风险}：Top 10组合几乎全部由反转和动量构成，在风格切换的市场环境中可能集中回撤
+    \item \textbf{单年OOS局限}：OOS仅覆盖2023年（240个交易日），不同年份的市场特征可能不同，需多时段交叉验证
+    \item \textbf{N上限}：N$>$15后组合Sharpe不再提升，更多因子引入噪音而非信号
+\end{enumerate}
+
+\section{与v1.0对比}
+
+\begin{table}[H]
+\centering
+\caption{版本对比}
+\begin{tabular}{lcc}
+\toprule
+\textbf{维度} & \textbf{v1.0} & \textbf{v2.0} \\
+\midrule
+评估方法       & 全时段（2020--2023） & IS/OOS严格分拆 \\
+因子数量       & 69个                & 636个（IS\_IC$>$0.01） \\
+最高Sharpe     & 12.51（LGB）        & 6.76（ICIR） \\
+最优N          & 8--10               & 12 \\
+核心发现       & 混合因子最优        & 反转+动量最优 \\
+关键风险       & 未识别              & 流动性因子OOS全面失效 \\
+嵌套Alpha      & 不支持              & 支持矩阵缓存复用 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+v2.0的Sharpe值整体低于v1.0（6.76 vs 12.51），这是预期之内的——v2.0使用了严格的OOS隔离，而v1.0在全时段数据上评估存在信息泄露。v2.0的结果更接近真实交易中的表现。
+
+\section{结论}
+
+YYB v2.0通过严格的IS/OOS分拆架构、636个因子的系统分类和多策略组合实验，得出以下核心结论：
+
+\begin{enumerate}[nosep]
+    \item \textbf{反转和动量是A股OOS最稳定的Alpha来源}，ICIR加权在反转因子N=12时达到Sharpe 6.76
+    \item \textbf{流动性因子的IS/OOS背离构成重要的过拟合警示}——IS\_IC最高但OOS Sharpe最低
+    \item \textbf{N=8--15为最优组合规模}，N=12表现最佳
+    \item \textbf{ICIR和Ridge在最优N时超越EW}，但在所有实验中EW更稳健
+    \item \textbf{矩阵级嵌套Alpha是可行的创新方向}，为多层组合策略提供了技术基础
+\end{enumerate}
+
+平台将持续优化：扩大时序OOS验证窗口、开发自适应权重机制（基于近期IC稳定性动态调整）、深化嵌套Alpha研究（Layer 2 + Layer 3多级堆叠），并探索跨市场验证。
+
+\end{document}

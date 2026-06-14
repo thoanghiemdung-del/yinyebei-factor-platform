@@ -1,0 +1,76 @@
+{
+  "time": "2026-06-01 23:08:43",
+  "target_qualified": 100,
+  "qualified_count": 5,
+  "remaining": 95,
+  "qualified_abs_ic": 0.05,
+  "max_combo_corr": 0.7,
+  "cycle": 1057,
+  "tested_count": 222,
+  "running": true,
+  "last_result": {
+    "time": "2026-06-01 23:08:22",
+    "signature": "eb36dcc2aa7968f3",
+    "history_id": "6627d169-c2ed-4b0a-91db-de4946a73c3a",
+    "qualified": false,
+    "reject_reason": "abs_ic_below_0.05",
+    "mode": "lgb",
+    "theme_name": "high_ic_balanced",
+    "style": "negative_high_ic",
+    "single_max_corr": 0.7,
+    "anti_corr": true,
+    "max_seed_corr": 0.55,
+    "selected_count": 20,
+    "selected_single_max_corr": 0.698,
+    "selected_avg_abs_ic": 0.0318,
+    "selected_theme_counts": {
+      "liquidity": 14,
+      "reversal": 6,
+      "momentum": 6,
+      "volatility": 10,
+      "microstructure": 4
+    },
+    "combo_max_corr_to_qualified": 0.7107,
+    "metrics": {
+      "pearson_ic": 0.0462,
+      "annual_excess": 0.3435,
+      "sharpe": 6.336,
+      "fitness": 5.463,
+      "max_drawdown": 0.0404,
+      "turnover": 0.4622
+    },
+    "n_factors": 20.0,
+    "n_skipped_features": 0.0,
+    "train_period": {
+      "end": "2022-12-23",
+      "purge_days": 5.0,
+      "start": "2020-01-02"
+    },
+    "oos_period": {
+      "end": "2023-12-29",
+      "start": "2023-01-03"
+    }
+  },
+  "last_error": null,
+  "phase": "lgb_running",
+  "candidates": 488,
+  "free_gb": 7.05,
+  "active_config": {
+    "theme_name": "high_ic_momentum_volatility",
+    "style": "high_ic",
+    "single_max_corr": 0.7,
+    "keep_count": 20,
+    "anti_corr": true,
+    "max_seed_corr": 0.55
+  },
+  "selected_count": 20,
+  "selected_single_max_corr": 0.6835,
+  "selected_avg_abs_ic": 0.0317,
+  "selected_theme_counts": {
+    "liquidity": 13,
+    "reversal": 5,
+    "momentum": 4,
+    "volatility": 17,
+    "microstructure": 5
+  }
+}

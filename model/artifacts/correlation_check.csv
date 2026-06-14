@@ -1,0 +1,4 @@
+benchmark,mean_rank_corr,max_abs_corr,pass_50pct
+market_cap_rank,0.0218,0.3853,True
+momentum_20d,-0.3148,0.7116,True
+volatility_20d,-0.2105,0.562,True

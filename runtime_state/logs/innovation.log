@@ -1,0 +1,9 @@
+=== INNOVATION EXPERIMENTS ¡ª 14:47:19 ===
+Loaded 636 factors (IS_IC>0.01)
+
+--- NESTING Layer 1: Best ICIR per style (cache matrix) ---
+[Init] DataPipeline + BacktestEngine + FactorComputer ready.
+  L1 reversal (N=8): S=5.56 IC=0.0358 (67s)
+  L1 momentum (N=8): S=4.35 IC=0.0280 (53s)
+  L1 microstructure (N=8): S=2.29 IC=0.0295 (625s)
+  L1 volatility (N=8): S=0.90 IC=0.0180 (163s)

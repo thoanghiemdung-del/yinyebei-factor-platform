@@ -1,0 +1,10 @@
+Loading engine...
+Ready. IS:[2675:3403] OOS:[3403:3645] in 4s
+Queue: 623, In DB: 150, To do: 483
+[50/483] 10% done=50 err=0 db=150 elapsed=4min
+  ERR[81]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+  ERR[82]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+  ERR[83]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+  ERR[84]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+  ERR[85]: 'BacktestEngine' object has no attribute 'A1_1_ret_20d'
+[100/483] 21% done=83 err=17 db=150 elapsed=7min

@@ -1,0 +1,23 @@
+636 factors
+Groups: {'mixed': 367, 'liquidity': 84, 'unknown': 58, 'microstructure': 54, 'reversal': 35, 'momentum': 22, 'volatility': 11, 'size': 3, 'fundamental': 2}
+
+=== ROUND 2 °™ 07:51:38 ===
+
+--- A. Deep dive: momentum, reversal ---
+[1] equal-momentum-N6                             S=   3.34 IC= 0.0241 (11s)
+[2] icir-momentum-N6                              S=   1.97 IC= 0.0178 (23s)
+[3] ridge-momentum-N6                             S=   2.27 IC= 0.0158 (23s)
+[4] equal-momentum-N7                             S=   5.98 IC= 0.0279 (16s)
+[5] icir-momentum-N7                              S=   2.66 IC= 0.0188 (27s)
+[6] ridge-momentum-N7                             S=   4.99 IC= 0.0185 (25s)
+[7] equal-momentum-N9                             S=   5.86 IC= 0.0295 (17s)
+[8] icir-momentum-N9                              S=   3.95 IC= 0.0224 (32s)
+[9] ridge-momentum-N9                             S=   5.90 IC= 0.0225 (34s)
+[10] equal-momentum-N12                            ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 76.7 MiB for an array with shape (3645, 5515) and data type float
+[11] icir-momentum-N12                             ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[12] ridge-momentum-N12                            ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[13] equal-momentum-N18                            ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[14] icir-momentum-N18                             ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[15] ridge-momentum-N18                            ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[16] equal-momentum-N22                            ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed
+[17] icir-momentum-N22                             ERR: SuperAlphaº∆À„ ß∞‹: Unable to allocate 153. MiB for an array with shape (3645, 5515) and data type timed

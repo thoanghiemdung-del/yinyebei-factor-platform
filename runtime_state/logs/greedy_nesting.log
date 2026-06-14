@@ -1,0 +1,22 @@
+0 factors
+Fetching PnL from DB...
+  Valid PnLs: 0/50
+
+=== GREEDY FILTERING ===
+
+--- Threshold 0.3 ---
+  Selected 0 factors (from 50, max_corr<0.3)
+  Groups: {}
+
+--- Threshold 0.5 ---
+  Selected 0 factors (from 50, max_corr<0.5)
+  Groups: {}
+
+--- Threshold 0.7 ---
+  Selected 0 factors (from 50, max_corr<0.7)
+  Groups: {}
+
+=== NESTING (COMBO of COMBOS) ===
+
+  L1 reversal: HTTPConnectionPool(host='127.0.0.1', port=5000): Read timed 
+lts\greedy_nesting.json

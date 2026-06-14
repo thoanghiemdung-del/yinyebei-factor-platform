@@ -1,0 +1,185 @@
+{
+  "generated_at": "2026-06-02T14:12:39",
+  "note": "Descriptive statistics for 950 measured experiments inside the adaptively inspected 2023 OOS window. These statistics are not untouched validation.",
+  "jsonl_sources": [
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_extension_experiments.jsonl",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_deep_experiments.jsonl",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_backup_experiments.jsonl"
+  ],
+  "experiment_rows": 950,
+  "all_rows_success": true,
+  "phase_count": 11,
+  "phases": [
+    {
+      "phase": "backup_cross_style_pair",
+      "rows": 96,
+      "success_rows": 96,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 96,
+      "sharpe_gt_10_rows": 90,
+      "median_sharpe": 12.3975,
+      "p90_sharpe": 14.796,
+      "maximum_sharpe": 16.247
+    },
+    {
+      "phase": "backup_cross_style_triple",
+      "rows": 72,
+      "success_rows": 72,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 72,
+      "sharpe_gt_10_rows": 72,
+      "median_sharpe": 13.4145,
+      "p90_sharpe": 14.8483,
+      "maximum_sharpe": 15.846
+    },
+    {
+      "phase": "backup_meta_nesting",
+      "rows": 10,
+      "success_rows": 10,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 10,
+      "sharpe_gt_10_rows": 10,
+      "median_sharpe": 15.6555,
+      "p90_sharpe": 15.9536,
+      "maximum_sharpe": 16.031
+    },
+    {
+      "phase": "cross_style_bridge",
+      "rows": 270,
+      "success_rows": 270,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 253,
+      "sharpe_gt_10_rows": 137,
+      "median_sharpe": 10.016,
+      "p90_sharpe": 11.545,
+      "maximum_sharpe": 14.677
+    },
+    {
+      "phase": "cross_style_offset",
+      "rows": 60,
+      "success_rows": 60,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 48,
+      "sharpe_gt_10_rows": 24,
+      "median_sharpe": 9.6165,
+      "p90_sharpe": 12.6322,
+      "maximum_sharpe": 12.9
+    },
+    {
+      "phase": "deep_meta_nesting",
+      "rows": 10,
+      "success_rows": 10,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 10,
+      "sharpe_gt_10_rows": 10,
+      "median_sharpe": 15.396,
+      "p90_sharpe": 15.5495,
+      "maximum_sharpe": 15.563
+    },
+    {
+      "phase": "deep_pair_triple_nesting",
+      "rows": 140,
+      "success_rows": 140,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 140,
+      "sharpe_gt_10_rows": 140,
+      "median_sharpe": 13.808,
+      "p90_sharpe": 14.9067,
+      "maximum_sharpe": 15.91
+    },
+    {
+      "phase": "nested_style_anchor",
+      "rows": 20,
+      "success_rows": 20,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 15,
+      "sharpe_gt_10_rows": 4,
+      "median_sharpe": 9.2875,
+      "p90_sharpe": 10.691,
+      "maximum_sharpe": 10.799
+    },
+    {
+      "phase": "residualized_near_threshold",
+      "rows": 116,
+      "success_rows": 116,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 78,
+      "sharpe_gt_10_rows": 30,
+      "median_sharpe": 8.1995,
+      "p90_sharpe": 10.227,
+      "maximum_sharpe": 10.901
+    },
+    {
+      "phase": "style_anchor",
+      "rows": 60,
+      "success_rows": 60,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 33,
+      "sharpe_gt_10_rows": 12,
+      "median_sharpe": 8.1025,
+      "p90_sharpe": 10.7448,
+      "maximum_sharpe": 11.397
+    },
+    {
+      "phase": "weighted_cross_style",
+      "rows": 96,
+      "success_rows": 96,
+      "failed_rows": 0,
+      "sharpe_gt_8_rows": 64,
+      "sharpe_gt_10_rows": 36,
+      "median_sharpe": 9.402,
+      "p90_sharpe": 12.475,
+      "maximum_sharpe": 12.9
+    }
+  ],
+  "neutralizations": [
+    {
+      "neutralize": "beta",
+      "rows": 258,
+      "median_sharpe": 10.4075,
+      "p90_sharpe": 14.2683,
+      "maximum_sharpe": 15.846
+    },
+    {
+      "neutralize": "market_cap",
+      "rows": 168,
+      "median_sharpe": 11.514,
+      "p90_sharpe": 14.5136,
+      "maximum_sharpe": 16.247
+    },
+    {
+      "neutralize": "market_cap_beta",
+      "rows": 258,
+      "median_sharpe": 10.373,
+      "p90_sharpe": 14.1006,
+      "maximum_sharpe": 15.945
+    },
+    {
+      "neutralize": "market_cap_regression",
+      "rows": 37,
+      "median_sharpe": 8.597,
+      "p90_sharpe": 12.5918,
+      "maximum_sharpe": 16.031
+    },
+    {
+      "neutralize": "none",
+      "rows": 229,
+      "median_sharpe": 10.656,
+      "p90_sharpe": 14.3102,
+      "maximum_sharpe": 15.816
+    }
+  ],
+  "neutralization_counts": {
+    "beta": 258,
+    "market_cap": 168,
+    "market_cap_beta": 258,
+    "market_cap_regression": 37,
+    "none": 229
+  },
+  "method_counts": {
+    "custom": 96,
+    "equal": 774,
+    "icir": 40,
+    "ridge": 40
+  }
+}

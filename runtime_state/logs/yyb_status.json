@@ -1,0 +1,23 @@
+{
+  "time": "2026-06-02 22:53:06",
+  "local_login": true,
+  "public_login": true,
+  "ngrok_login": false,
+  "cloudflared_login": true,
+  "cloudflared_public_url": "https://tries-decision-avenue-facing.trycloudflare.com",
+  "miner_running": false,
+  "combo_tester_running": false,
+  "combo_builder_running": false,
+  "mining_paused": true,
+  "memory_paused": true,
+  "combo_builder_paused": true,
+  "free_memory_gb": 2.59,
+  "flask_rss_gb": 0.03,
+  "eligible_factor_count": 453,
+  "target": 1000,
+  "remaining": 547,
+  "dedup": [
+    "eligible_qualified=453 kept=453 remove=0 threshold=0.7",
+    "max_corr_after=0.6980"
+  ]
+}

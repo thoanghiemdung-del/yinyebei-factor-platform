@@ -1,0 +1,29 @@
+{
+  "tested": [
+    "equal:0.5:5:67c35f9a4e3e",
+    "equal:0.7:8:aef4f771722d",
+    "equal:0.5:5:f3538a53963e",
+    "equal:0.7:8:482f9283b0f3",
+    "equal:0.5:5:b2dd2875f320",
+    "equal:0.7:8:da9b44eb845b"
+  ],
+  "cycle": 33,
+  "last_result": {
+    "time": "2026-05-26T04:52:13",
+    "mode": "equal",
+    "max_corr": 0.7,
+    "keep_count": 8,
+    "selected_count": 8,
+    "selected_max_corr": 0.475,
+    "avg_ic": 0.034,
+    "metrics": {
+      "pearson_ic": 0.0386,
+      "rank_ic": 0.0525,
+      "annual_excess": 0.1422,
+      "sharpe": 2.541,
+      "max_drawdown": 0.1417,
+      "turnover": 0.5369
+    },
+    "signature": "equal:0.7:8:da9b44eb845b"
+  }
+}

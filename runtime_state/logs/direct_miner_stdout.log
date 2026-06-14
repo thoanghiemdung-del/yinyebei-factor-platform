@@ -1,0 +1,9 @@
+[15:38:15] Loading DataPipeline (2-3 min)...
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\direct_miner.py", line 66, in <module>
+    pipeline = DataPipeline()
+  File "D:\yyb/project\data_pipeline.py", line 24, in __init__
+    self._load_daily()
+  File "D:\yyb/project\data_pipeline.py", line 31, in _load_daily
+    with open(bin_path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\比赛2026-数据&说明\\DailyData20240102open.bin'

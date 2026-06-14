@@ -1,0 +1,430 @@
+[2026-06-01T23:16:41] final audit runner start
+[2026-06-01T23:16:49] waiting for active lgb workers=[8920] free_gb=2.95
+[2026-06-01T23:17:33] stopped pid=25652 term= app.py
+[2026-06-01T23:17:52] Flask restarted with audit patches
+[2026-06-01T23:17:53] loaded eligible single factors=543
+[2026-06-01T23:17:53] run top_is_sharpe_n5_equal_none n=5 method=equal neutralize=none
+[2026-06-01T23:18:12] done top_is_sharpe_n5_equal_none success=True valid=5/5 sharpe=11.751
+[2026-06-01T23:18:13] run top_is_sharpe_n5_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-01T23:18:29] done top_is_sharpe_n5_equal_market_cap success=True valid=5/5 sharpe=12.345
+[2026-06-01T23:18:29] run top_is_sharpe_n5_equal_market_cap_regression n=5 method=equal neutralize=market_cap_regression
+[2026-06-01T23:18:45] done top_is_sharpe_n5_equal_market_cap_regression success=True valid=5/5 sharpe=12.096
+[2026-06-01T23:18:45] run top_is_sharpe_n5_equal_beta n=5 method=equal neutralize=beta
+[2026-06-01T23:19:21] done top_is_sharpe_n5_equal_beta success=True valid=5/5 sharpe=11.605
+[2026-06-01T23:19:21] run top_is_sharpe_n5_equal_market_cap_beta n=5 method=equal neutralize=market_cap_beta
+[2026-06-01T23:19:44] done top_is_sharpe_n5_equal_market_cap_beta success=True valid=5/5 sharpe=12.256
+[2026-06-01T23:19:44] run top_is_sharpe_n5_icir_none n=5 method=icir neutralize=none
+[2026-06-01T23:20:36] done top_is_sharpe_n5_icir_none success=True valid=5/5 sharpe=12.307
+[2026-06-01T23:20:36] run top_is_sharpe_n5_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-01T23:21:32] done top_is_sharpe_n5_icir_market_cap success=True valid=5/5 sharpe=12.733
+[2026-06-01T23:21:32] run top_is_sharpe_n5_icir_market_cap_regression n=5 method=icir neutralize=market_cap_regression
+[2026-06-01T23:22:31] done top_is_sharpe_n5_icir_market_cap_regression success=True valid=5/5 sharpe=12.313
+[2026-06-01T23:22:31] run top_is_sharpe_n5_icir_beta n=5 method=icir neutralize=beta
+[2026-06-01T23:23:17] done top_is_sharpe_n5_icir_beta success=True valid=5/5 sharpe=12.882
+[2026-06-01T23:23:17] run top_is_sharpe_n5_icir_market_cap_beta n=5 method=icir neutralize=market_cap_beta
+[2026-06-01T23:24:06] done top_is_sharpe_n5_icir_market_cap_beta success=True valid=5/5 sharpe=12.588
+[2026-06-01T23:24:06] run top_is_sharpe_n5_ridge_none n=5 method=ridge neutralize=none
+[2026-06-01T23:24:40] done top_is_sharpe_n5_ridge_none success=True valid=5/5 sharpe=11.866
+[2026-06-01T23:24:40] run top_is_sharpe_n5_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-01T23:25:12] done top_is_sharpe_n5_ridge_market_cap success=True valid=5/5 sharpe=12.310
+[2026-06-01T23:25:12] run top_is_sharpe_n5_ridge_market_cap_regression n=5 method=ridge neutralize=market_cap_regression
+[2026-06-01T23:25:46] done top_is_sharpe_n5_ridge_market_cap_regression success=True valid=5/5 sharpe=12.090
+[2026-06-01T23:25:46] run top_is_sharpe_n5_ridge_beta n=5 method=ridge neutralize=beta
+[2026-06-01T23:26:17] done top_is_sharpe_n5_ridge_beta success=True valid=5/5 sharpe=11.785
+[2026-06-01T23:26:17] run top_is_sharpe_n5_ridge_market_cap_beta n=5 method=ridge neutralize=market_cap_beta
+[2026-06-01T23:26:51] done top_is_sharpe_n5_ridge_market_cap_beta success=True valid=5/5 sharpe=12.033
+[2026-06-01T23:26:51] run top_is_sharpe_n10_equal_none n=10 method=equal neutralize=none
+[2026-06-01T23:27:21] done top_is_sharpe_n10_equal_none success=True valid=10/10 sharpe=9.245
+[2026-06-01T23:27:21] run top_is_sharpe_n10_equal_market_cap n=10 method=equal neutralize=market_cap
+[2026-06-01T23:27:52] done top_is_sharpe_n10_equal_market_cap success=True valid=10/10 sharpe=9.338
+[2026-06-01T23:27:52] run top_is_sharpe_n10_equal_market_cap_regression n=10 method=equal neutralize=market_cap_regression
+[2026-06-01T23:28:23] done top_is_sharpe_n10_equal_market_cap_regression success=True valid=10/10 sharpe=9.070
+[2026-06-01T23:28:23] run top_is_sharpe_n10_equal_beta n=10 method=equal neutralize=beta
+[2026-06-01T23:29:18] done top_is_sharpe_n10_equal_beta success=True valid=10/10 sharpe=8.969
+[2026-06-01T23:29:18] run top_is_sharpe_n10_equal_market_cap_beta n=10 method=equal neutralize=market_cap_beta
+[2026-06-01T23:30:08] done top_is_sharpe_n10_equal_market_cap_beta success=True valid=10/10 sharpe=8.884
+[2026-06-01T23:30:08] run top_is_sharpe_n10_icir_none n=10 method=icir neutralize=none
+[2026-06-01T23:32:00] done top_is_sharpe_n10_icir_none success=True valid=10/10 sharpe=6.541
+[2026-06-01T23:32:00] run top_is_sharpe_n10_icir_market_cap n=10 method=icir neutralize=market_cap
+[2026-06-01T23:33:43] done top_is_sharpe_n10_icir_market_cap success=True valid=10/10 sharpe=6.409
+[2026-06-01T23:33:43] run top_is_sharpe_n10_icir_market_cap_regression n=10 method=icir neutralize=market_cap_regression
+[2026-06-01T23:35:18] done top_is_sharpe_n10_icir_market_cap_regression success=True valid=10/10 sharpe=6.383
+[2026-06-01T23:35:18] run top_is_sharpe_n10_icir_beta n=10 method=icir neutralize=beta
+[2026-06-01T23:36:37] done top_is_sharpe_n10_icir_beta success=True valid=10/10 sharpe=5.716
+[2026-06-01T23:36:37] run top_is_sharpe_n10_icir_market_cap_beta n=10 method=icir neutralize=market_cap_beta
+[2026-06-01T23:38:10] done top_is_sharpe_n10_icir_market_cap_beta success=True valid=10/10 sharpe=6.075
+[2026-06-01T23:38:10] run top_is_sharpe_n10_ridge_none n=10 method=ridge neutralize=none
+[2026-06-01T23:39:50] done top_is_sharpe_n10_ridge_none success=True valid=10/10 sharpe=6.622
+[2026-06-01T23:39:50] run top_is_sharpe_n10_ridge_market_cap n=10 method=ridge neutralize=market_cap
+[2026-06-01T23:41:16] done top_is_sharpe_n10_ridge_market_cap success=True valid=10/10 sharpe=6.518
+[2026-06-01T23:41:16] run top_is_sharpe_n10_ridge_market_cap_regression n=10 method=ridge neutralize=market_cap_regression
+[2026-06-01T23:43:00] done top_is_sharpe_n10_ridge_market_cap_regression success=True valid=10/10 sharpe=6.741
+[2026-06-01T23:43:00] run top_is_sharpe_n10_ridge_beta n=10 method=ridge neutralize=beta
+[2026-06-01T23:44:15] done top_is_sharpe_n10_ridge_beta success=True valid=10/10 sharpe=7.065
+[2026-06-01T23:44:15] run top_is_sharpe_n10_ridge_market_cap_beta n=10 method=ridge neutralize=market_cap_beta
+[2026-06-01T23:45:42] done top_is_sharpe_n10_ridge_market_cap_beta success=True valid=10/10 sharpe=7.259
+[2026-06-01T23:45:42] run greedy_corr_0.3_n10_equal_none n=10 method=equal neutralize=none
+[2026-06-01T23:51:24] done greedy_corr_0.3_n10_equal_none success=True valid=10/10 sharpe=5.858
+[2026-06-01T23:51:24] run greedy_corr_0.3_n10_equal_market_cap n=10 method=equal neutralize=market_cap
+[2026-06-01T23:51:49] done greedy_corr_0.3_n10_equal_market_cap success=True valid=10/10 sharpe=5.932
+[2026-06-01T23:51:49] run greedy_corr_0.3_n10_equal_market_cap_regression n=10 method=equal neutralize=market_cap_regression
+[2026-06-01T23:52:17] done greedy_corr_0.3_n10_equal_market_cap_regression success=True valid=10/10 sharpe=6.579
+[2026-06-01T23:52:17] run greedy_corr_0.3_n10_equal_beta n=10 method=equal neutralize=beta
+[2026-06-01T23:52:45] done greedy_corr_0.3_n10_equal_beta success=True valid=10/10 sharpe=6.320
+[2026-06-01T23:52:45] run greedy_corr_0.3_n10_equal_market_cap_beta n=10 method=equal neutralize=market_cap_beta
+[2026-06-01T23:53:11] done greedy_corr_0.3_n10_equal_market_cap_beta success=True valid=10/10 sharpe=6.509
+[2026-06-01T23:53:11] run greedy_corr_0.3_n10_icir_none n=10 method=icir neutralize=none
+[2026-06-01T23:54:00] done greedy_corr_0.3_n10_icir_none success=True valid=10/10 sharpe=3.848
+[2026-06-01T23:54:00] run greedy_corr_0.3_n10_icir_market_cap n=10 method=icir neutralize=market_cap
+[2026-06-01T23:54:53] done greedy_corr_0.3_n10_icir_market_cap success=True valid=10/10 sharpe=4.165
+[2026-06-01T23:54:54] run greedy_corr_0.3_n10_icir_market_cap_regression n=10 method=icir neutralize=market_cap_regression
+[2026-06-01T23:55:49] done greedy_corr_0.3_n10_icir_market_cap_regression success=True valid=10/10 sharpe=4.399
+[2026-06-01T23:55:49] run greedy_corr_0.3_n10_icir_beta n=10 method=icir neutralize=beta
+[2026-06-01T23:56:39] done greedy_corr_0.3_n10_icir_beta success=True valid=10/10 sharpe=3.844
+[2026-06-01T23:56:39] run greedy_corr_0.3_n10_icir_market_cap_beta n=10 method=icir neutralize=market_cap_beta
+[2026-06-01T23:57:28] done greedy_corr_0.3_n10_icir_market_cap_beta success=True valid=10/10 sharpe=4.342
+[2026-06-01T23:57:28] run greedy_corr_0.3_n10_ridge_none n=10 method=ridge neutralize=none
+[2026-06-01T23:58:18] done greedy_corr_0.3_n10_ridge_none success=True valid=10/10 sharpe=3.906
+[2026-06-01T23:58:18] run greedy_corr_0.3_n10_ridge_market_cap n=10 method=ridge neutralize=market_cap
+[2026-06-01T23:59:08] done greedy_corr_0.3_n10_ridge_market_cap success=True valid=10/10 sharpe=4.037
+[2026-06-01T23:59:08] run greedy_corr_0.3_n10_ridge_market_cap_regression n=10 method=ridge neutralize=market_cap_regression
+[2026-06-01T23:59:57] done greedy_corr_0.3_n10_ridge_market_cap_regression success=True valid=10/10 sharpe=4.535
+[2026-06-01T23:59:57] run greedy_corr_0.3_n10_ridge_beta n=10 method=ridge neutralize=beta
+[2026-06-02T00:01:06] done greedy_corr_0.3_n10_ridge_beta success=True valid=10/10 sharpe=4.200
+[2026-06-02T00:01:06] run greedy_corr_0.3_n10_ridge_market_cap_beta n=10 method=ridge neutralize=market_cap_beta
+[2026-06-02T00:02:24] done greedy_corr_0.3_n10_ridge_market_cap_beta success=True valid=10/10 sharpe=4.869
+[2026-06-02T00:02:24] run greedy_corr_0.5_n10_equal_none n=10 method=equal neutralize=none
+[2026-06-02T00:03:06] done greedy_corr_0.5_n10_equal_none success=True valid=10/10 sharpe=9.438
+[2026-06-02T00:03:06] run greedy_corr_0.5_n10_equal_market_cap n=10 method=equal neutralize=market_cap
+[2026-06-02T00:03:47] done greedy_corr_0.5_n10_equal_market_cap success=True valid=10/10 sharpe=9.565
+[2026-06-02T00:03:47] run greedy_corr_0.5_n10_equal_market_cap_regression n=10 method=equal neutralize=market_cap_regression
+[2026-06-02T00:04:28] done greedy_corr_0.5_n10_equal_market_cap_regression success=True valid=10/10 sharpe=9.578
+[2026-06-02T00:04:28] run greedy_corr_0.5_n10_equal_beta n=10 method=equal neutralize=beta
+[2026-06-02T00:05:07] done greedy_corr_0.5_n10_equal_beta success=True valid=10/10 sharpe=9.240
+[2026-06-02T00:05:07] run greedy_corr_0.5_n10_equal_market_cap_beta n=10 method=equal neutralize=market_cap_beta
+[2026-06-02T00:05:38] done greedy_corr_0.5_n10_equal_market_cap_beta success=True valid=10/10 sharpe=9.532
+[2026-06-02T00:05:38] run greedy_corr_0.5_n10_icir_none n=10 method=icir neutralize=none
+[2026-06-02T00:06:41] done greedy_corr_0.5_n10_icir_none success=True valid=10/10 sharpe=6.109
+[2026-06-02T00:06:41] run greedy_corr_0.5_n10_icir_market_cap n=10 method=icir neutralize=market_cap
+[2026-06-02T00:07:40] done greedy_corr_0.5_n10_icir_market_cap success=True valid=10/10 sharpe=6.110
+[2026-06-02T00:07:40] run greedy_corr_0.5_n10_icir_market_cap_regression n=10 method=icir neutralize=market_cap_regression
+[2026-06-02T00:08:36] done greedy_corr_0.5_n10_icir_market_cap_regression success=True valid=10/10 sharpe=5.943
+[2026-06-02T00:08:36] run greedy_corr_0.5_n10_icir_beta n=10 method=icir neutralize=beta
+[2026-06-02T00:09:31] done greedy_corr_0.5_n10_icir_beta success=True valid=10/10 sharpe=6.044
+[2026-06-02T00:09:31] run greedy_corr_0.5_n10_icir_market_cap_beta n=10 method=icir neutralize=market_cap_beta
+[2026-06-02T00:10:28] done greedy_corr_0.5_n10_icir_market_cap_beta success=True valid=10/10 sharpe=5.945
+[2026-06-02T00:10:28] run greedy_corr_0.5_n10_ridge_none n=10 method=ridge neutralize=none
+[2026-06-02T00:11:23] done greedy_corr_0.5_n10_ridge_none success=True valid=10/10 sharpe=7.213
+[2026-06-02T00:11:23] run greedy_corr_0.5_n10_ridge_market_cap n=10 method=ridge neutralize=market_cap
+[2026-06-02T00:12:30] done greedy_corr_0.5_n10_ridge_market_cap success=True valid=10/10 sharpe=7.084
+[2026-06-02T00:12:30] run greedy_corr_0.5_n10_ridge_market_cap_regression n=10 method=ridge neutralize=market_cap_regression
+[2026-06-02T00:13:35] done greedy_corr_0.5_n10_ridge_market_cap_regression success=True valid=10/10 sharpe=7.216
+[2026-06-02T00:13:35] run greedy_corr_0.5_n10_ridge_beta n=10 method=ridge neutralize=beta
+[2026-06-02T00:14:59] done greedy_corr_0.5_n10_ridge_beta success=True valid=10/10 sharpe=7.466
+[2026-06-02T00:14:59] run greedy_corr_0.5_n10_ridge_market_cap_beta n=10 method=ridge neutralize=market_cap_beta
+[2026-06-02T00:16:08] done greedy_corr_0.5_n10_ridge_market_cap_beta success=True valid=10/10 sharpe=7.392
+[2026-06-02T00:16:09] run greedy_corr_0.7_n10_equal_none n=10 method=equal neutralize=none
+[2026-06-02T00:16:35] done greedy_corr_0.7_n10_equal_none success=True valid=10/10 sharpe=9.245
+[2026-06-02T00:16:35] run greedy_corr_0.7_n10_equal_market_cap n=10 method=equal neutralize=market_cap
+[2026-06-02T00:17:02] done greedy_corr_0.7_n10_equal_market_cap success=True valid=10/10 sharpe=9.338
+[2026-06-02T00:17:02] run greedy_corr_0.7_n10_equal_market_cap_regression n=10 method=equal neutralize=market_cap_regression
+[2026-06-02T00:17:32] done greedy_corr_0.7_n10_equal_market_cap_regression success=True valid=10/10 sharpe=9.070
+[2026-06-02T00:17:32] run greedy_corr_0.7_n10_equal_beta n=10 method=equal neutralize=beta
+[2026-06-02T00:18:01] done greedy_corr_0.7_n10_equal_beta success=True valid=10/10 sharpe=8.969
+[2026-06-02T00:18:01] run greedy_corr_0.7_n10_equal_market_cap_beta n=10 method=equal neutralize=market_cap_beta
+[2026-06-02T00:18:29] done greedy_corr_0.7_n10_equal_market_cap_beta success=True valid=10/10 sharpe=8.884
+[2026-06-02T00:18:29] run greedy_corr_0.7_n10_icir_none n=10 method=icir neutralize=none
+[2026-06-02T00:19:22] done greedy_corr_0.7_n10_icir_none success=True valid=10/10 sharpe=6.541
+[2026-06-02T00:19:22] run greedy_corr_0.7_n10_icir_market_cap n=10 method=icir neutralize=market_cap
+[2026-06-02T00:20:16] done greedy_corr_0.7_n10_icir_market_cap success=True valid=10/10 sharpe=6.409
+[2026-06-02T00:20:16] run greedy_corr_0.7_n10_icir_market_cap_regression n=10 method=icir neutralize=market_cap_regression
+[2026-06-02T00:21:09] done greedy_corr_0.7_n10_icir_market_cap_regression success=True valid=10/10 sharpe=6.383
+[2026-06-02T00:21:09] run greedy_corr_0.7_n10_icir_beta n=10 method=icir neutralize=beta
+[2026-06-02T00:22:18] done greedy_corr_0.7_n10_icir_beta success=True valid=10/10 sharpe=5.716
+[2026-06-02T00:22:18] run greedy_corr_0.7_n10_icir_market_cap_beta n=10 method=icir neutralize=market_cap_beta
+[2026-06-02T00:23:31] done greedy_corr_0.7_n10_icir_market_cap_beta success=True valid=10/10 sharpe=6.075
+[2026-06-02T00:23:31] run greedy_corr_0.7_n10_ridge_none n=10 method=ridge neutralize=none
+[2026-06-02T00:24:24] done greedy_corr_0.7_n10_ridge_none success=True valid=10/10 sharpe=6.622
+[2026-06-02T00:24:24] run greedy_corr_0.7_n10_ridge_market_cap n=10 method=ridge neutralize=market_cap
+[2026-06-02T00:25:17] done greedy_corr_0.7_n10_ridge_market_cap success=True valid=10/10 sharpe=6.518
+[2026-06-02T00:25:17] run greedy_corr_0.7_n10_ridge_market_cap_regression n=10 method=ridge neutralize=market_cap_regression
+[2026-06-02T00:26:10] done greedy_corr_0.7_n10_ridge_market_cap_regression success=True valid=10/10 sharpe=6.741
+[2026-06-02T00:26:10] run greedy_corr_0.7_n10_ridge_beta n=10 method=ridge neutralize=beta
+[2026-06-02T00:27:03] done greedy_corr_0.7_n10_ridge_beta success=True valid=10/10 sharpe=7.065
+[2026-06-02T00:27:03] run greedy_corr_0.7_n10_ridge_market_cap_beta n=10 method=ridge neutralize=market_cap_beta
+[2026-06-02T00:27:57] done greedy_corr_0.7_n10_ridge_market_cap_beta success=True valid=10/10 sharpe=7.259
+[2026-06-02T00:27:57] run nest_l1_reversal_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:28:08] done nest_l1_reversal_equal_market_cap success=True valid=5/5 sharpe=3.328
+[2026-06-02T00:28:08] run nest_l1_reversal_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:28:32] done nest_l1_reversal_icir_market_cap success=True valid=5/5 sharpe=3.098
+[2026-06-02T00:28:32] run nest_l1_reversal_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:28:56] done nest_l1_reversal_ridge_market_cap success=True valid=5/5 sharpe=3.662
+[2026-06-02T00:28:56] run nest_l1_momentum_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:29:09] done nest_l1_momentum_equal_market_cap success=True valid=5/5 sharpe=3.254
+[2026-06-02T00:29:09] run nest_l1_momentum_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:29:33] done nest_l1_momentum_icir_market_cap success=True valid=5/5 sharpe=2.633
+[2026-06-02T00:29:33] run nest_l1_momentum_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:29:55] done nest_l1_momentum_ridge_market_cap success=True valid=5/5 sharpe=2.045
+[2026-06-02T00:29:55] run nest_l1_microstructure_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:30:08] done nest_l1_microstructure_equal_market_cap success=True valid=5/5 sharpe=3.287
+[2026-06-02T00:30:08] run nest_l1_microstructure_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:30:31] done nest_l1_microstructure_icir_market_cap success=True valid=5/5 sharpe=3.310
+[2026-06-02T00:30:31] run nest_l1_microstructure_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:30:49] fatal ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[2026-06-02T00:31:07] final audit runner start
+[2026-06-02T00:33:06] stopped pid=4516 term= app.py
+[2026-06-02T00:33:25] Flask restarted with audit patches
+[2026-06-02T00:33:26] loaded eligible single factors=543
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_equal_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_equal_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_equal_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_equal_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_equal_market_cap_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_icir_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_icir_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_icir_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_icir_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_icir_market_cap_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_ridge_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_ridge_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_ridge_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n5_ridge_market_cap_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_equal_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_equal_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_equal_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_equal_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_equal_market_cap_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_icir_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_icir_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_icir_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_icir_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_icir_market_cap_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_ridge_none
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_ridge_market_cap_regression
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_ridge_beta
+[2026-06-02T00:33:26] reuse completed top_is_sharpe_n10_ridge_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_equal_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_equal_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_equal_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_equal_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_equal_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_icir_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_icir_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_icir_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_icir_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_icir_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_ridge_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_ridge_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_ridge_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.3_n10_ridge_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_equal_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_equal_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_equal_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_equal_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_equal_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_icir_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_icir_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_icir_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_icir_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_icir_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_ridge_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_ridge_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_ridge_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.5_n10_ridge_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_equal_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_equal_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_equal_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_equal_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_equal_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_icir_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_icir_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_icir_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_icir_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_icir_market_cap_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_ridge_none
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_ridge_market_cap_regression
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_ridge_beta
+[2026-06-02T00:33:26] reuse completed greedy_corr_0.7_n10_ridge_market_cap_beta
+[2026-06-02T00:33:26] reuse completed nest_l1_reversal_equal_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_reversal_icir_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_reversal_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_momentum_equal_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_momentum_icir_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_momentum_ridge_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_microstructure_equal_market_cap
+[2026-06-02T00:33:26] reuse completed nest_l1_microstructure_icir_market_cap
+[2026-06-02T00:33:26] run nest_l1_microstructure_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:38:37] done nest_l1_microstructure_ridge_market_cap success=True valid=5/5 sharpe=2.819
+[2026-06-02T00:38:37] run nest_l1_liquidity_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:38:55] done nest_l1_liquidity_equal_market_cap success=True valid=5/5 sharpe=6.252
+[2026-06-02T00:38:55] run nest_l1_liquidity_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:39:24] done nest_l1_liquidity_icir_market_cap success=True valid=5/5 sharpe=4.224
+[2026-06-02T00:39:24] run nest_l1_liquidity_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:39:55] done nest_l1_liquidity_ridge_market_cap success=True valid=5/5 sharpe=5.722
+[2026-06-02T00:39:55] run nest_l1_volatility_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:40:20] fatal ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[2026-06-02T00:40:24] final audit runner start
+[2026-06-02T00:42:26] fatal RuntimeError: Flask or ngrok health check failed
+[2026-06-02T00:42:29] final audit runner start
+[2026-06-02T00:43:16] stopped pid=13060 term= app.py
+[2026-06-02T00:43:41] Flask restarted with audit patches
+[2026-06-02T00:43:42] loaded eligible single factors=543
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_equal_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_equal_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_equal_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_equal_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_equal_market_cap_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_icir_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_icir_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_icir_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_icir_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_icir_market_cap_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_ridge_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_ridge_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_ridge_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n5_ridge_market_cap_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_equal_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_equal_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_equal_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_equal_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_equal_market_cap_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_icir_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_icir_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_icir_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_icir_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_icir_market_cap_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_ridge_none
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_ridge_market_cap_regression
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_ridge_beta
+[2026-06-02T00:43:42] reuse completed top_is_sharpe_n10_ridge_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_equal_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_equal_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_equal_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_equal_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_equal_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_icir_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_icir_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_icir_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_icir_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_icir_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_ridge_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_ridge_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_ridge_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.3_n10_ridge_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_equal_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_equal_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_equal_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_equal_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_equal_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_icir_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_icir_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_icir_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_icir_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_icir_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_ridge_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_ridge_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_ridge_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.5_n10_ridge_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_equal_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_equal_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_equal_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_equal_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_equal_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_icir_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_icir_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_icir_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_icir_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_icir_market_cap_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_ridge_none
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_ridge_market_cap_regression
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_ridge_beta
+[2026-06-02T00:43:42] reuse completed greedy_corr_0.7_n10_ridge_market_cap_beta
+[2026-06-02T00:43:42] reuse completed nest_l1_reversal_equal_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_reversal_icir_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_reversal_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_momentum_equal_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_momentum_icir_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_momentum_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_microstructure_equal_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_microstructure_icir_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_microstructure_ridge_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_liquidity_equal_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_liquidity_icir_market_cap
+[2026-06-02T00:43:42] reuse completed nest_l1_liquidity_ridge_market_cap
+[2026-06-02T00:43:42] run nest_l1_volatility_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:44:09] done nest_l1_volatility_equal_market_cap success=True valid=5/5 sharpe=4.473
+[2026-06-02T00:44:09] run nest_l1_volatility_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:44:36] done nest_l1_volatility_icir_market_cap success=True valid=5/5 sharpe=2.992
+[2026-06-02T00:44:36] run nest_l1_volatility_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:45:03] done nest_l1_volatility_ridge_market_cap success=True valid=5/5 sharpe=3.491
+[2026-06-02T00:45:03] run nest_l2_equal_none n=5 method=equal neutralize=none
+[2026-06-02T00:45:06] done nest_l2_equal_none success=True valid=5/5 sharpe=5.684
+[2026-06-02T00:45:06] run nest_l2_equal_market_cap n=5 method=equal neutralize=market_cap
+[2026-06-02T00:45:09] done nest_l2_equal_market_cap success=True valid=5/5 sharpe=5.679
+[2026-06-02T00:45:09] run nest_l2_equal_market_cap_regression n=5 method=equal neutralize=market_cap_regression
+[2026-06-02T00:45:13] done nest_l2_equal_market_cap_regression success=True valid=5/5 sharpe=5.674
+[2026-06-02T00:45:13] run nest_l2_equal_beta n=5 method=equal neutralize=beta
+[2026-06-02T00:45:39] done nest_l2_equal_beta success=True valid=5/5 sharpe=6.348
+[2026-06-02T00:45:39] run nest_l2_equal_market_cap_beta n=5 method=equal neutralize=market_cap_beta
+[2026-06-02T00:45:44] done nest_l2_equal_market_cap_beta success=True valid=5/5 sharpe=6.356
+[2026-06-02T00:45:44] run nest_l2_icir_none n=5 method=icir neutralize=none
+[2026-06-02T00:45:50] done nest_l2_icir_none success=True valid=5/5 sharpe=5.684
+[2026-06-02T00:45:50] run nest_l2_icir_market_cap n=5 method=icir neutralize=market_cap
+[2026-06-02T00:45:55] done nest_l2_icir_market_cap success=True valid=5/5 sharpe=5.679
+[2026-06-02T00:45:55] run nest_l2_icir_market_cap_regression n=5 method=icir neutralize=market_cap_regression
+[2026-06-02T00:46:00] done nest_l2_icir_market_cap_regression success=True valid=5/5 sharpe=5.674
+[2026-06-02T00:46:00] run nest_l2_icir_beta n=5 method=icir neutralize=beta
+[2026-06-02T00:46:05] done nest_l2_icir_beta success=True valid=5/5 sharpe=6.348
+[2026-06-02T00:46:05] run nest_l2_icir_market_cap_beta n=5 method=icir neutralize=market_cap_beta
+[2026-06-02T00:46:09] done nest_l2_icir_market_cap_beta success=True valid=5/5 sharpe=6.356
+[2026-06-02T00:46:09] run nest_l2_ridge_none n=5 method=ridge neutralize=none
+[2026-06-02T00:46:12] done nest_l2_ridge_none success=True valid=5/5 sharpe=5.684
+[2026-06-02T00:46:12] run nest_l2_ridge_market_cap n=5 method=ridge neutralize=market_cap
+[2026-06-02T00:46:15] done nest_l2_ridge_market_cap success=True valid=5/5 sharpe=5.679
+[2026-06-02T00:46:15] run nest_l2_ridge_market_cap_regression n=5 method=ridge neutralize=market_cap_regression
+[2026-06-02T00:46:19] done nest_l2_ridge_market_cap_regression success=True valid=5/5 sharpe=5.674
+[2026-06-02T00:46:19] run nest_l2_ridge_beta n=5 method=ridge neutralize=beta
+[2026-06-02T00:46:22] done nest_l2_ridge_beta success=True valid=5/5 sharpe=6.348
+[2026-06-02T00:46:22] run nest_l2_ridge_market_cap_beta n=5 method=ridge neutralize=market_cap_beta
+[2026-06-02T00:46:25] done nest_l2_ridge_market_cap_beta success=True valid=5/5 sharpe=6.356
+[2026-06-02T00:46:26] run nest_l3_equal_none n=2 method=equal neutralize=none
+[2026-06-02T00:46:27] done nest_l3_equal_none success=True valid=2/2 sharpe=10.448
+[2026-06-02T00:46:27] run nest_l3_equal_market_cap n=2 method=equal neutralize=market_cap
+[2026-06-02T00:46:29] done nest_l3_equal_market_cap success=True valid=2/2 sharpe=10.349
+[2026-06-02T00:46:29] run nest_l3_equal_market_cap_regression n=2 method=equal neutralize=market_cap_regression
+[2026-06-02T00:46:31] done nest_l3_equal_market_cap_regression success=True valid=2/2 sharpe=10.335
+[2026-06-02T00:46:31] run nest_l3_equal_beta n=2 method=equal neutralize=beta
+[2026-06-02T00:46:32] done nest_l3_equal_beta success=True valid=2/2 sharpe=10.255
+[2026-06-02T00:46:32] run nest_l3_equal_market_cap_beta n=2 method=equal neutralize=market_cap_beta
+[2026-06-02T00:46:34] done nest_l3_equal_market_cap_beta success=True valid=2/2 sharpe=10.299
+[2026-06-02T00:46:34] run nest_l3_icir_none n=2 method=icir neutralize=none
+[2026-06-02T00:46:36] done nest_l3_icir_none success=True valid=2/2 sharpe=10.448
+[2026-06-02T00:46:36] run nest_l3_icir_market_cap n=2 method=icir neutralize=market_cap
+[2026-06-02T00:46:38] done nest_l3_icir_market_cap success=True valid=2/2 sharpe=10.349
+[2026-06-02T00:46:38] run nest_l3_icir_market_cap_regression n=2 method=icir neutralize=market_cap_regression
+[2026-06-02T00:46:40] done nest_l3_icir_market_cap_regression success=True valid=2/2 sharpe=10.335
+[2026-06-02T00:46:40] run nest_l3_icir_beta n=2 method=icir neutralize=beta
+[2026-06-02T00:46:41] done nest_l3_icir_beta success=True valid=2/2 sharpe=10.255
+[2026-06-02T00:46:41] run nest_l3_icir_market_cap_beta n=2 method=icir neutralize=market_cap_beta
+[2026-06-02T00:46:43] done nest_l3_icir_market_cap_beta success=True valid=2/2 sharpe=10.299
+[2026-06-02T00:46:43] run nest_l3_ridge_none n=2 method=ridge neutralize=none
+[2026-06-02T00:46:45] done nest_l3_ridge_none success=True valid=2/2 sharpe=10.448
+[2026-06-02T00:46:45] run nest_l3_ridge_market_cap n=2 method=ridge neutralize=market_cap
+[2026-06-02T00:46:46] done nest_l3_ridge_market_cap success=True valid=2/2 sharpe=10.349
+[2026-06-02T00:46:46] run nest_l3_ridge_market_cap_regression n=2 method=ridge neutralize=market_cap_regression
+[2026-06-02T00:46:48] done nest_l3_ridge_market_cap_regression success=True valid=2/2 sharpe=10.335
+[2026-06-02T00:46:48] run nest_l3_ridge_beta n=2 method=ridge neutralize=beta
+[2026-06-02T00:46:50] done nest_l3_ridge_beta success=True valid=2/2 sharpe=10.255
+[2026-06-02T00:46:50] run nest_l3_ridge_market_cap_beta n=2 method=ridge neutralize=market_cap_beta
+[2026-06-02T00:46:52] done nest_l3_ridge_market_cap_beta success=True valid=2/2 sharpe=10.299
+[2026-06-02T00:46:52] final audit complete results=90 strict_gt10_lowcorr=1

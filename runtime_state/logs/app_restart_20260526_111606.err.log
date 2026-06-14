@@ -1,0 +1,54 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.102.125.248:5000
+Press CTRL+C to quit
+127.0.0.1 - - [26/May/2026 11:16:17] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:16:18] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:16:18] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:16:19] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:16:59] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:17:00] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:19:58] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:19:58] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:01] "POST /api/alpha/history/corr_greedy HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:01] "POST /api/superalpha/lgb/start HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:03] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:05] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:07] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:09] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:20:11] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:21:07] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:21:07] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:21:08] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:21:09] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:21:15] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:21:15] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:21:17] "POST /api/alpha/history/corr_greedy HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:04] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:26:04] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:04] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:14] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:24] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:34] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:44] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:26:54] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:04] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:14] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:24] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:34] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:44] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:27:54] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:25] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:29:25] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:26] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:29:26] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:49] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:29:49] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:50] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:29:51] "POST /login HTTP/1.1" 302 -
+127.0.0.1 - - [26/May/2026 11:29:51] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:51] "GET /api/backtest/status/c602958e-c89b-413f-9e4d-47858e0791be HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:51] "GET /login HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:51] "GET /dashboard HTTP/1.1" 200 -
+127.0.0.1 - - [26/May/2026 11:29:51] "GET /login HTTP/1.1" 200 -

@@ -1,0 +1,5 @@
+[2026-06-01T23:21:10] supervisor start
+[2026-06-02T00:31:06] started final audit runner
+[2026-06-02T00:40:24] started final audit runner
+[2026-06-02T00:42:28] started final audit runner
+[2026-06-02T00:47:39] frozen audit JSON exists; supervisor exit

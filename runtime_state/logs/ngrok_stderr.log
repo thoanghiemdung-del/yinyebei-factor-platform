@@ -1,0 +1,50 @@
+ERROR:  authentication failed: Your account is limited to 3 simultaneous ngrok agent sessions.
+ERROR:  Run multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.
+ERROR:  Read more about the agent configuration file: https://ngrok.com/docs/agent/config/ 
+ERROR:  You can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:
+ERROR:  https://dashboard.ngrok.com/billing/choose-a-plan
+ERROR:  
+ERROR:  ERR_NGROK_108
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_108
+ERROR:  
+ERROR:  failed to start tunnel: You have exceeded the maximum number of concurrent endpoints allowed for this account. Log into https://dashboard.ngrok.com/billing to review your usage and https://dashboard.ngrok.com/billing/choose-a-plan to view your subscription options.
+ERROR:  
+ERROR:  ERR_NGROK_18021
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_18021
+ERROR:  
+ERROR:  authentication failed: Your account is limited to 3 simultaneous ngrok agent sessions.
+ERROR:  Run multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.
+ERROR:  Read more about the agent configuration file: https://ngrok.com/docs/agent/config/ 
+ERROR:  You can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:
+ERROR:  https://dashboard.ngrok.com/billing/choose-a-plan
+ERROR:  
+ERROR:  ERR_NGROK_108
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_108
+ERROR:  
+ERROR:  authentication failed: Your account is limited to 3 simultaneous ngrok agent sessions.
+ERROR:  Run multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.
+ERROR:  Read more about the agent configuration file: https://ngrok.com/docs/agent/config/ 
+ERROR:  You can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:
+ERROR:  https://dashboard.ngrok.com/billing/choose-a-plan
+ERROR:  
+ERROR:  ERR_NGROK_108
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_108
+ERROR:  
+ERROR:  authentication failed: Your account is limited to 3 simultaneous ngrok agent sessions.
+ERROR:  Run multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.
+ERROR:  Read more about the agent configuration file: https://ngrok.com/docs/agent/config/ 
+ERROR:  You can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:
+ERROR:  https://dashboard.ngrok.com/billing/choose-a-plan
+ERROR:  
+ERROR:  ERR_NGROK_108
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_108
+ERROR:  
+ERROR:  authentication failed: Your account is limited to 3 simultaneous ngrok agent sessions.
+ERROR:  Run multiple endpoints at the same time from a single agent by defining them in your agent configuration file and running `ngrok start --all`.
+ERROR:  Read more about the agent configuration file: https://ngrok.com/docs/agent/config/ 
+ERROR:  You can view your current agent sessions in the dashboard: https://dashboard.ngrok.com/agents. Upgrade to a paid plan to remove this limit:
+ERROR:  https://dashboard.ngrok.com/billing/choose-a-plan
+ERROR:  
+ERROR:  ERR_NGROK_108
+ERROR:  https://ngrok.com/docs/errors/err_ngrok_108
+ERROR:  

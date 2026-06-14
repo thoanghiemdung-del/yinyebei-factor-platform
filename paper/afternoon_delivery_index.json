@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-06-02T15:06:40",
+  "purpose": "Static integrity snapshot for the frozen afternoon exploratory delivery.",
+  "artifacts": {
+    "D:\\yyb\\paper\\afternoon_final_submission.pdf": "3f1c734b80599c7bdd2c1571e4beb8ce8152d2d4498e7f644018e62370f0a76f",
+    "D:\\yyb\\paper\\afternoon_final_submission.tex": "928c23090c460f09d00061261ada377100f00a75a58844fe01f2435ab50bb76e",
+    "D:\\yyb\\paper\\afternoon_final_factors.json": "8139a3fa9e9b838bbec409337d4ef77699a5fd2de343747f5178d1f84fd9ba0c",
+    "D:\\yyb\\paper\\afternoon_final_factors.tsv": "846c6068c2ecc0a725ea4b43270ea85ca9a0816d3620fcea1e346649f57d9e42",
+    "D:\\yyb\\paper\\afternoon_final_summary.json": "855d610efac49b3253cbe75f879b2e031329b1bf64467e518418b7d9e95af0b5",
+    "D:\\yyb\\paper\\afternoon_phase_audit.json": "d77c1bf5210985aa4d98843988baea3eefcfe2f7e6568d8042830517f7a73f8b",
+    "D:\\yyb\\paper\\afternoon_phase_audit.tsv": "6fb4463f4172fcbc00ffac5ea2d589265a9083d7d3da3548f5c4763a961aa533",
+    "D:\\yyb\\paper\\afternoon_regime_audit.json": "b310d7e9801fda90f8d605deeddaf16c8db68688604af8a8b4de4fbd4754ec4e",
+    "D:\\yyb\\paper\\afternoon_regime_audit.tsv": "61a3bdb6b2177cdae91db9a19307683341f0995e0375140640a5af04ebf79cc6",
+    "D:\\yyb\\paper\\next_holdout_preregistration.json": "763e734347f1bd85dbcc615a5b2f1a3f00995d5430142ece88cc6929a09a6372",
+    "D:\\yyb\\paper\\next_holdout_preregistration.md": "bfbffbf69ca93763a4a51a3675820ec9687298a52d03a07fd18ad6b4b33f23be",
+    "D:\\yyb\\paper\\literature_source_notes.md": "386fb9160610a86dcc3d8ea2f303e966eaf4f344de50968e14472b266dbe6c78",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_extension_experiments.jsonl": "9bdba682caf4e35a99bb70614a0685e9363bec320b4122ff5e8563c23df0aeae",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_deep_experiments.jsonl": "ecdbcf53036622513322ffa4f36971f07f334fd49b1f4767d08ce7e65090a14d",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_backup_experiments.jsonl": "809404e9823642deb3c263a54cc520de920ce1e668652355974549718593eb54",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_extension_results.json": "8b90087dc4ed72c20ff3b96eb8bfa046c672461f0fb10df0d8e57aff9aba761b",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_deep_results.json": "eb257e7b10611907116e01261ac3d743097336cd7d740988e54c2664e68f2382",
+    "D:\\yyb\\backtest_platform\\experiment_results\\afternoon_backup_results.json": "bbfc708e3927d25eabe53c0f268989bb6e4c91357774e737ede5c9102a242aa9",
+    "D:\\yyb\\backtest_platform\\run_afternoon_extension_experiments.py": "280daf2184ba522cb6a7b960e04dae6313d68a2d1f71de37c6a1b5f2fb09c48e",
+    "D:\\yyb\\backtest_platform\\run_afternoon_deep_extension.py": "d24eadbf0b8157ff616721250ac2e928f1f9cee93d25963c8c787b7ead66ebf0",
+    "D:\\yyb\\backtest_platform\\run_afternoon_backup_extension.py": "1674be99442181c6383687d0fb19b363f31f975e87c8a8f9707524a723c40ca9",
+    "D:\\yyb\\backtest_platform\\generate_afternoon_submission.py": "e11461454805040111d806881d3eb0022144838c23e0359ae91742e55a0dd155",
+    "D:\\yyb\\backtest_platform\\generate_afternoon_regime_audit.py": "cf0826a5f35409cb928e5b0b274673aebbf17cf8ec9f6b351b9b21f354aea862",
+    "D:\\yyb\\backtest_platform\\generate_afternoon_phase_audit.py": "b97659505ffc5df0e824fcde49784fa48800ef9b8d3d46143dfcf4657a6e11fb",
+    "D:\\yyb\\backtest_platform\\generate_next_holdout_preregistration.py": "e4b1461775f2935260e3443a5046bccfd3ee78440c699374345f61268f564716",
+    "D:\\yyb\\backtest_platform\\generate_afternoon_delivery_index.py": "114d187dfe6cb096236796dcb03994d872c28321f91a66f907ac4f7dd41f1aa2",
+    "D:\\yyb\\backtest_platform\\afternoon_completion_audit.py": "2863d263e720ac90648a698c7e6d6915a5ec29c1edc3fc91835c8aafde293412",
+    "D:\\yyb\\backtest_platform\\yyb_guardian.py": "24f57a064c368b3bba8c15ae2939af06b81fca00f03714b0c38dcfc2cc29f146",
+    "D:\\yyb\\FINAL_DELIVERY_20260602.md": "306a44b0d25235f6de764f5956915c87402a2388e06049d2164e075b222764af",
+    "D:\\yyb\\HANDOFF_FINAL_AUDIT_20260601.md": "e4ab7af11d6451afc946baea777488ab8b5ca8ff4672002aa763e58e57ea431a",
+    "D:\\yyb\\HANDOFF_20260601.md": "17b1d30b75d8b86b62c78f608ca8913c0bd046dd15d84865cf11576a3d127d22"
+  },
+  "health_snapshot": {
+    "local_login_status": 200,
+    "remote_login_url": "https://remark-glance-tweet.ngrok-free.dev/login",
+    "remote_login_status": 200,
+    "remote_tunnel_provider": "ngrok",
+    "available_memory_gb": 1.012,
+    "flask_app_pids": [
+      29556
+    ],
+    "port_5000_listener_pids": [
+      29556
+    ]
+  },
+  "note": "No external Alpha submission is performed by this indexer."
+}

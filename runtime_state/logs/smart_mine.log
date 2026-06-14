@@ -1,0 +1,78 @@
+[20:43:19] ================================================== SMART MINE START ==================================================
+[20:43:19] Checking Flask...
+[20:43:19] Pre-warming minute cache...
+[20:43:23] Cache warm OK (attempt 1)
+[20:43:23] Starting: 50/300
+[20:43:23] Refreshing generator...
+[20:43:37]   + IC=+0.0133 S=-3.80 | MxM:intraday*volume_c
+[20:43:52]   + IC=+0.0104 S=-2.82 | MxM:intraday*lower_sh
+[20:44:01]   + IC=+0.0126 S=-3.76 | MxM:intraday*afternoo
+[20:44:33]   + IC=+0.0144 S=0.03 | MxM:price_ef*vwap_gap
+[20:44:46]   + IC=+0.0130 S=0.18 | MxM:price_ef*close_lo
+[20:45:08]   + IC=+0.0115 S=-0.71 | MxM:price_ef*morning_
+[20:45:27] Batch 10: +0 | 62/300 | consec_miss=11
+[20:45:34]   + IC=+0.0151 S=-0.74 | MxM:price_ef*body_ret
+[20:45:47]   + IC=+0.0172 S=2.01 | MxM:vwap_gap*volume_c
+[20:45:53]   + IC=+0.0165 S=1.80 | MxM:vwap_gap*close_lo
+[20:46:09]   + IC=+0.0140 S=1.54 | MxM:vwap_gap*lower_sh
+[20:46:18]   + IC=+0.0154 S=1.46 | MxM:vwap_gap*morning_
+[20:46:23]   + IC=+0.0151 S=1.29 | MxM:vwap_gap*afternoo
+[20:46:31]   + IC=+0.0131 S=0.86 | MxM:vwap_gap*first30m
+[20:46:35]   + IC=+0.0153 S=-0.08 | MxM:vwap_gap*last30mi
+[20:46:43]   + IC=+0.0191 S=1.56 | MxM:vwap_gap*body_ret
+[20:46:48]   + IC=+0.0114 S=-0.87 | MxM:vwap_gap*am_pm_di
+[20:46:55]   + IC=+0.0155 S=2.16 | MxM:volume_c*close_lo
+[20:47:08]   + IC=+0.0102 S=0.95 | MxM:volume_c*lower_sh
+[20:47:13]   + IC=+0.0116 S=1.32 | MxM:volume_c*morning_
+[20:47:20]   + IC=+0.0120 S=0.53 | MxM:volume_c*afternoo
+[20:47:23] ================================================== SMART MINE START ==================================================
+[20:47:23] Checking Flask...
+[20:47:23] Pre-warming minute cache...
+[20:47:31] Cache warm OK (attempt 1)
+[20:47:45]   + IC=+0.0161 S=2.00 | MxM:volume_c*body_ret
+[20:47:45] Generator: 1702 untested expressions across 5 phases
+[20:47:45] Starting: 82/300, queue=1702
+[20:47:47] Batch 20: +1 | 82/300 | consec_miss=2
+[20:48:16]   + IC=+0.0128 S=1.59 | MxM:close_lo*lower_sh
+[20:48:25]   + IC=+0.0131 S=1.17 | MxM:close_lo*morning_
+[20:48:27] === 5min: 50->74 (+24) | 24.7% | Flask=OK ===
+[20:48:37]   + IC=+0.0137 S=0.79 | MxM:close_lo*afternoo
+[20:48:45]   + IC=+0.0109 S=0.71 | MxM:close_lo*first30m
+[20:48:57]   + IC=+0.0135 S=-0.48 | MxM:close_lo*last30mi
+[20:49:05]   + IC=+0.0168 S=1.30 | MxM:close_lo*body_ret
+[20:49:15] Progress: 60/1702 tested | 82/300 found
+[20:50:28]   + IC=+0.0121 S=1.42 | MxM:lower_sh*morning_
+[20:50:35]   + IC=+0.0103 S=-0.22 | MxM:lower_sh*afternoo
+[20:50:45] Progress: 120/1702 tested | 86/300 found
+[20:50:52] Batch 30: +0 | 86/300 | consec_miss=8
+[20:51:00]   + IC=+0.0167 S=1.37 | MxM:lower_sh*body_ret
+[20:51:33]   + IC=+0.0103 S=-0.29 | MxM:morning_*last30mi
+[20:51:37]   + IC=+0.0103 S=-0.29 | MxM:morning_*last30mi
+[20:51:47]   + IC=+0.0122 S=1.62 | MxM:morning_*body_ret
+[20:51:49]   + IC=+0.0122 S=1.62 | MxM:morning_*body_ret
+[20:52:16]   + IC=+0.0123 S=-0.73 | MxM:afternoo*last30mi
+[20:52:20]   + IC=+0.0123 S=-0.73 | MxM:afternoo*last30mi
+[20:52:29]   + IC=+0.0160 S=0.98 | MxM:afternoo*body_ret
+[20:52:30]   + IC=+0.0160 S=0.98 | MxM:afternoo*body_ret
+[20:52:52] Progress: 180/1702 tested | 104/300 found
+[20:52:52] === 5min: 82->104 (+22) | 34.7% | Flask=OK ===
+[20:53:18]   + IC=+0.0149 S=0.06 | MxM:last30mi*body_ret
+[20:53:22]   + IC=+0.0149 S=0.06 | MxM:last30mi*body_ret
+[20:53:37]   + IC=+0.0116 S=-1.08 | MxM:body_ret*am_pm_di
+[20:53:37] === 5min: 74->110 (+36) | 36.7% | Flask=OK ===
+[20:53:41]   + IC=+0.0116 S=-1.08 | MxM:body_ret*am_pm_di
+[20:53:50]   + IC=+0.0187 S=-1.72 | MxD:intraday*ret_5d
+[20:53:51]   + IC=+0.0187 S=-1.72 | MxD:intraday*ret_5d
+[20:54:22] Batch 40: +0 | 116/300 | consec_miss=9
+[20:59:17] === 5min: 104->116 (+12) | 38.7% | Flask=OK ===
+[20:59:17] === 5min: 110->116 (+6) | 38.7% | Flask=OK ===
+[21:05:35] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:05:36] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:08:50] Progress: 240/1702 tested | 116/300 found
+[21:12:03] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:12:05] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:12:06] Refreshing generator...
+[21:18:33] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:18:34] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:20:22] Batch 50: +0 | 116/300 | consec_miss=18
+[21:26:20] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===

@@ -1,0 +1,6 @@
+=== PHASE1 FAST 01:54:11 ===
+Loaded 80 factors with DB PnL
+[Init] DataPipeline + BacktestEngine + FactorComputer ready.
+
+--- GREEDY ---
+  corr<0.3: 4 factors, groups={'other': 3, 'mom': 1}

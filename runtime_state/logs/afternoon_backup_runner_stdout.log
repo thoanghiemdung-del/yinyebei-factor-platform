@@ -1,0 +1,358 @@
+[2026-06-02T13:05:26] backup extension start history=1998 strict_cached=15
+[2026-06-02T13:05:26] run backup_pair_0_none n=2 method=equal neutralize=none free_gb=1.82
+[2026-06-02T13:05:28] done backup_pair_0_none success=True sharpe=10.885
+[2026-06-02T13:05:31] run backup_pair_0_market_cap n=2 method=equal neutralize=market_cap free_gb=1.84
+[2026-06-02T13:05:35] done backup_pair_0_market_cap success=True sharpe=10.895
+[2026-06-02T13:05:38] run backup_pair_0_beta n=2 method=equal neutralize=beta free_gb=1.79
+[2026-06-02T13:05:41] done backup_pair_0_beta success=True sharpe=10.930
+[2026-06-02T13:05:43] run backup_pair_0_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.80
+[2026-06-02T13:05:46] done backup_pair_0_market_cap_beta success=True sharpe=10.924
+[2026-06-02T13:05:48] run backup_pair_1_none n=2 method=equal neutralize=none free_gb=1.83
+[2026-06-02T13:05:51] done backup_pair_1_none success=True sharpe=12.185
+[2026-06-02T13:05:53] run backup_pair_1_market_cap n=2 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:05:56] done backup_pair_1_market_cap success=True sharpe=12.073
+[2026-06-02T13:05:58] run backup_pair_1_beta n=2 method=equal neutralize=beta free_gb=1.88
+[2026-06-02T13:06:01] done backup_pair_1_beta success=True sharpe=11.653
+[2026-06-02T13:06:03] run backup_pair_1_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.83
+[2026-06-02T13:06:08] done backup_pair_1_market_cap_beta success=True sharpe=11.103
+[2026-06-02T13:06:11] run backup_pair_2_none n=2 method=equal neutralize=none free_gb=1.71
+[2026-06-02T13:06:14] done backup_pair_2_none success=True sharpe=15.703
+[2026-06-02T13:06:16] run backup_pair_2_market_cap n=2 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:06:20] done backup_pair_2_market_cap success=True sharpe=16.247
+[2026-06-02T13:06:22] run backup_pair_2_beta n=2 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T13:06:25] done backup_pair_2_beta success=True sharpe=15.667
+[2026-06-02T13:06:27] run backup_pair_2_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.81
+[2026-06-02T13:06:29] done backup_pair_2_market_cap_beta success=True sharpe=15.935
+[2026-06-02T13:06:32] run backup_pair_3_none n=2 method=equal neutralize=none free_gb=1.70
+[2026-06-02T13:06:34] done backup_pair_3_none success=True sharpe=13.897
+[2026-06-02T13:06:36] run backup_pair_3_market_cap n=2 method=equal neutralize=market_cap free_gb=1.78
+[2026-06-02T13:06:39] done backup_pair_3_market_cap success=True sharpe=13.931
+[2026-06-02T13:06:41] run backup_pair_3_beta n=2 method=equal neutralize=beta free_gb=1.79
+[2026-06-02T13:06:44] done backup_pair_3_beta success=True sharpe=14.483
+[2026-06-02T13:06:46] run backup_pair_3_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.83
+[2026-06-02T13:06:50] done backup_pair_3_market_cap_beta success=True sharpe=13.894
+[2026-06-02T13:06:52] run backup_pair_4_none n=2 method=equal neutralize=none free_gb=1.72
+[2026-06-02T13:06:55] done backup_pair_4_none success=True sharpe=14.128
+[2026-06-02T13:06:57] run backup_pair_4_market_cap n=2 method=equal neutralize=market_cap free_gb=1.78
+[2026-06-02T13:07:01] done backup_pair_4_market_cap success=True sharpe=14.064
+[2026-06-02T13:07:04] run backup_pair_4_beta n=2 method=equal neutralize=beta free_gb=1.84
+[2026-06-02T13:07:07] done backup_pair_4_beta success=True sharpe=14.262
+[2026-06-02T13:07:10] run backup_pair_4_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.79
+[2026-06-02T13:07:12] done backup_pair_4_market_cap_beta success=True sharpe=15.579
+[2026-06-02T13:07:14] run backup_pair_5_none n=2 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:07:16] done backup_pair_5_none success=True sharpe=14.684
+[2026-06-02T13:07:19] run backup_pair_5_market_cap n=2 method=equal neutralize=market_cap free_gb=1.86
+[2026-06-02T13:07:22] done backup_pair_5_market_cap success=True sharpe=14.608
+[2026-06-02T13:07:25] run backup_pair_5_beta n=2 method=equal neutralize=beta free_gb=1.82
+[2026-06-02T13:07:28] done backup_pair_5_beta success=True sharpe=14.867
+[2026-06-02T13:07:30] run backup_pair_5_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.85
+[2026-06-02T13:07:33] done backup_pair_5_market_cap_beta success=True sharpe=14.725
+[2026-06-02T13:07:36] run backup_pair_6_none n=2 method=equal neutralize=none free_gb=1.55
+[2026-06-02T13:07:40] done backup_pair_6_none success=True sharpe=14.288
+[2026-06-02T13:07:43] run backup_pair_6_market_cap n=2 method=equal neutralize=market_cap free_gb=1.74
+[2026-06-02T13:07:46] done backup_pair_6_market_cap success=True sharpe=14.248
+[2026-06-02T13:07:48] run backup_pair_6_beta n=2 method=equal neutralize=beta free_gb=1.69
+[2026-06-02T13:07:51] done backup_pair_6_beta success=True sharpe=14.283
+[2026-06-02T13:07:53] run backup_pair_6_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.74
+[2026-06-02T13:07:56] done backup_pair_6_market_cap_beta success=True sharpe=14.218
+[2026-06-02T13:07:58] run backup_pair_7_none n=2 method=equal neutralize=none free_gb=1.77
+[2026-06-02T13:08:00] done backup_pair_7_none success=True sharpe=10.933
+[2026-06-02T13:08:02] run backup_pair_7_market_cap n=2 method=equal neutralize=market_cap free_gb=1.77
+[2026-06-02T13:08:05] done backup_pair_7_market_cap success=True sharpe=10.859
+[2026-06-02T13:08:07] run backup_pair_7_beta n=2 method=equal neutralize=beta free_gb=1.76
+[2026-06-02T13:08:10] done backup_pair_7_beta success=True sharpe=10.293
+[2026-06-02T13:08:12] run backup_pair_7_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.78
+[2026-06-02T13:08:15] done backup_pair_7_market_cap_beta success=True sharpe=10.477
+[2026-06-02T13:08:17] run backup_pair_8_none n=2 method=equal neutralize=none free_gb=1.72
+[2026-06-02T13:08:20] done backup_pair_8_none success=True sharpe=13.186
+[2026-06-02T13:08:21] run backup_pair_8_market_cap n=2 method=equal neutralize=market_cap free_gb=1.80
+[2026-06-02T13:08:24] done backup_pair_8_market_cap success=True sharpe=13.188
+[2026-06-02T13:08:25] run backup_pair_8_beta n=2 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:08:27] done backup_pair_8_beta success=True sharpe=14.087
+[2026-06-02T13:08:29] run backup_pair_8_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:08:31] done backup_pair_8_market_cap_beta success=True sharpe=13.316
+[2026-06-02T13:08:33] run backup_pair_9_none n=2 method=equal neutralize=none free_gb=1.77
+[2026-06-02T13:08:34] done backup_pair_9_none success=True sharpe=9.205
+[2026-06-02T13:08:36] run backup_pair_9_market_cap n=2 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T13:08:38] done backup_pair_9_market_cap success=True sharpe=9.134
+[2026-06-02T13:08:40] run backup_pair_9_beta n=2 method=equal neutralize=beta free_gb=1.78
+[2026-06-02T13:08:42] done backup_pair_9_beta success=True sharpe=10.007
+[2026-06-02T13:08:44] run backup_pair_9_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.73
+[2026-06-02T13:08:46] done backup_pair_9_market_cap_beta success=True sharpe=10.240
+[2026-06-02T13:08:48] run backup_pair_10_none n=2 method=equal neutralize=none free_gb=1.71
+[2026-06-02T13:08:49] done backup_pair_10_none success=True sharpe=11.483
+[2026-06-02T13:08:51] run backup_pair_10_market_cap n=2 method=equal neutralize=market_cap free_gb=1.71
+[2026-06-02T13:08:53] done backup_pair_10_market_cap success=True sharpe=11.858
+[2026-06-02T13:08:55] run backup_pair_10_beta n=2 method=equal neutralize=beta free_gb=1.74
+[2026-06-02T13:08:57] done backup_pair_10_beta success=True sharpe=10.932
+[2026-06-02T13:08:59] run backup_pair_10_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.78
+[2026-06-02T13:09:01] done backup_pair_10_market_cap_beta success=True sharpe=11.080
+[2026-06-02T13:09:02] run backup_pair_11_none n=2 method=equal neutralize=none free_gb=1.78
+[2026-06-02T13:09:04] done backup_pair_11_none success=True sharpe=13.369
+[2026-06-02T13:09:05] run backup_pair_11_market_cap n=2 method=equal neutralize=market_cap free_gb=1.75
+[2026-06-02T13:09:08] done backup_pair_11_market_cap success=True sharpe=13.484
+[2026-06-02T13:09:09] run backup_pair_11_beta n=2 method=equal neutralize=beta free_gb=1.74
+[2026-06-02T13:09:11] done backup_pair_11_beta success=True sharpe=13.441
+[2026-06-02T13:09:13] run backup_pair_11_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.74
+[2026-06-02T13:09:15] done backup_pair_11_market_cap_beta success=True sharpe=13.237
+[2026-06-02T13:09:16] run backup_pair_12_none n=2 method=equal neutralize=none free_gb=1.74
+[2026-06-02T13:09:18] done backup_pair_12_none success=True sharpe=12.749
+[2026-06-02T13:09:20] run backup_pair_12_market_cap n=2 method=equal neutralize=market_cap free_gb=1.73
+[2026-06-02T13:09:22] done backup_pair_12_market_cap success=True sharpe=12.793
+[2026-06-02T13:09:24] run backup_pair_12_beta n=2 method=equal neutralize=beta free_gb=1.76
+[2026-06-02T13:09:26] done backup_pair_12_beta success=True sharpe=12.850
+[2026-06-02T13:09:27] run backup_pair_12_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.76
+[2026-06-02T13:09:29] done backup_pair_12_market_cap_beta success=True sharpe=13.096
+[2026-06-02T13:09:31] run backup_pair_13_none n=2 method=equal neutralize=none free_gb=1.74
+[2026-06-02T13:09:33] done backup_pair_13_none success=True sharpe=14.198
+[2026-06-02T13:09:34] run backup_pair_13_market_cap n=2 method=equal neutralize=market_cap free_gb=1.72
+[2026-06-02T13:09:37] done backup_pair_13_market_cap success=True sharpe=14.171
+[2026-06-02T13:09:38] run backup_pair_13_beta n=2 method=equal neutralize=beta free_gb=1.76
+[2026-06-02T13:09:40] done backup_pair_13_beta success=True sharpe=14.178
+[2026-06-02T13:09:42] run backup_pair_13_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.74
+[2026-06-02T13:09:43] done backup_pair_13_market_cap_beta success=True sharpe=12.897
+[2026-06-02T13:09:45] run backup_pair_14_none n=2 method=equal neutralize=none free_gb=1.83
+[2026-06-02T13:09:47] done backup_pair_14_none success=True sharpe=11.970
+[2026-06-02T13:09:48] run backup_pair_14_market_cap n=2 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T13:09:50] done backup_pair_14_market_cap success=True sharpe=12.246
+[2026-06-02T13:09:51] run backup_pair_14_beta n=2 method=equal neutralize=beta free_gb=1.79
+[2026-06-02T13:09:53] done backup_pair_14_beta success=True sharpe=12.226
+[2026-06-02T13:09:55] run backup_pair_14_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.78
+[2026-06-02T13:09:57] done backup_pair_14_market_cap_beta success=True sharpe=12.452
+[2026-06-02T13:09:59] run backup_pair_15_none n=2 method=equal neutralize=none free_gb=1.77
+[2026-06-02T13:10:01] done backup_pair_15_none success=True sharpe=10.802
+[2026-06-02T13:10:02] run backup_pair_15_market_cap n=2 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:10:04] done backup_pair_15_market_cap success=True sharpe=10.817
+[2026-06-02T13:10:06] run backup_pair_15_beta n=2 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:10:08] done backup_pair_15_beta success=True sharpe=10.638
+[2026-06-02T13:10:10] run backup_pair_15_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.83
+[2026-06-02T13:10:12] done backup_pair_15_market_cap_beta success=True sharpe=10.795
+[2026-06-02T13:10:13] run backup_pair_16_none n=2 method=equal neutralize=none free_gb=1.82
+[2026-06-02T13:10:15] done backup_pair_16_none success=True sharpe=11.899
+[2026-06-02T13:10:16] run backup_pair_16_market_cap n=2 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T13:10:18] done backup_pair_16_market_cap success=True sharpe=12.063
+[2026-06-02T13:10:20] run backup_pair_16_beta n=2 method=equal neutralize=beta free_gb=1.82
+[2026-06-02T13:10:22] done backup_pair_16_beta success=True sharpe=12.008
+[2026-06-02T13:10:23] run backup_pair_16_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.80
+[2026-06-02T13:10:25] done backup_pair_16_market_cap_beta success=True sharpe=11.973
+[2026-06-02T13:10:27] run backup_pair_17_none n=2 method=equal neutralize=none free_gb=1.82
+[2026-06-02T13:10:28] done backup_pair_17_none success=True sharpe=14.405
+[2026-06-02T13:10:30] run backup_pair_17_market_cap n=2 method=equal neutralize=market_cap free_gb=1.78
+[2026-06-02T13:10:32] done backup_pair_17_market_cap success=True sharpe=14.456
+[2026-06-02T13:10:33] run backup_pair_17_beta n=2 method=equal neutralize=beta free_gb=1.67
+[2026-06-02T13:10:36] done backup_pair_17_beta success=True sharpe=14.303
+[2026-06-02T13:10:37] run backup_pair_17_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.83
+[2026-06-02T13:10:39] done backup_pair_17_market_cap_beta success=True sharpe=15.316
+[2026-06-02T13:10:41] run backup_pair_18_none n=2 method=equal neutralize=none free_gb=1.80
+[2026-06-02T13:10:43] done backup_pair_18_none success=True sharpe=11.407
+[2026-06-02T13:10:44] run backup_pair_18_market_cap n=2 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T13:10:46] done backup_pair_18_market_cap success=True sharpe=11.455
+[2026-06-02T13:10:48] run backup_pair_18_beta n=2 method=equal neutralize=beta free_gb=1.82
+[2026-06-02T13:10:50] done backup_pair_18_beta success=True sharpe=11.741
+[2026-06-02T13:10:51] run backup_pair_18_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.82
+[2026-06-02T13:10:53] done backup_pair_18_market_cap_beta success=True sharpe=11.332
+[2026-06-02T13:10:54] run backup_pair_19_none n=2 method=equal neutralize=none free_gb=1.83
+[2026-06-02T13:10:56] done backup_pair_19_none success=True sharpe=9.034
+[2026-06-02T13:10:58] run backup_pair_19_market_cap n=2 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:10:59] done backup_pair_19_market_cap success=True sharpe=9.031
+[2026-06-02T13:11:01] run backup_pair_19_beta n=2 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:11:03] done backup_pair_19_beta success=True sharpe=9.130
+[2026-06-02T13:11:05] run backup_pair_19_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:11:07] done backup_pair_19_market_cap_beta success=True sharpe=9.159
+[2026-06-02T13:11:08] run backup_pair_20_none n=2 method=equal neutralize=none free_gb=1.84
+[2026-06-02T13:11:10] done backup_pair_20_none success=True sharpe=15.119
+[2026-06-02T13:11:11] run backup_pair_20_market_cap n=2 method=equal neutralize=market_cap free_gb=1.84
+[2026-06-02T13:11:13] done backup_pair_20_market_cap success=True sharpe=15.278
+[2026-06-02T13:11:15] run backup_pair_20_beta n=2 method=equal neutralize=beta free_gb=1.84
+[2026-06-02T13:11:17] done backup_pair_20_beta success=True sharpe=15.142
+[2026-06-02T13:11:18] run backup_pair_20_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.83
+[2026-06-02T13:11:20] done backup_pair_20_market_cap_beta success=True sharpe=14.710
+[2026-06-02T13:11:22] run backup_pair_21_none n=2 method=equal neutralize=none free_gb=1.83
+[2026-06-02T13:11:23] done backup_pair_21_none success=True sharpe=12.396
+[2026-06-02T13:11:25] run backup_pair_21_market_cap n=2 method=equal neutralize=market_cap free_gb=1.80
+[2026-06-02T13:11:27] done backup_pair_21_market_cap success=True sharpe=12.399
+[2026-06-02T13:11:28] run backup_pair_21_beta n=2 method=equal neutralize=beta free_gb=1.79
+[2026-06-02T13:11:30] done backup_pair_21_beta success=True sharpe=13.332
+[2026-06-02T13:11:32] run backup_pair_21_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.81
+[2026-06-02T13:11:34] done backup_pair_21_market_cap_beta success=True sharpe=12.581
+[2026-06-02T13:11:35] run backup_pair_22_none n=2 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:11:37] done backup_pair_22_none success=True sharpe=11.236
+[2026-06-02T13:11:38] run backup_pair_22_market_cap n=2 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T13:11:40] done backup_pair_22_market_cap success=True sharpe=11.083
+[2026-06-02T13:11:42] run backup_pair_22_beta n=2 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:11:44] done backup_pair_22_beta success=True sharpe=10.671
+[2026-06-02T13:11:45] run backup_pair_22_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.79
+[2026-06-02T13:11:47] done backup_pair_22_market_cap_beta success=True sharpe=10.582
+[2026-06-02T13:11:49] run backup_pair_23_none n=2 method=equal neutralize=none free_gb=1.75
+[2026-06-02T13:11:51] done backup_pair_23_none success=True sharpe=10.572
+[2026-06-02T13:11:53] run backup_pair_23_market_cap n=2 method=equal neutralize=market_cap free_gb=1.75
+[2026-06-02T13:11:55] done backup_pair_23_market_cap success=True sharpe=10.869
+[2026-06-02T13:11:57] run backup_pair_23_beta n=2 method=equal neutralize=beta free_gb=1.74
+[2026-06-02T13:11:59] done backup_pair_23_beta success=True sharpe=10.721
+[2026-06-02T13:12:01] run backup_pair_23_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.77
+[2026-06-02T13:12:03] done backup_pair_23_market_cap_beta success=True sharpe=10.312
+[2026-06-02T13:12:05] run backup_triple_0_none n=3 method=equal neutralize=none free_gb=1.76
+[2026-06-02T13:12:07] done backup_triple_0_none success=True sharpe=13.963
+[2026-06-02T13:12:09] run backup_triple_0_market_cap n=3 method=equal neutralize=market_cap free_gb=1.71
+[2026-06-02T13:12:12] done backup_triple_0_market_cap success=True sharpe=13.988
+[2026-06-02T13:12:14] run backup_triple_0_beta n=3 method=equal neutralize=beta free_gb=1.70
+[2026-06-02T13:12:16] done backup_triple_0_beta success=True sharpe=14.093
+[2026-06-02T13:12:18] run backup_triple_0_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.71
+[2026-06-02T13:12:21] done backup_triple_0_market_cap_beta success=True sharpe=14.626
+[2026-06-02T13:12:22] run backup_triple_1_none n=3 method=equal neutralize=none free_gb=1.72
+[2026-06-02T13:12:25] done backup_triple_1_none success=True sharpe=15.261
+[2026-06-02T13:12:26] run backup_triple_1_market_cap n=3 method=equal neutralize=market_cap free_gb=1.69
+[2026-06-02T13:12:29] done backup_triple_1_market_cap success=True sharpe=15.152
+[2026-06-02T13:12:31] run backup_triple_1_beta n=3 method=equal neutralize=beta free_gb=1.70
+[2026-06-02T13:12:34] done backup_triple_1_beta success=True sharpe=15.846
+[2026-06-02T13:12:35] run backup_triple_1_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.72
+[2026-06-02T13:12:38] done backup_triple_1_market_cap_beta success=True sharpe=15.434
+[2026-06-02T13:12:40] run backup_triple_2_none n=3 method=equal neutralize=none free_gb=1.65
+[2026-06-02T13:12:42] done backup_triple_2_none success=True sharpe=13.421
+[2026-06-02T13:12:44] run backup_triple_2_market_cap n=3 method=equal neutralize=market_cap free_gb=1.70
+[2026-06-02T13:12:47] done backup_triple_2_market_cap success=True sharpe=13.284
+[2026-06-02T13:12:49] run backup_triple_2_beta n=3 method=equal neutralize=beta free_gb=1.66
+[2026-06-02T13:12:51] done backup_triple_2_beta success=True sharpe=13.379
+[2026-06-02T13:12:53] run backup_triple_2_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.69
+[2026-06-02T13:12:56] done backup_triple_2_market_cap_beta success=True sharpe=13.093
+[2026-06-02T13:12:58] run backup_triple_3_none n=3 method=equal neutralize=none free_gb=1.74
+[2026-06-02T13:13:00] done backup_triple_3_none success=True sharpe=13.848
+[2026-06-02T13:13:02] run backup_triple_3_market_cap n=3 method=equal neutralize=market_cap free_gb=1.78
+[2026-06-02T13:13:04] done backup_triple_3_market_cap success=True sharpe=14.020
+[2026-06-02T13:13:06] run backup_triple_3_beta n=3 method=equal neutralize=beta free_gb=1.79
+[2026-06-02T13:13:08] done backup_triple_3_beta success=True sharpe=13.619
+[2026-06-02T13:13:10] run backup_triple_3_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.82
+[2026-06-02T13:13:13] done backup_triple_3_market_cap_beta success=True sharpe=13.204
+[2026-06-02T13:13:14] run backup_triple_4_none n=3 method=equal neutralize=none free_gb=1.80
+[2026-06-02T13:13:16] done backup_triple_4_none success=True sharpe=15.213
+[2026-06-02T13:13:18] run backup_triple_4_market_cap n=3 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:13:21] done backup_triple_4_market_cap success=True sharpe=14.991
+[2026-06-02T13:13:22] run backup_triple_4_beta n=3 method=equal neutralize=beta free_gb=1.77
+[2026-06-02T13:13:25] done backup_triple_4_beta success=True sharpe=14.873
+[2026-06-02T13:13:26] run backup_triple_4_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.81
+[2026-06-02T13:13:29] done backup_triple_4_market_cap_beta success=True sharpe=15.466
+[2026-06-02T13:13:30] run backup_triple_5_none n=3 method=equal neutralize=none free_gb=1.81
+[2026-06-02T13:13:32] done backup_triple_5_none success=True sharpe=13.111
+[2026-06-02T13:13:34] run backup_triple_5_market_cap n=3 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:13:37] done backup_triple_5_market_cap success=True sharpe=13.408
+[2026-06-02T13:13:38] run backup_triple_5_beta n=3 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:13:41] done backup_triple_5_beta success=True sharpe=12.880
+[2026-06-02T13:13:43] run backup_triple_5_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.80
+[2026-06-02T13:13:45] done backup_triple_5_market_cap_beta success=True sharpe=14.212
+[2026-06-02T13:13:47] run backup_triple_6_none n=3 method=equal neutralize=none free_gb=1.79
+[2026-06-02T13:13:50] done backup_triple_6_none success=True sharpe=13.719
+[2026-06-02T13:13:52] run backup_triple_6_market_cap n=3 method=equal neutralize=market_cap free_gb=1.86
+[2026-06-02T13:13:55] done backup_triple_6_market_cap success=True sharpe=13.492
+[2026-06-02T13:13:57] run backup_triple_6_beta n=3 method=equal neutralize=beta free_gb=1.81
+[2026-06-02T13:14:00] done backup_triple_6_beta success=True sharpe=13.242
+[2026-06-02T13:14:02] run backup_triple_6_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.80
+[2026-06-02T13:14:05] done backup_triple_6_market_cap_beta success=True sharpe=13.459
+[2026-06-02T13:14:06] run backup_triple_7_none n=3 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:14:09] done backup_triple_7_none success=True sharpe=13.949
+[2026-06-02T13:14:10] run backup_triple_7_market_cap n=3 method=equal neutralize=market_cap free_gb=1.92
+[2026-06-02T13:14:13] done backup_triple_7_market_cap success=True sharpe=13.588
+[2026-06-02T13:14:15] run backup_triple_7_beta n=3 method=equal neutralize=beta free_gb=1.94
+[2026-06-02T13:14:17] done backup_triple_7_beta success=True sharpe=13.814
+[2026-06-02T13:14:19] run backup_triple_7_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.91
+[2026-06-02T13:14:22] done backup_triple_7_market_cap_beta success=True sharpe=14.005
+[2026-06-02T13:14:24] run backup_triple_8_none n=3 method=equal neutralize=none free_gb=1.93
+[2026-06-02T13:14:26] done backup_triple_8_none success=True sharpe=13.724
+[2026-06-02T13:14:28] run backup_triple_8_market_cap n=3 method=equal neutralize=market_cap free_gb=1.90
+[2026-06-02T13:14:31] done backup_triple_8_market_cap success=True sharpe=13.636
+[2026-06-02T13:14:33] run backup_triple_8_beta n=3 method=equal neutralize=beta free_gb=1.86
+[2026-06-02T13:14:36] done backup_triple_8_beta success=True sharpe=14.232
+[2026-06-02T13:14:38] run backup_triple_8_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.87
+[2026-06-02T13:14:41] done backup_triple_8_market_cap_beta success=True sharpe=13.698
+[2026-06-02T13:14:43] run backup_triple_9_none n=3 method=equal neutralize=none free_gb=1.84
+[2026-06-02T13:14:46] done backup_triple_9_none success=True sharpe=12.913
+[2026-06-02T13:14:47] run backup_triple_9_market_cap n=3 method=equal neutralize=market_cap free_gb=1.83
+[2026-06-02T13:14:50] done backup_triple_9_market_cap success=True sharpe=12.832
+[2026-06-02T13:14:52] run backup_triple_9_beta n=3 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T13:14:54] done backup_triple_9_beta success=True sharpe=13.057
+[2026-06-02T13:14:56] run backup_triple_9_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.85
+[2026-06-02T13:14:58] done backup_triple_9_market_cap_beta success=True sharpe=13.486
+[2026-06-02T13:15:00] run backup_triple_10_none n=3 method=equal neutralize=none free_gb=1.84
+[2026-06-02T13:15:02] done backup_triple_10_none success=True sharpe=11.354
+[2026-06-02T13:15:03] run backup_triple_10_market_cap n=3 method=equal neutralize=market_cap free_gb=1.85
+[2026-06-02T13:15:06] done backup_triple_10_market_cap success=True sharpe=11.452
+[2026-06-02T13:15:07] run backup_triple_10_beta n=3 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T13:15:09] done backup_triple_10_beta success=True sharpe=11.857
+[2026-06-02T13:15:11] run backup_triple_10_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.85
+[2026-06-02T13:15:13] done backup_triple_10_market_cap_beta success=True sharpe=11.596
+[2026-06-02T13:15:16] run backup_triple_11_none n=3 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:15:18] done backup_triple_11_none success=True sharpe=12.606
+[2026-06-02T13:15:20] run backup_triple_11_market_cap n=3 method=equal neutralize=market_cap free_gb=1.80
+[2026-06-02T13:15:22] done backup_triple_11_market_cap success=True sharpe=12.570
+[2026-06-02T13:15:24] run backup_triple_11_beta n=3 method=equal neutralize=beta free_gb=1.80
+[2026-06-02T13:15:26] done backup_triple_11_beta success=True sharpe=13.471
+[2026-06-02T13:15:28] run backup_triple_11_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.82
+[2026-06-02T13:15:31] done backup_triple_11_market_cap_beta success=True sharpe=13.311
+[2026-06-02T13:15:32] run backup_triple_12_none n=3 method=equal neutralize=none free_gb=1.81
+[2026-06-02T13:15:34] done backup_triple_12_none success=True sharpe=12.320
+[2026-06-02T13:15:36] run backup_triple_12_market_cap n=3 method=equal neutralize=market_cap free_gb=1.87
+[2026-06-02T13:15:38] done backup_triple_12_market_cap success=True sharpe=12.249
+[2026-06-02T13:15:40] run backup_triple_12_beta n=3 method=equal neutralize=beta free_gb=1.87
+[2026-06-02T13:15:43] done backup_triple_12_beta success=True sharpe=12.361
+[2026-06-02T13:15:44] run backup_triple_12_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.81
+[2026-06-02T13:15:47] done backup_triple_12_market_cap_beta success=True sharpe=12.599
+[2026-06-02T13:15:48] run backup_triple_13_none n=3 method=equal neutralize=none free_gb=1.82
+[2026-06-02T13:15:51] done backup_triple_13_none success=True sharpe=13.375
+[2026-06-02T13:15:52] run backup_triple_13_market_cap n=3 method=equal neutralize=market_cap free_gb=1.85
+[2026-06-02T13:15:55] done backup_triple_13_market_cap success=True sharpe=13.287
+[2026-06-02T13:15:56] run backup_triple_13_beta n=3 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T13:15:59] done backup_triple_13_beta success=True sharpe=13.521
+[2026-06-02T13:16:01] run backup_triple_13_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.88
+[2026-06-02T13:16:03] done backup_triple_13_market_cap_beta success=True sharpe=13.605
+[2026-06-02T13:16:06] run backup_triple_14_none n=3 method=equal neutralize=none free_gb=1.71
+[2026-06-02T13:16:08] done backup_triple_14_none success=True sharpe=12.071
+[2026-06-02T13:16:10] run backup_triple_14_market_cap n=3 method=equal neutralize=market_cap free_gb=1.82
+[2026-06-02T13:16:12] done backup_triple_14_market_cap success=True sharpe=12.160
+[2026-06-02T13:16:14] run backup_triple_14_beta n=3 method=equal neutralize=beta free_gb=1.84
+[2026-06-02T13:16:17] done backup_triple_14_beta success=True sharpe=12.126
+[2026-06-02T13:16:19] run backup_triple_14_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.86
+[2026-06-02T13:16:21] done backup_triple_14_market_cap_beta success=True sharpe=12.363
+[2026-06-02T13:16:23] run backup_triple_15_none n=3 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:16:25] done backup_triple_15_none success=True sharpe=11.441
+[2026-06-02T13:16:27] run backup_triple_15_market_cap n=3 method=equal neutralize=market_cap free_gb=1.85
+[2026-06-02T13:16:29] done backup_triple_15_market_cap success=True sharpe=11.524
+[2026-06-02T13:16:31] run backup_triple_15_beta n=3 method=equal neutralize=beta free_gb=1.80
+[2026-06-02T13:16:33] done backup_triple_15_beta success=True sharpe=12.473
+[2026-06-02T13:16:35] run backup_triple_15_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:16:38] done backup_triple_15_market_cap_beta success=True sharpe=12.879
+[2026-06-02T13:16:39] run backup_triple_16_none n=3 method=equal neutralize=none free_gb=1.85
+[2026-06-02T13:16:41] done backup_triple_16_none success=True sharpe=12.049
+[2026-06-02T13:16:43] run backup_triple_16_market_cap n=3 method=equal neutralize=market_cap free_gb=1.84
+[2026-06-02T13:16:46] done backup_triple_16_market_cap success=True sharpe=11.861
+[2026-06-02T13:16:47] run backup_triple_16_beta n=3 method=equal neutralize=beta free_gb=1.86
+[2026-06-02T13:16:50] done backup_triple_16_beta success=True sharpe=12.882
+[2026-06-02T13:16:52] run backup_triple_16_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:16:54] done backup_triple_16_market_cap_beta success=True sharpe=13.322
+[2026-06-02T13:16:56] run backup_triple_17_none n=3 method=equal neutralize=none free_gb=1.89
+[2026-06-02T13:16:58] done backup_triple_17_none success=True sharpe=14.532
+[2026-06-02T13:17:00] run backup_triple_17_market_cap n=3 method=equal neutralize=market_cap free_gb=1.87
+[2026-06-02T13:17:02] done backup_triple_17_market_cap success=True sharpe=14.483
+[2026-06-02T13:17:04] run backup_triple_17_beta n=3 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T13:17:06] done backup_triple_17_beta success=True sharpe=13.632
+[2026-06-02T13:17:08] run backup_triple_17_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.89
+[2026-06-02T13:17:11] done backup_triple_17_market_cap_beta success=True sharpe=13.596
+[2026-06-02T13:17:13] run backup_meta_l4_n2_none n=2 method=equal neutralize=none free_gb=1.84
+[2026-06-02T13:17:15] done backup_meta_l4_n2_none success=True sharpe=15.685
+[2026-06-02T13:17:17] run backup_meta_l4_n2_market_cap n=2 method=equal neutralize=market_cap free_gb=1.85
+[2026-06-02T13:17:19] done backup_meta_l4_n2_market_cap success=True sharpe=14.933
+[2026-06-02T13:17:21] run backup_meta_l4_n2_beta n=2 method=equal neutralize=beta free_gb=1.86
+[2026-06-02T13:17:22] done backup_meta_l4_n2_beta success=True sharpe=15.681
+[2026-06-02T13:17:24] run backup_meta_l4_n2_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:17:26] done backup_meta_l4_n2_market_cap_beta success=True sharpe=15.945
+[2026-06-02T13:17:28] run backup_meta_l4_n2_market_cap_regression n=2 method=equal neutralize=market_cap_regression free_gb=1.85
+[2026-06-02T13:17:30] done backup_meta_l4_n2_market_cap_regression success=True sharpe=16.031
+[2026-06-02T13:17:31] run backup_meta_l4_n3_none n=3 method=equal neutralize=none free_gb=1.82
+[2026-06-02T13:17:33] done backup_meta_l4_n3_none success=True sharpe=15.306
+[2026-06-02T13:17:35] run backup_meta_l4_n3_market_cap n=3 method=equal neutralize=market_cap free_gb=1.86
+[2026-06-02T13:17:38] done backup_meta_l4_n3_market_cap success=True sharpe=15.144
+[2026-06-02T13:17:39] run backup_meta_l4_n3_beta n=3 method=equal neutralize=beta free_gb=1.83
+[2026-06-02T13:17:42] done backup_meta_l4_n3_beta success=True sharpe=15.450
+[2026-06-02T13:17:44] run backup_meta_l4_n3_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.84
+[2026-06-02T13:17:46] done backup_meta_l4_n3_market_cap_beta success=True sharpe=15.630
+[2026-06-02T13:17:48] run backup_meta_l4_n3_market_cap_regression n=3 method=equal neutralize=market_cap_regression free_gb=1.85
+[2026-06-02T13:17:50] done backup_meta_l4_n3_market_cap_regression success=True sharpe=15.742
+[2026-06-02T13:17:55] backup extension complete experiments=178 strict_gt8_lowcorr=22

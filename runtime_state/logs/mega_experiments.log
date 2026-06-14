@@ -1,0 +1,272 @@
+Login OK
+Loaded 636 single factors (IS_IC > 0.01)
+  mixed: 367
+  liquidity: 84
+  unknown: 58
+  microstructure: 54
+  reversal: 35
+  momentum: 22
+  volatility: 11
+  size: 3
+  fundamental: 2
+
+=== MEGA EXPERIMENTS ¡ª 2026-05-31 00:52:21 ===
+Target: 550+ experiments, running until 08:00
+
+--- PHASE 1: Within-style ---
+[1] equal-liquidity-N3                       S=  -0.68 IC= 0.0373 IR=   1.53 (18s)
+[2] icir-liquidity-N3                        S=  -4.80 IC= 0.0376 IR=   1.88 (12s)
+[3] ridge-liquidity-N3                       S=  -2.75 IC= 0.0376 IR=   1.80 (12s)
+[4] equal-liquidity-N5                       S=  -2.64 IC= 0.0388 IR=   1.45 (10s)
+[5] icir-liquidity-N5                        S=  -3.01 IC= 0.0375 IR=   1.63 (18s)
+[6] ridge-liquidity-N5                       S=  -2.97 IC= 0.0382 IR=   1.58 (18s)
+[7] equal-liquidity-N8                       ERROR: timeout/retry exhausted
+[8] icir-liquidity-N8                        ERROR: timeout/retry exhausted
+[9] ridge-liquidity-N8                       ERROR: timeout/retry exhausted
+[10] equal-liquidity-N10                      ERROR: timeout/retry exhausted
+[11] icir-liquidity-N10                       ERROR: timeout/retry exhausted
+[12] ridge-liquidity-N10                      ERROR: timeout/retry exhausted
+[13] equal-liquidity-N12                      ERROR: timeout/retry exhausted
+[14] icir-liquidity-N12                       ERROR: timeout/retry exhausted
+[15] ridge-liquidity-N12                      ERROR: timeout/retry exhausted
+[16] equal-liquidity-N15                      ERROR: timeout/retry exhausted
+[17] icir-liquidity-N15                       ERROR: timeout/retry exhausted
+[18] ridge-liquidity-N15                      ERROR: timeout/retry exhausted
+[19] equal-microstructure-N3                  ERROR: timeout/retry exhausted
+[20] icir-microstructure-N3                   ERROR: timeout/retry exhausted
+[21] ridge-microstructure-N3                  ERROR: timeout/retry exhausted
+[22] equal-microstructure-N5                  ERROR: timeout/retry exhausted
+[23] icir-microstructure-N5                   S=   2.08 IC= 0.0279 IR=   0.94 (13s)
+[24] ridge-microstructure-N5                  S=   2.24 IC= 0.0299 IR=   0.71 (13s)
+[25] equal-microstructure-N8                  S=   1.28 IC= 0.0287 IR=   0.61 (10s)
+[26] icir-microstructure-N8                   S=   2.37 IC= 0.0283 IR=   0.74 (20s)
+[27] ridge-microstructure-N8                  S=   2.27 IC= 0.0291 IR=   0.59 (19s)
+[28] equal-microstructure-N10                 S=   1.79 IC= 0.0281 IR=   0.46 (11s)
+[29] icir-microstructure-N10                  S=   2.58 IC= 0.0281 IR=   0.60 (24s)
+[30] ridge-microstructure-N10                 S=   1.39 IC= 0.0275 IR=   0.41 (23s)
+[31] equal-microstructure-N12                 ERROR: timeout/retry exhausted
+[32] icir-microstructure-N12                  ERROR: timeout/retry exhausted
+[33] ridge-microstructure-N12                 ERROR: timeout/retry exhausted
+[34] equal-microstructure-N15                 ERROR: timeout/retry exhausted
+[35] icir-microstructure-N15                  ERROR: timeout/retry exhausted
+[36] ridge-microstructure-N15                 ERROR: timeout/retry exhausted
+[37] equal-reversal-N3                        ERROR: timeout/retry exhausted
+[38] icir-reversal-N3                         ERROR: timeout/retry exhausted
+[39] ridge-reversal-N3                        S=   3.82 IC= 0.0294 IR=   0.76 (11s)
+[40] equal-reversal-N5                        S=   4.84 IC= 0.0333 IR=   0.73 (9s)
+[41] icir-reversal-N5                         S=   4.51 IC= 0.0333 IR=   0.74 (15s)
+[42] ridge-reversal-N5                        S=   4.31 IC= 0.0329 IR=   0.74 (14s)
+[43] equal-reversal-N8                        S=   5.67 IC= 0.0357 IR=   0.74 (13s)
+[44] icir-reversal-N8                         S=   5.25 IC= 0.0362 IR=   0.76 (26s)
+[45] ridge-reversal-N8                        S=   4.59 IC= 0.0362 IR=   0.76 (26s)
+[46] equal-reversal-N10                       S=   5.25 IC= 0.0360 IR=   0.73 (29s)
+[47] icir-reversal-N10                        S=   5.48 IC= 0.0368 IR=   0.74 (41s)
+[48] ridge-reversal-N10                       S=   3.81 IC= 0.0364 IR=   0.73 (40s)
+[49] equal-reversal-N12                       S=   6.34 IC= 0.0390 IR=   0.82 (54s)
+[50] icir-reversal-N12                        S=   6.76 IC= 0.0412 IR=   0.95 (77s)
+[51] ridge-reversal-N12                       S=   4.05 IC= 0.0363 IR=   0.77 (76s)
+[52] equal-reversal-N15                       S=   6.11 IC= 0.0385 IR=   0.81 (55s)
+[53] icir-reversal-N15                        S=   6.20 IC= 0.0407 IR=   0.92 (88s)
+[54] ridge-reversal-N15                       S=   4.27 IC= 0.0357 IR=   0.77 (86s)
+[55] equal-momentum-N3                        S=   6.09 IC= 0.0310 IR=   0.93 (6s)
+[56] icir-momentum-N3                         S=   5.98 IC= 0.0268 IR=   0.99 (11s)
+[57] ridge-momentum-N3                        S=   6.33 IC= 0.0259 IR=   0.97 (10s)
+[58] equal-momentum-N5                        S=   4.97 IC= 0.0266 IR=   1.03 (8s)
+[59] icir-momentum-N5                         S=   3.25 IC= 0.0205 IR=   0.97 (16s)
+[60] ridge-momentum-N5                        S=   4.08 IC= 0.0204 IR=   0.99 (17s)
+[61] equal-momentum-N8                        S=   6.60 IC= 0.0294 IR=   1.15 (15s)
+[62] icir-momentum-N8                         S=   4.21 IC= 0.0216 IR=   1.08 (30s)
+[63] ridge-momentum-N8                        S=   5.66 IC= 0.0216 IR=   1.14 (31s)
+[64] equal-momentum-N10                       S=   5.53 IC= 0.0299 IR=   1.02 (17s)
+[65] icir-momentum-N10                        S=   4.09 IC= 0.0236 IR=   1.05 (36s)
+[66] ridge-momentum-N10                       S=   6.00 IC= 0.0251 IR=   1.08 (34s)
+[67] equal-momentum-N12                       S=   5.70 IC= 0.0307 IR=   0.94 (43s)
+[68] icir-momentum-N12                        S=   4.37 IC= 0.0261 IR=   1.05 (64s)
+[69] ridge-momentum-N12                       S=   6.20 IC= 0.0274 IR=   1.02 (62s)
+[70] equal-momentum-N15                       S=   5.87 IC= 0.0307 IR=   0.99 (46s)
+[71] icir-momentum-N15                        S=   4.46 IC= 0.0260 IR=   1.04 (74s)
+[72] ridge-momentum-N15                       S=   6.18 IC= 0.0276 IR=   1.02 (73s)
+[73] equal-volatility-N3                      S=   1.62 IC= 0.0166 IR=   0.47 (10s)
+[74] icir-volatility-N3                       S=   1.32 IC= 0.0148 IR=   0.46 (13s)
+[75] ridge-volatility-N3                      S=   1.10 IC= 0.0108 IR=   0.42 (13s)
+[76] equal-volatility-N5                      S=  -1.44 IC= 0.0187 IR=   0.67 (42s)
+[77] icir-volatility-N5                       S=  -2.71 IC= 0.0160 IR=   0.63 (20s)
+[78] ridge-volatility-N5                      S=  -0.48 IC= 0.0152 IR=   0.55 (20s)
+[79] equal-volatility-N8                      S=   0.63 IC= 0.0179 IR=   0.73 (16s)
+[80] icir-volatility-N8                       S=   0.11 IC= 0.0166 IR=   0.81 (31s)
+[81] ridge-volatility-N8                      S=   1.17 IC= 0.0134 IR=   0.59 (33s)
+[82] equal-volatility-N10                     S=  -0.41 IC= 0.0219 IR=   0.97 (19s)
+[83] icir-volatility-N10                      S=  -0.69 IC= 0.0200 IR=   1.14 (39s)
+[84] ridge-volatility-N10                     S=   0.67 IC= 0.0163 IR=   0.74 (38s)
+
+--- PHASE 2: Clean pool ---
+[85] equal-clean-N10                          S=   3.98 IC= 0.0421 IR=   1.02 (18s)
+[86] icir-clean-N10                           S=  -1.36 IC= 0.0387 IR=   1.45 (32s)
+[87] ridge-clean-N10                          S=   6.73 IC= 0.0438 IR=   1.01 (33s)
+[88] equal-clean-N20                          ERROR: timeout/retry exhausted
+[89] icir-clean-N20                           ERROR: timeout/retry exhausted
+[90] ridge-clean-N20                          ERROR: timeout/retry exhausted
+[91] equal-clean-N30                          ERROR: timeout/retry exhausted
+[92] icir-clean-N30                           ERROR: timeout/retry exhausted
+[93] ridge-clean-N30                          ERROR: timeout/retry exhausted
+[94] equal-clean-N50                          ERROR: timeout/retry exhausted
+[95] icir-clean-N50                           ERROR: timeout/retry exhausted
+[96] ridge-clean-N50                          ERROR: timeout/retry exhausted
+[97] equal-clean-N75                          ERROR: timeout/retry exhausted
+[98] icir-clean-N75                           ERROR: timeout/retry exhausted
+[99] ridge-clean-N75                          ERROR: timeout/retry exhausted
+[100] equal-clean-N100                         ERROR: timeout/retry exhausted
+[101] icir-clean-N100                          ERROR: timeout/retry exhausted
+[102] ridge-clean-N100                         ERROR: timeout/retry exhausted
+[103] equal-clean-N150                         ERROR: timeout/retry exhausted
+[104] icir-clean-N150                          ERROR: timeout/retry exhausted
+[105] ridge-clean-N150                         ERROR: timeout/retry exhausted
+[106] equal-clean-N200                         ERROR: timeout/retry exhausted
+[107] icir-clean-N200                          ERROR: timeout/retry exhausted
+[108] ridge-clean-N200                         ERROR: timeout/retry exhausted
+
+--- PHASE 3: Top by IS_IC ---
+[109] equal-topIC-N3                           ERROR: timeout/retry exhausted
+[110] icir-topIC-N3                            ERROR: timeout/retry exhausted
+[111] ridge-topIC-N3                           ERROR: timeout/retry exhausted
+[112] equal-topIC-N5                           ERROR: timeout/retry exhausted
+[113] icir-topIC-N5                            ERROR: timeout/retry exhausted
+[114] ridge-topIC-N5                           S=  -1.28 IC= 0.0377 IR=   1.45 (31s)
+[115] equal-topIC-N10                          S=   2.45 IC= 0.0395 IR=   1.10 (19s)
+[116] icir-topIC-N10                           S=   1.37 IC= 0.0388 IR=   1.27 (38s)
+[117] ridge-topIC-N10                          S=   0.40 IC= 0.0390 IR=   1.31 (39s)
+[118] equal-topIC-N15                          ERROR: timeout/retry exhausted
+[119] icir-topIC-N15                           ERROR: timeout/retry exhausted
+[120] ridge-topIC-N15                          ERROR: timeout/retry exhausted
+[121] equal-topIC-N20                          ERROR: timeout/retry exhausted
+[122] icir-topIC-N20                           ERROR: timeout/retry exhausted
+[123] ridge-topIC-N20                          ERROR: timeout/retry exhausted
+[124] equal-topIC-N30                          ERROR: timeout/retry exhausted
+[125] icir-topIC-N30                           ERROR: timeout/retry exhausted
+[126] ridge-topIC-N30                          ERROR: timeout/retry exhausted
+[127] equal-topIC-N50                          ERROR: timeout/retry exhausted
+[128] icir-topIC-N50                           ERROR: timeout/retry exhausted
+[129] ridge-topIC-N50                          ERROR: timeout/retry exhausted
+[130] equal-topIC-N75                          ERROR: timeout/retry exhausted
+[131] icir-topIC-N75                           ERROR: timeout/retry exhausted
+[132] ridge-topIC-N75                          ERROR: timeout/retry exhausted
+[133] equal-topIC-N100                         ERROR: timeout/retry exhausted
+[134] icir-topIC-N100                          ERROR: timeout/retry exhausted
+[135] ridge-topIC-N100                         ERROR: timeout/retry exhausted
+
+--- PHASE 4: Top by IS_Sharpe ---
+[136] equal-topSharpe-N5                       ERROR: timeout/retry exhausted
+[137] icir-topSharpe-N5                        ERROR: timeout/retry exhausted
+[138] ridge-topSharpe-N5                       ERROR: timeout/retry exhausted
+[139] equal-topSharpe-N10                      ERROR: timeout/retry exhausted
+[140] icir-topSharpe-N10                       ERROR: timeout/retry exhausted
+[141] ridge-topSharpe-N10                      ERROR: timeout/retry exhausted
+[142] equal-topSharpe-N20                      ERROR: timeout/retry exhausted
+[143] icir-topSharpe-N20                       ERROR: timeout/retry exhausted
+[144] ridge-topSharpe-N20                      S=   6.68 IC= 0.0335 IR=   1.27 (127s)
+[145] equal-topSharpe-N30                      ERROR: timeout/retry exhausted
+[146] icir-topSharpe-N30                       ERROR: timeout/retry exhausted
+[147] ridge-topSharpe-N30                      ERROR: timeout/retry exhausted
+[148] equal-topSharpe-N50                      ERROR: timeout/retry exhausted
+[149] icir-topSharpe-N50                       ERROR: timeout/retry exhausted
+[150] ridge-topSharpe-N50                      ERROR: timeout/retry exhausted
+[151] equal-topSharpe-N100                     ERROR: timeout/retry exhausted
+[152] icir-topSharpe-N100                      ERROR: timeout/retry exhausted
+[153] ridge-topSharpe-N100                     ERROR: timeout/retry exhausted
+
+--- PHASE 5: Cross-style greedy ---
+[154] equal-cross_greedy-N5                    ERROR: timeout/retry exhausted
+[155] icir-cross_greedy-N5                     ERROR: timeout/retry exhausted
+[156] ridge-cross_greedy-N5                    ERROR: timeout/retry exhausted
+[157] equal-cross_greedy-N8                    ERROR: timeout/retry exhausted
+[158] icir-cross_greedy-N8                     ERROR: timeout/retry exhausted
+[159] ridge-cross_greedy-N8                    ERROR: timeout/retry exhausted
+[160] equal-cross_greedy-N10                   ERROR: timeout/retry exhausted
+[161] icir-cross_greedy-N10                    ERROR: timeout/retry exhausted
+[162] ridge-cross_greedy-N10                   ERROR: timeout/retry exhausted
+
+--- PHASE 6: Mixed pool ---
+[163] equal-mixed-N10                          ERROR: timeout/retry exhausted
+[164] icir-mixed-N10                           ERROR: timeout/retry exhausted
+[165] ridge-mixed-N10                          ERROR: timeout/retry exhausted
+[166] equal-mixed-N20                          ERROR: timeout/retry exhausted
+[167] icir-mixed-N20                           ERROR: timeout/retry exhausted
+[168] ridge-mixed-N20                          ERROR: timeout/retry exhausted
+[169] equal-mixed-N30                          ERROR: timeout/retry exhausted
+[170] icir-mixed-N30                           ERROR: timeout/retry exhausted
+[171] ridge-mixed-N30                          ERROR: timeout/retry exhausted
+[172] equal-mixed-N50                          ERROR: timeout/retry exhausted
+[173] icir-mixed-N50                           ERROR: timeout/retry exhausted
+[174] ridge-mixed-N50                          ERROR: timeout/retry exhausted
+[175] equal-mixed-N75                          ERROR: timeout/retry exhausted
+[176] icir-mixed-N75                           ERROR: timeout/retry exhausted
+[177] ridge-mixed-N75                          ERROR: timeout/retry exhausted
+[178] equal-mixed-N100                         ERROR: timeout/retry exhausted
+[179] icir-mixed-N100                          ERROR: timeout/retry exhausted
+[180] ridge-mixed-N100                         ERROR: timeout/retry exhausted
+
+--- PHASE 7: Style-balanced ---
+[181] equal-balanced-p1                        ERROR: timeout/retry exhausted
+[182] icir-balanced-p1                         ERROR: timeout/retry exhausted
+[183] ridge-balanced-p1                        ERROR: timeout/retry exhausted
+[184] equal-balanced-p2                        ERROR: timeout/retry exhausted
+[185] icir-balanced-p2                         ERROR: timeout/retry exhausted
+[186] ridge-balanced-p2                        ERROR: timeout/retry exhausted
+[187] equal-balanced-p3                        ERROR: timeout/retry exhausted
+[188] icir-balanced-p3                         ERROR: timeout/retry exhausted
+[189] ridge-balanced-p3                        ERROR: timeout/retry exhausted
+[190] equal-balanced-p5                        ERROR: timeout/retry exhausted
+[191] icir-balanced-p5                         ERROR: timeout/retry exhausted
+[192] ridge-balanced-p5                        ERROR: timeout/retry exhausted
+
+--- PHASE 8: Unknown group ---
+[193] equal-unknown-N10                        ERROR: timeout/retry exhausted
+[194] icir-unknown-N10                         ERROR: timeout/retry exhausted
+[195] ridge-unknown-N10                        ERROR: timeout/retry exhausted
+[196] equal-unknown-N20                        ERROR: timeout/retry exhausted
+[197] icir-unknown-N20                         ERROR: timeout/retry exhausted
+[198] ridge-unknown-N20                        ERROR: timeout/retry exhausted
+[199] equal-unknown-N50                        ERROR: timeout/retry exhausted
+[200] icir-unknown-N50                         ERROR: timeout/retry exhausted
+[201] ridge-unknown-N50                        ERROR: timeout/retry exhausted
+
+--- PHASE 9: All-in ---
+[202] equal-all-N50                            ERROR: timeout/retry exhausted
+[203] icir-all-N50                             ERROR: timeout/retry exhausted
+[204] ridge-all-N50                            ERROR: timeout/retry exhausted
+[205] equal-all-N100                           ERROR: timeout/retry exhausted
+[206] icir-all-N100                            ERROR: timeout/retry exhausted
+[207] ridge-all-N100                           ERROR: timeout/retry exhausted
+[208] equal-all-N200                           ERROR: timeout/retry exhausted
+[209] icir-all-N200                            ERROR: timeout/retry exhausted
+[210] ridge-all-N200                           ERROR: timeout/retry exhausted
+[211] equal-all-N300                           ERROR: timeout/retry exhausted
+[212] icir-all-N300                            ERROR: timeout/retry exhausted
+[213] ridge-all-N300                           ERROR: timeout/retry exhausted
+
+--- PHASE 10: Pairwise cross-group ---
+[214] equal-liquidity+microstructure           ERROR: timeout/retry exhausted
+[215] icir-liquidity+microstructure            ERROR: timeout/retry exhausted
+[216] equal-liquidity+reversal                 ERROR: timeout/retry exhausted
+[217] icir-liquidity+reversal                  ERROR: timeout/retry exhausted
+[218] equal-liquidity+momentum                 ERROR: timeout/retry exhausted
+[219] icir-liquidity+momentum                  ERROR: timeout/retry exhausted
+[220] equal-liquidity+volatility               ERROR: timeout/retry exhausted
+[221] icir-liquidity+volatility                ERROR: timeout/retry exhausted
+[222] equal-microstructure+reversal            ERROR: timeout/retry exhausted
+[223] icir-microstructure+reversal             ERROR: timeout/retry exhausted
+[224] equal-microstructure+momentum            ERROR: timeout/retry exhausted
+[225] icir-microstructure+momentum             ERROR: timeout/retry exhausted
+[226] equal-microstructure+volatility          ERROR: timeout/retry exhausted
+[227] icir-microstructure+volatility           ERROR: timeout/retry exhausted
+[228] equal-reversal+momentum                  ERROR: timeout/retry exhausted
+[229] icir-reversal+momentum                   ERROR: timeout/retry exhausted
+[230] equal-reversal+volatility                ERROR: timeout/retry exhausted
+[231] icir-reversal+volatility                 ERROR: timeout/retry exhausted
+[232] equal-momentum+volatility                ERROR: timeout/retry exhausted
+[233] icir-momentum+volatility                 S=   0.04 IC= 0.0209 IR=   0.94 (38s)
+
+=== COMPLETE ===
+Total: 233 experiments, 164 errors
+Duration: 104.5 min
+Results: 69 successful

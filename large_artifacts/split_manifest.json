@@ -1,0 +1,94 @@
+[
+  {
+    "file_name": "DailyData20240102open.bin",
+    "source_path": "D:\\yyb\\DailyData20240102open.bin",
+    "bytes": 299061766,
+    "sha256": "e5c6bbcd03aaa21c821929383a178386db21d687101bd7dca93462a705895b81",
+    "chunk_size": 94371840,
+    "parts": [
+      {
+        "name": "DailyData20240102open.bin.part001",
+        "bytes": 94371840
+      },
+      {
+        "name": "DailyData20240102open.bin.part002",
+        "bytes": 94371840
+      },
+      {
+        "name": "DailyData20240102open.bin.part003",
+        "bytes": 94371840
+      },
+      {
+        "name": "DailyData20240102open.bin.part004",
+        "bytes": 15946246
+      }
+    ]
+  },
+  {
+    "file_name": "银叶杯提交.zip",
+    "source_path": "D:\\yyb\\银叶杯提交.zip",
+    "bytes": 149228113,
+    "sha256": "99a97859790594d348962b9eb9b12e6dd5052ca3b120750d3248eff16342e686",
+    "chunk_size": 94371840,
+    "parts": [
+      {
+        "name": "银叶杯提交.zip.part001",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交.zip.part002",
+        "bytes": 54856273
+      }
+    ]
+  },
+  {
+    "file_name": "银叶杯提交_赶工最终版.zip",
+    "source_path": "D:\\yyb\\银叶杯提交_赶工最终版.zip",
+    "bytes": 317341116,
+    "sha256": "72c3140ab6029a007025f5d223eabbc25ba0f833f4227778614df3e2bde5fa6d",
+    "chunk_size": 94371840,
+    "parts": [
+      {
+        "name": "银叶杯提交_赶工最终版.zip.part001",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工最终版.zip.part002",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工最终版.zip.part003",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工最终版.zip.part004",
+        "bytes": 34225596
+      }
+    ]
+  },
+  {
+    "file_name": "银叶杯提交_赶工增强版.zip",
+    "source_path": "D:\\yyb\\银叶杯提交_赶工增强版.zip",
+    "bytes": 334056050,
+    "sha256": "9bd477cbf7341c9d6c981dacdab6abd8febe12266efac33aac0f7023f6a22b54",
+    "chunk_size": 94371840,
+    "parts": [
+      {
+        "name": "银叶杯提交_赶工增强版.zip.part001",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工增强版.zip.part002",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工增强版.zip.part003",
+        "bytes": 94371840
+      },
+      {
+        "name": "银叶杯提交_赶工增强版.zip.part004",
+        "bytes": 50940530
+      }
+    ]
+  }
+]

@@ -1,4 +1,4 @@
-# YYB Platform Restart — guarantees single instance, kills old processes properly
+﻿# YYB Platform Restart — guarantees single instance, kills old processes properly
 $ErrorActionPreference = "Continue"
 
 Write-Host "=== Killing old processes ==="
@@ -35,7 +35,7 @@ Remove-Item "$env:TEMP\lgb_task_*.json" -Force -ErrorAction SilentlyContinue
 Remove-Item "$env:TEMP\task_*.json" -Force -ErrorAction SilentlyContinue
 
 # Start Flask
-$env:DEEPSEEK_API_KEY = "sk-97e53fa7645849c9bf1679be75bc5eb8"
+$env:DEEPSEEK_API_KEY = "<SET_DEEPSEEK_API_KEY_IN_ENV>"
 $proc = Start-Process python -ArgumentList @("-u", "app.py") `
     -WorkingDirectory "D:\yyb\backtest_platform" `
     -WindowStyle Hidden `
@@ -67,3 +67,4 @@ try {
 $count = (Get-CimInstance Win32_Process | Where-Object { $_.CommandLine -match 'app\.py' }).Count
 Write-Host "Flask instances: $count (should be 1)"
 Write-Host "DONE"
+

@@ -1,0 +1,7 @@
+Loading engine...
+Ready. IS:[2675:3403] OOS:[3403:3645] in 4s
+Queue: 623, In DB: 142, To do: 483
+Starting DB count: 142
+[10/483] 2% done=10 err=0 db=142 (+0) elapsed=1min
+[20/483] 4% done=20 err=0 db=142 (+0) elapsed=2min
+[30/483] 6% done=30 err=0 db=142 (+0) elapsed=2min

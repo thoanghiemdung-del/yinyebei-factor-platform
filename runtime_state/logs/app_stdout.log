@@ -1,0 +1,6 @@
+[Init] Stale workers and temp files cleaned.
+[Init] Loading engine...
+[Init] DataPipeline + BacktestEngine + FactorComputer ready.
+[Init] Engine ready. Starting server...
+ * Serving Flask app 'app'
+ * Debug mode: off

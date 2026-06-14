@@ -1,0 +1,55 @@
+[2026-05-26 12:56:46] guardian start
+[2026-05-26 13:00:10] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 13:00:10] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 13:13:50] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 13:13:50] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 13:27:19] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 13:27:19] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 13:40:55] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 13:40:55] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 13:54:20] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 13:54:20] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 14:07:49] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 14:07:49] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 14:21:15] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 14:21:15] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 14:34:45] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 14:34:45] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 14:48:05] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 14:48:05] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 15:01:49] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 15:01:49] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 15:15:18] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 15:15:18] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 15:28:46] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 15:28:46] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 15:42:22] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 15:42:22] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 15:55:40] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 15:55:40] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 16:09:05] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 16:09:05] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 16:22:44] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 16:22:44] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 16:36:12] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 16:36:12] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 16:49:35] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 16:49:35] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 17:03:12] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 17:03:12] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 17:16:39] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 17:16:39] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 17:30:01] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 17:30:01] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 17:43:41] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 17:43:41] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 17:57:08] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 17:57:08] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 18:10:35] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 18:10:35] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 18:24:07] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 18:24:07] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 18:37:12] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 18:37:12] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999
+[2026-05-26 18:50:57] status local=True public=True miner=False combo=False combo_builder=True eligible_factors=916/1000 remaining=84
+[2026-05-26 18:50:57] dedup eligible_qualified=914 kept=914 remove=0 threshold=0.7 | max_corr_after=0.6999

@@ -1,0 +1,17 @@
+{
+  "file_name": "银叶杯提交.zip",
+  "source_path": "D:\\yyb\\银叶杯提交.zip",
+  "bytes": 149228113,
+  "sha256": "99a97859790594d348962b9eb9b12e6dd5052ca3b120750d3248eff16342e686",
+  "chunk_size": 94371840,
+  "parts": [
+    {
+      "name": "银叶杯提交.zip.part001",
+      "bytes": 94371840
+    },
+    {
+      "name": "银叶杯提交.zip.part002",
+      "bytes": 54856273
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 461, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in run
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in <listcomp>
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+KeyError: 'daily'
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 461, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in run
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in <listcomp>
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+KeyError: 'daily'
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 461, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in run
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in <listcomp>
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+KeyError: 'daily'
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 461, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in run
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in <listcomp>
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+KeyError: 'daily'
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 461, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in run
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+  File "D:\yyb\backtest_platform\run_afternoon_extension_experiments.py", line 368, in <listcomp>
+    values = [abs_corr(row["daily"], old["daily"]) for old in strict]
+KeyError: 'daily'

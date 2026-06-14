@@ -1,0 +1,62 @@
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\combo_builder.py", line 726, in main
+    run_one_combo(state)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 644, in run_one_combo
+    result = start_lgb(op, expressions, cfg)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 575, in start_lgb
+    start = request_json(op, "/api/superalpha/lgb/start", payload, timeout=60)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 144, in request_json
+    with op.open(req, timeout=timeout) as resp:
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 517, in open
+    response = self._open(req, data)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 534, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1375, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 1350, in do_open
+    r = h.getresponse()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 1377, in getresponse
+    response.begin()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 320, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\http\client.py", line 281, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python39\lib\socket.py", line 704, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\combo_builder.py", line 752, in <module>
+    main()
+  File "D:\yyb\backtest_platform\combo_builder.py", line 745, in main
+    write_status(state, phase="error")
+  File "D:\yyb\backtest_platform\combo_builder.py", line 120, in write_status
+    atomic_json(STATUS_FILE, status)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 82, in atomic_json
+    os.replace(tmp, path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\yyb\\logs\\combo_builder_status.json.tmp' -> 'D:\\yyb\\logs\\combo_builder_status.json'
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\combo_builder.py", line 727, in main
+    save_state(state)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 101, in save_state
+    atomic_json(STATE_FILE, state)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 82, in atomic_json
+    os.replace(tmp, path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\yyb\\logs\\combo_builder_state.json.tmp' -> 'D:\\yyb\\logs\\combo_builder_state.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\combo_builder.py", line 752, in <module>
+    main()
+  File "D:\yyb\backtest_platform\combo_builder.py", line 746, in main
+    save_state(state)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 101, in save_state
+    atomic_json(STATE_FILE, state)
+  File "D:\yyb\backtest_platform\combo_builder.py", line 82, in atomic_json
+    os.replace(tmp, path)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\yyb\\logs\\combo_builder_state.json.tmp' -> 'D:\\yyb\\logs\\combo_builder_state.json'

@@ -1,0 +1,54 @@
+[20:47:23] ================================================== SMART MINE START ==================================================
+[20:47:23] Checking Flask...
+[20:47:23] Pre-warming minute cache...
+[20:47:31] Cache warm OK (attempt 1)
+[20:47:45] Generator: 1702 untested expressions across 5 phases
+[20:47:45] Starting: 82/300, queue=1702
+[20:49:15] Progress: 60/1702 tested | 82/300 found
+[20:50:45] Progress: 120/1702 tested | 86/300 found
+[20:51:37]   + IC=+0.0103 S=-0.29 | MxM:morning_*last30mi
+[20:51:49]   + IC=+0.0122 S=1.62 | MxM:morning_*body_ret
+[20:52:20]   + IC=+0.0123 S=-0.73 | MxM:afternoo*last30mi
+[20:52:30]   + IC=+0.0160 S=0.98 | MxM:afternoo*body_ret
+[20:52:52] Progress: 180/1702 tested | 104/300 found
+[20:52:52] === 5min: 82->104 (+22) | 34.7% | Flask=OK ===
+[20:53:22]   + IC=+0.0149 S=0.06 | MxM:last30mi*body_ret
+[20:53:41]   + IC=+0.0116 S=-1.08 | MxM:body_ret*am_pm_di
+[20:53:51]   + IC=+0.0187 S=-1.72 | MxD:intraday*ret_5d
+[20:59:17] === 5min: 104->116 (+12) | 38.7% | Flask=OK ===
+[21:05:36] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:08:50] Progress: 240/1702 tested | 116/300 found
+[21:12:05] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:18:34] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\smart_mine.py", line 217, in <module>
+    r = bt(expr)
+  File "D:\yyb\backtest_platform\smart_mine.py", line 40, in bt
+    o = opener()
+  File "D:\yyb\backtest_platform\smart_mine.py", line 24, in opener
+    o.open(urllib.request.Request(f'{API}/login',
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 523, in open
+    response = meth(req, response)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 632, in http_response
+    response = self.parent.error(
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 561, in error
+    return self._call_chain(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 494, in _call_chain
+    result = func(*args)
+  File "C:\Users\Ðì×ÓÃú\AppData\Local\Programs\Python\Python39\lib\urllib\request.py", line 641, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 500: INTERNAL SERVER ERROR
+ S=-0.73 | MxM:afternoo*last30mi
+[20:52:29]   + IC=+0.0160 S=0.98 | MxM:afternoo*body_ret
+[20:53:18]   + IC=+0.0149 S=0.06 | MxM:last30mi*body_ret
+[20:53:37]   + IC=+0.0116 S=-1.08 | MxM:body_ret*am_pm_di
+[20:53:37] === 5min: 74->110 (+36) | 36.7% | Flask=OK ===
+[20:53:50]   + IC=+0.0187 S=-1.72 | MxD:intraday*ret_5d
+[20:54:22] Batch 40: +0 | 116/300 | consec_miss=9
+[20:59:17] === 5min: 110->116 (+6) | 38.7% | Flask=OK ===
+[21:05:35] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:12:03] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:12:06] Refreshing generator...
+[21:18:33] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===
+[21:20:22] Batch 50: +0 | 116/300 | consec_miss=18
+[21:26:20] === 5min: 116->116 (+0) | 38.7% | Flask=OK ===

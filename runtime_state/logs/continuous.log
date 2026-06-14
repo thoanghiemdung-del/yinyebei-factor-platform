@@ -1,0 +1,255 @@
+=== CONTINUOUS LOOP ！ 2026-06-01 07:03:01 ===
+[MEM] Killed Flask PID 23136
+Loaded 636 factors
+Total experiments in one cycle: 183
+[1] equal-reversal-N3                        S=   3.73 IC= 0.0311 (9s)
+[2] icir-reversal-N3                         S=   3.81 IC= 0.0300 (11s)
+[3] ridge-reversal-N3                        S=   3.92 IC= 0.0295 (12s)
+[4] equal-reversal-N4                        S=   4.76 IC= 0.0326 (13s)
+[5] icir-reversal-N4                         S=   4.41 IC= 0.0320 (20s)
+[6] ridge-reversal-N4                        S=   4.29 IC= 0.0309 (19s)
+[7] equal-reversal-N5                        S=   4.67 IC= 0.0334 (11s)
+[8] icir-reversal-N5                         S=   4.32 IC= 0.0334 (24s)
+[9] ridge-reversal-N5                        S=   4.38 IC= 0.0330 (24s)
+[10] equal-reversal-N6                        S=   5.55 IC= 0.0368 (13s)
+[11] icir-reversal-N6                         S=   5.25 IC= 0.0365 (20s)
+[12] ridge-reversal-N6                        S=   4.99 IC= 0.0360 (19s)
+[13] equal-reversal-N7                        S=   5.78 IC= 0.0356 (12s)
+[14] icir-reversal-N7                         S=   5.50 IC= 0.0361 (24s)
+[15] ridge-reversal-N7                        S=   5.39 IC= 0.0366 (24s)
+[16] equal-reversal-N8                        S=   5.56 IC= 0.0358 (13s)
+[17] icir-reversal-N8                         S=   5.36 IC= 0.0363 (26s)
+[18] ridge-reversal-N8                        S=   4.79 IC= 0.0363 (26s)
+[19] equal-reversal-N9                        S=   5.68 IC= 0.0374 (22s)
+[20] icir-reversal-N9                         S=   5.50 IC= 0.0377 (31s)
+[21] ridge-reversal-N9                        S=   3.97 IC= 0.0361 (31s)
+[22] equal-reversal-N10                       S=   5.34 IC= 0.0361 (19s)
+[23] icir-reversal-N10                        S=   5.46 IC= 0.0369 (40s)
+[24] ridge-reversal-N10                       S=   3.87 IC= 0.0365 (61s)
+[25] equal-momentum-N3                        S=   5.99 IC= 0.0311 (10s)
+[26] icir-momentum-N3                         S=   6.03 IC= 0.0269 (17s)
+[27] ridge-momentum-N3                        S=   6.37 IC= 0.0260 (16s)
+[28] equal-momentum-N4                        S=   6.86 IC= 0.0303 (10s)
+[29] icir-momentum-N4                         S=   6.47 IC= 0.0273 (22s)
+[30] ridge-momentum-N4                        S=   6.10 IC= 0.0290 (22s)
+[31] equal-momentum-N5                        S=   4.71 IC= 0.0267 (14s)
+[32] icir-momentum-N5                         S=   4.15 IC= 0.0207 (29s)
+[33] ridge-momentum-N5                        S=   4.36 IC= 0.0205 (28s)
+[34] equal-momentum-N6                        S=   3.40 IC= 0.0242 (15s)
+[35] icir-momentum-N6                         S=   2.40 IC= 0.0180 (29s)
+[36] ridge-momentum-N6                        S=   2.51 IC= 0.0159 (27s)
+[37] equal-momentum-N7                        S=   5.92 IC= 0.0280 (17s)
+[38] icir-momentum-N7                         S=   2.96 IC= 0.0190 (32s)
+[39] ridge-momentum-N7                        S=   5.01 IC= 0.0187 (32s)
+[40] equal-momentum-N8                        S=   6.35 IC= 0.0295 (19s)
+[41] icir-momentum-N8                         S=   4.22 IC= 0.0218 (39s)
+[42] ridge-momentum-N8                        S=   5.61 IC= 0.0217 (40s)
+[43] equal-momentum-N9                        S=   5.65 IC= 0.0296 (21s)
+[44] icir-momentum-N9                         S=   4.10 IC= 0.0226 (43s)
+[45] ridge-momentum-N9                        S=   5.84 IC= 0.0226 (58s)
+[46] equal-momentum-N10                       S=   5.48 IC= 0.0300 (20s)
+[47] icir-momentum-N10                        S=   4.11 IC= 0.0238 (40s)
+[48] ridge-momentum-N10                       S=   5.87 IC= 0.0253 (41s)
+[49] equal-microstructure-N3                  S=  -0.23 IC= 0.0256 (283s)
+[MEM] Flask 4.2GB, free 1.9GB ！ restarting Flask...
+[MEM] Killed Flask PID 27660
+[50] icir-microstructure-N3                   S=  -0.38 IC= 0.0248 (337s)
+
+=== REPORT 07:35:27 ===
+  Results: 50 | Cycle: 0 | Errors: 0
+  Memory: Flask 3.6GB, Free 2.5GB
+  Top Sharpe:
+    equal-momentum-N4                        S=6.86 IC=0.0303
+    icir-momentum-N4                         S=6.47 IC=0.0273
+    ridge-momentum-N3                        S=6.37 IC=0.0260
+    equal-momentum-N8                        S=6.35 IC=0.0295
+    ridge-momentum-N4                        S=6.10 IC=0.0290
+=== END REPORT ===
+
+[51] ridge-microstructure-N3                  S=  -0.45 IC= 0.0260 (16s)
+[52] equal-microstructure-N4                  S=   2.68 IC= 0.0283 (9s)
+[53] icir-microstructure-N4                   S=   3.08 IC= 0.0270 (18s)
+[54] ridge-microstructure-N4                  S=   2.94 IC= 0.0288 (18s)
+[55] equal-microstructure-N5                  S=   1.98 IC= 0.0293 (11s)
+[56] icir-microstructure-N5                   S=   2.23 IC= 0.0280 (21s)
+[57] ridge-microstructure-N5                  S=   2.32 IC= 0.0299 (19s)
+[58] equal-microstructure-N6                  S=   2.37 IC= 0.0294 (11s)
+[59] icir-microstructure-N6                   S=   3.11 IC= 0.0285 (21s)
+[60] ridge-microstructure-N6                  S=   2.20 IC= 0.0293 (22s)
+[61] equal-microstructure-N7                  S=   1.99 IC= 0.0295 (14s)
+[MEM] Flask 3.5GB, free 2.4GB ！ restarting Flask...
+[MEM] Killed Flask PID 240
+[62] icir-microstructure-N7                   S=   2.64 IC= 0.0286 (421s)
+[MEM] Flask 3.5GB, free 2.6GB ！ restarting Flask...
+[MEM] Killed Flask PID 8792
+[63] ridge-microstructure-N7                  S=   2.31 IC= 0.0295 (318s)
+[MEM] Flask 3.5GB, free 2.5GB ！ restarting Flask...
+[MEM] Killed Flask PID 26964
+[64] equal-microstructure-N8                  S=   2.29 IC= 0.0295 (399s)
+[MEM] Flask 3.6GB, free 2.4GB ！ restarting Flask...
+[MEM] Killed Flask PID 29808
+[65] icir-microstructure-N8                   S=   2.50 IC= 0.0285 (448s)
+
+=== REPORT 08:06:54 ===
+  Results: 65 | Cycle: 0 | Errors: 0
+  Memory: Flask 3.6GB, Free 1.7GB
+  Top Sharpe:
+    equal-momentum-N4                        S=6.86 IC=0.0303
+    icir-momentum-N4                         S=6.47 IC=0.0273
+    ridge-momentum-N3                        S=6.37 IC=0.0260
+    equal-momentum-N8                        S=6.35 IC=0.0295
+    ridge-momentum-N4                        S=6.10 IC=0.0290
+=== END REPORT ===
+
+[MEM] Flask 3.6GB, free 1.9GB ！ restarting Flask...
+[MEM] Killed Flask PID 30400
+[65] ridge-microstructure-N8                  ERR: timeout/retry exhausted
+[65] equal-microstructure-N9                  ERR: timeout/retry exhausted
+[65] icir-microstructure-N9                   ERR: timeout/retry exhausted
+[65] ridge-microstructure-N9                  ERR: timeout/retry exhausted
+[65] equal-microstructure-N10                 ERR: timeout/retry exhausted
+[65] icir-microstructure-N10                  ERR: timeout/retry exhausted
+[65] ridge-microstructure-N10                 ERR: timeout/retry exhausted
+[65] equal-volatility-N3                      ERR: timeout/retry exhausted
+[65] icir-volatility-N3                       ERR: timeout/retry exhausted
+[65] ridge-volatility-N3                      ERR: timeout/retry exhausted
+[65] equal-volatility-N4                      ERR: timeout/retry exhausted
+Too many errors (11), restarting Flask...
+[66] icir-volatility-N4                       S=   1.41 IC= 0.0151 (41s)
+[67] ridge-volatility-N4                      S=   1.20 IC= 0.0130 (16s)
+[68] equal-volatility-N5                      S=  -0.97 IC= 0.0188 (27s)
+[69] icir-volatility-N5                       S=  -2.36 IC= 0.0161 (20s)
+[70] ridge-volatility-N5                      S=  -0.43 IC= 0.0153 (20s)
+[71] equal-volatility-N6                      S=  -0.95 IC= 0.0191 (13s)
+[72] icir-volatility-N6                       S=  -1.23 IC= 0.0168 (25s)
+[73] ridge-volatility-N6                      S=  -0.48 IC= 0.0150 (27s)
+[74] equal-volatility-N7                      S=   1.01 IC= 0.0193 (18s)
+[75] icir-volatility-N7                       S=   0.80 IC= 0.0172 (46s)
+[76] ridge-volatility-N7                      S=   0.96 IC= 0.0147 (44s)
+[77] equal-volatility-N8                      S=   0.90 IC= 0.0180 (25s)
+[78] icir-volatility-N8                       S=   0.74 IC= 0.0167 (52s)
+[79] ridge-volatility-N8                      S=   1.17 IC= 0.0134 (46s)
+[80] equal-volatility-N9                      S=   1.01 IC= 0.0216 (30s)
+[81] icir-volatility-N9                       S=   0.90 IC= 0.0193 (35s)
+[82] ridge-volatility-N9                      S=   1.32 IC= 0.0140 (34s)
+[83] equal-volatility-N10                     S=  -0.26 IC= 0.0220 (19s)
+[84] icir-volatility-N10                      S=  -0.37 IC= 0.0202 (38s)
+[85] ridge-volatility-N10                     S=   0.84 IC= 0.0163 (39s)
+[86] equal-liquidity-N3                       S=  -0.05 IC= 0.0376 (7s)
+[87] icir-liquidity-N3                        S=  -4.04 IC= 0.0379 (12s)
+[88] ridge-liquidity-N3                       S=  -2.57 IC= 0.0379 (13s)
+[89] equal-liquidity-N4                       S=  -1.48 IC= 0.0373 (9s)
+[90] icir-liquidity-N4                        S=  -2.74 IC= 0.0373 (15s)
+[91] ridge-liquidity-N4                       S=  -2.56 IC= 0.0374 (15s)
+[92] equal-liquidity-N5                       S=  -2.26 IC= 0.0390 (10s)
+[93] icir-liquidity-N5                        S=  -2.79 IC= 0.0378 (19s)
+[94] ridge-liquidity-N5                       S=  -2.88 IC= 0.0384 (20s)
+[95] equal-liquidity-N6                       S=  -2.69 IC= 0.0383 (12s)
+[96] icir-liquidity-N6                        S=  -3.39 IC= 0.0370 (27s)
+[97] ridge-liquidity-N6                       S=  -3.36 IC= 0.0375 (42s)
+[98] equal-liquidity-N7                       S=  -2.60 IC= 0.0381 (18s)
+[99] icir-liquidity-N7                        S=  -3.43 IC= 0.0370 (39s)
+[100] ridge-liquidity-N7                       S=  -3.32 IC= 0.0375 (31s)
+[101] equal-liquidity-N8                       S=  -1.10 IC= 0.0408 (303s)
+
+=== REPORT 08:39:50 ===
+  Results: 101 | Cycle: 0 | Errors: 0
+  Memory: Flask 4.0GB, Free 1.7GB
+  Top Sharpe:
+    equal-momentum-N4                        S=6.86 IC=0.0303
+    icir-momentum-N4                         S=6.47 IC=0.0273
+    ridge-momentum-N3                        S=6.37 IC=0.0260
+    equal-momentum-N8                        S=6.35 IC=0.0295
+    ridge-momentum-N4                        S=6.10 IC=0.0290
+=== END REPORT ===
+
+[MEM] Flask 4.0GB, free 1.7GB ！ restarting Flask...
+[MEM] Killed Flask PID 3248
+[102] icir-liquidity-N8                        S=  -3.06 IC= 0.0379 (416s)
+[MEM] Flask 3.6GB, free 2.1GB ！ restarting Flask...
+[MEM] Killed Flask PID 5132
+[103] ridge-liquidity-N8                       S=  -1.14 IC= 0.0414 (400s)
+[MEM] Flask 3.6GB, free 2.1GB ！ restarting Flask...
+[MEM] Killed Flask PID 30444
+[104] equal-liquidity-N9                       S=  -0.61 IC= 0.0405 (330s)
+[MEM] Flask 3.7GB, free 2.1GB ！ restarting Flask...
+[MEM] Killed Flask PID 3112
+[104] icir-liquidity-N9                        ERR: timeout/retry exhausted
+[104] ridge-liquidity-N9                       ERR: timeout/retry exhausted
+[104] equal-liquidity-N10                      ERR: timeout/retry exhausted
+[104] icir-liquidity-N10                       ERR: timeout/retry exhausted
+[104] ridge-liquidity-N10                      ERR: timeout/retry exhausted
+[104] equal-topIC-N3                           ERR: timeout/retry exhausted
+[104] icir-topIC-N3                            ERR: timeout/retry exhausted
+[104] ridge-topIC-N3                           ERR: timeout/retry exhausted
+
+=== REPORT 09:10:09 ===
+  Results: 104 | Cycle: 0 | Errors: 8
+  Memory: Flask 0.1GB, Free 5.3GB
+  Top Sharpe:
+    equal-momentum-N4                        S=6.86 IC=0.0303
+    icir-momentum-N4                         S=6.47 IC=0.0273
+    ridge-momentum-N3                        S=6.37 IC=0.0260
+    equal-momentum-N8                        S=6.35 IC=0.0295
+    ridge-momentum-N4                        S=6.10 IC=0.0290
+=== END REPORT ===
+
+[104] equal-topIC-N4                           ERR: timeout/retry exhausted
+[104] icir-topIC-N4                            ERR: timeout/retry exhausted
+[104] ridge-topIC-N4                           ERR: timeout/retry exhausted
+Too many errors (11), restarting Flask...
+[105] equal-topIC-N5                           S=  -1.76 IC= 0.0382 (51s)
+[106] icir-topIC-N5                            S=  -1.60 IC= 0.0385 (37s)
+[107] ridge-topIC-N5                           S=  -1.81 IC= 0.0381 (34s)
+[108] equal-topIC-N6                           S=  -0.24 IC= 0.0381 (24s)
+[109] icir-topIC-N6                            S=  -1.67 IC= 0.0385 (39s)
+[110] ridge-topIC-N6                           S=  -1.38 IC= 0.0381 (42s)
+[111] equal-topIC-N7                           S=   0.54 IC= 0.0390 (17s)
+[112] icir-topIC-N7                            S=  -1.29 IC= 0.0392 (33s)
+[113] ridge-topIC-N7                           S=  -0.55 IC= 0.0390 (28s)
+[114] equal-topIC-N8                           S=   3.67 IC= 0.0392 (17s)
+[115] icir-topIC-N8                            S=   2.50 IC= 0.0394 (31s)
+[116] ridge-topIC-N8                           S=   1.53 IC= 0.0391 (31s)
+[117] equal-topIC-N9                           S=   2.07 IC= 0.0388 (18s)
+[118] icir-topIC-N9                            S=   0.97 IC= 0.0389 (35s)
+[119] ridge-topIC-N9                           S=   0.03 IC= 0.0387 (34s)
+[120] equal-topIC-N10                          S=   1.91 IC= 0.0398 (20s)
+[121] icir-topIC-N10                           S=   0.94 IC= 0.0391 (38s)
+[122] ridge-topIC-N10                          S=   0.09 IC= 0.0393 (39s)
+[123] equal-topIC-N11                          S=   1.89 IC= 0.0392 (99s)
+[124] icir-topIC-N11                           S=   0.86 IC= 0.0384 (105s)
+[125] ridge-topIC-N11                          S=   0.17 IC= 0.0385 (96s)
+[126] equal-topSharpe-N5                       S=  12.35 IC= 0.0401 (12s)
+[127] icir-topSharpe-N5                        S=  12.73 IC= 0.0396 (24s)
+[128] ridge-topSharpe-N5                       S=  12.31 IC= 0.0406 (24s)
+[129] equal-topSharpe-N8                       S=  11.07 IC= 0.0390 (21s)
+[130] icir-topSharpe-N8                        S=   8.02 IC= 0.0339 (39s)
+[131] ridge-topSharpe-N8                       S=   8.06 IC= 0.0339 (39s)
+[132] equal-topSharpe-N10                      S=  10.06 IC= 0.0413 (23s)
+[133] icir-topSharpe-N10                       S=   8.44 IC= 0.0373 (47s)
+[134] ridge-topSharpe-N10                      S=   9.66 IC= 0.0378 (49s)
+[135] equal-cross_greedy-N5                    S=  -0.10 IC= 0.0387 (340s)
+[135] icir-cross_greedy-N5                     ERR: timeout/retry exhausted
+[135] ridge-cross_greedy-N5                    ERR: timeout/retry exhausted
+[135] equal-cross_greedy-N8                    ERR: timeout/retry exhausted
+[135] icir-cross_greedy-N8                     ERR: timeout/retry exhausted
+[135] ridge-cross_greedy-N8                    ERR: timeout/retry exhausted
+[135] equal-cross_greedy-N10                   ERR: timeout/retry exhausted
+[135] icir-cross_greedy-N10                    ERR: timeout/retry exhausted
+
+=== REPORT 09:40:14 ===
+  Results: 135 | Cycle: 0 | Errors: 7
+  Memory: Flask 0.1GB, Free 6.6GB
+  Top Sharpe:
+    icir-topSharpe-N5                        S=12.73 IC=0.0396
+    equal-topSharpe-N5                       S=12.35 IC=0.0401
+    ridge-topSharpe-N5                       S=12.31 IC=0.0406
+    equal-topSharpe-N8                       S=11.07 IC=0.0390
+    equal-topSharpe-N10                      S=10.06 IC=0.0413
+=== END REPORT ===
+
+[135] ridge-cross_greedy-N10                   ERR: timeout/retry exhausted
+[135] equal-clean-N8                           ERR: timeout/retry exhausted
+[135] icir-clean-N8                            ERR: timeout/retry exhausted
+[135] ridge-clean-N8                           ERR: timeout/retry exhausted
+Too many errors (11), restarting Flask...

@@ -1,0 +1,29 @@
+=== Systematic Experiment Runner ===
+Start: 2026-05-31 00:43:00
+
+Loaded 636 factors (IS_IC > 0.01)
+  mixed: 367
+  liquidity: 84
+  unknown: 58
+  microstructure: 54
+  reversal: 35
+  momentum: 22
+  volatility: 11
+  size: 3
+  fundamental: 2
+
+Clean pool (pure groups): 206 factors
+Mixed pool: 367 factors
+
+============================================================
+EXPERIMENT 1: Within-style combos
+============================================================
+  [1] equal-liquidity-N3 (avg_IS_IC=0.0330)... [Init] DataPipeline + BacktestEngine + FactorComputer ready.
+S=-0.68 IC=0.0373 IR=1.53 (23.4s)
+  [2] icir-liquidity-N3 (avg_IS_IC=0.0330)... S=-4.80 IC=0.0376 IR=1.88 (12.5s)
+  [3] ridge-liquidity-N3 (avg_IS_IC=0.0330)... S=-2.83 IC=0.0376 IR=1.81 (10.3s)
+  [4] equal-liquidity-N5 (avg_IS_IC=0.0319)... S=-2.64 IC=0.0388 IR=1.45 (10.5s)
+  [5] icir-liquidity-N5 (avg_IS_IC=0.0319)... S=-3.01 IC=0.0375 IR=1.63 (18.5s)
+  [6] ridge-liquidity-N5 (avg_IS_IC=0.0319)... S=-2.91 IC=0.0381 IR=1.58 (16.2s)
+  [7] equal-liquidity-N8 (avg_IS_IC=0.0305)... S=-1.41 IC=0.0405 IR=1.36 (293.6s)
+  [8] icir-liquidity-N8 (avg_IS_IC=0.0305)... 

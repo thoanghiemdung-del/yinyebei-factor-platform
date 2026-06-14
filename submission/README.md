@@ -1,12 +1,23 @@
-# Submission Package
+# 最终提交包
 
-This directory contains the privacy-sanitized final Silver Leaf Cup package.
+本目录保存银叶杯初赛最终提交材料。
 
-The ZIP keeps the required four-file structure:
+## 可直接提交的冻结 zip
+
+- `银叶杯_三个臭诸葛亮_初赛结果.zip`
+
+该 zip 来自桌面原始包，包含比赛要求的四个文件：
 
 - `银叶杯.py`
 - `回测报告.docx`
 - `因子逻辑说明文档.pdf`
 - `因子值.xlsx`
 
-Personal names, local machine paths, and account-specific URLs were removed from the package contents before upload.
+## 解压目录
+
+`official_initial_round_result/` 是同一 zip 的展开版本，便于 GitHub 在线查看和新电脑验证。
+
+## 提交逻辑
+
+最终因子为单一 `ultimate_lgb`。提交脚本读取 `因子值.xlsx`，返回日期轴、股票轴和
+970×5515 的因子矩阵。完整研究和从源数据重算逻辑位于 `backtest_platform/` 与 `model/`。

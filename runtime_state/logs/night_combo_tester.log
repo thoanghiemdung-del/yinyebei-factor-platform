@@ -1,0 +1,55 @@
+[2026-05-25 22:49:21] night combo tester start
+[2026-05-25 22:49:28] http_error 400: {"error":"SuperAlpha\u8ba1\u7b97\u5931\u8d25: Unable to allocate 76.7 MiB for an array with shape (3645, 5515) and data type float32"}
+
+[2026-05-25 23:08:00] night combo tester start
+[2026-05-25 23:08:50] error ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+[2026-05-25 23:14:28] night combo tester start
+[2026-05-25 23:16:35] night combo tester start
+[2026-05-25 23:26:36] error timeout: timed out
+[2026-05-25 23:50:00] night combo tester start
+[2026-05-25 23:56:01] error timeout: timed out
+[2026-05-26 00:09:08] night combo tester start
+[2026-05-26 00:09:09] skip equal low_memory free_gb=1.48 maxcorr=0.5 keep=5
+[2026-05-26 00:29:10] skip lgb low_memory free_gb=1.45 maxcorr=0.65 keep=15
+[2026-05-26 00:49:12] skip equal low_memory free_gb=1.29 maxcorr=0.7 keep=8
+[2026-05-26 01:09:13] skip lgb low_memory free_gb=1.61 maxcorr=0.6 keep=20
+[2026-05-26 01:29:31] equal done maxcorr=0.5 keep=5 sel_maxcorr=0.468 avg_ic=0.0341 metrics={'pearson_ic': 0.0371, 'rank_ic': 0.0532, 'annual_excess': -0.0864, 'sharpe': -1.663, 'max_drawdown': 0.4881, 'turnover': 0.3022}
+[2026-05-26 01:49:32] skip lgb low_memory free_gb=1.95 maxcorr=0.65 keep=15
+[2026-05-26 02:10:16] equal done maxcorr=0.7 keep=8 sel_maxcorr=0.4704 avg_ic=0.0345 metrics={'pearson_ic': 0.0378, 'rank_ic': 0.0536, 'annual_excess': 0.1096, 'sharpe': 1.877, 'max_drawdown': 0.1891, 'turnover': 0.5135}
+[2026-05-26 02:30:18] skip lgb low_memory free_gb=1.62 maxcorr=0.6 keep=20
+[2026-05-26 02:50:32] equal done maxcorr=0.5 keep=5 sel_maxcorr=0.468 avg_ic=0.0356 metrics={'pearson_ic': 0.0369, 'rank_ic': 0.055, 'annual_excess': -0.0724, 'sharpe': -1.581, 'max_drawdown': 0.375, 'turnover': 0.2555}
+[2026-05-26 03:10:33] skip lgb low_memory free_gb=2.02 maxcorr=0.65 keep=15
+[2026-05-26 03:31:01] equal done maxcorr=0.7 keep=8 sel_maxcorr=0.5795 avg_ic=0.0344 metrics={'pearson_ic': 0.0388, 'rank_ic': 0.0525, 'annual_excess': 0.141, 'sharpe': 2.46, 'max_drawdown': 0.1106, 'turnover': 0.4711}
+[2026-05-26 03:51:02] skip lgb low_memory free_gb=1.89 maxcorr=0.6 keep=20
+[2026-05-26 04:11:24] equal done maxcorr=0.5 keep=5 sel_maxcorr=0.468 avg_ic=0.0351 metrics={'pearson_ic': 0.0369, 'rank_ic': 0.0524, 'annual_excess': -0.0799, 'sharpe': -1.593, 'max_drawdown': 0.4546, 'turnover': 0.2841}
+[2026-05-26 04:31:26] skip lgb low_memory free_gb=1.82 maxcorr=0.65 keep=15
+[2026-05-26 04:52:13] equal done maxcorr=0.7 keep=8 sel_maxcorr=0.475 avg_ic=0.034 metrics={'pearson_ic': 0.0386, 'rank_ic': 0.0525, 'annual_excess': 0.1422, 'sharpe': 2.541, 'max_drawdown': 0.1417, 'turnover': 0.5369}
+[2026-05-26 05:12:14] skip lgb low_memory free_gb=2.10 maxcorr=0.6 keep=20
+[2026-05-26 05:32:16] skip duplicate mode=equal maxcorr=0.5 keep=5 sig=equal:0.5:5:b2dd2875f320
+[2026-05-26 05:52:17] skip lgb low_memory free_gb=2.11 maxcorr=0.65 keep=15
+[2026-05-26 06:12:19] skip duplicate mode=equal maxcorr=0.7 keep=8 sig=equal:0.7:8:da9b44eb845b
+[2026-05-26 06:32:21] skip lgb low_memory free_gb=1.75 maxcorr=0.6 keep=20
+[2026-05-26 06:52:22] skip duplicate mode=equal maxcorr=0.5 keep=5 sig=equal:0.5:5:b2dd2875f320
+[2026-05-26 07:12:24] skip lgb low_memory free_gb=1.91 maxcorr=0.65 keep=15
+[2026-05-26 07:32:25] skip duplicate mode=equal maxcorr=0.7 keep=8 sig=equal:0.7:8:da9b44eb845b
+[2026-05-26 07:52:27] skip lgb low_memory free_gb=1.87 maxcorr=0.6 keep=20
+[2026-05-26 08:12:29] skip duplicate mode=equal maxcorr=0.5 keep=5 sig=equal:0.5:5:b2dd2875f320
+[2026-05-26 08:32:31] skip lgb low_memory free_gb=1.91 maxcorr=0.65 keep=15
+[2026-05-26 08:52:33] skip duplicate mode=equal maxcorr=0.7 keep=8 sig=equal:0.7:8:da9b44eb845b
+[2026-05-26 09:12:36] skip lgb low_memory free_gb=1.95 maxcorr=0.6 keep=20
+[2026-05-26 09:32:38] skip equal low_memory free_gb=1.34 maxcorr=0.5 keep=5
+[2026-05-26 09:52:40] skip lgb low_memory free_gb=1.55 maxcorr=0.65 keep=15
+[2026-05-26 10:12:43] skip equal low_memory free_gb=0.99 maxcorr=0.7 keep=8
+[2026-05-26 10:32:45] skip lgb low_memory free_gb=1.01 maxcorr=0.6 keep=20
+[2026-05-26 10:39:27] night combo tester start
+[2026-05-26 10:39:27] http_error 500: <!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+
+[2026-05-26 10:49:08] night combo tester start
+[2026-05-26 10:49:10] skip duplicate mode=equal maxcorr=0.5 keep=5 sig=equal:0.5:5:b2dd2875f320
+[2026-05-26 10:53:26] night combo tester start
+[2026-05-26 11:13:28] error timeout: timed out
+[2026-05-26 11:21:15] night combo tester start

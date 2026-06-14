@@ -1,0 +1,8 @@
+[08:37:12] === Backfill V2 starting ===
+[08:37:12] Loading engine...
+[08:37:16] Engine ready. IS:[2675:3403] OOS:[3403:3645]
+[08:37:16] Queue: 623, In DB: 142, To process: 483
+[08:37:16] Starting DB count: 142
+[08:38:37] [31/623] 2% done=10 err=0 rate=0.1/s db=142 (+0) elapsed=1min
+[08:39:02] [42/623] 4% done=20 err=0 rate=0.8/s db=142 (+0) elapsed=2min
+[08:39:33] [52/623] 6% done=30 err=0 rate=1.0/s db=142 (+0) elapsed=2min

@@ -1,25 +1,27 @@
-# Data and caches
-*.db
-*.sqlite
-*.pkl
-*.npy
-*.npz
-*.mat
-*.zip
-*.jsonl
-*.log
+# Python / local build
 __pycache__/
+*.py[cod]
 .pytest_cache/
-cache/
-logs/
-experiment_results/
-verify_output/
+.venv/
+
+# Runtime caches that should not be regenerated into Git by accident
+backtest_platform/cache/
+backtest_platform/logs/
+backtest_platform/__pycache__/
+model/__pycache__/
 
 # Credentials or local state
 cookie.txt
 cookie2.txt
 *.env
 .env
+ngrok*.log
+
+# Raw source data placed at repo root after restore
+/Minute*.mat
+/DailyData20240102open.bin
+/股票分钟数据.zip
+/restored_large_artifacts/
 
 # OS/editor
 Thumbs.db

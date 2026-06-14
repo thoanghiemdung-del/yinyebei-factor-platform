@@ -1,0 +1,3 @@
+[10:49:07] Pool: 13817 | Start: 916/1000 eligible | Seen: 10615 | fast_only=True | diversify=True
+[10:49:25] skip corr | corr=0.818 <= existing_score=0.18291 | zscore(bollinger_pos) - zscore(upper_shadow)
+[10:49:39] skip corr | corr=0.994 <= existing_score=0.01455 | zscore(upper_shadow) - zscore(bollinger_pos)

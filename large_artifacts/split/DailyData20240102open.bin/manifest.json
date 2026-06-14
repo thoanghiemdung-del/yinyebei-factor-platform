@@ -1,0 +1,25 @@
+{
+  "file_name": "DailyData20240102open.bin",
+  "source_path": "D:\\yyb\\DailyData20240102open.bin",
+  "bytes": 299061766,
+  "sha256": "e5c6bbcd03aaa21c821929383a178386db21d687101bd7dca93462a705895b81",
+  "chunk_size": 94371840,
+  "parts": [
+    {
+      "name": "DailyData20240102open.bin.part001",
+      "bytes": 94371840
+    },
+    {
+      "name": "DailyData20240102open.bin.part002",
+      "bytes": 94371840
+    },
+    {
+      "name": "DailyData20240102open.bin.part003",
+      "bytes": 94371840
+    },
+    {
+      "name": "DailyData20240102open.bin.part004",
+      "bytes": 15946246
+    }
+  ]
+}

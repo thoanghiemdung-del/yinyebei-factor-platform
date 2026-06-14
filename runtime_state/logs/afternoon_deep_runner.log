@@ -1,0 +1,1174 @@
+[2026-06-02T11:50:42] restart Flask for memory recovery free_gb=2.78
+[2026-06-02T11:51:06] Flask recovered free_gb=3.20
+[2026-06-02T11:51:09] deep extension start history=1752 strict_gt8_lowcorr=18
+[2026-06-02T11:51:09] run deep_weighted_o0_balanced_none n=2 custom neutralize=none free_gb=3.16
+[2026-06-02T11:51:10] done deep_weighted_o0_balanced_none success=True sharpe=5.035
+[2026-06-02T11:51:12] run deep_weighted_o0_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.87
+[2026-06-02T11:51:15] done deep_weighted_o0_balanced_market_cap success=True sharpe=5.043
+[2026-06-02T11:51:17] run deep_weighted_o0_balanced_beta n=2 custom neutralize=beta free_gb=3.05
+[2026-06-02T11:51:46] done deep_weighted_o0_balanced_beta success=True sharpe=4.490
+[2026-06-02T11:51:48] run deep_weighted_o0_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.80
+[2026-06-02T11:51:50] done deep_weighted_o0_balanced_market_cap_beta success=True sharpe=4.721
+[2026-06-02T11:51:52] run deep_weighted_o0_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.80
+[2026-06-02T11:51:54] done deep_weighted_o0_liquidity_tilt_none success=True sharpe=5.035
+[2026-06-02T11:51:56] run deep_weighted_o0_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.88
+[2026-06-02T11:51:59] done deep_weighted_o0_liquidity_tilt_market_cap success=True sharpe=5.043
+[2026-06-02T11:52:01] run deep_weighted_o0_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.87
+[2026-06-02T11:52:03] done deep_weighted_o0_liquidity_tilt_beta success=True sharpe=4.490
+[2026-06-02T11:52:04] run deep_weighted_o0_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.92
+[2026-06-02T11:52:07] done deep_weighted_o0_liquidity_tilt_market_cap_beta success=True sharpe=4.721
+[2026-06-02T11:52:09] run deep_weighted_o0_reversal_tilt_none n=2 custom neutralize=none free_gb=2.88
+[2026-06-02T11:52:11] done deep_weighted_o0_reversal_tilt_none success=True sharpe=4.907
+[2026-06-02T11:52:13] run deep_weighted_o0_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.89
+[2026-06-02T11:52:16] done deep_weighted_o0_reversal_tilt_market_cap success=True sharpe=4.918
+[2026-06-02T11:52:18] run deep_weighted_o0_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.93
+[2026-06-02T11:52:21] done deep_weighted_o0_reversal_tilt_beta success=True sharpe=4.642
+[2026-06-02T11:52:22] run deep_weighted_o0_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.93
+[2026-06-02T11:52:24] done deep_weighted_o0_reversal_tilt_market_cap_beta success=True sharpe=4.772
+[2026-06-02T11:52:26] run deep_weighted_o0_risk_tilt_none n=2 custom neutralize=none free_gb=2.96
+[2026-06-02T11:52:28] done deep_weighted_o0_risk_tilt_none success=True sharpe=5.035
+[2026-06-02T11:52:29] run deep_weighted_o0_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.95
+[2026-06-02T11:52:32] done deep_weighted_o0_risk_tilt_market_cap success=True sharpe=5.043
+[2026-06-02T11:52:34] run deep_weighted_o0_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.91
+[2026-06-02T11:52:37] done deep_weighted_o0_risk_tilt_beta success=True sharpe=4.490
+[2026-06-02T11:52:38] run deep_weighted_o0_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.94
+[2026-06-02T11:52:41] done deep_weighted_o0_risk_tilt_market_cap_beta success=True sharpe=4.721
+[2026-06-02T11:52:42] run deep_weighted_o1_balanced_none n=2 custom neutralize=none free_gb=2.94
+[2026-06-02T11:52:45] done deep_weighted_o1_balanced_none success=True sharpe=9.402
+[2026-06-02T11:52:47] run deep_weighted_o1_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.94
+[2026-06-02T11:52:49] done deep_weighted_o1_balanced_market_cap success=True sharpe=9.402
+[2026-06-02T11:52:51] run deep_weighted_o1_balanced_beta n=2 custom neutralize=beta free_gb=2.92
+[2026-06-02T11:52:53] done deep_weighted_o1_balanced_beta success=True sharpe=9.831
+[2026-06-02T11:52:56] run deep_weighted_o1_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.84
+[2026-06-02T11:52:58] done deep_weighted_o1_balanced_market_cap_beta success=True sharpe=9.905
+[2026-06-02T11:53:00] run deep_weighted_o1_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.84
+[2026-06-02T11:53:02] done deep_weighted_o1_liquidity_tilt_none success=True sharpe=9.351
+[2026-06-02T11:53:03] run deep_weighted_o1_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.82
+[2026-06-02T11:53:06] done deep_weighted_o1_liquidity_tilt_market_cap success=True sharpe=9.351
+[2026-06-02T11:53:07] run deep_weighted_o1_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.81
+[2026-06-02T11:53:09] done deep_weighted_o1_liquidity_tilt_beta success=True sharpe=9.331
+[2026-06-02T11:53:11] run deep_weighted_o1_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.82
+[2026-06-02T11:53:13] done deep_weighted_o1_liquidity_tilt_market_cap_beta success=True sharpe=9.688
+[2026-06-02T11:53:15] run deep_weighted_o1_reversal_tilt_none n=2 custom neutralize=none free_gb=2.84
+[2026-06-02T11:53:17] done deep_weighted_o1_reversal_tilt_none success=True sharpe=9.402
+[2026-06-02T11:53:18] run deep_weighted_o1_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.93
+[2026-06-02T11:53:21] done deep_weighted_o1_reversal_tilt_market_cap success=True sharpe=9.402
+[2026-06-02T11:53:22] run deep_weighted_o1_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.91
+[2026-06-02T11:53:24] done deep_weighted_o1_reversal_tilt_beta success=True sharpe=9.831
+[2026-06-02T11:53:26] run deep_weighted_o1_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.94
+[2026-06-02T11:53:28] done deep_weighted_o1_reversal_tilt_market_cap_beta success=True sharpe=9.905
+[2026-06-02T11:53:29] run deep_weighted_o1_risk_tilt_none n=2 custom neutralize=none free_gb=2.96
+[2026-06-02T11:53:31] done deep_weighted_o1_risk_tilt_none success=True sharpe=9.402
+[2026-06-02T11:53:33] run deep_weighted_o1_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.93
+[2026-06-02T11:53:35] done deep_weighted_o1_risk_tilt_market_cap success=True sharpe=9.402
+[2026-06-02T11:53:36] run deep_weighted_o1_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.94
+[2026-06-02T11:53:38] done deep_weighted_o1_risk_tilt_beta success=True sharpe=9.831
+[2026-06-02T11:53:40] run deep_weighted_o1_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.94
+[2026-06-02T11:53:42] done deep_weighted_o1_risk_tilt_market_cap_beta success=True sharpe=9.905
+[2026-06-02T11:53:43] run deep_weighted_o2_balanced_none n=2 custom neutralize=none free_gb=2.94
+[2026-06-02T11:53:45] done deep_weighted_o2_balanced_none success=True sharpe=11.706
+[2026-06-02T11:53:47] run deep_weighted_o2_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.93
+[2026-06-02T11:53:49] done deep_weighted_o2_balanced_market_cap success=True sharpe=11.689
+[2026-06-02T11:53:51] run deep_weighted_o2_balanced_beta n=2 custom neutralize=beta free_gb=2.94
+[2026-06-02T11:53:53] done deep_weighted_o2_balanced_beta success=True sharpe=11.413
+[2026-06-02T11:53:54] run deep_weighted_o2_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.94
+[2026-06-02T11:53:58] done deep_weighted_o2_balanced_market_cap_beta success=True sharpe=11.905
+[2026-06-02T11:54:00] run deep_weighted_o2_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.68
+[2026-06-02T11:54:02] done deep_weighted_o2_liquidity_tilt_none success=True sharpe=12.399
+[2026-06-02T11:54:04] run deep_weighted_o2_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.58
+[2026-06-02T11:54:07] done deep_weighted_o2_liquidity_tilt_market_cap success=True sharpe=12.361
+[2026-06-02T11:54:10] run deep_weighted_o2_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.66
+[2026-06-02T11:54:13] done deep_weighted_o2_liquidity_tilt_beta success=True sharpe=12.203
+[2026-06-02T11:54:15] run deep_weighted_o2_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.68
+[2026-06-02T11:54:18] done deep_weighted_o2_liquidity_tilt_market_cap_beta success=True sharpe=12.119
+[2026-06-02T11:54:19] run deep_weighted_o2_reversal_tilt_none n=2 custom neutralize=none free_gb=2.73
+[2026-06-02T11:54:22] done deep_weighted_o2_reversal_tilt_none success=True sharpe=11.706
+[2026-06-02T11:54:24] run deep_weighted_o2_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.70
+[2026-06-02T11:54:28] done deep_weighted_o2_reversal_tilt_market_cap success=True sharpe=11.689
+[2026-06-02T11:54:30] run deep_weighted_o2_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.75
+[2026-06-02T11:54:34] done deep_weighted_o2_reversal_tilt_beta success=True sharpe=11.413
+[2026-06-02T11:54:36] run deep_weighted_o2_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.69
+[2026-06-02T11:54:39] done deep_weighted_o2_reversal_tilt_market_cap_beta success=True sharpe=11.905
+[2026-06-02T11:54:41] run deep_weighted_o2_risk_tilt_none n=2 custom neutralize=none free_gb=2.74
+[2026-06-02T11:54:43] done deep_weighted_o2_risk_tilt_none success=True sharpe=11.706
+[2026-06-02T11:54:45] run deep_weighted_o2_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.76
+[2026-06-02T11:54:48] done deep_weighted_o2_risk_tilt_market_cap success=True sharpe=11.689
+[2026-06-02T11:54:49] run deep_weighted_o2_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.75
+[2026-06-02T11:54:51] done deep_weighted_o2_risk_tilt_beta success=True sharpe=11.413
+[2026-06-02T11:54:53] run deep_weighted_o2_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.76
+[2026-06-02T11:54:55] done deep_weighted_o2_risk_tilt_market_cap_beta success=True sharpe=11.905
+[2026-06-02T11:54:56] run deep_weighted_o3_balanced_none n=2 custom neutralize=none free_gb=2.74
+[2026-06-02T11:54:58] done deep_weighted_o3_balanced_none success=True sharpe=9.245
+[2026-06-02T11:55:00] run deep_weighted_o3_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.80
+[2026-06-02T11:55:02] done deep_weighted_o3_balanced_market_cap success=True sharpe=9.302
+[2026-06-02T11:55:03] run deep_weighted_o3_balanced_beta n=2 custom neutralize=beta free_gb=2.81
+[2026-06-02T11:55:06] done deep_weighted_o3_balanced_beta success=True sharpe=8.988
+[2026-06-02T11:55:07] run deep_weighted_o3_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.84
+[2026-06-02T11:55:09] done deep_weighted_o3_balanced_market_cap_beta success=True sharpe=8.776
+[2026-06-02T11:55:11] run deep_weighted_o3_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.87
+[2026-06-02T11:55:12] done deep_weighted_o3_liquidity_tilt_none success=True sharpe=9.245
+[2026-06-02T11:55:14] run deep_weighted_o3_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.86
+[2026-06-02T11:55:16] done deep_weighted_o3_liquidity_tilt_market_cap success=True sharpe=9.302
+[2026-06-02T11:55:18] run deep_weighted_o3_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.85
+[2026-06-02T11:55:20] done deep_weighted_o3_liquidity_tilt_beta success=True sharpe=8.988
+[2026-06-02T11:55:21] run deep_weighted_o3_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.86
+[2026-06-02T11:55:23] done deep_weighted_o3_liquidity_tilt_market_cap_beta success=True sharpe=8.776
+[2026-06-02T11:55:25] run deep_weighted_o3_reversal_tilt_none n=2 custom neutralize=none free_gb=2.84
+[2026-06-02T11:55:27] done deep_weighted_o3_reversal_tilt_none success=True sharpe=9.245
+[2026-06-02T11:55:28] run deep_weighted_o3_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.86
+[2026-06-02T11:55:30] done deep_weighted_o3_reversal_tilt_market_cap success=True sharpe=9.302
+[2026-06-02T11:55:32] run deep_weighted_o3_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.86
+[2026-06-02T11:55:34] done deep_weighted_o3_reversal_tilt_beta success=True sharpe=8.988
+[2026-06-02T11:55:35] run deep_weighted_o3_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.85
+[2026-06-02T11:55:37] done deep_weighted_o3_reversal_tilt_market_cap_beta success=True sharpe=8.776
+[2026-06-02T11:55:39] run deep_weighted_o3_risk_tilt_none n=2 custom neutralize=none free_gb=2.87
+[2026-06-02T11:55:41] done deep_weighted_o3_risk_tilt_none success=True sharpe=10.629
+[2026-06-02T11:55:42] run deep_weighted_o3_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.87
+[2026-06-02T11:55:44] done deep_weighted_o3_risk_tilt_market_cap success=True sharpe=10.589
+[2026-06-02T11:55:46] run deep_weighted_o3_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.88
+[2026-06-02T11:55:48] done deep_weighted_o3_risk_tilt_beta success=True sharpe=10.683
+[2026-06-02T11:55:49] run deep_weighted_o3_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.85
+[2026-06-02T11:55:51] done deep_weighted_o3_risk_tilt_market_cap_beta success=True sharpe=10.595
+[2026-06-02T11:55:53] run deep_weighted_o4_balanced_none n=2 custom neutralize=none free_gb=2.86
+[2026-06-02T11:55:55] done deep_weighted_o4_balanced_none success=True sharpe=12.868
+[2026-06-02T11:55:57] run deep_weighted_o4_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.77
+[2026-06-02T11:56:01] done deep_weighted_o4_balanced_market_cap success=True sharpe=12.900
+[2026-06-02T11:56:04] run deep_weighted_o4_balanced_beta n=2 custom neutralize=beta free_gb=2.82
+[2026-06-02T11:56:07] done deep_weighted_o4_balanced_beta success=True sharpe=12.459
+[2026-06-02T11:56:10] run deep_weighted_o4_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.86
+[2026-06-02T11:56:14] done deep_weighted_o4_balanced_market_cap_beta success=True sharpe=12.606
+[2026-06-02T11:56:16] run deep_weighted_o4_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.84
+[2026-06-02T11:56:20] done deep_weighted_o4_liquidity_tilt_none success=True sharpe=12.868
+[2026-06-02T11:56:22] run deep_weighted_o4_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.82
+[2026-06-02T11:56:26] done deep_weighted_o4_liquidity_tilt_market_cap success=True sharpe=12.900
+[2026-06-02T11:56:29] run deep_weighted_o4_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.87
+[2026-06-02T11:56:32] done deep_weighted_o4_liquidity_tilt_beta success=True sharpe=12.459
+[2026-06-02T11:56:35] run deep_weighted_o4_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.81
+[2026-06-02T11:56:39] done deep_weighted_o4_liquidity_tilt_market_cap_beta success=True sharpe=12.606
+[2026-06-02T11:56:41] run deep_weighted_o4_reversal_tilt_none n=2 custom neutralize=none free_gb=2.83
+[2026-06-02T11:56:47] done deep_weighted_o4_reversal_tilt_none success=True sharpe=11.446
+[2026-06-02T11:56:51] run deep_weighted_o4_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.57
+[2026-06-02T11:56:58] done deep_weighted_o4_reversal_tilt_market_cap success=True sharpe=11.504
+[2026-06-02T11:57:02] run deep_weighted_o4_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.17
+[2026-06-02T11:57:07] done deep_weighted_o4_reversal_tilt_beta success=True sharpe=11.539
+[2026-06-02T11:57:11] run deep_weighted_o4_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.21
+[2026-06-02T11:57:16] done deep_weighted_o4_reversal_tilt_market_cap_beta success=True sharpe=11.631
+[2026-06-02T11:57:20] run deep_weighted_o4_risk_tilt_none n=2 custom neutralize=none free_gb=2.12
+[2026-06-02T11:57:24] done deep_weighted_o4_risk_tilt_none success=True sharpe=12.884
+[2026-06-02T11:57:28] run deep_weighted_o4_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.09
+[2026-06-02T11:57:33] done deep_weighted_o4_risk_tilt_market_cap success=True sharpe=12.852
+[2026-06-02T11:57:38] run deep_weighted_o4_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.01
+[2026-06-02T11:57:42] done deep_weighted_o4_risk_tilt_beta success=True sharpe=12.491
+[2026-06-02T11:57:46] run deep_weighted_o4_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.11
+[2026-06-02T11:57:50] done deep_weighted_o4_risk_tilt_market_cap_beta success=True sharpe=12.503
+[2026-06-02T11:57:53] run deep_weighted_o5_balanced_none n=2 custom neutralize=none free_gb=2.20
+[2026-06-02T11:57:58] done deep_weighted_o5_balanced_none success=True sharpe=6.127
+[2026-06-02T11:58:01] run deep_weighted_o5_balanced_market_cap n=2 custom neutralize=market_cap free_gb=2.22
+[2026-06-02T11:58:06] done deep_weighted_o5_balanced_market_cap success=True sharpe=6.097
+[2026-06-02T11:58:09] run deep_weighted_o5_balanced_beta n=2 custom neutralize=beta free_gb=2.20
+[2026-06-02T11:58:13] done deep_weighted_o5_balanced_beta success=True sharpe=6.361
+[2026-06-02T11:58:16] run deep_weighted_o5_balanced_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.29
+[2026-06-02T11:58:21] done deep_weighted_o5_balanced_market_cap_beta success=True sharpe=6.358
+[2026-06-02T11:58:24] run deep_weighted_o5_liquidity_tilt_none n=2 custom neutralize=none free_gb=2.23
+[2026-06-02T11:58:29] done deep_weighted_o5_liquidity_tilt_none success=True sharpe=6.127
+[2026-06-02T11:58:32] run deep_weighted_o5_liquidity_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.23
+[2026-06-02T11:58:37] done deep_weighted_o5_liquidity_tilt_market_cap success=True sharpe=6.097
+[2026-06-02T11:58:41] run deep_weighted_o5_liquidity_tilt_beta n=2 custom neutralize=beta free_gb=2.08
+[2026-06-02T11:58:45] done deep_weighted_o5_liquidity_tilt_beta success=True sharpe=6.361
+[2026-06-02T11:58:49] run deep_weighted_o5_liquidity_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.14
+[2026-06-02T11:58:54] done deep_weighted_o5_liquidity_tilt_market_cap_beta success=True sharpe=6.358
+[2026-06-02T11:58:57] run deep_weighted_o5_reversal_tilt_none n=2 custom neutralize=none free_gb=2.22
+[2026-06-02T11:59:01] done deep_weighted_o5_reversal_tilt_none success=True sharpe=5.894
+[2026-06-02T11:59:04] run deep_weighted_o5_reversal_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.11
+[2026-06-02T11:59:08] done deep_weighted_o5_reversal_tilt_market_cap success=True sharpe=5.887
+[2026-06-02T11:59:12] run deep_weighted_o5_reversal_tilt_beta n=2 custom neutralize=beta free_gb=2.11
+[2026-06-02T11:59:16] done deep_weighted_o5_reversal_tilt_beta success=True sharpe=5.625
+[2026-06-02T11:59:19] run deep_weighted_o5_reversal_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.24
+[2026-06-02T11:59:24] done deep_weighted_o5_reversal_tilt_market_cap_beta success=True sharpe=5.691
+[2026-06-02T11:59:27] run deep_weighted_o5_risk_tilt_none n=2 custom neutralize=none free_gb=2.29
+[2026-06-02T11:59:30] done deep_weighted_o5_risk_tilt_none success=True sharpe=6.127
+[2026-06-02T11:59:34] run deep_weighted_o5_risk_tilt_market_cap n=2 custom neutralize=market_cap free_gb=2.27
+[2026-06-02T11:59:39] done deep_weighted_o5_risk_tilt_market_cap success=True sharpe=6.097
+[2026-06-02T11:59:42] run deep_weighted_o5_risk_tilt_beta n=2 custom neutralize=beta free_gb=2.24
+[2026-06-02T11:59:46] done deep_weighted_o5_risk_tilt_beta success=True sharpe=6.361
+[2026-06-02T11:59:50] run deep_weighted_o5_risk_tilt_market_cap_beta n=2 custom neutralize=market_cap_beta free_gb=2.26
+[2026-06-02T11:59:55] done deep_weighted_o5_risk_tilt_market_cap_beta success=True sharpe=6.358
+[2026-06-02T12:00:01] run deep_nest_s2_0_none n=2 method=equal neutralize=none free_gb=2.29
+[2026-06-02T12:00:07] done deep_nest_s2_0_none success=True sharpe=13.300
+[2026-06-02T12:00:12] run deep_nest_s2_0_market_cap n=2 method=equal neutralize=market_cap free_gb=2.22
+[2026-06-02T12:00:17] done deep_nest_s2_0_market_cap success=True sharpe=13.087
+[2026-06-02T12:00:20] run deep_nest_s2_0_beta n=2 method=equal neutralize=beta free_gb=2.26
+[2026-06-02T12:00:25] done deep_nest_s2_0_beta success=True sharpe=13.422
+[2026-06-02T12:00:29] run deep_nest_s2_0_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.23
+[2026-06-02T12:00:34] done deep_nest_s2_0_market_cap_beta success=True sharpe=12.815
+[2026-06-02T12:00:37] run deep_nest_s2_1_none n=2 method=equal neutralize=none free_gb=2.31
+[2026-06-02T12:00:42] done deep_nest_s2_1_none success=True sharpe=14.650
+[2026-06-02T12:00:45] run deep_nest_s2_1_market_cap n=2 method=equal neutralize=market_cap free_gb=2.38
+[2026-06-02T12:00:48] done deep_nest_s2_1_market_cap success=True sharpe=14.609
+[2026-06-02T12:00:51] run deep_nest_s2_1_beta n=2 method=equal neutralize=beta free_gb=2.40
+[2026-06-02T12:00:54] done deep_nest_s2_1_beta success=True sharpe=14.812
+[2026-06-02T12:00:57] run deep_nest_s2_1_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.37
+[2026-06-02T12:01:01] done deep_nest_s2_1_market_cap_beta success=True sharpe=14.166
+[2026-06-02T12:01:04] run deep_nest_s2_2_none n=2 method=equal neutralize=none free_gb=2.30
+[2026-06-02T12:01:07] done deep_nest_s2_2_none success=True sharpe=14.272
+[2026-06-02T12:01:10] run deep_nest_s2_2_market_cap n=2 method=equal neutralize=market_cap free_gb=2.29
+[2026-06-02T12:01:14] done deep_nest_s2_2_market_cap success=True sharpe=14.278
+[2026-06-02T12:01:17] run deep_nest_s2_2_beta n=2 method=equal neutralize=beta free_gb=2.22
+[2026-06-02T12:01:20] done deep_nest_s2_2_beta success=True sharpe=14.454
+[2026-06-02T12:01:23] run deep_nest_s2_2_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.26
+[2026-06-02T12:01:26] done deep_nest_s2_2_market_cap_beta success=True sharpe=14.148
+[2026-06-02T12:01:29] run deep_nest_s2_3_none n=2 method=equal neutralize=none free_gb=2.27
+[2026-06-02T12:01:32] done deep_nest_s2_3_none success=True sharpe=12.781
+[2026-06-02T12:01:34] run deep_nest_s2_3_market_cap n=2 method=equal neutralize=market_cap free_gb=2.22
+[2026-06-02T12:01:37] done deep_nest_s2_3_market_cap success=True sharpe=12.941
+[2026-06-02T12:01:38] run deep_nest_s2_3_beta n=2 method=equal neutralize=beta free_gb=2.23
+[2026-06-02T12:01:40] done deep_nest_s2_3_beta success=True sharpe=12.807
+[2026-06-02T12:01:42] run deep_nest_s2_3_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.29
+[2026-06-02T12:01:43] done deep_nest_s2_3_market_cap_beta success=True sharpe=12.731
+[2026-06-02T12:01:45] run deep_nest_s2_4_none n=2 method=equal neutralize=none free_gb=2.28
+[2026-06-02T12:01:47] done deep_nest_s2_4_none success=True sharpe=15.816
+[2026-06-02T12:01:48] run deep_nest_s2_4_market_cap n=2 method=equal neutralize=market_cap free_gb=2.19
+[2026-06-02T12:01:51] done deep_nest_s2_4_market_cap success=True sharpe=15.910
+[2026-06-02T12:01:52] run deep_nest_s2_4_beta n=2 method=equal neutralize=beta free_gb=2.21
+[2026-06-02T12:01:54] done deep_nest_s2_4_beta success=True sharpe=15.812
+[2026-06-02T12:01:56] run deep_nest_s2_4_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.21
+[2026-06-02T12:01:58] done deep_nest_s2_4_market_cap_beta success=True sharpe=15.819
+[2026-06-02T12:02:00] run deep_nest_s2_5_none n=2 method=equal neutralize=none free_gb=2.17
+[2026-06-02T12:02:02] done deep_nest_s2_5_none success=True sharpe=14.308
+[2026-06-02T12:02:03] run deep_nest_s2_5_market_cap n=2 method=equal neutralize=market_cap free_gb=2.20
+[2026-06-02T12:02:05] done deep_nest_s2_5_market_cap success=True sharpe=14.016
+[2026-06-02T12:02:07] run deep_nest_s2_5_beta n=2 method=equal neutralize=beta free_gb=2.23
+[2026-06-02T12:02:08] done deep_nest_s2_5_beta success=True sharpe=13.553
+[2026-06-02T12:02:10] run deep_nest_s2_5_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.20
+[2026-06-02T12:02:12] done deep_nest_s2_5_market_cap_beta success=True sharpe=13.345
+[2026-06-02T12:02:13] run deep_nest_s2_6_none n=2 method=equal neutralize=none free_gb=2.30
+[2026-06-02T12:02:15] done deep_nest_s2_6_none success=True sharpe=12.846
+[2026-06-02T12:02:16] run deep_nest_s2_6_market_cap n=2 method=equal neutralize=market_cap free_gb=2.30
+[2026-06-02T12:02:19] done deep_nest_s2_6_market_cap success=True sharpe=12.825
+[2026-06-02T12:02:21] run deep_nest_s2_6_beta n=2 method=equal neutralize=beta free_gb=2.22
+[2026-06-02T12:02:23] done deep_nest_s2_6_beta success=True sharpe=12.785
+[2026-06-02T12:02:25] run deep_nest_s2_6_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.16
+[2026-06-02T12:02:28] done deep_nest_s2_6_market_cap_beta success=True sharpe=12.660
+[2026-06-02T12:02:30] run deep_nest_s2_7_none n=2 method=equal neutralize=none free_gb=2.19
+[2026-06-02T12:02:32] done deep_nest_s2_7_none success=True sharpe=13.449
+[2026-06-02T12:02:34] run deep_nest_s2_7_market_cap n=2 method=equal neutralize=market_cap free_gb=2.10
+[2026-06-02T12:02:37] done deep_nest_s2_7_market_cap success=True sharpe=13.491
+[2026-06-02T12:02:39] run deep_nest_s2_7_beta n=2 method=equal neutralize=beta free_gb=2.19
+[2026-06-02T12:02:43] done deep_nest_s2_7_beta success=True sharpe=13.277
+[2026-06-02T12:02:44] run deep_nest_s2_7_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.28
+[2026-06-02T12:02:47] done deep_nest_s2_7_market_cap_beta success=True sharpe=12.902
+[2026-06-02T12:02:49] run deep_nest_s2_8_none n=2 method=equal neutralize=none free_gb=2.31
+[2026-06-02T12:02:51] done deep_nest_s2_8_none success=True sharpe=14.748
+[2026-06-02T12:02:53] run deep_nest_s2_8_market_cap n=2 method=equal neutralize=market_cap free_gb=2.34
+[2026-06-02T12:02:55] done deep_nest_s2_8_market_cap success=True sharpe=14.887
+[2026-06-02T12:02:57] run deep_nest_s2_8_beta n=2 method=equal neutralize=beta free_gb=2.38
+[2026-06-02T12:03:00] done deep_nest_s2_8_beta success=True sharpe=15.323
+[2026-06-02T12:03:02] run deep_nest_s2_8_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.33
+[2026-06-02T12:03:04] done deep_nest_s2_8_market_cap_beta success=True sharpe=14.945
+[2026-06-02T12:03:06] run deep_nest_s2_9_none n=2 method=equal neutralize=none free_gb=2.35
+[2026-06-02T12:03:09] done deep_nest_s2_9_none success=True sharpe=13.606
+[2026-06-02T12:03:11] run deep_nest_s2_9_market_cap n=2 method=equal neutralize=market_cap free_gb=2.31
+[2026-06-02T12:03:14] done deep_nest_s2_9_market_cap success=True sharpe=13.824
+[2026-06-02T12:03:16] run deep_nest_s2_9_beta n=2 method=equal neutralize=beta free_gb=2.35
+[2026-06-02T12:03:19] done deep_nest_s2_9_beta success=True sharpe=13.800
+[2026-06-02T12:03:20] run deep_nest_s2_9_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.39
+[2026-06-02T12:03:23] done deep_nest_s2_9_market_cap_beta success=True sharpe=13.688
+[2026-06-02T12:03:24] run deep_nest_s2_10_none n=2 method=equal neutralize=none free_gb=2.40
+[2026-06-02T12:03:27] done deep_nest_s2_10_none success=True sharpe=13.824
+[2026-06-02T12:03:29] run deep_nest_s2_10_market_cap n=2 method=equal neutralize=market_cap free_gb=2.42
+[2026-06-02T12:03:31] done deep_nest_s2_10_market_cap success=True sharpe=14.024
+[2026-06-02T12:03:33] run deep_nest_s2_10_beta n=2 method=equal neutralize=beta free_gb=2.41
+[2026-06-02T12:03:35] done deep_nest_s2_10_beta success=True sharpe=13.496
+[2026-06-02T12:03:37] run deep_nest_s2_10_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.37
+[2026-06-02T12:03:39] done deep_nest_s2_10_market_cap_beta success=True sharpe=13.435
+[2026-06-02T12:03:41] run deep_nest_s2_11_none n=2 method=equal neutralize=none free_gb=2.40
+[2026-06-02T12:03:43] done deep_nest_s2_11_none success=True sharpe=13.203
+[2026-06-02T12:03:45] run deep_nest_s2_11_market_cap n=2 method=equal neutralize=market_cap free_gb=2.43
+[2026-06-02T12:03:48] done deep_nest_s2_11_market_cap success=True sharpe=13.449
+[2026-06-02T12:03:49] run deep_nest_s2_11_beta n=2 method=equal neutralize=beta free_gb=2.43
+[2026-06-02T12:03:52] done deep_nest_s2_11_beta success=True sharpe=13.338
+[2026-06-02T12:03:54] run deep_nest_s2_11_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.36
+[2026-06-02T12:03:56] done deep_nest_s2_11_market_cap_beta success=True sharpe=13.272
+[2026-06-02T12:03:58] run deep_nest_s2_12_none n=2 method=equal neutralize=none free_gb=2.38
+[2026-06-02T12:04:02] done deep_nest_s2_12_none success=True sharpe=12.861
+[2026-06-02T12:04:05] run deep_nest_s2_12_market_cap n=2 method=equal neutralize=market_cap free_gb=2.11
+[2026-06-02T12:04:09] done deep_nest_s2_12_market_cap success=True sharpe=12.568
+[2026-06-02T12:04:12] run deep_nest_s2_12_beta n=2 method=equal neutralize=beta free_gb=1.94
+[2026-06-02T12:04:15] done deep_nest_s2_12_beta success=True sharpe=13.199
+[2026-06-02T12:04:18] run deep_nest_s2_12_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=1.98
+[2026-06-02T12:04:21] done deep_nest_s2_12_market_cap_beta success=True sharpe=12.826
+[2026-06-02T12:04:23] run deep_nest_s2_13_none n=2 method=equal neutralize=none free_gb=2.23
+[2026-06-02T12:04:26] done deep_nest_s2_13_none success=True sharpe=13.691
+[2026-06-02T12:04:27] run deep_nest_s2_13_market_cap n=2 method=equal neutralize=market_cap free_gb=2.22
+[2026-06-02T12:04:30] done deep_nest_s2_13_market_cap success=True sharpe=13.963
+[2026-06-02T12:04:32] run deep_nest_s2_13_beta n=2 method=equal neutralize=beta free_gb=2.16
+[2026-06-02T12:04:35] done deep_nest_s2_13_beta success=True sharpe=13.783
+[2026-06-02T12:04:37] run deep_nest_s2_13_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.24
+[2026-06-02T12:04:39] done deep_nest_s2_13_market_cap_beta success=True sharpe=13.953
+[2026-06-02T12:04:41] run deep_nest_s2_14_none n=2 method=equal neutralize=none free_gb=2.35
+[2026-06-02T12:04:43] done deep_nest_s2_14_none success=True sharpe=11.476
+[2026-06-02T12:04:45] run deep_nest_s2_14_market_cap n=2 method=equal neutralize=market_cap free_gb=2.32
+[2026-06-02T12:04:48] done deep_nest_s2_14_market_cap success=True sharpe=11.477
+[2026-06-02T12:04:49] run deep_nest_s2_14_beta n=2 method=equal neutralize=beta free_gb=2.34
+[2026-06-02T12:04:52] done deep_nest_s2_14_beta success=True sharpe=11.487
+[2026-06-02T12:04:54] run deep_nest_s2_14_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.27
+[2026-06-02T12:04:57] done deep_nest_s2_14_market_cap_beta success=True sharpe=11.476
+[2026-06-02T12:04:58] run deep_nest_s3_0_none n=3 method=equal neutralize=none free_gb=2.33
+[2026-06-02T12:05:01] done deep_nest_s3_0_none success=True sharpe=14.178
+[2026-06-02T12:05:03] run deep_nest_s3_0_market_cap n=3 method=equal neutralize=market_cap free_gb=2.34
+[2026-06-02T12:05:07] done deep_nest_s3_0_market_cap success=True sharpe=13.722
+[2026-06-02T12:05:09] run deep_nest_s3_0_beta n=3 method=equal neutralize=beta free_gb=2.24
+[2026-06-02T12:05:12] done deep_nest_s3_0_beta success=True sharpe=14.212
+[2026-06-02T12:05:13] run deep_nest_s3_0_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.35
+[2026-06-02T12:05:16] done deep_nest_s3_0_market_cap_beta success=True sharpe=14.097
+[2026-06-02T12:05:19] run deep_nest_s3_1_none n=3 method=equal neutralize=none free_gb=2.36
+[2026-06-02T12:05:21] done deep_nest_s3_1_none success=True sharpe=13.680
+[2026-06-02T12:05:22] run deep_nest_s3_1_market_cap n=3 method=equal neutralize=market_cap free_gb=2.36
+[2026-06-02T12:05:25] done deep_nest_s3_1_market_cap success=True sharpe=13.820
+[2026-06-02T12:05:27] run deep_nest_s3_1_beta n=3 method=equal neutralize=beta free_gb=2.31
+[2026-06-02T12:05:30] done deep_nest_s3_1_beta success=True sharpe=14.043
+[2026-06-02T12:05:32] run deep_nest_s3_1_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.34
+[2026-06-02T12:05:35] done deep_nest_s3_1_market_cap_beta success=True sharpe=13.285
+[2026-06-02T12:05:37] run deep_nest_s3_2_none n=3 method=equal neutralize=none free_gb=2.29
+[2026-06-02T12:05:40] done deep_nest_s3_2_none success=True sharpe=14.373
+[2026-06-02T12:05:41] run deep_nest_s3_2_market_cap n=3 method=equal neutralize=market_cap free_gb=2.35
+[2026-06-02T12:05:45] done deep_nest_s3_2_market_cap success=True sharpe=14.362
+[2026-06-02T12:05:47] run deep_nest_s3_2_beta n=3 method=equal neutralize=beta free_gb=2.26
+[2026-06-02T12:05:50] done deep_nest_s3_2_beta success=True sharpe=14.334
+[2026-06-02T12:05:51] run deep_nest_s3_2_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.31
+[2026-06-02T12:05:54] done deep_nest_s3_2_market_cap_beta success=True sharpe=14.109
+[2026-06-02T12:05:56] run deep_nest_s3_3_none n=3 method=equal neutralize=none free_gb=2.40
+[2026-06-02T12:05:58] done deep_nest_s3_3_none success=True sharpe=15.296
+[2026-06-02T12:05:59] run deep_nest_s3_3_market_cap n=3 method=equal neutralize=market_cap free_gb=2.38
+[2026-06-02T12:06:02] done deep_nest_s3_3_market_cap success=True sharpe=15.587
+[2026-06-02T12:06:04] run deep_nest_s3_3_beta n=3 method=equal neutralize=beta free_gb=2.36
+[2026-06-02T12:06:06] done deep_nest_s3_3_beta success=True sharpe=15.832
+[2026-06-02T12:06:08] run deep_nest_s3_3_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.33
+[2026-06-02T12:06:10] done deep_nest_s3_3_market_cap_beta success=True sharpe=15.815
+[2026-06-02T12:06:11] run deep_nest_s3_4_none n=3 method=equal neutralize=none free_gb=2.34
+[2026-06-02T12:06:13] done deep_nest_s3_4_none success=True sharpe=14.323
+[2026-06-02T12:06:14] run deep_nest_s3_4_market_cap n=3 method=equal neutralize=market_cap free_gb=2.39
+[2026-06-02T12:06:17] done deep_nest_s3_4_market_cap success=True sharpe=14.148
+[2026-06-02T12:06:18] run deep_nest_s3_4_beta n=3 method=equal neutralize=beta free_gb=2.40
+[2026-06-02T12:06:20] done deep_nest_s3_4_beta success=True sharpe=14.533
+[2026-06-02T12:06:22] run deep_nest_s3_4_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.42
+[2026-06-02T12:06:24] done deep_nest_s3_4_market_cap_beta success=True sharpe=14.442
+[2026-06-02T12:06:25] run deep_nest_s3_5_none n=3 method=equal neutralize=none free_gb=2.41
+[2026-06-02T12:06:27] done deep_nest_s3_5_none success=True sharpe=13.816
+[2026-06-02T12:06:28] run deep_nest_s3_5_market_cap n=3 method=equal neutralize=market_cap free_gb=2.41
+[2026-06-02T12:06:30] done deep_nest_s3_5_market_cap success=True sharpe=13.705
+[2026-06-02T12:06:32] run deep_nest_s3_5_beta n=3 method=equal neutralize=beta free_gb=2.44
+[2026-06-02T12:06:34] done deep_nest_s3_5_beta success=True sharpe=13.799
+[2026-06-02T12:06:36] run deep_nest_s3_5_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.34
+[2026-06-02T12:06:38] done deep_nest_s3_5_market_cap_beta success=True sharpe=13.698
+[2026-06-02T12:06:39] run deep_nest_s3_6_none n=3 method=equal neutralize=none free_gb=2.34
+[2026-06-02T12:06:42] done deep_nest_s3_6_none success=True sharpe=14.671
+[2026-06-02T12:06:43] run deep_nest_s3_6_market_cap n=3 method=equal neutralize=market_cap free_gb=2.35
+[2026-06-02T12:06:45] done deep_nest_s3_6_market_cap success=True sharpe=14.734
+[2026-06-02T12:06:47] run deep_nest_s3_6_beta n=3 method=equal neutralize=beta free_gb=2.39
+[2026-06-02T12:06:49] done deep_nest_s3_6_beta success=True sharpe=14.482
+[2026-06-02T12:06:51] run deep_nest_s3_6_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.32
+[2026-06-02T12:06:54] done deep_nest_s3_6_market_cap_beta success=True sharpe=14.507
+[2026-06-02T12:06:55] run deep_nest_s3_7_none n=3 method=equal neutralize=none free_gb=2.13
+[2026-06-02T12:06:57] done deep_nest_s3_7_none success=True sharpe=14.034
+[2026-06-02T12:06:59] run deep_nest_s3_7_market_cap n=3 method=equal neutralize=market_cap free_gb=2.06
+[2026-06-02T12:07:02] done deep_nest_s3_7_market_cap success=True sharpe=13.982
+[2026-06-02T12:07:03] run deep_nest_s3_7_beta n=3 method=equal neutralize=beta free_gb=1.90
+[2026-06-02T12:07:06] done deep_nest_s3_7_beta success=True sharpe=13.846
+[2026-06-02T12:07:07] run deep_nest_s3_7_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.92
+[2026-06-02T12:07:09] done deep_nest_s3_7_market_cap_beta success=True sharpe=13.628
+[2026-06-02T12:07:11] run deep_nest_s3_8_none n=3 method=equal neutralize=none free_gb=1.87
+[2026-06-02T12:07:13] done deep_nest_s3_8_none success=True sharpe=14.589
+[2026-06-02T12:07:14] run deep_nest_s3_8_market_cap n=3 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T12:07:16] done deep_nest_s3_8_market_cap success=True sharpe=14.475
+[2026-06-02T12:07:18] restart Flask for memory recovery free_gb=1.78
+[2026-06-02T12:07:41] Flask recovered free_gb=2.24
+[2026-06-02T12:07:41] run deep_nest_s3_8_beta n=3 method=equal neutralize=beta free_gb=2.24
+[2026-06-02T12:08:06] done deep_nest_s3_8_beta success=True sharpe=14.931
+[2026-06-02T12:08:07] run deep_nest_s3_8_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.02
+[2026-06-02T12:08:10] done deep_nest_s3_8_market_cap_beta success=True sharpe=14.904
+[2026-06-02T12:08:11] run deep_nest_s3_9_none n=3 method=equal neutralize=none free_gb=2.05
+[2026-06-02T12:08:14] done deep_nest_s3_9_none success=True sharpe=13.102
+[2026-06-02T12:08:15] run deep_nest_s3_9_market_cap n=3 method=equal neutralize=market_cap free_gb=1.86
+[2026-06-02T12:08:18] done deep_nest_s3_9_market_cap success=True sharpe=13.029
+[2026-06-02T12:08:20] run deep_nest_s3_9_beta n=3 method=equal neutralize=beta free_gb=1.85
+[2026-06-02T12:08:22] done deep_nest_s3_9_beta success=True sharpe=13.134
+[2026-06-02T12:08:23] run deep_nest_s3_9_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.86
+[2026-06-02T12:08:26] done deep_nest_s3_9_market_cap_beta success=True sharpe=13.129
+[2026-06-02T12:08:27] run deep_nest_s3_10_none n=3 method=equal neutralize=none free_gb=1.86
+[2026-06-02T12:08:30] done deep_nest_s3_10_none success=True sharpe=13.836
+[2026-06-02T12:08:31] run deep_nest_s3_10_market_cap n=3 method=equal neutralize=market_cap free_gb=1.87
+[2026-06-02T12:08:34] done deep_nest_s3_10_market_cap success=True sharpe=13.994
+[2026-06-02T12:08:36] run deep_nest_s3_10_beta n=3 method=equal neutralize=beta free_gb=1.86
+[2026-06-02T12:08:38] done deep_nest_s3_10_beta success=True sharpe=13.770
+[2026-06-02T12:08:40] run deep_nest_s3_10_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.87
+[2026-06-02T12:08:42] done deep_nest_s3_10_market_cap_beta success=True sharpe=13.699
+[2026-06-02T12:08:44] run deep_nest_s3_11_none n=3 method=equal neutralize=none free_gb=1.89
+[2026-06-02T12:08:46] done deep_nest_s3_11_none success=True sharpe=14.042
+[2026-06-02T12:08:47] run deep_nest_s3_11_market_cap n=3 method=equal neutralize=market_cap free_gb=1.90
+[2026-06-02T12:08:50] done deep_nest_s3_11_market_cap success=True sharpe=14.082
+[2026-06-02T12:08:52] run deep_nest_s3_11_beta n=3 method=equal neutralize=beta free_gb=1.89
+[2026-06-02T12:08:54] done deep_nest_s3_11_beta success=True sharpe=14.208
+[2026-06-02T12:08:56] run deep_nest_s3_11_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.85
+[2026-06-02T12:08:58] done deep_nest_s3_11_market_cap_beta success=True sharpe=14.052
+[2026-06-02T12:08:59] run deep_nest_s3_12_none n=3 method=equal neutralize=none free_gb=1.81
+[2026-06-02T12:09:02] done deep_nest_s3_12_none success=True sharpe=14.999
+[2026-06-02T12:09:03] restart Flask for memory recovery free_gb=1.67
+[2026-06-02T12:12:12] Flask healthy with limited free memory free_gb=1.56
+[2026-06-02T12:12:12] run deep_nest_s3_12_market_cap n=3 method=equal neutralize=market_cap free_gb=1.55
+[2026-06-02T12:12:16] done deep_nest_s3_12_market_cap success=True sharpe=15.277
+[2026-06-02T12:12:18] restart Flask for memory recovery free_gb=1.73
+[2026-06-02T12:15:20] Flask recovered free_gb=2.25
+[2026-06-02T12:15:21] run deep_nest_s3_12_beta n=3 method=equal neutralize=beta free_gb=2.24
+[2026-06-02T12:15:49] done deep_nest_s3_12_beta success=True sharpe=14.728
+[2026-06-02T12:15:51] run deep_nest_s3_12_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.16
+[2026-06-02T12:15:55] done deep_nest_s3_12_market_cap_beta success=True sharpe=15.023
+[2026-06-02T12:15:56] run deep_nest_s3_13_none n=3 method=equal neutralize=none free_gb=2.29
+[2026-06-02T12:15:59] done deep_nest_s3_13_none success=True sharpe=13.769
+[2026-06-02T12:16:00] run deep_nest_s3_13_market_cap n=3 method=equal neutralize=market_cap free_gb=2.40
+[2026-06-02T12:16:04] done deep_nest_s3_13_market_cap success=True sharpe=13.698
+[2026-06-02T12:16:05] run deep_nest_s3_13_beta n=3 method=equal neutralize=beta free_gb=2.39
+[2026-06-02T12:16:08] done deep_nest_s3_13_beta success=True sharpe=13.571
+[2026-06-02T12:16:09] run deep_nest_s3_13_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.43
+[2026-06-02T12:16:12] done deep_nest_s3_13_market_cap_beta success=True sharpe=13.347
+[2026-06-02T12:16:13] run deep_nest_s3_14_none n=3 method=equal neutralize=none free_gb=2.53
+[2026-06-02T12:16:15] done deep_nest_s3_14_none success=True sharpe=14.319
+[2026-06-02T12:16:17] run deep_nest_s3_14_market_cap n=3 method=equal neutralize=market_cap free_gb=2.56
+[2026-06-02T12:16:20] done deep_nest_s3_14_market_cap success=True sharpe=14.585
+[2026-06-02T12:16:22] run deep_nest_s3_14_beta n=3 method=equal neutralize=beta free_gb=2.56
+[2026-06-02T12:16:25] done deep_nest_s3_14_beta success=True sharpe=14.424
+[2026-06-02T12:16:27] run deep_nest_s3_14_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=2.57
+[2026-06-02T12:16:40] restart Flask for memory recovery free_gb=3.76
+[2026-06-02T12:19:46] Flask healthy with limited free memory free_gb=1.76
+[2026-06-02T12:19:51] deep extension start history=1967 strict_gt8_lowcorr=18
+[2026-06-02T12:19:51] reuse deep_weighted_o0_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o0_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o0_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o0_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o0_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o0_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o0_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o0_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o0_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o0_risk_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o1_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o1_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o1_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o1_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o1_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o1_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o1_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o1_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o1_risk_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o2_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o2_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o2_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o2_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o2_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o2_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o2_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o2_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o2_risk_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o3_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o3_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o3_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o3_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o3_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o3_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o3_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o3_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o3_risk_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o4_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o4_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o4_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o4_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o4_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o4_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o4_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o4_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o4_risk_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_balanced_none
+[2026-06-02T12:19:51] reuse deep_weighted_o5_balanced_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o5_balanced_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_balanced_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_liquidity_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o5_liquidity_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o5_liquidity_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_liquidity_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_reversal_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o5_reversal_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o5_reversal_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_reversal_tilt_market_cap_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_risk_tilt_none
+[2026-06-02T12:19:51] reuse deep_weighted_o5_risk_tilt_market_cap
+[2026-06-02T12:19:51] reuse deep_weighted_o5_risk_tilt_beta
+[2026-06-02T12:19:51] reuse deep_weighted_o5_risk_tilt_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_0_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_0_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_0_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_0_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_1_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_1_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_1_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_1_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_2_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_2_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_2_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_2_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_3_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_3_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_3_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_3_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_4_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_4_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_4_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_4_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_5_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_5_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_5_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_5_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_6_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_6_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_6_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_6_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_7_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_7_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_7_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_7_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_8_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_8_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_8_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_8_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_9_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_9_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_9_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_9_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_10_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_10_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_10_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_10_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_11_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_11_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_11_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_11_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_12_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_12_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_12_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_12_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_13_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_13_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_13_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_13_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_14_none
+[2026-06-02T12:19:53] reuse deep_nest_s2_14_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s2_14_beta
+[2026-06-02T12:19:53] reuse deep_nest_s2_14_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_0_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_0_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_0_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_0_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_1_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_1_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_1_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_1_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_2_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_2_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_2_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_2_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_3_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_3_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_3_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_3_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_4_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_4_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_4_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_4_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_5_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_5_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_5_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_5_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_6_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_6_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_6_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_6_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_7_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_7_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_7_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_7_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_8_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_8_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_8_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_8_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_9_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_9_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_9_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_9_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_10_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_10_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_10_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_10_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_11_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_11_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_11_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_11_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_12_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_12_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_12_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_12_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_13_none
+[2026-06-02T12:19:53] reuse deep_nest_s3_13_market_cap
+[2026-06-02T12:19:53] reuse deep_nest_s3_13_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_13_market_cap_beta
+[2026-06-02T12:19:53] reuse deep_nest_s3_14_none
+[2026-06-02T12:19:54] reuse deep_nest_s3_14_market_cap
+[2026-06-02T12:19:54] reuse deep_nest_s3_14_beta
+[2026-06-02T12:19:54] restart Flask for memory recovery free_gb=1.72
+[2026-06-02T12:23:05] Flask healthy with limited free memory free_gb=1.46
+[2026-06-02T12:23:06] run deep_nest_s3_14_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.46
+[2026-06-02T12:23:40] done deep_nest_s3_14_market_cap_beta success=True sharpe=14.323
+[2026-06-02T12:23:42] restart Flask for memory recovery free_gb=1.50
+[2026-06-02T12:26:52] Flask healthy with limited free memory free_gb=1.69
+[2026-06-02T12:26:52] run deep_nest_s3_15_none n=3 method=equal neutralize=none free_gb=1.69
+[2026-06-02T12:26:56] done deep_nest_s3_15_none success=True sharpe=13.311
+[2026-06-02T12:26:58] restart Flask for memory recovery free_gb=1.60
+[2026-06-02T12:27:56] restart Flask for memory recovery free_gb=3.60
+[2026-06-02T12:31:05] Flask healthy with limited free memory free_gb=1.52
+[2026-06-02T12:31:08] deep extension start history=1969 strict_gt8_lowcorr=18
+[2026-06-02T12:31:08] reuse deep_weighted_o0_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o0_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o0_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o0_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o0_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o0_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o0_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o0_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o0_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o0_risk_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o1_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o1_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o1_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o1_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o1_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o1_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o1_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o1_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o1_risk_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o2_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o2_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o2_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o2_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o2_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o2_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o2_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o2_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o2_risk_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o3_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o3_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o3_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o3_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o3_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o3_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o3_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o3_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o3_risk_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o4_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o4_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o4_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o4_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o4_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o4_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o4_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o4_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o4_risk_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_balanced_none
+[2026-06-02T12:31:08] reuse deep_weighted_o5_balanced_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o5_balanced_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_balanced_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_liquidity_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o5_liquidity_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o5_liquidity_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_liquidity_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_reversal_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o5_reversal_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o5_reversal_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_reversal_tilt_market_cap_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_risk_tilt_none
+[2026-06-02T12:31:08] reuse deep_weighted_o5_risk_tilt_market_cap
+[2026-06-02T12:31:08] reuse deep_weighted_o5_risk_tilt_beta
+[2026-06-02T12:31:08] reuse deep_weighted_o5_risk_tilt_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_0_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_0_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_0_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_0_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_1_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_1_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_1_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_1_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_2_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_2_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_2_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_2_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_3_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_3_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_3_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_3_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_4_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_4_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_4_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_4_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_5_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_5_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_5_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_5_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_6_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_6_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_6_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_6_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_7_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_7_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_7_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_7_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_8_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_8_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_8_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_8_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_9_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_9_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_9_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_9_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_10_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_10_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_10_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_10_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_11_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_11_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_11_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_11_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_12_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_12_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_12_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_12_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_13_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_13_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_13_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_13_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_14_none
+[2026-06-02T12:31:09] reuse deep_nest_s2_14_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s2_14_beta
+[2026-06-02T12:31:09] reuse deep_nest_s2_14_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_0_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_0_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_0_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_0_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_1_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_1_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_1_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_1_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_2_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_2_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_2_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_2_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_3_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_3_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_3_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_3_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_4_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_4_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_4_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_4_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_5_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_5_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_5_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_5_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_6_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_6_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_6_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_6_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_7_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_7_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_7_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_7_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_8_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_8_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_8_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_8_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_9_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_9_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_9_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_9_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_10_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_10_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_10_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_10_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_11_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_11_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_11_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_11_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_12_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_12_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_12_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_12_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_13_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_13_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_13_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_13_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_14_none
+[2026-06-02T12:31:09] reuse deep_nest_s3_14_market_cap
+[2026-06-02T12:31:09] reuse deep_nest_s3_14_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_14_market_cap_beta
+[2026-06-02T12:31:09] reuse deep_nest_s3_15_none
+[2026-06-02T12:31:09] run deep_nest_s3_15_market_cap n=3 method=equal neutralize=market_cap free_gb=1.48
+[2026-06-02T12:31:12] done deep_nest_s3_15_market_cap success=True sharpe=13.432
+[2026-06-02T12:31:14] run deep_nest_s3_15_beta n=3 method=equal neutralize=beta free_gb=1.44
+[2026-06-02T12:31:41] done deep_nest_s3_15_beta success=True sharpe=13.604
+[2026-06-02T12:31:42] restart Flask for memory recovery free_gb=1.39
+[2026-06-02T12:34:51] Flask healthy with limited free memory free_gb=1.20
+[2026-06-02T12:34:51] run deep_nest_s3_15_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.19
+[2026-06-02T12:35:16] done deep_nest_s3_15_market_cap_beta success=True sharpe=13.469
+[2026-06-02T12:35:17] restart Flask for memory recovery free_gb=1.09
+[2026-06-02T12:37:16] restart Flask for memory recovery free_gb=3.52
+[2026-06-02T12:37:43] Flask recovered free_gb=1.46
+[2026-06-02T12:37:47] deep extension start history=1972 strict_gt8_lowcorr=18
+[2026-06-02T12:37:47] reuse deep_weighted_o0_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o0_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o0_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o0_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o0_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o0_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o0_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o0_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o0_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o0_risk_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o1_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o1_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o1_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o1_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o1_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o1_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o1_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o1_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o1_risk_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o2_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o2_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o2_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o2_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o2_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o2_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o2_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o2_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o2_risk_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o3_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o3_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o3_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o3_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o3_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o3_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o3_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o3_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o3_risk_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o4_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o4_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o4_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o4_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o4_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o4_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o4_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o4_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o4_risk_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_balanced_none
+[2026-06-02T12:37:47] reuse deep_weighted_o5_balanced_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o5_balanced_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_balanced_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_liquidity_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o5_liquidity_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o5_liquidity_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_liquidity_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_reversal_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o5_reversal_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o5_reversal_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_reversal_tilt_market_cap_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_risk_tilt_none
+[2026-06-02T12:37:47] reuse deep_weighted_o5_risk_tilt_market_cap
+[2026-06-02T12:37:47] reuse deep_weighted_o5_risk_tilt_beta
+[2026-06-02T12:37:47] reuse deep_weighted_o5_risk_tilt_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_0_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_0_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_0_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_0_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_1_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_1_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_1_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_1_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_2_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_2_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_2_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_2_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_3_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_3_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_3_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_3_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_4_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_4_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_4_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_4_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_5_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_5_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_5_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_5_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_6_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_6_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_6_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_6_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_7_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_7_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_7_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_7_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_8_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_8_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_8_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_8_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_9_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_9_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_9_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_9_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_10_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_10_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_10_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_10_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_11_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_11_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_11_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_11_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_12_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_12_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_12_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_12_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_13_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_13_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_13_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_13_market_cap_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_14_none
+[2026-06-02T12:37:49] reuse deep_nest_s2_14_market_cap
+[2026-06-02T12:37:49] reuse deep_nest_s2_14_beta
+[2026-06-02T12:37:49] reuse deep_nest_s2_14_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_0_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_0_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_0_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_0_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_1_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_1_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_1_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_1_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_2_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_2_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_2_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_2_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_3_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_3_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_3_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_3_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_4_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_4_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_4_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_4_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_5_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_5_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_5_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_5_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_6_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_6_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_6_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_6_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_7_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_7_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_7_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_7_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_8_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_8_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_8_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_8_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_9_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_9_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_9_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_9_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_10_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_10_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_10_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_10_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_11_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_11_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_11_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_11_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_12_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_12_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_12_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_12_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_13_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_13_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_13_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_13_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_14_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_14_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_14_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_14_market_cap_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_15_none
+[2026-06-02T12:37:50] reuse deep_nest_s3_15_market_cap
+[2026-06-02T12:37:50] reuse deep_nest_s3_15_beta
+[2026-06-02T12:37:50] reuse deep_nest_s3_15_market_cap_beta
+[2026-06-02T12:37:50] run deep_nest_s3_16_none n=3 method=equal neutralize=none free_gb=1.15
+[2026-06-02T12:37:55] done deep_nest_s3_16_none success=True sharpe=13.612
+[2026-06-02T12:37:57] run deep_nest_s3_16_market_cap n=3 method=equal neutralize=market_cap free_gb=1.16
+[2026-06-02T12:38:03] done deep_nest_s3_16_market_cap success=True sharpe=13.665
+[2026-06-02T12:38:06] restart Flask for memory recovery free_gb=0.90
+[2026-06-02T12:39:12] Flask recovered free_gb=1.50
+[2026-06-02T12:39:12] run deep_nest_s3_16_beta n=3 method=equal neutralize=beta free_gb=1.50
+[2026-06-02T12:39:41] done deep_nest_s3_16_beta success=True sharpe=13.789
+[2026-06-02T12:39:42] run deep_nest_s3_16_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.11
+[2026-06-02T12:39:45] done deep_nest_s3_16_market_cap_beta success=True sharpe=13.799
+[2026-06-02T12:39:47] run deep_nest_s3_17_none n=3 method=equal neutralize=none free_gb=1.60
+[2026-06-02T12:39:49] done deep_nest_s3_17_none success=True sharpe=14.549
+[2026-06-02T12:39:50] run deep_nest_s3_17_market_cap n=3 method=equal neutralize=market_cap free_gb=1.81
+[2026-06-02T12:39:53] done deep_nest_s3_17_market_cap success=True sharpe=14.660
+[2026-06-02T12:39:55] run deep_nest_s3_17_beta n=3 method=equal neutralize=beta free_gb=1.43
+[2026-06-02T12:39:58] done deep_nest_s3_17_beta success=True sharpe=14.572
+[2026-06-02T12:40:00] run deep_nest_s3_17_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.79
+[2026-06-02T12:40:03] done deep_nest_s3_17_market_cap_beta success=True sharpe=14.578
+[2026-06-02T12:40:04] run deep_nest_s3_18_none n=3 method=equal neutralize=none free_gb=1.21
+[2026-06-02T12:40:07] done deep_nest_s3_18_none success=True sharpe=12.640
+[2026-06-02T12:40:09] run deep_nest_s3_18_market_cap n=3 method=equal neutralize=market_cap free_gb=1.47
+[2026-06-02T12:40:13] done deep_nest_s3_18_market_cap success=True sharpe=12.720
+[2026-06-02T12:40:15] run deep_nest_s3_18_beta n=3 method=equal neutralize=beta free_gb=1.58
+[2026-06-02T12:40:19] done deep_nest_s3_18_beta success=True sharpe=12.825
+[2026-06-02T12:40:20] run deep_nest_s3_18_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.66
+[2026-06-02T12:40:24] done deep_nest_s3_18_market_cap_beta success=True sharpe=12.772
+[2026-06-02T12:40:26] run deep_nest_s3_19_none n=3 method=equal neutralize=none free_gb=1.34
+[2026-06-02T12:40:28] done deep_nest_s3_19_none success=True sharpe=12.840
+[2026-06-02T12:40:30] run deep_nest_s3_19_market_cap n=3 method=equal neutralize=market_cap free_gb=1.39
+[2026-06-02T12:40:35] done deep_nest_s3_19_market_cap success=True sharpe=13.022
+[2026-06-02T12:40:36] run deep_nest_s3_19_beta n=3 method=equal neutralize=beta free_gb=1.92
+[2026-06-02T12:40:40] done deep_nest_s3_19_beta success=True sharpe=13.126
+[2026-06-02T12:40:42] run deep_nest_s3_19_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=1.73
+[2026-06-02T12:40:45] done deep_nest_s3_19_market_cap_beta success=True sharpe=13.133
+[2026-06-02T12:40:48] run deep_meta_l4_n2_none n=2 method=equal neutralize=none free_gb=3.74
+[2026-06-02T12:40:55] done deep_meta_l4_n2_none success=True sharpe=15.484
+[2026-06-02T12:40:57] run deep_meta_l4_n2_market_cap n=2 method=equal neutralize=market_cap free_gb=3.72
+[2026-06-02T12:41:00] done deep_meta_l4_n2_market_cap success=True sharpe=15.548
+[2026-06-02T12:41:02] run deep_meta_l4_n2_beta n=2 method=equal neutralize=beta free_gb=3.56
+[2026-06-02T12:41:30] done deep_meta_l4_n2_beta success=True sharpe=15.563
+[2026-06-02T12:41:32] run deep_meta_l4_n2_market_cap_beta n=2 method=equal neutralize=market_cap_beta free_gb=2.92
+[2026-06-02T12:41:34] done deep_meta_l4_n2_market_cap_beta success=True sharpe=15.403
+[2026-06-02T12:41:35] run deep_meta_l4_n2_market_cap_regression n=2 method=equal neutralize=market_cap_regression free_gb=2.59
+[2026-06-02T12:41:37] done deep_meta_l4_n2_market_cap_regression success=True sharpe=15.450
+[2026-06-02T12:41:39] run deep_meta_l4_n3_none n=3 method=equal neutralize=none free_gb=2.99
+[2026-06-02T12:41:41] done deep_meta_l4_n3_none success=True sharpe=15.215
+[2026-06-02T12:41:43] run deep_meta_l4_n3_market_cap n=3 method=equal neutralize=market_cap free_gb=2.99
+[2026-06-02T12:41:46] done deep_meta_l4_n3_market_cap success=True sharpe=15.295
+[2026-06-02T12:41:48] run deep_meta_l4_n3_beta n=3 method=equal neutralize=beta free_gb=2.87
+[2026-06-02T12:41:51] done deep_meta_l4_n3_beta success=True sharpe=15.236
+[2026-06-02T12:41:53] run deep_meta_l4_n3_market_cap_beta n=3 method=equal neutralize=market_cap_beta free_gb=3.10
+[2026-06-02T12:41:56] done deep_meta_l4_n3_market_cap_beta success=True sharpe=15.284
+[2026-06-02T12:41:57] run deep_meta_l4_n3_market_cap_regression n=3 method=equal neutralize=market_cap_regression free_gb=2.22
+[2026-06-02T12:42:01] done deep_meta_l4_n3_market_cap_regression success=True sharpe=15.389
+[2026-06-02T12:42:04] deep extension complete experiments=246 strict_gt8_lowcorr=18

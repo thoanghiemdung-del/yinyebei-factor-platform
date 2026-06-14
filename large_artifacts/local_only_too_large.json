@@ -1,0 +1,22 @@
+[
+  {
+    "path": "D:\\yyb\\股票分钟数据.zip",
+    "bytes": 12699267564,
+    "files": 1
+  },
+  {
+    "path": "D:\\yyb\\模型\\all_factors.pkl",
+    "bytes": 5226570798,
+    "files": 1
+  },
+  {
+    "path": "D:\\yyb\\submission_rebuild",
+    "bytes": 5180121776,
+    "files": 360
+  },
+  {
+    "path": "D:\\yyb\\backtest_platform\\cache",
+    "bytes": 6203509214,
+    "files": 1163
+  }
+]

@@ -1,0 +1,64 @@
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 461, in <module>
+    frozen = {
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 408, in run
+    for neutralize in NEUTRALIZATIONS:
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 301, in call_combo
+    "SELECT id FROM alpha_history WHERE type='superalpha' ORDER BY timestamp DESC, rowid DESC LIMIT 1"
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 211, in request_json
+    deadline = time.time() + 180
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1377, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1352, in do_open
+    r = h.getresponse()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1375, in getresponse
+    response.begin()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 483, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 430, in run
+    style_rows.append(call_combo(
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 322, in call_combo
+    data = request_json(op, "/api/superalpha", payload, timeout=420)
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 229, in request_json
+    with op.open(urllib.request.Request(API + path, data=data, headers=headers), timeout=timeout) as resp:
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 519, in open
+    response = self._open(req, data)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 536, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 496, in _call_chain
+    result = func(*args)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1377, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\urllib\request.py", line 1352, in do_open
+    r = h.getresponse()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 1375, in getresponse
+    response.begin()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Users\徐子铭\AppData\Local\Programs\Python\Python310\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [WinError 10054] 远程主机强迫关闭了一个现有的连接。
+Traceback (most recent call last):
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 483, in <module>
+    run()
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 392, in run
+    wait_health()
+  File "D:\yyb\backtest_platform\run_final_audit_experiments.py", line 165, in wait_health
+    raise RuntimeError("Flask or ngrok health check failed")
+RuntimeError: Flask or ngrok health check failed

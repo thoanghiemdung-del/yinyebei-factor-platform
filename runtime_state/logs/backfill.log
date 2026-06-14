@@ -1,0 +1,9 @@
+[Init] DataPipeline + BacktestEngine + FactorComputer ready.
+623 expressions
+[0/623] saved=1
+[20:24:45] === Backfill runner starting ===
+[20:24:45] Loading DataPipeline + BacktestEngine...
+[20:24:49] Engine ready.
+[20:24:49] IS: [2675:3403] OOS: [3403:3645]
+[20:24:49] Queue: 623 expressions
+[20:24:49] Already in DB: 1, Remaining: 623

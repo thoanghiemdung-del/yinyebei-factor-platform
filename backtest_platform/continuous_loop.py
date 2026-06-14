@@ -1,4 +1,4 @@
-"""
+﻿"""
 CONTINUOUS experiment loop — NEVER stops.
 Restarts Flask when memory exceeds threshold.
 Reports progress every 30 min.
@@ -30,7 +30,7 @@ def restart_flask():
     time.sleep(3)
     # Start Flask
     env = os.environ.copy()
-    env['DEEPSEEK_API_KEY'] = 'sk-97e53fa7645849c9bf1679be75bc5eb8'
+    env['DEEPSEEK_API_KEY'] = '<SET_DEEPSEEK_API_KEY_IN_ENV>'
     subprocess.Popen([PYTHON, '-u', APP], env=env,
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                      cwd=SCRIPT_DIR)
@@ -330,3 +330,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
