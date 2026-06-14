@@ -23,7 +23,7 @@ model/artifacts/            小于 100MB 的模型产物和结果表
 submission/                 最终可提交 zip、官方四件套、平台源码 zip
 runtime_state/              SQLite 数据库、真实实验 JSON/JSONL、运行日志
 paper/                      论文、图表、LaTeX/PDF、审计输出
-large_artifacts/            分卷上传的大文件和未上传超大文件清单
+large_artifacts/            分卷上传的大文件、非分钟全量材料和分钟数据排除清单
 tools/                      恢复分卷、交接完整性验证脚本
 docs/                       交接文档、复现说明、平台说明
 ```
@@ -51,8 +51,9 @@ python app.py
 如果要从主办方源数据重新计算，需要把 `DailyData20240102open.bin` 和
 `MinuteYYYYMMDD.mat` 放到仓库根目录或按 `docs/SOURCE_DATA_LAYOUT.md` 设置数据目录。
 `DailyData20240102open.bin` 已在 `large_artifacts/split/` 中分卷上传，可用
-`python tools\restore_large_artifacts.py` 恢复；12GB 级分钟压缩包和 5GB 级全量缓存
-因 GitHub 公开仓库体积限制记录在 `large_artifacts/local_only_too_large.json`。
+`python tools\restore_large_artifacts.py` 恢复；`all_factors.pkl`、平台 `cache/`
+和 `submission_rebuild/` 已按“非分钟全量材料”镜像到 `large_artifacts/full_nonminute/`。
+12GB 级分钟压缩包按你的要求不上传，仅记录在 `large_artifacts/local_only_too_large.json`。
 
 ## 重要说明
 

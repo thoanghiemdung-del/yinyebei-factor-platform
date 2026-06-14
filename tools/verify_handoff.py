@@ -61,6 +61,15 @@ def main() -> None:
         raise SystemExit("alpha_history is empty")
 
     manifest = json.loads((ROOT / "large_artifacts" / "split_manifest.json").read_text(encoding="utf-8"))
+    full_nonminute_path = ROOT / "large_artifacts" / "full_nonminute" / "FULL_NONMINUTE_MANIFEST.json"
+    if not full_nonminute_path.exists():
+        raise SystemExit("missing full_nonminute manifest")
+    full_nonminute = json.loads(full_nonminute_path.read_text(encoding="utf-8"))
+    groups = {g.get("name"): g for g in full_nonminute.get("groups", [])}
+    for required_group in ("model_all_factors", "backtest_platform_cache", "submission_rebuild"):
+        group = groups.get(required_group)
+        if not group or not group.get("exists") or group.get("entry_count", 0) <= 0:
+            raise SystemExit(f"missing full_nonminute group: {required_group}")
     print(json.dumps({
         "ok": True,
         "factor_shape": list(values.shape),
@@ -68,6 +77,13 @@ def main() -> None:
         "stock_count": len(stocks),
         "alpha_history_count": count,
         "split_artifact_count": len(manifest),
+        "full_nonminute_groups": {
+            name: {
+                "entry_count": groups[name].get("entry_count"),
+                "bytes": groups[name].get("bytes"),
+            }
+            for name in ("model_all_factors", "backtest_platform_cache", "submission_rebuild")
+        },
     }, ensure_ascii=False, indent=2))
 
 

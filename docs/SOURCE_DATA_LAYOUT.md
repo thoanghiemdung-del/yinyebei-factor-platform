@@ -21,5 +21,5 @@ yinyebei-factor-platform/
 ## 本仓库状态
 
 - `DailyData20240102open.bin` 已按 90MB 分卷放在 `large_artifacts/split/`。
-- 全量分钟数据体积约 12GB，记录在 `large_artifacts/local_only_too_large.json`。
+- 全量分钟数据体积约 12GB，按用户明确要求不上传，记录在 `large_artifacts/local_only_too_large.json`。
 - 若没有分钟数据，仍可校验最终提交因子、读取数据库和运行部分日频表达式；涉及日内微观结构的重算需要分钟数据。

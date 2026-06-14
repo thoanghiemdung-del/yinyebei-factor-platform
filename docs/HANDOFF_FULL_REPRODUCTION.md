@@ -49,14 +49,13 @@ python backtest_platform\app.py
 `large_artifacts/split/` 中的文件是按 90MB 分卷上传的，运行
 `python tools/restore_large_artifacts.py` 后会恢复到 `restored_large_artifacts/`。
 
-未直接上传的超大文件记录在 `large_artifacts/local_only_too_large.json`，主要是：
+`large_artifacts/full_nonminute/` 已上传除分钟数据外的超大项目状态：
 
-- 12GB 级 `股票分钟数据.zip`
-- 5GB 级 `模型/all_factors.pkl`
-- 5.9GB 级 `backtest_platform/cache/`
-- 4.9GB 级 `submission_rebuild/`
+- 5GB 级 `模型/all_factors.pkl`（分卷）
+- 5.9GB 级 `backtest_platform/cache/`（原矩阵文件镜像）
+- 4.9GB 级 `submission_rebuild/`（大文件分卷，小文件原样镜像）
 
-它们不进普通 GitHub 仓库是因为公开仓库单文件/总体积限制。接手者可以用主办方原始数据和本仓库代码重新生成。
+`large_artifacts/local_only_too_large.json` 只记录按用户要求不上传的 12GB 级分钟数据。
 
 ## 6. 自查命令
 

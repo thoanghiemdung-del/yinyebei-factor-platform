@@ -137,22 +137,31 @@
     {
       "path": "D:\\yyb\\股票分钟数据.zip",
       "bytes": 12699267564,
-      "files": 1
-    },
+      "files": 1,
+      "reason": "user explicitly said minute data is not required on GitHub"
+    }
+  ],
+  "full_nonminute_uploaded": [
     {
-      "path": "D:\\yyb\\模型\\all_factors.pkl",
+      "name": "model_all_factors",
+      "exists": true,
+      "entry_count": 1,
       "bytes": 5226570798,
-      "files": 1
+      "source": "D:\\yyb\\模型\\all_factors.pkl"
     },
     {
-      "path": "D:\\yyb\\submission_rebuild",
-      "bytes": 5180121776,
-      "files": 360
-    },
-    {
-      "path": "D:\\yyb\\backtest_platform\\cache",
+      "name": "backtest_platform_cache",
+      "exists": true,
+      "entry_count": 1163,
       "bytes": 6203509214,
-      "files": 1163
+      "source": "D:\\yyb\\backtest_platform\\cache"
+    },
+    {
+      "name": "submission_rebuild",
+      "exists": true,
+      "entry_count": 345,
+      "bytes": 5179958582,
+      "source": "D:\\yyb\\submission_rebuild"
     }
   ]
 }
