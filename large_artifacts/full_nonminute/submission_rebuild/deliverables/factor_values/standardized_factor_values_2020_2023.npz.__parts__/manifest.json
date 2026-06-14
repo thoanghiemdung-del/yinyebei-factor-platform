@@ -1,0 +1,19 @@
+{
+  "kind": "split_file",
+  "relative_output": "submission_rebuild/deliverables/factor_values/standardized_factor_values_2020_2023.npz",
+  "relative_parts_dir": "submission_rebuild/deliverables/factor_values/standardized_factor_values_2020_2023.npz.__parts__",
+  "source_path": "D:\\yyb\\submission_rebuild\\deliverables\\factor_values\\standardized_factor_values_2020_2023.npz",
+  "bytes": 147803599,
+  "sha256": "08bef9001ea0a8b5384dc0e08f05a80e5dbe6b0070a8f8a774883afa7ff64197",
+  "chunk_size": 94371840,
+  "parts": [
+    {
+      "name": "part001",
+      "bytes": 94371840
+    },
+    {
+      "name": "part002",
+      "bytes": 53431759
+    }
+  ]
+}
