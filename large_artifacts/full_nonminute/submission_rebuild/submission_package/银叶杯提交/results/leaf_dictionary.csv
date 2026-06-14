@@ -1,0 +1,25 @@
+﻿leaf,source_fields,raw_formula,meaning
+F6_4_large_trade_ratio,MINUTE_VOLUME,sum(volume where volume > 2 * median(minute_volume)) / sum(volume),大额成交分钟的成交量占比，刻画大额执行集中度。
+F_COMBO_8_large_trade,"MINUTE_VOLUME, MINUTE_OPEN, MINUTE_CLOSE",F6_4_large_trade_ratio * sign(intraday_return),大额成交占比与日内方向结合，刻画大单推动。
+N5_log_avg_ticket,"MINUTE_AMOUNT, MINUTE_NUMBER",log1p(sum(minute_amount) / sum(minute_number)),全日平均单笔金额的对数，刻画平均订单规模。
+N6_large_ticket_amount_ratio,"MINUTE_AMOUNT, MINUTE_NUMBER",sum(amount where amount/number > 2*median(bar_amount/bar_number)) / sum(amount),异常大单时段成交额占比，刻画机构式大单执行。
+F1_1_first30_mom,"MINUTE_OPEN, MINUTE_CLOSE",(close_at_minute_30 - open_at_minute_1) / open_at_minute_1,前30分钟收益，反映隔夜信息进入市场后的早盘价格压力。
+F1_2_last30_mom,"MINUTE_OPEN, MINUTE_CLOSE",(close_at_last_minute - open_at_last_30min_start) / open_at_last_30min_start,后30分钟收益，反映尾盘调仓和集中执行造成的价格压力。
+F1_3_intraday_mom,"MINUTE_OPEN, MINUTE_CLOSE",(close_at_last_minute - open_at_first_minute) / open_at_first_minute,从开盘到收盘的日内收益，刻画当日订单流推动的价格偏离。
+N1_count_weighted_time,MINUTE_NUMBER,sum(minute_index * minute_number) / sum(minute_number) / (bars - 1),成交笔数加权平均交易时点，刻画普通交易参与偏早盘还是尾盘。
+N2_open_count_ratio,MINUTE_NUMBER,sum(first_30min_minute_number) / sum(all_day_minute_number),前30分钟成交笔数占比，刻画早盘参与密度。
+N3_close_count_ratio,MINUTE_NUMBER,sum(last_30min_minute_number) / sum(all_day_minute_number),后30分钟成交笔数占比，刻画尾盘参与密度。
+N4_count_hhi,MINUTE_NUMBER,sum((minute_number / sum(all_day_minute_number)) ** 2),分钟成交笔数HHI，刻画交易活跃度在时段上的集中程度。
+N7_count_price_corr,"MINUTE_CLOSE, MINUTE_NUMBER","corr(minute_close_return, minute_number) across one day",分钟收益与成交笔数的日内相关性，刻画参与密度是否与价格变化共振。
+F4_1_close_vs_vwap,"MINUTE_HIGH, MINUTE_LOW, MINUTE_CLOSE, MINUTE_VOLUME","(last_close - vwap) / vwap, vwap=sum(((high+low+close)/3)*volume)/sum(volume)",收盘价相对全日VWAP偏离，刻画尾盘价格与平均成交成本的距离。
+F4_2_vwap_trend,"MINUTE_HIGH, MINUTE_LOW, MINUTE_CLOSE, MINUTE_VOLUME","clip((afternoon_vwap - morning_vwap) / morning_vwap, -2, 2)",下午VWAP相对上午VWAP变化，刻画日内成本中枢迁移。
+F_COMBO_9_smart_money_vwap,"MINUTE_OHLC, MINUTE_VOLUME",up_bar_volume_ratio * F4_1_close_vs_vwap,上涨分钟成交量占比与收盘VWAP偏离相乘，刻画买方订单流与价格偏离共振。
+F5_1_volume_hhi,MINUTE_VOLUME,sum((minute_volume / sum(all_day_minute_volume)) ** 2),分钟成交量HHI，刻画成交是否集中于少数时点。
+F5_2_open_vol_ratio,MINUTE_VOLUME,sum(first_6_minute_bars_volume) / sum(all_day_volume),开盘最初6根分钟bar的成交量占比，刻画开盘阶段的信息到达和抢跑交易。
+F5_3_close_vol_ratio,MINUTE_VOLUME,sum(last_30min_volume) / sum(all_day_volume),后30分钟成交量占比，刻画尾盘调仓和集中执行。
+F_COMBO_7_wat,"MINUTE_VOLUME, MINUTE_OPEN, MINUTE_CLOSE",(0.5 - volume_weighted_time) * sign(intraday_return),成交量加权交易时点与日内方向结合，刻画信息到达时段。
+N8_tail_ticket_reversal,"MINUTE_OHLC, MINUTE_AMOUNT, MINUTE_NUMBER",-last_30min_return * (last_30min_avg_ticket / all_day_avg_ticket),尾盘收益取反并乘尾盘单笔金额相对比例，刻画尾盘大单冲击后的修复。
+F_COMBO_4_amihud_hybrid,"MINUTE_CLOSE, MINUTE_AMOUNT","F6_2_amihud_min / trailing_mean(F6_2_amihud_min, 20) - 1",分钟Amihud相对20日均值的变化，检验流动性冲击。
+F_COMBO_2_vpin_informed,"MINUTE_CLOSE, MINUTE_VOLUME","vpin - trailing_mean(vpin, 20), vpin=sum(volume*abs(minute_return))/sqrt(sum(volume**2))",VPIN相对20日均值的变化，检验订单流毒性是否异常。
+G2_1_intraday_ret5d,"MINUTE_OPEN, MINUTE_CLOSE, DAILY_CLOSE",abs(intraday_return * trailing_5d_return) if signs_are_equal else NaN,日内方向与五日收益同向时保留交互，刻画短期趋势确认。
+F6_2_amihud_min,"MINUTE_CLOSE, MINUTE_AMOUNT","mean(clip(abs(minute_close_return) / max(minute_amount, 1000), 0, 0.01))",分钟收益绝对值相对分钟成交额的均值，刻画单位资金推动价格的能力。

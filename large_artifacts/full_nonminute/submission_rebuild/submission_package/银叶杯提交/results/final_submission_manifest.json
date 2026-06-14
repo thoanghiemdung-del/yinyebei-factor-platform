@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-06-02T19:03:18",
+  "official_requirement_alignment": {
+    "minute_data_based": true,
+    "standardized_factor_values_included": true,
+    "python_factor_code_required": true,
+    "report_and_logic_document_required": true,
+    "factor_value_correlation_below_0_5": true
+  },
+  "selection_protocol": {
+    "direction_and_ranking_period": "2020-01-02 to 2021-12-31",
+    "oos_report_period": "2022-01-04 to 2023-12-29",
+    "standardization": "cross-sectional 1%/99% winsorization followed by z-score",
+    "complexity": "atomic, same-style composite, or explicit cross-style pair only; no recursive nesting"
+  },
+  "selected_count": 10,
+  "selected": [
+    "S5_large_ticket_flow",
+    "X2_1_6",
+    "S2_vwap_pressure",
+    "A_N4_count_hhi",
+    "X2_4_7",
+    "A_F_COMBO_4_amihud_hybrid",
+    "A_F_COMBO_2_vpin_informed",
+    "A_G2_1_intraday_ret5d",
+    "A_F6_2_amihud_min",
+    "I10_volume_count_concentration_gap"
+  ],
+  "maximum_abs_factor_value_correlation": 0.4943187220781237,
+  "factor_values": {
+    "file": "D:\\yyb\\submission_rebuild\\deliverables\\factor_values\\standardized_factor_values_2020_2023.npz",
+    "shape_per_factor": [
+      970,
+      5515
+    ],
+    "factor_keys": [
+      "factor_01",
+      "factor_02",
+      "factor_03",
+      "factor_04",
+      "factor_05",
+      "factor_06",
+      "factor_07",
+      "factor_08",
+      "factor_09",
+      "factor_10"
+    ]
+  }
+}

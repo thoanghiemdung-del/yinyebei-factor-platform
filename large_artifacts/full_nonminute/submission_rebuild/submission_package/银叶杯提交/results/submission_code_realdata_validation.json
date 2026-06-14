@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-06-02T19:12:27",
+  "status": "PASS",
+  "validation_window": [
+    "2023-11-20",
+    "2023-12-29"
+  ],
+  "compared_dates": [
+    "2023-12-25",
+    "2023-12-26",
+    "2023-12-27",
+    "2023-12-28",
+    "2023-12-29"
+  ],
+  "rows": [
+    {
+      "factor_key": "factor_01",
+      "comparable_values": 24141,
+      "pearson_corr": 1.0,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_02",
+      "comparable_values": 24104,
+      "pearson_corr": 0.9999999999999973,
+      "mean_abs_error": 3.6528422953097106e-08,
+      "max_abs_error": 4.76837158203125e-07,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_03",
+      "comparable_values": 24141,
+      "pearson_corr": 1.0,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_04",
+      "comparable_values": 24104,
+      "pearson_corr": 0.9999999999999998,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_05",
+      "comparable_values": 24141,
+      "pearson_corr": 0.9999999999999991,
+      "mean_abs_error": 2.797861675674085e-08,
+      "max_abs_error": 2.384185791015625e-07,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_06",
+      "comparable_values": 24104,
+      "pearson_corr": 1.0,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_07",
+      "comparable_values": 24141,
+      "pearson_corr": 0.9999999999999998,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_08",
+      "comparable_values": 14559,
+      "pearson_corr": 0.9999999999999982,
+      "mean_abs_error": 1.8477036789477097e-08,
+      "max_abs_error": 9.5367431640625e-07,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_09",
+      "comparable_values": 24104,
+      "pearson_corr": 1.0,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    },
+    {
+      "factor_key": "factor_10",
+      "comparable_values": 24141,
+      "pearson_corr": 1.0,
+      "mean_abs_error": 0.0,
+      "max_abs_error": 0.0,
+      "nan_agreement": 1.0
+    }
+  ]
+}
