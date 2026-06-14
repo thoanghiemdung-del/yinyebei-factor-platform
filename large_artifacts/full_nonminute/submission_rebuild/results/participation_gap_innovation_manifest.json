@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-06-02T17:42:10",
+  "current_selected9": [
+    "S5_large_ticket_flow",
+    "X2_1_6",
+    "S2_vwap_pressure",
+    "A_N4_count_hhi",
+    "X2_4_7",
+    "A_F_COMBO_4_amihud_hybrid",
+    "A_F_COMBO_2_vpin_informed",
+    "A_G2_1_intraday_ret5d",
+    "A_F6_2_amihud_min"
+  ],
+  "innovation_count": 13,
+  "robust_eligible_count": 1,
+  "chosen_tenth": "I10_volume_count_concentration_gap",
+  "chosen_matrix": "D:\\yyb\\submission_rebuild\\innovation_candidate_matrices\\I10_volume_count_concentration_gap.npy"
+}

@@ -1,0 +1,29 @@
+{
+  "generated_at": "2026-06-02T17:39:08",
+  "selection_policy": {
+    "robustness_filter": "IS Pearson IC > 0; OOS Pearson IC > 0; OOS annual Top10%-market excess > 0",
+    "factor_value_correlation": "absolute aligned full-period Pearson correlation < 0.50",
+    "complexity": "atomic <= 6; same-style composites <= 4; explicit cross-style pairs <= 3; no triples; no recursive nesting",
+    "ranking": "IS balanced score with complexity penalty; randomized greedy search; OOS magnitudes not used for ordering"
+  },
+  "candidate_pool_count": 44,
+  "selected_count": 9,
+  "selected": [
+    "S5_large_ticket_flow",
+    "X2_1_6",
+    "S2_vwap_pressure",
+    "A_N4_count_hhi",
+    "X2_4_7",
+    "A_F_COMBO_4_amihud_hybrid",
+    "A_F_COMBO_2_vpin_informed",
+    "A_G2_1_intraday_ret5d",
+    "A_F6_2_amihud_min"
+  ],
+  "selected_kind_counts": {
+    "same_style": 2,
+    "cross_style_pair": 2,
+    "atomic": 5
+  },
+  "maximum_abs_factor_value_correlation": 0.4943187220781237,
+  "correlation_cache_pairs": 941
+}

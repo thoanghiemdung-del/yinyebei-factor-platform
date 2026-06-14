@@ -1,0 +1,8 @@
+segment	start_daily_index	stop_daily_index_exclusive	n_days	equal_weight_portfolio_sharpe	equal_weight_cumulative_pnl	equal_weight_positive_day_ratio	maximum_pairwise_abs_daily_pnl_corr
+Full 2023 OOS	0	241	241	21.268941	46.768509	0.929461	0.49804
+H1 sequential	0	120	120	17.31163	21.009982	0.9	0.586591
+H2 sequential	120	241	121	27.134902	25.758527	0.958678	0.609686
+Q1 sequential	0	60	60	22.707277	8.677887	0.9	0.648911
+Q2 sequential	60	120	60	16.422218	12.332095	0.9	0.647646
+Q3 sequential	120	180	60	37.961851	12.297973	1.0	0.531074
+Q4 sequential	180	241	61	22.890723	13.460554	0.918033	0.740932

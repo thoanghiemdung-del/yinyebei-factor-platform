@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-06-02T16:25:34",
+  "passed": true,
+  "checks": {
+    "supplemental_files_exist": true,
+    "frozen_manifest_has_exactly_10_factors": true,
+    "all_frozen_factors_sharpe_gt_8": true,
+    "frozen_manifest_max_corr_lt_0_5": true,
+    "economic_detail_has_exactly_10_factors": true,
+    "economic_detail_contains_mechanism_and_risk": true,
+    "paper_contains_project_history": true,
+    "paper_contains_top_conference_boundary": true,
+    "paper_contains_child_factor_dictionary": true,
+    "paper_contains_10_factor_subsections": true,
+    "pdf_nontrivial": true,
+    "pdf_pages_at_least_15": true,
+    "flask_local_http_200": true
+  },
+  "metrics": {
+    "displayed_factors": 10,
+    "minimum_sharpe": 10.722,
+    "maximum_sharpe": 16.247,
+    "maximum_pairwise_abs_daily_pnl_corr": 0.4980399456918927,
+    "pdf_pages": 15,
+    "pdf_bytes": 589518,
+    "local_flask_status": 200
+  },
+  "sha256": {
+    "D:\\yyb\\paper\\afternoon_final_submission_zh.tex": "e0ec43317b60dfc176980862d84bcbca2bfd4003d9ec4969093f09194be3830b",
+    "D:\\yyb\\paper\\afternoon_final_submission_zh.pdf": "34823b0d1fccdcdfca9e219b0a497118e519f311dddd035eb621108b691458d5",
+    "D:\\yyb\\paper\\afternoon_final_factor_economics_zh.md": "b13e40de384432203212b2640b0a4317e29bb172020631f9072789b1bd2a9caf",
+    "D:\\yyb\\paper\\afternoon_final_factor_economics_zh.json": "703efe8263c629f38c95f0aa3545b3ecbf229fa703f43a9058272e922d88544a",
+    "D:\\yyb\\paper\\afternoon_final_factors_zh.tsv": "68fe3edd1c82bd4abe161a5711768434aae1ea462a78a0a29287d6c2f77d55fb"
+  },
+  "note": "Supplemental Chinese delivery audit. The English frozen evidence bundle remains untouched. No external Alpha submission is performed."
+}

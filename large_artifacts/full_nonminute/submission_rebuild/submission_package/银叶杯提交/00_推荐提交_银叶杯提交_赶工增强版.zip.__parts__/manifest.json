@@ -1,0 +1,19 @@
+{
+  "kind": "split_file",
+  "relative_output": "submission_rebuild/submission_package/银叶杯提交/00_推荐提交_银叶杯提交_赶工增强版.zip",
+  "relative_parts_dir": "submission_rebuild/submission_package/银叶杯提交/00_推荐提交_银叶杯提交_赶工增强版.zip.__parts__",
+  "source_path": "D:\\yyb\\submission_rebuild\\submission_package\\银叶杯提交\\00_推荐提交_银叶杯提交_赶工增强版.zip",
+  "bytes": 183972102,
+  "sha256": "bf4f3d9f51ad8584fba9f2bc91fe3427f6fac82dceda87d542e4dd34adb2f314",
+  "chunk_size": 94371840,
+  "parts": [
+    {
+      "name": "part001",
+      "bytes": 94371840
+    },
+    {
+      "name": "part002",
+      "bytes": 89600262
+    }
+  ]
+}

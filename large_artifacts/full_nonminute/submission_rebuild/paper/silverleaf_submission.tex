@@ -1,0 +1,547 @@
+\documentclass[UTF8,11pt,a4paper]{ctexart}
+\usepackage[left=2.15cm,right=2.15cm,top=2.15cm,bottom=2.15cm]{geometry}
+\usepackage{booktabs,longtable,array,graphicx,float,caption,subcaption}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor,hyperref,enumitem}
+\usepackage{fancyhdr}
+\graphicspath{{../charts/}}
+\hypersetup{colorlinks=true,linkcolor=blue!55!black,urlcolor=blue!55!black}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.35em}
+\setlength{\headheight}{14pt}
+\setlength{\LTpre}{0.4em}
+\setlength{\LTpost}{0.4em}
+\renewcommand{\arraystretch}{1.22}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{银叶杯因子研究报告}
+\fancyhead[R]{分钟级交易参与结构}
+\fancyfoot[C]{\thepage}
+\newcommand{\z}[1]{z\!\left(#1\right)}
+\newcommand{\pct}[1]{#1\%}
+
+\title{\bfseries 基于分钟级交易参与结构的可解释 A 股因子研究\\
+\large 银叶杯因子比赛提交报告}
+\author{参赛团队}
+\date{2026 年 6 月}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+本文面向银叶杯因子比赛构建一组可以直接复算、经济含义明确且低相关的分钟级 A 股因子。
+研究严格使用日内一分钟开盘价、最高价、最低价、收盘价、成交量、成交额和成交笔数，并仅在一个因子中结合允许使用的基础日收盘价。
+我们将 2020--2021 年作为研究期，用于确定方向、筛选组合与设置相关性约束；将 2022--2023 年作为留出期，仅用于报告样本外表现。
+在传统量价分钟因子之外，本文系统引入成交笔数维度，提出交易笔数集中度、成交量--笔数集中度差、平均单笔金额与尾盘单笔规模反转等可解释信号。
+
+最终提交十个因子，每个因子均为原子信号或一次显式线性组合，不存在递归套娃和不可读缓存引用。
+十个因子的全样本因子值两两绝对相关性均小于 0.50，最大值为 0.4943。
+样本外 Pearson IC 全部为正，范围为 0.0066--0.0337；样本外 Top10\% 组合年化超额收益全部为正，范围为 1.82\%--26.00\%。
+对照实验表明，跨风格组合在平均样本外 IC 和年化超额收益上优于原子信号与同风格组合；ICIR 加权在透明组合中取得较好的样本外收益。
+LightGBM 非线性模型虽具有较高样本外 IC，但因其不透明、难以逐因子解释且不适合直接满足比赛提交格式，仅作为研究基准而不纳入最终提交。
+\end{abstract}
+
+\textbf{关键词：} 分钟因子；成交笔数；订单流；VWAP；流动性；因子相关性；可解释组合
+
+\section{赛题定义与合规边界}
+
+\subsection{官方任务口径}
+
+本文首先按照赛题文件重新固定研究口径。股票池为沪深 A 股，剔除 ST、*ST 以及上市不足 120 日的股票。
+研究区间为 2020 年 1 月 2 日至 2023 年 12 月 29 日。因子在交易日 $T$ 收盘前由当日及历史数据计算，在 $T+1$ 交易，并预测比赛方提供的未来五日收益标签。
+根据数据说明，该标签是从下一交易日早晨开始计算的未来五日收益，在剥离风险因子后得到的剩余收益。
+
+官方允许的数据包括日内一分钟 OHLC、成交量、成交额、成交笔数，以及基础行情中的开盘价和收盘价。
+本文不使用新闻、基本面、分析师预期、未来函数或任何标签泄露信息。
+最终提交对象是单因子矩阵；因子内部允许由多个分钟叶子信号组合，但必须能够给出 Python 计算函数、标准化因子值、回测报告和逻辑说明。
+
+\subsection{时间切分与研究纪律}
+
+为降低反复试验造成的过拟合风险，本文采用固定切分：
+\begin{itemize}[leftmargin=2em]
+  \item 样本内研究期（IS）：2020-01-02 至 2021-12-31，共 486 个交易日；
+  \item 样本外留出期（OOS）：2022-01-04 至 2023-12-29，共 484 个交易日；
+  \item 全样本报告期：2020-01-02 至 2023-12-29，共 970 个交易日。
+\end{itemize}
+
+叶子方向、候选组合排序和贪心筛选均只使用样本内数据。
+样本外结果用于报告稳定性，不用于确定因子正负方向。
+最终因子只保留原子信号、同风格显式组合和跨风格双因子显式组合；探索阶段考察过三因子组合，但不将递归组合纳入最终提交。
+
+\section{评价指标与实现方式}
+
+\subsection{横截面标准化}
+
+对每个交易日 $t$ 和股票 $i$，原始因子值记为 $x_{i,t}$。
+先在当日有效股票池内按 1\% 和 99\% 分位点缩尾，再做横截面标准化：
+\begin{equation}
+z(x_{i,t}) = \frac{\operatorname{clip}(x_{i,t}, q_{1\%,t}, q_{99\%,t})-\mu_t}{\sigma_t}.
+\end{equation}
+最终提交的十个矩阵均保存为该标准化值。股票不在当日股票池内或数据不足时保存为 \texttt{NaN}。
+
+\subsection{官方主指标}
+
+赛题文件给出两个等权主指标。第一项为 Top10\% 组合相对全 A 股票均值的收益。
+对每个交易日按标准化因子值从高到低排序，取最高 10\% 股票等权持有，组合超额收益定义为
+\begin{equation}
+r^{\mathrm{excess}}_t =
+\frac{1}{|Q_{90,t}|}\sum_{i\in Q_{90,t}} y_{i,t}
+- \frac{1}{|U_t|}\sum_{i\in U_t} y_{i,t},
+\end{equation}
+其中 $y_{i,t}$ 为未来五日收益标签，$U_t$ 为当日股票池，$Q_{90,t}$ 为因子值最高 10\% 的股票集合。
+为了便于年度尺度比较，本文报告
+\begin{equation}
+R_{\mathrm{ann}} = 252 \cdot \operatorname{mean}_t(r^{\mathrm{excess}}_t).
+\end{equation}
+
+第二项为 Pearson IC，即每天横截面因子值与标签之间的 Pearson 相关系数，再对交易日取均值：
+\begin{equation}
+\mathrm{IC}_{\mathrm{Pearson}} =
+\operatorname{mean}_t\left[\operatorname{corr}\left(z(x_{\cdot,t}),y_{\cdot,t}\right)\right].
+\end{equation}
+
+\subsection{辅助诊断指标}
+
+比赛方未要求辅助指标，但为避免只追求单一 Sharpe，本文同时报告：
+\begin{itemize}[leftmargin=2em]
+  \item Rank IC：横截面 Spearman 相关系数的时间均值；
+  \item ICIR：日度 Pearson IC 均值除以其标准差，再乘 $\sqrt{252}$；
+  \item 超额 Sharpe：日度 Top10\% 超额收益均值除以标准差，再乘 $\sqrt{252}$；
+  \item 最大回撤：Top10\% 超额收益累计曲线的最大回撤；
+  \item 正收益日比例：日度 Top10\% 超额收益大于零的比例。
+\end{itemize}
+
+需要强调的是，Sharpe 是辅助稳定性指标，不是唯一筛选目标。
+最终筛选使用样本内 Pearson IC 与样本内年化超额收益构成的平衡分，并额外施加经济含义、结构复杂度和相关性约束。
+
+\section{分钟叶子因子设计}
+
+\subsection{设计原则}
+
+分钟因子不是对表达式进行机械拼接。本文将日内交易过程拆为五类可解释对象：
+\begin{enumerate}[leftmargin=2em]
+  \item 价格压力：早盘、尾盘和全日价格方向；
+  \item 成本中枢：收盘价相对 VWAP 偏离、上午与下午 VWAP 迁移；
+  \item 交易时段：成交量和成交笔数在日内的集中程度；
+  \item 订单流：大额成交占比、平均单笔金额、成交笔数与价格变动的关系；
+  \item 流动性：单位成交额推动价格的能力，以及 VPIN 异常变化。
+\end{enumerate}
+
+这种拆分使组合因子的每个子因子都能对应一个交易行为假设，而不是仅对应一段无法解释的代码。
+
+\subsection{最终组合使用的叶子因子}
+
+\footnotesize
+\begin{longtable}{p{3.7cm}p{3.0cm}p{7.8cm}}
+\toprule
+\textbf{叶子因子} & \textbf{原始数据} & \textbf{计算逻辑与经济含义}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{叶子因子} & \textbf{原始数据} & \textbf{计算逻辑与经济含义}\\
+\midrule
+\endhead
+\texttt{F1\_1\_first30\_mom} & OPEN, CLOSE & 前 30 分钟收益。反映隔夜信息进入市场后，早盘订单流产生的价格压力。\\
+\texttt{F1\_2\_last30\_mom} & OPEN, CLOSE & 后 30 分钟收益。反映尾盘调仓、赎回和集中执行造成的价格偏离。\\
+\texttt{F1\_3\_intraday\_mom} & OPEN, CLOSE & 从开盘到收盘的日内收益。反映当日订单流推动的整体偏离。\\
+\texttt{F4\_1\_close\_vs\_vwap} & HIGH, LOW, CLOSE, VOLUME & 收盘价相对全日 VWAP 的偏离。刻画尾盘价格与平均成交成本之间的距离。\\
+\texttt{F4\_2\_vwap\_trend} & HIGH, LOW, CLOSE, VOLUME & 下午 VWAP 相对上午 VWAP 的变化。刻画日内成本中枢迁移。\\
+\texttt{F5\_1\_volume\_hhi} & VOLUME & 分钟成交量占比平方和。数值越高，成交越集中于少数分钟。\\
+\texttt{F5\_2\_open\_vol\_ratio} & VOLUME & 开盘最初 6 根分钟 bar 的成交量占全天比例。刻画开盘阶段的信息到达和抢跑交易。\\
+\texttt{F5\_3\_close\_vol\_ratio} & VOLUME & 后 30 分钟成交量占全天比例。刻画尾盘集中执行。\\
+\texttt{F6\_2\_amihud\_min} & CLOSE, AMOUNT & 分钟收益绝对值除以分钟成交额后取日内均值；成交额分母下限为 1000 元，单分钟比值截断到 $[0,0.01]$。刻画单位资金推动价格的能力。\\
+\texttt{F6\_3\_vpin} & CLOSE, VOLUME & 分钟成交量乘分钟收益绝对值，除以成交量平方和开根号。作为订单流毒性的简化代理。\\
+\texttt{F6\_4\_large\_trade\_ratio} & VOLUME & 成交量超过当日分钟中位数两倍的分钟成交量占比。刻画大额执行集中度。\\
+\texttt{F\_COMBO\_2\_vpin\_informed} & CLOSE, VOLUME & VPIN 相对自身 20 日均值的变化。刻画订单流毒性是否出现异常。\\
+\texttt{F\_COMBO\_4\_amihud\_hybrid} & CLOSE, AMOUNT & 分钟 Amihud 相对自身 20 日均值的变化。刻画流动性冲击。\\
+\texttt{F\_COMBO\_7\_wat} & VOLUME, OPEN, CLOSE & 成交量加权交易时点与日内方向结合。刻画信息到达时段。\\
+\texttt{F\_COMBO\_8\_large\_trade} & VOLUME, OPEN, CLOSE & 大额成交占比乘日内方向。刻画大单推动。\\
+\texttt{F\_COMBO\_9\_smart\_money\_vwap} & OHLC, VOLUME & 上涨分钟成交量占比乘收盘 VWAP 偏离。刻画买方订单流与执行偏离共振。\\
+\texttt{G2\_1\_intraday\_ret5d} & OPEN, CLOSE, 日收盘 & 日内方向与五日收益同向时保留绝对乘积。刻画短期趋势确认。\\
+\texttt{N1\_count\_weighted\_time} & NUMBER & 成交笔数加权平均交易时点。刻画普通交易参与更偏早盘还是尾盘。\\
+\texttt{N2\_open\_count\_ratio} & NUMBER & 前 30 分钟成交笔数占比。刻画早盘参与密度。\\
+\texttt{N3\_close\_count\_ratio} & NUMBER & 后 30 分钟成交笔数占比。刻画尾盘参与密度。\\
+\texttt{N4\_count\_hhi} & NUMBER & 分钟成交笔数占比平方和。刻画交易活跃度在时段上的集中程度。\\
+\texttt{N5\_log\_avg\_ticket} & AMOUNT, NUMBER & 全日成交额除以成交笔数后取对数。刻画平均单笔金额。\\
+\texttt{N6\_large\_ticket\_amount\_ratio} & AMOUNT, NUMBER & 单分钟平均单笔金额超过中位数两倍时的成交额占比。刻画机构式大单时段。\\
+\texttt{N7\_count\_price\_corr} & CLOSE, NUMBER & 分钟收益与成交笔数的日内相关性。刻画参与密度是否与价格变化共振。\\
+\texttt{N8\_tail\_ticket\_reversal} & OHLC, AMOUNT, NUMBER & 尾盘 30 分钟收益取反，乘尾盘平均单笔金额相对全天的比例。刻画尾盘大单冲击后的修复。\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+\section{最终十因子：展开公式与经济含义}
+
+\subsection{组合约束}
+
+所有叶子因子先独立做横截面标准化，最终线性组合后再次做横截面标准化。
+下文中的 $\z{\cdot}$ 均表示 1\%/99\% 缩尾后的日度横截面 z-score。
+最终因子不存在递归引用；所谓“组合”只表示一次显式加权。
+
+\subsection{F01：大单执行压力}
+\begin{align}
+F01={}&-0.25\z{\texttt{F6\_4\_large\_trade\_ratio}}
+-0.25\z{\texttt{F\_COMBO\_8\_large\_trade}} \nonumber\\
+&-0.25\z{\texttt{N5\_log\_avg\_ticket}}
++0.25\z{\texttt{N6\_large\_ticket\_amount\_ratio}}.
+\end{align}
+该因子同时区分“成交量异常放大”“带方向的大额成交”“全天平均单笔金额”和“局部大单时段占比”。
+它不是简单认为大单一定利好，而是检验大额执行导致的短期价格压力是否会在未来五日修复。
+其中 \texttt{N5} 描述全日平均订单规模，\texttt{N6} 描述局部异常大单时段，两者互补。
+
+\subsection{F02：日内反转与成交笔数时序}
+\begin{align}
+F02={}&-\tfrac{1}{6}\z{\texttt{F1\_1\_first30\_mom}}
+-\tfrac{1}{6}\z{\texttt{F1\_2\_last30\_mom}} \nonumber\\
+&-\tfrac{1}{6}\z{\texttt{F1\_3\_intraday\_mom}}
++0.10\z{\texttt{N1\_count\_weighted\_time}} \nonumber\\
+&-0.10\z{\texttt{N2\_open\_count\_ratio}}
+-0.10\z{\texttt{N3\_close\_count\_ratio}} \nonumber\\
+&
+-0.10\z{\texttt{N4\_count\_hhi}}
+-0.10\z{\texttt{N7\_count\_price\_corr}}.
+\end{align}
+该因子将价格反转与成交笔数时序结合。前三项测量价格是否在早盘、尾盘和全日被单向推动；
+后五项区分参与密度是分散还是集中、偏早还是偏晚，以及价格变化是否由参与数量同步放大。
+它对应“价格偏离是否由广泛参与确认”的交易行为问题。
+
+\subsection{F03：VWAP 执行价格压力}
+\begin{equation}
+F03=-\tfrac{1}{3}\z{\texttt{F4\_1\_close\_vs\_vwap}}
+-\tfrac{1}{3}\z{\texttt{F4\_2\_vwap\_trend}}
+-\tfrac{1}{3}\z{\texttt{F\_COMBO\_9\_smart\_money\_vwap}}.
+\end{equation}
+该因子聚焦执行价格偏离。若收盘明显高于全天平均成本、下午成本中枢继续上移，且上涨分钟成交量占比偏高，
+则当日买方订单流可能造成短期过度推动。负号对应未来五日修复假设。
+
+\subsection{F04：成交笔数集中度}
+\begin{equation}
+F04=-\z{\texttt{N4\_count\_hhi}}.
+\end{equation}
+这是最简洁的新因子。它完全由分钟成交笔数构造：成交笔数越集中于少数分钟，说明交易活跃度越不均匀。
+负号表示研究期内更分散、更持续的参与结构对应更高的未来收益。
+该因子不依赖成交量，因此与传统成交量集中度保留差异。
+
+\subsection{F05：尾盘压力与成交分布修复}
+\begin{align}
+F05={}&-0.10\z{\texttt{F1\_2\_last30\_mom}}
+-0.125\z{\texttt{F5\_1\_volume\_hhi}} \nonumber\\
+&-0.125\z{\texttt{F5\_2\_open\_vol\_ratio}}
+-0.225\z{\texttt{F5\_3\_close\_vol\_ratio}} \nonumber\\
+&-0.125\z{\texttt{F\_COMBO\_7\_wat}} \nonumber\\
+&-0.10\z{\texttt{N3\_close\_count\_ratio}}
++0.10\z{\texttt{N8\_tail\_ticket\_reversal}}.
+\end{align}
+该因子重点刻画尾盘。尾盘收益、尾盘成交量占比和尾盘成交笔数占比共同描述集中执行；
+\texttt{F\_COMBO\_7} 描述成交量加权交易时点与日内方向；
+\texttt{N8} 进一步区分尾盘变化是否伴随大额单笔交易。
+它对应尾盘集中调仓造成暂时性价格压力的修复逻辑。
+
+\subsection{F06：相对分钟 Amihud 冲击}
+\begin{equation}
+F06=\z{\texttt{F\_COMBO\_4\_amihud\_hybrid}}.
+\end{equation}
+\texttt{F\_COMBO\_4} 等于当日分钟 Amihud 相对其 20 日均值的变化。
+当单位成交额对价格的推动能力突然提高时，说明流动性供给发生异常变化。
+该因子保留正方向，用于捕捉流动性冲击后的风险补偿。
+
+\subsection{F07：相对 VPIN 订单流毒性}
+\begin{equation}
+F07=-\z{\texttt{F\_COMBO\_2\_vpin\_informed}}.
+\end{equation}
+\texttt{F\_COMBO\_2} 等于 VPIN 简化代理减去自身 20 日均值。
+它不使用绝对订单流毒性，而使用相对历史状态的异常变化。
+负号表示毒性突然上升时，未来五日收益倾向较弱。
+
+\subsection{F08：日内与五日趋势确认}
+\begin{equation}
+F08=-\z{\texttt{G2\_1\_intraday\_ret5d}}.
+\end{equation}
+若当日日内方向与过去五日收益方向相同，则保留二者绝对乘积，否则记为缺失。
+该因子识别短期趋势被当日订单流再次确认的状态。
+负号反映研究期内的短期拥挤修复，而不是长期动量延续。
+
+\subsection{F09：分钟 Amihud 价格冲击}
+\begin{equation}
+F09=\z{\texttt{F6\_2\_amihud\_min}}.
+\end{equation}
+该因子为分钟收益绝对值相对分钟成交额的日内均值。实现时将分钟成交额分母下限设为 1000 元，并把单分钟比值截断到 $[0,0.01]$，避免近零成交额放大噪声。
+它衡量单位资金能够推动多少价格变化，是最接近经典 Amihud 非流动性思想的分钟版本。
+其正方向与 F06 的“相对冲击”不同：F09 描述当日冲击水平，F06 描述相对历史异常。
+
+\subsection{F10：成交量--成交笔数集中度差}
+\begin{equation}
+F10=0.50\z{\texttt{F5\_1\_volume\_hhi}}
+-0.50\z{\texttt{N4\_count\_hhi}}.
+\end{equation}
+这是成交笔数创新池中最终纳入提交的跨模态因子。
+成交量集中但成交笔数不集中，意味着少数分钟的单笔规模明显增大；
+反之，成交笔数集中但成交量不集中，则意味着许多小单在局部时段涌入。
+因此 F10 直接刻画“金额集中度”和“参与次数集中度”之间的差异，比单独使用成交量 HHI 更接近订单规模变化。
+
+\section{对照实验}
+
+\subsection{同风格与跨风格组合}
+
+本文在统一的样本内方向规则下构造 33 个原子因子、8 个同风格组合、28 个跨风格双因子和 8 个跨风格三因子。
+图 \ref{fig:style} 显示，原子候选的平均样本外 Pearson IC 为 0.0135，同风格组合提高到 0.0184，
+跨风格双因子进一步提高到 0.0226，跨风格三因子达到 0.0252。
+对应的平均样本外年化超额收益分别为 -2.57\%、4.40\%、11.00\% 和 12.32\%。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{03_same_cross_style_comparison.png}
+\caption{候选池中的同风格与跨风格组合对照}
+\label{fig:style}
+\end{figure}
+
+三因子组合在候选池平均表现上略有优势，但最终提交不追求更深层嵌套。
+原因是比赛评价同时考虑数量、质量、可解释性和相关性约束；复杂度增加会扩大试验空间，并削弱经济解释的确定性。
+
+\subsection{三种透明加权方式与 LightGBM 基准}
+
+本文比较等权、样本内 ICIR 加权和 Ridge 加权三种透明方式，并将已有 LightGBM 结果作为非线性基准。
+
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{方法} & \textbf{IS Pearson IC} & \textbf{OOS Pearson IC} & \textbf{OOS 年化超额} & \textbf{OOS Sharpe}\\
+\midrule
+等权 & 0.0339 & 0.0298 & 17.56\% & 3.04\\
+ICIR 加权 & 0.0331 & 0.0329 & 22.69\% & 4.99\\
+Ridge 加权 & 0.0382 & 0.0308 & 18.08\% & 3.59\\
+LightGBM 基准 & 0.0465 & 0.0574 & 13.49\% & 2.06\\
+\bottomrule
+\end{tabular}
+\caption{加权方式对照}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{04_weighting_method_comparison.png}
+\caption{透明加权方式与 LightGBM 非线性基准}
+\end{figure}
+
+LightGBM 的样本外 IC 较高，但没有成为最终提交方案，原因有三点：
+\begin{enumerate}[leftmargin=2em]
+  \item 比赛要求提交逐因子计算代码、矩阵和逻辑说明，非线性模型输出难以被还原为少量经济含义稳定的单因子；
+  \item LightGBM 的 IC 优势并未同步转化为 Top10\% 组合年化超额收益优势；
+  \item 本文最终目标是形成十个低相关因子，而不是提交一个不可拆解的模型分数。
+\end{enumerate}
+
+\subsection{贪心排序与相关性阈值}
+
+候选去重采用贪心策略：先按样本内指标排序，再逐一加入与已选因子全样本绝对相关性低于阈值的候选。
+我们比较 IC、年化超额、Sharpe 和平衡分四种排序方式。
+在阈值固定为 0.50 时，平衡分排序对应的入选池平均样本外年化超额收益为 4.97\%，高于仅按 IC 或 Sharpe 排序。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{05_greedy_ranking_comparison.png}
+\caption{不同贪心排序指标的样本外对照}
+\end{figure}
+
+阈值敏感性实验表明，放宽相关性约束会增加因子数量，但不会单调提高平均质量。
+阈值为 0.45 时，平衡分贪心得到 8 个候选，平均样本外 Pearson IC 为 0.0189，平均样本外年化超额收益为 13.17\%；
+阈值放宽到 0.60 时，可选数量增至 19，但平均样本外年化超额收益降至 0.42\%。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{06_corr_threshold_sensitivity.png}
+\caption{贪心相关性阈值敏感性}
+\end{figure}
+
+\subsection{成交笔数创新池}
+
+在传统分钟量价叶子之外，本文新增八个直接使用成交笔数的原子信号，并进一步探索十三个参与结构组合。
+图 \ref{fig:number} 展示部分候选的样本外结果。
+例如，平均单笔金额与 VWAP 迁移的结合、交易笔数集中度与 VPIN 的结合，都能形成具有经济含义的跨模态信号。
+
+最终纳入 F10 的并非创新池中样本外收益最高的组合，而是结构最简洁、与已有九因子相关性较低且经济含义清楚的成交量--成交笔数集中度差。
+这种选择体现了本文的研究原则：不能为了提高单一回测指标而无限叠加表达式。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{07_number_innovation_comparison.png}
+\caption{成交笔数创新候选对照}
+\label{fig:number}
+\end{figure}
+
+\section{最终结果}
+
+\subsection{十因子指标}
+
+\small
+\begin{longtable}{clrrrr}
+\toprule
+\textbf{编号} & \textbf{因子简称} & \textbf{IS IC} & \textbf{OOS IC} & \textbf{OOS 年化超额} & \textbf{OOS Sharpe}\\
+\midrule
+\endfirsthead
+\toprule
+\textbf{编号} & \textbf{因子简称} & \textbf{IS IC} & \textbf{OOS IC} & \textbf{OOS 年化超额} & \textbf{OOS Sharpe}\\
+\midrule
+\endhead
+F01 & 大单执行压力 & 0.0268 & 0.0284 & 26.00\% & 6.25\\
+F02 & 日内反转与成交笔数时序 & 0.0231 & 0.0201 & 16.82\% & 2.78\\
+F03 & VWAP 执行价格压力 & 0.0253 & 0.0179 & 2.60\% & 0.38\\
+F04 & 成交笔数集中度 & 0.0269 & 0.0265 & 20.62\% & 4.52\\
+F05 & 尾盘压力与成交分布修复 & 0.0235 & 0.0112 & 2.19\% & 0.44\\
+F06 & 相对分钟 Amihud 冲击 & 0.0095 & 0.0124 & 10.97\% & 2.79\\
+F07 & 相对 VPIN 订单流毒性 & 0.0180 & 0.0224 & 1.82\% & 0.30\\
+F08 & 日内与五日趋势确认 & 0.0258 & 0.0337 & 5.59\% & 1.33\\
+F09 & 分钟 Amihud 价格冲击 & 0.0091 & 0.0066 & 14.56\% & 3.03\\
+F10 & 成交量--成交笔数集中度差 & 0.0153 & 0.0150 & 5.14\% & 1.49\\
+\bottomrule
+\caption{最终十因子的样本内与样本外指标}
+\end{longtable}
+\normalsize
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{01_final_metric_overview.png}
+\caption{最终十因子的样本外 IC 与 Top10\% 年化超额收益}
+\end{figure}
+
+十个因子的样本外 Pearson IC 和年化超额收益全部为正，但表现强弱存在差异。
+这不是缺陷，而是刻意保留不同风格的结果：F01 和 F04 较强，F03、F05 和 F07 较温和；
+后者仍具有正向 IC、独立经济含义和低相关性，可以为后续组合提供分散化价值。
+
+\subsection{相关性约束}
+
+对十个最终标准化因子矩阵，使用全样本有效交集计算因子值 Pearson 相关性。
+所有非对角线绝对值均小于 0.50，最大值为 0.4943。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{02_final_corr_heatmap.png}
+\caption{最终十因子全样本因子值相关性}
+\end{figure}
+
+\subsection{样本内外稳定性}
+
+图 \ref{fig:stability} 对比十个因子的样本内和样本外 Pearson IC。
+十个因子在留出期内均保持正向 IC。
+其中 F08 样本外 IC 高于样本内，F09 的 IC 较低但 Top10\% 年化超额收益保持稳定。
+这进一步说明不能只使用单一指标定义“最强因子”。
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.94\textwidth]{08_is_oos_stability.png}
+\caption{最终十因子的样本内与样本外 Pearson IC}
+\label{fig:stability}
+\end{figure}
+
+\section{过拟合控制、局限与可复核性}
+
+\subsection{过拟合控制}
+
+本文没有将“回测指标最高”视为唯一目标，而采用以下约束：
+\begin{enumerate}[leftmargin=2em]
+  \item 固定样本内外切分，方向和排序只使用样本内信息；
+  \item 最终公式限制为原子因子或一次显式线性组合；
+  \item 逐一检查全样本因子值相关性，强制两两绝对相关性低于 0.50；
+  \item 不要求十个因子都具有极高 Sharpe，保留具有独立经济含义的风格代表；
+  \item 使用 IC、年化超额、Sharpe、ICIR、回撤和正收益日比例共同诊断；
+  \item 将 LightGBM 限定为研究基准，不直接提交不透明模型分数。
+\end{enumerate}
+
+\subsection{局限}
+
+本文结果仍存在需要在真实交易中进一步验证的局限。
+第一，Top10\% 等权组合未显式计入冲击成本和换手约束。
+第二，五日标签下的日度组合收益具有重叠持有特征，年化超额和 Sharpe 用于同口径对照，而不是承诺实盘可实现收益。
+第三，成交笔数因子对分钟数据质量较敏感，需要在正式复算时继续执行缺失值和停牌过滤。
+第四，相关性低于 0.50 不等于风险完全独立，仍需在组合层面考虑行业暴露与市场状态变化。
+
+\subsection{提交文件与复核方式}
+
+提交包包含：
+\begin{itemize}[leftmargin=2em]
+  \item \texttt{code/factor\_submission.py}：独立计算代码，明确列出十个最终因子的叶子权重；
+  \item \texttt{factor\_values/standardized\_factor\_values\_2020\_2023.npz}：十个标准化矩阵；
+  \item \texttt{results/final\_factor\_metrics.csv}：逐因子指标、公式和经济含义；
+  \item \texttt{results/final\_factor\_value\_correlation.csv}：最终相关性矩阵；
+  \item \texttt{results/submission\_code\_realdata\_validation.json}：独立代码对真实分钟窗口的复算一致性审计；
+  \item 本报告 PDF、图表与对照实验 CSV。
+\end{itemize}
+
+因子值文件含 \texttt{dates}、\texttt{stock\_codes} 和 \texttt{factor\_01} 至 \texttt{factor\_10}。
+每个因子矩阵形状为 $970\times 5515$，行是交易日，列是股票，数值为横截面标准化后的 \texttt{float32}，无效位置为 \texttt{NaN}。
+
+\subsection{真实分钟数据复算一致性}
+
+为确认提交函数不是仅用于展示的伪代码，本文在 2023-11-20 至 2023-12-29 的连续真实分钟窗口上重新调用
+\texttt{compute\_final\_factors()}，并将最后五个交易日与冻结提交矩阵逐值比较。
+十个因子的复算 Pearson 相关性全部为 1.0 或机器误差级接近 1.0，缺失值位置一致率全部为 1.0。
+其中绝大多数因子的平均绝对误差为 0；非零误差仅来自 \texttt{float32} 计算中的机器精度舍入。
+复算明细随提交包一并提供。
+
+\section{结论}
+
+本文给出十个分钟级、低相关、可解释且可以直接复算的 A 股因子。
+研究的核心增量不在于增加表达式层数，而在于把成交量、成交额和成交笔数放到同一微观结构框架中：
+同样的成交量集中，可以由少量大单或大量小单造成；同样的尾盘上涨，可以由广泛参与或局部冲击造成。
+成交笔数维度帮助区分这些状态。
+
+对照实验支持三个结论。
+第一，跨风格显式组合优于只在同一风格内堆叠信号。
+第二，透明的 ICIR 加权在收益维度上具有竞争力，LightGBM 虽可用于研究，但不适合作为本次直接提交形式。
+第三，放宽相关性阈值会提高可选数量，却不保证平均质量提升。
+最终十因子方案因此在指标、相关性、经济解释和提交可复核性之间取得平衡。
+
+\appendix
+\section{最终因子 ASCII 展开式}
+
+以下展开式与提交代码中的 \texttt{FINAL\_SPECS} 完全一致。
+\begin{verbatim}
+factor_01 =
+  -0.250000 * z(F6_4_large_trade_ratio)
+  -0.250000 * z(F_COMBO_8_large_trade)
+  -0.250000 * z(N5_log_avg_ticket)
+  +0.250000 * z(N6_large_ticket_amount_ratio)
+
+factor_02 =
+  -0.166667 * z(F1_1_first30_mom)
+  -0.166667 * z(F1_2_last30_mom)
+  -0.166667 * z(F1_3_intraday_mom)
+  +0.100000 * z(N1_count_weighted_time)
+  -0.100000 * z(N2_open_count_ratio)
+  -0.100000 * z(N3_close_count_ratio)
+  -0.100000 * z(N4_count_hhi)
+  -0.100000 * z(N7_count_price_corr)
+
+factor_03 =
+  -0.333333 * z(F4_1_close_vs_vwap)
+  -0.333333 * z(F4_2_vwap_trend)
+  -0.333333 * z(F_COMBO_9_smart_money_vwap)
+
+factor_04 = -1.000000 * z(N4_count_hhi)
+
+factor_05 =
+  -0.100000 * z(F1_2_last30_mom)
+  -0.125000 * z(F5_1_volume_hhi)
+  -0.125000 * z(F5_2_open_vol_ratio)
+  -0.225000 * z(F5_3_close_vol_ratio)
+  -0.125000 * z(F_COMBO_7_wat)
+  -0.100000 * z(N3_close_count_ratio)
+  +0.100000 * z(N8_tail_ticket_reversal)
+
+factor_06 = +1.000000 * z(F_COMBO_4_amihud_hybrid)
+factor_07 = -1.000000 * z(F_COMBO_2_vpin_informed)
+factor_08 = -1.000000 * z(G2_1_intraday_ret5d)
+factor_09 = +1.000000 * z(F6_2_amihud_min)
+factor_10 = +0.500000 * z(F5_1_volume_hhi)
+            -0.500000 * z(N4_count_hhi)
+\end{verbatim}
+
+\section{参考文献}
+\begin{enumerate}[leftmargin=2em]
+  \item Amihud, Y. (2002). Illiquidity and stock returns: Cross-section and time-series effects. \textit{Journal of Financial Markets}, 5(1), 31--56.
+  \item Easley, D., L{\'o}pez de Prado, M. M., and O'Hara, M. (2012). Flow toxicity and liquidity in a high-frequency world. \textit{Review of Financial Studies}, 25(5), 1457--1493.
+  \item Kyle, A. S. (1985). Continuous auctions and insider trading. \textit{Econometrica}, 53(6), 1315--1335.
+  \item Jegadeesh, N., and Titman, S. (1993). Returns to buying winners and selling losers. \textit{Journal of Finance}, 48(1), 65--91.
+\end{enumerate}
+
+\end{document}

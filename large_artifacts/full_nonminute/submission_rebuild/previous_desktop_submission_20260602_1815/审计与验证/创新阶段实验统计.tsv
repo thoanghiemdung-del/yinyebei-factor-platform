@@ -1,0 +1,12 @@
+phase	rows	success_rows	failed_rows	sharpe_gt_8_rows	sharpe_gt_10_rows	median_sharpe	p90_sharpe	maximum_sharpe
+backup_cross_style_pair	96	96	0	96	90	12.3975	14.796	16.247
+backup_cross_style_triple	72	72	0	72	72	13.4145	14.8483	15.846
+backup_meta_nesting	10	10	0	10	10	15.6555	15.9536	16.031
+cross_style_bridge	270	270	0	253	137	10.016	11.545	14.677
+cross_style_offset	60	60	0	48	24	9.6165	12.6322	12.9
+deep_meta_nesting	10	10	0	10	10	15.396	15.5495	15.563
+deep_pair_triple_nesting	140	140	0	140	140	13.808	14.9067	15.91
+nested_style_anchor	20	20	0	15	4	9.2875	10.691	10.799
+residualized_near_threshold	116	116	0	78	30	8.1995	10.227	10.901
+style_anchor	60	60	0	33	12	8.1025	10.7448	11.397
+weighted_cross_style	96	96	0	64	36	9.402	12.475	12.9

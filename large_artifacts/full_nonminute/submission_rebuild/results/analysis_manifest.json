@@ -1,0 +1,203 @@
+{
+  "generated_at": "2026-06-02T17:28:39",
+  "protocol": {
+    "selection_period": "2020-01-02 to 2021-12-31",
+    "oos_report_period": "2022-01-04 to 2023-12-29",
+    "standardization": "cross-sectional 1%/99% winsorization followed by z-score",
+    "selection_score": "0.5 * percentile_rank(IS Pearson IC) + 0.5 * percentile_rank(IS annual Top10%-market excess)",
+    "final_factor_value_correlation_constraint": "absolute full-period aligned factor-value Pearson correlation < 0.50",
+    "complexity_policy": "explicit flattened formulas only; maximum one combination layer; no UUID nesting"
+  },
+  "selected": [
+    "X2_4_5",
+    "X2_2_6",
+    "A_N4_count_hhi",
+    "A_N5_log_avg_ticket",
+    "A_G2_1_intraday_ret5d",
+    "A_F_COMBO_1_opening_confirm",
+    "A_F1_2_last30_mom",
+    "A_F6_2_amihud_min"
+  ],
+  "maximum_abs_factor_value_correlation": 0.4927477527899397,
+  "candidate_count": 77,
+  "leaf_count": 33,
+  "leaf_signs_selected_on_is_only": {
+    "F1_1_first30_mom": -1.0,
+    "F1_2_last30_mom": -1.0,
+    "F1_3_intraday_mom": -1.0,
+    "F3_1_realized_vol": -1.0,
+    "F3_2_vol_skew": -1.0,
+    "F4_1_close_vs_vwap": -1.0,
+    "F4_2_vwap_trend": -1.0,
+    "F5_1_volume_hhi": -1.0,
+    "F5_2_open_vol_ratio": -1.0,
+    "F5_3_close_vol_ratio": -1.0,
+    "F5_5_smart_money_vol": -1.0,
+    "F6_2_amihud_min": 1.0,
+    "F6_3_vpin": -1.0,
+    "F6_4_large_trade_ratio": -1.0,
+    "F6_5_roll_spread": 1.0,
+    "F_COMBO_1_opening_confirm": -1.0,
+    "F_COMBO_2_vpin_informed": -1.0,
+    "F_COMBO_4_amihud_hybrid": 1.0,
+    "F_COMBO_5_close_manip": 1.0,
+    "F_COMBO_7_wat": -1.0,
+    "F_COMBO_8_large_trade": -1.0,
+    "F_COMBO_9_smart_money_vwap": -1.0,
+    "G2_1_intraday_ret5d": -1.0,
+    "G2_3_vwap_close_mom": -1.0,
+    "G2_5_smart_money_rev": 1.0,
+    "N1_count_weighted_time": 1.0,
+    "N2_open_count_ratio": -1.0,
+    "N3_close_count_ratio": -1.0,
+    "N4_count_hhi": -1.0,
+    "N5_log_avg_ticket": -1.0,
+    "N6_large_ticket_amount_ratio": 1.0,
+    "N7_count_price_corr": -1.0,
+    "N8_tail_ticket_reversal": 1.0
+  },
+  "leaf_definitions": {
+    "F1_1_first30_mom": {
+      "style": "日内价格",
+      "meaning": "开盘前30分钟收益，反映隔夜信息进入市场后的早盘价格压力。"
+    },
+    "F1_2_last30_mom": {
+      "style": "日内价格",
+      "meaning": "收盘前30分钟收益，反映尾盘调仓和集中执行造成的价格压力。"
+    },
+    "F1_3_intraday_mom": {
+      "style": "日内价格",
+      "meaning": "从开盘到收盘的日内收益，刻画当日订单流推动的价格偏离。"
+    },
+    "F3_1_realized_vol": {
+      "style": "日内波动",
+      "meaning": "分钟收益平方和构造的已实现波动率，刻画日内不确定性。"
+    },
+    "F3_2_vol_skew": {
+      "style": "日内波动",
+      "meaning": "上午与下午分钟波动率之比，刻画风险释放的时段不对称。"
+    },
+    "F4_1_close_vs_vwap": {
+      "style": "VWAP偏离",
+      "meaning": "收盘价相对全日VWAP的偏离，刻画尾盘价格与平均成交成本的距离。"
+    },
+    "F4_2_vwap_trend": {
+      "style": "VWAP偏离",
+      "meaning": "下午VWAP相对上午VWAP的变化，刻画订单流推动的日内成本中枢迁移。"
+    },
+    "F5_1_volume_hhi": {
+      "style": "成交分布",
+      "meaning": "分钟成交量HHI，刻画成交是否集中于少数时点。"
+    },
+    "F5_2_open_vol_ratio": {
+      "style": "成交分布",
+      "meaning": "前30分钟成交量占比，刻画早盘信息到达和抢跑交易。"
+    },
+    "F5_3_close_vol_ratio": {
+      "style": "成交分布",
+      "meaning": "后30分钟成交量占比，刻画尾盘调仓和集中执行。"
+    },
+    "F5_5_smart_money_vol": {
+      "style": "订单流",
+      "meaning": "上涨分钟成交量占比，刻画买方订单流强弱。"
+    },
+    "F6_2_amihud_min": {
+      "style": "流动性",
+      "meaning": "分钟收益绝对值相对分钟成交额的均值，刻画单位资金推动价格的能力。"
+    },
+    "F6_3_vpin": {
+      "style": "订单流",
+      "meaning": "成交量加权绝对分钟收益相对成交量平方和，刻画订单流毒性。"
+    },
+    "F6_4_large_trade_ratio": {
+      "style": "订单流",
+      "meaning": "成交量超过分钟中位数两倍的成交占比，刻画大额执行集中度。"
+    },
+    "F6_5_roll_spread": {
+      "style": "流动性",
+      "meaning": "分钟收益负自协方差推导的Roll价差代理，刻画隐含交易成本。"
+    },
+    "F_COMBO_1_opening_confirm": {
+      "style": "显式分钟组合",
+      "meaning": "早盘与尾盘同方向时保留开盘驱动，检验全天方向确认。"
+    },
+    "F_COMBO_2_vpin_informed": {
+      "style": "显式分钟组合",
+      "meaning": "VPIN相对20日均值的变化，检验订单流毒性是否异常。"
+    },
+    "F_COMBO_4_amihud_hybrid": {
+      "style": "显式分钟组合",
+      "meaning": "分钟Amihud相对20日均值的变化，检验流动性冲击。"
+    },
+    "F_COMBO_5_close_manip": {
+      "style": "显式分钟组合",
+      "meaning": "尾盘价格变化与尾盘成交量不匹配时做反向处理，检验尾盘压力修复。"
+    },
+    "F_COMBO_7_wat": {
+      "style": "显式分钟组合",
+      "meaning": "成交量加权平均交易时点与日内方向结合，刻画信息到达时段。"
+    },
+    "F_COMBO_8_large_trade": {
+      "style": "显式分钟组合",
+      "meaning": "大额成交占比与日内方向结合，刻画大单推动。"
+    },
+    "F_COMBO_9_smart_money_vwap": {
+      "style": "显式分钟组合",
+      "meaning": "上涨分钟成交量占比与收盘VWAP偏离相乘，刻画买方订单流与价格偏离共振。"
+    },
+    "G2_1_intraday_ret5d": {
+      "style": "分钟×基础行情",
+      "meaning": "日内方向与5日收益同向时保留交互，刻画短期趋势确认。"
+    },
+    "G2_3_vwap_close_mom": {
+      "style": "分钟×基础行情",
+      "meaning": "收盘VWAP偏离与5日收益相乘，刻画短期趋势与执行价格共振。"
+    },
+    "G2_5_smart_money_rev": {
+      "style": "分钟×基础行情",
+      "meaning": "上涨分钟成交量占比乘以1日反转，刻画订单流确认后的价格修复。"
+    },
+    "N1_count_weighted_time": {
+      "style": "成交笔数",
+      "meaning": "成交笔数加权平均交易时点，刻画交易活跃度集中在早盘还是尾盘。"
+    },
+    "N2_open_count_ratio": {
+      "style": "成交笔数",
+      "meaning": "前30分钟成交笔数占比，刻画早盘交易参与度。"
+    },
+    "N3_close_count_ratio": {
+      "style": "成交笔数",
+      "meaning": "后30分钟成交笔数占比，刻画尾盘交易参与度。"
+    },
+    "N4_count_hhi": {
+      "style": "成交笔数",
+      "meaning": "分钟成交笔数HHI，刻画交易活跃度在时段上的集中程度。"
+    },
+    "N5_log_avg_ticket": {
+      "style": "成交笔数",
+      "meaning": "全天平均单笔金额的对数，刻画订单规模结构。"
+    },
+    "N6_large_ticket_amount_ratio": {
+      "style": "成交笔数",
+      "meaning": "高于两倍分钟中位单笔金额的成交额占比，刻画大单资金参与。"
+    },
+    "N7_count_price_corr": {
+      "style": "成交笔数",
+      "meaning": "分钟收益与成交笔数的相关性，刻画上涨或下跌时交易参与是否同步放大。"
+    },
+    "N8_tail_ticket_reversal": {
+      "style": "成交笔数",
+      "meaning": "尾盘收益反向乘以尾盘平均单笔金额相对全天水平，刻画尾盘大单压力后的修复。"
+    }
+  },
+  "style_definitions": {
+    "S1_intraday_reversal": "对早盘、尾盘和全天价格压力做反向处理，检验短期订单失衡后的价格修复。",
+    "S2_vwap_pressure": "综合收盘-VWAP偏离、上午-下午VWAP迁移和聪明钱VWAP共振，检验执行价格偏离后的修复。",
+    "S3_liquidity_toxicity": "综合分钟Amihud、VPIN及其异常变化，检验流动性冲击和订单流毒性。",
+    "S4_volume_profile": "综合成交量集中度、开收盘成交量占比和成交量加权时点，检验交易时段结构。",
+    "S5_large_ticket_flow": "综合大额成交占比、方向性大单和平均单笔金额，检验机构式大单执行压力。",
+    "S6_trade_count_profile": "综合成交笔数时点、集中度和价格相关性，直接利用题目提供的成交笔数字段。",
+    "S7_closing_pressure": "综合尾盘收益、尾盘量、尾盘异常和尾盘单笔金额，检验收盘前集中交易后的修复。",
+    "S8_cross_modal_reversal": "把分钟订单流和基础行情的短期收益结合，检验日内确认与短期反转。"
+  }
+}
