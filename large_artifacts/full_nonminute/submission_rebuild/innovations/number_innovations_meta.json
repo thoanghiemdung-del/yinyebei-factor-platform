@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-06-02T17:10:00",
+  "processed_days": 970,
+  "failed_days": [],
+  "shape": [
+    3645,
+    5515
+  ],
+  "definitions": {
+    "N1_count_weighted_time": "sum(minute_index * MINUTE_NUMBER) / sum(MINUTE_NUMBER) / 241",
+    "N2_open_count_ratio": "sum(first_30min MINUTE_NUMBER) / sum(all_day MINUTE_NUMBER)",
+    "N3_close_count_ratio": "sum(last_30min MINUTE_NUMBER) / sum(all_day MINUTE_NUMBER)",
+    "N4_count_hhi": "sum((MINUTE_NUMBER / sum(all_day MINUTE_NUMBER)) ** 2)",
+    "N5_log_avg_ticket": "log1p(sum(MINUTE_AMOUNT) / sum(MINUTE_NUMBER))",
+    "N6_large_ticket_amount_ratio": "sum(MINUTE_AMOUNT where avg_ticket_per_bar > 2 * median_bar_ticket) / sum(MINUTE_AMOUNT)",
+    "N7_count_price_corr": "corr(minute_close_return, MINUTE_NUMBER) across the trading day",
+    "N8_tail_ticket_reversal": "-last_30min_return * (last_30min_avg_ticket / all_day_avg_ticket)"
+  },
+  "source_fields": [
+    "MINUTE_OPEN",
+    "MINUTE_CLOSE",
+    "MINUTE_AMOUNT",
+    "MINUTE_NUMBER"
+  ],
+  "future_data_used": false
+}
